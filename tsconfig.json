@@ -7,7 +7,9 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@types": ["./types/src"]
+      "@types": ["./types/src"],
+      "@/*": ["./src/*"]
     }
-  }
+  },
+  "include": ["src/**/*"],
 }
