@@ -15,13 +15,14 @@
   "type": "commonjs",
   "main": "index.js",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/app.js",
+    "build": "tsc --build && tsc-alias",
+    "start": "node ./dist/app.js",
     "dev": "tsx watch --clear-screen=false src/app.ts"
   },
   "devDependencies": {
     "@types/express": "^5.0.3",
     "@types/node": "^24.0.15",
+    "tsc-alias": "^1.8.16",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
   },
