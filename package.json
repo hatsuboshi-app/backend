@@ -2,18 +2,12 @@
   "name": "hatsuboshi-backend",
   "version": "1.0.0",
   "description": "The backend server for Hatsuboshi App.",
-  "homepage": "https://github.com/hatsuboshi-app/backend#readme",
-  "bugs": {
-    "url": "https://github.com/hatsuboshi-app/backend/issues"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hatsuboshi-app/backend.git"
   },
   "license": "MIT",
   "author": "HuzzNZ",
-  "type": "commonjs",
-  "main": "index.js",
   "scripts": {
     "build": "tsc --build && tsc-alias",
     "start": "node ./dist/app.js",
