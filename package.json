@@ -1,6 +1,6 @@
 {
   "name": "hatsuboshi-backend",
-  "version": "1.0.0",
+  "version": "0.1.0",
   "description": "The backend server for Hatsuboshi App.",
   "repository": {
     "type": "git",
@@ -21,6 +21,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
+    "@hatsuboshi/types": "^0.1.0",
     "dotenv": "^17.2.0",
     "express": "^5.1.0"
   }
