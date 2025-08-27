@@ -1,6 +1,7 @@
 import express, { Request, Response } from "express"
 import config from "@/config/config"
 import dotenv from 'dotenv'
+import cors from "cors"
 import { logger } from "@/services"
 import CharacterRouter from "@/routes/Character.router"
 import { errorHandler } from "@/middlewares/errorHandler"
@@ -17,7 +18,7 @@ dotenv.config({ quiet: true })
 const app = express()
 
 app.use(express.json())
-app.use(require("cors"))
+app.use(cors())
 
 app.get("/", (req: Request, res: Response) => {
     res.json({
