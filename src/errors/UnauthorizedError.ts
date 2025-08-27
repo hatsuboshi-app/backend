@@ -1,6 +1,6 @@
-import { HTTPError } from "@/errors/HTTPError"
+import HTTPError from "@/errors/HTTPError"
 
-export class UnauthorizedError extends HTTPError {
+export default class UnauthorizedError extends HTTPError {
     constructor(message?: string) {
         super(401)
         this.message = message ?? "Unauthorized"

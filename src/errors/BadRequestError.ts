@@ -1,6 +1,6 @@
-import { HTTPError } from "@/errors/HTTPError"
+import HTTPError from "@/errors/HTTPError"
 
-export class BadRequestError extends HTTPError {
+export default class BadRequestError extends HTTPError {
     constructor(message?: string) {
         super(400)
         this.message = message ?? "Bad Request"
