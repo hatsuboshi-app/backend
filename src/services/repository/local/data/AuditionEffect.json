@@ -1,0 +1,2922 @@
+[
+  {
+    "id": "effect-232703",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "好調",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2465",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2465}上昇量を50%増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-819092",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "元気",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードやトラブルによる体力減少時、体力の代わりに消費される",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-944961",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "スキルカードを引く",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードを引く",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-106832",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "消費体力減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力を50%軽減",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-629515",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "生成",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードを獲得する。獲得したスキルカードはレッスン終了時に削除される",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-440240",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "体力消費",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4324",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r4324}を無視して体力を消費",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-613374",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "集中",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1672",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "集中が1増加するごとに、{r1672}上昇量を1増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-759637",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "レッスン中強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "レッスン中強化終了までスキルカードを強化",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-897550",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "スキルカード使用数追加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "このターン、スキルカードを追加で使用できる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-167652",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "集中効果一時増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1128",
+          "refId": "effect-613374",
+          "refType": 1
+        },
+        {
+          "id": "r6469",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r1128}による{r6469}上昇量増加効果を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-165964",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "消費体力変化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "exam_template利用",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-677706",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "元気増加無効",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1415",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r1415}が増加しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-106834",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "持続効果",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "exam_template利用",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-826871",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "消費体力低下",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "exam_template利用",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-625993",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "体力減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-344140",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "体力回復",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-712918",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "固定パラメータ",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2631",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "固定パラメータ{r2631}を増加させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-155899",
+    "createdAt": "2025-08-31T10:25:25.131Z",
+    "updatedAt": "2025-08-31T10:25:25.131Z",
+    "name": {
+      "ja": "複製",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの複製を獲得する。獲得したスキルカードはレッスン終了時に削除される",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-684366",
+    "createdAt": "2025-08-31T10:25:25.131Z",
+    "updatedAt": "2025-08-31T10:25:25.131Z",
+    "name": {
+      "ja": "好印象",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1023",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン終了時、好印象1ごとに{r1023}を1上昇。ターン開始時、好印象が1減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-371055",
+    "createdAt": "2025-08-31T10:25:25.131Z",
+    "updatedAt": "2025-08-31T10:25:25.131Z",
+    "name": {
+      "ja": "スキルカード追加発動",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "次に使用する対象のスキルカードの効果を複数回発動",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-855229",
+    "createdAt": "2025-08-31T10:25:25.131Z",
+    "updatedAt": "2025-08-31T10:25:25.131Z",
+    "name": {
+      "ja": "パラメータ上昇量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2078",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r5975",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2078}上昇量を増加（{r5975}による上昇も含む）",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-536830",
+    "createdAt": "2025-08-31T10:25:25.131Z",
+    "updatedAt": "2025-08-31T10:25:25.131Z",
+    "name": {
+      "ja": "やる気",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1785",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "やる気が1増加するごとに、{r1785}の増加量を1増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-822062",
+    "createdAt": "2025-08-31T10:25:25.131Z",
+    "updatedAt": "2025-08-31T10:25:25.131Z",
+    "name": {
+      "ja": "強気",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4679",
+          "refId": "effect-822062",
+          "refType": 1
+        },
+        {
+          "id": "r5537",
+          "refId": "effect-822062",
+          "refType": 1
+        },
+        {
+          "id": "r5998",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r3544",
+          "refId": "effect-440240",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "指針を{r4679}に変更する",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "すでに{r5537}の場合、2段階目になる",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "▼1段階目",
+            "en": ""
+          }
+        },
+        {
+          "position": 4,
+          "body": {
+            "ja": "{r5998}上昇量と消費体力を100%増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 5,
+          "body": {
+            "ja": "",
+            "en": ""
+          }
+        },
+        {
+          "position": 6,
+          "body": {
+            "ja": "▼2段階目",
+            "en": ""
+          }
+        },
+        {
+          "position": 7,
+          "body": {
+            "ja": "{r5998}上昇量を150%増加・消費体力が100%増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 8,
+          "body": {
+            "ja": "スキルカードを使うごとに、{r3544}1",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-929039",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "温存",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6144",
+          "refId": "effect-929039",
+          "refType": 1
+        },
+        {
+          "id": "r7334",
+          "refId": "effect-929039",
+          "refType": 1
+        },
+        {
+          "id": "r4828",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r6832",
+          "refId": "effect-646858",
+          "refType": 1
+        },
+        {
+          "id": "r3664",
+          "refId": "effect-897550",
+          "refType": 1
+        },
+        {
+          "id": "r9537",
+          "refId": "effect-646858",
+          "refType": 1
+        },
+        {
+          "id": "r8754",
+          "refId": "effect-559002",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "指針を{r6144}に変更する",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "すでに{r7334}の場合、2段階目になる",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "▼1段階目",
+            "en": ""
+          }
+        },
+        {
+          "position": 4,
+          "body": {
+            "ja": "{r4828}上昇量と消費体力を50%減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 5,
+          "body": {
+            "ja": "解除されたとき、{r6832}+5・{r3664}+1",
+            "en": ""
+          }
+        },
+        {
+          "position": 6,
+          "body": {
+            "ja": "",
+            "en": ""
+          }
+        },
+        {
+          "position": 7,
+          "body": {
+            "ja": "▼2段階目",
+            "en": ""
+          }
+        },
+        {
+          "position": 8,
+          "body": {
+            "ja": "{r4828}上昇量と消費体力を75%減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 9,
+          "body": {
+            "ja": "解除されたとき、{r9537}+8・{r8754}+5・{r3664}+1",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-353609",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "全力",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8538",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r7429",
+          "refId": "effect-897550",
+          "refType": 1
+        },
+        {
+          "id": "r3514",
+          "refId": "terminology-214453",
+          "refType": 0
+        },
+        {
+          "id": "r8161",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r5976",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r5365",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r5371",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r5221",
+          "refId": "terminology-340783",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r8538}に変更時、{r7429}+1・{r3514}にあるスキルカードを手札に移動",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r8161}状態の時、{r5976}上昇量を200%増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "ターン終了時に{r5365}を解除",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r5371}状態を解除するまで{r5221}は変更できない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-113963",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "指針解除",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6081",
+          "refId": "effect-929039",
+          "refType": 1
+        },
+        {
+          "id": "r7281",
+          "refId": "effect-822062",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "「{r6081}」と「{r7281}」を解除する",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-587016",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "全力値",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3984",
+          "refId": "effect-587016",
+          "refType": 1
+        },
+        {
+          "id": "r8779",
+          "refId": "effect-587016",
+          "refType": 1
+        },
+        {
+          "id": "r4051",
+          "refId": "effect-353609",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン終了時に{r3984}が10以上なら、次のターン開始時に{r8779}を10消費して、指針を{r4051}に変更",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-171613",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "全力値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6308",
+          "refId": "effect-587016",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r6308}を減少させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-917287",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "消費体力変化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "exam_template利用",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-137505",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "高揚",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3453",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン終了時、高揚1ごとに{r3453}を1増加。体力減少時、高揚が1減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-406111",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "ターン追加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "レッスンの残りターンが増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-350211",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "低下状態無効",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "低下状態にならない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-767058",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "消費体力増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力が100%増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-342223",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "不安",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1748",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r1748}の増加量が33%減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-101262",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "不安無効",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "不安状態にならない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-521966",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "体力回復効果増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "体力回復効果を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-665701",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "体力消費軽減",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "以下の消費体力を1にする",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-113758",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "気まぐれ",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "手札の消費体力がランダムに変化",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-426248",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "パラメータ上昇値変更",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r7545",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "パラメータ上昇値変更{r7545}上昇値が以下ならにする",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-469354",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "手札持ち越し",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン終了時に手札を捨てない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-379482",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "消費体力追加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの消費体力が増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-439186",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "消費体力増加効果減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力増加の効果を50%に変更",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-482344",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "体力回復無効",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "体力が回復しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-750269",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "消費体力減少効果増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力減少の効果を60%に変更",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-599982",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "生成強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9963",
+          "refId": "effect-629515",
+          "refType": 1
+        },
+        {
+          "id": "r8772",
+          "refId": "effect-759637",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "レッスン中にスキルカードを{r9963}する場合、{r8772}状態で{r9963}",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-518387",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "消費体力削減",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの消費体力を減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-707624",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "手札を入れ替える",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "手札を入れ替える",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-928926",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "発動予約",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "、",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-181442",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "緊張",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9923",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "緊張が1増加するごとに、{r9923}上昇量が1減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-329641",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "不調",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2982",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2982}上昇量が33%減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-772935",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "弱気",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r7959",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "弱気が1増加するごとに、{r7959}の増加量が1減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-646858",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "熱意",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1678",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r3784",
+          "refId": "effect-646858",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "熱意1につき{r1678}上昇量を1増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "ターン終了時、{r3784}を0にする",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-153271",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "使用不可",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "使用不可",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-529221",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "スランプ",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9095",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9095}が上昇しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-732154",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "手札減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "手札減少が1増加するごとに、ターン開始時に引くスキルカードが1枚減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-559002",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "固定元気",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9190",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "強化状態や低下状態の影響を受けず{r9190}を増加させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-483955",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "うわの空",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r5015",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの{r5015}上昇値が以下ならになる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-132373",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "絶好調",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2438",
+          "refId": "effect-232703",
+          "refType": 1
+        },
+        {
+          "id": "r4341",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2438}の{r4341}上昇量を{r2438}1ターンごとに10%増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-627054",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "指針固定",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r5882",
+          "refId": "terminology-340783",
+          "refType": 0
+        },
+        {
+          "id": "r9528",
+          "refId": "effect-587016",
+          "refType": 1
+        },
+        {
+          "id": "r3388",
+          "refId": "effect-353609",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5882}と段階を変更できない",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r9528}が10以上の場合でも、効果中は{r3388}にならない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r3388}状態の場合は、ターン終了時に{r3388}を解除する",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-574587",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "低下状態回復",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "弱体状態を回復する",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-362694",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "好印象減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8322",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r8322}を減少させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-692911",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "やる気減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2455",
+          "refId": "effect-536830",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2455}を減少させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-922445",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "集中減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8204",
+          "refId": "effect-613374",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r8204}を減少させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-582371",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "好調減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4179",
+          "refId": "effect-232703",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r4179}を減少させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-736036",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "パラメータ上昇量減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3952",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r3121",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r3952}上昇量を減少（{r3121}による上昇も含む）",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-217570",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "成長",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "条件を満たすごとに、レッスン終了まで、このスキルカード自身の性能が変化する",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-270903",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.132Z",
+    "name": {
+      "ja": "のんびり",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8852",
+          "refId": "effect-270903",
+          "refType": 1
+        },
+        {
+          "id": "r5083",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r1610",
+          "refId": "effect-559002",
+          "refType": 1
+        },
+        {
+          "id": "r8723",
+          "refId": "effect-897550",
+          "refType": 1
+        },
+        {
+          "id": "r5170",
+          "refId": "effect-822062",
+          "refType": 1
+        },
+        {
+          "id": "r5565",
+          "refId": "effect-646858",
+          "refType": 1
+        },
+        {
+          "id": "r8212",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r3608",
+          "refId": "effect-270903",
+          "refType": 1
+        },
+        {
+          "id": "r6423",
+          "refId": "effect-929039",
+          "refType": 1
+        },
+        {
+          "id": "r3471",
+          "refId": "effect-270903",
+          "refType": 1
+        },
+        {
+          "id": "r9353",
+          "refId": "effect-270903",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "指針を{r8852}に変更する",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r5083}上昇量と消費体力を100%減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "解除されたとき、{r1610}+5・{r8723}+1",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r5170}に変更または解除した場合、{r5565}+10",
+            "en": ""
+          }
+        },
+        {
+          "position": 4,
+          "body": {
+            "ja": "{r8212}に変更した場合、すべてのスキルカードのパラメータ値増加+10",
+            "en": ""
+          }
+        },
+        {
+          "position": 5,
+          "body": {
+            "ja": "",
+            "en": ""
+          }
+        },
+        {
+          "position": 6,
+          "body": {
+            "ja": "{r3608}は{r6423}3段階目に相当し、{r3471}から{r6423}には変更できない",
+            "en": ""
+          }
+        },
+        {
+          "position": 7,
+          "body": {
+            "ja": "{r6423}から{r9353}に変更した場合、{r6423}解除時の効果は発生しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-258488",
+    "createdAt": "2025-08-31T10:25:25.132Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "熱意追加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r5836",
+          "refId": "effect-646858",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5836}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-713956",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "熱意増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9196",
+          "refId": "effect-646858",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9196}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-784228",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "全力強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r7708",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r8061",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r7708}による{r8061}上昇量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-269599",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "強気強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2402",
+          "refId": "effect-822062",
+          "refType": 1
+        },
+        {
+          "id": "r6829",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2402}による{r6829}上昇量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-918577",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "集中増加量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3010",
+          "refId": "effect-613374",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r3010}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-883915",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "好調増加量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9034",
+          "refId": "effect-232703",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9034}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-642241",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "やる気増加量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4157",
+          "refId": "effect-536830",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r4157}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-326861",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "好印象増加量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2434",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2434}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-977897",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "全力値増加量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1398",
+          "refId": "effect-587016",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r1398}の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-593693",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "パラメータ上昇値増加量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "パラメータ上昇値増加量増加の増加量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-917831",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "絶好調減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4262",
+          "refId": "effect-132373",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r4262}を減少させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-237222",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "プライド",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r5696",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r2038",
+          "refId": "effect-536830",
+          "refType": 1
+        },
+        {
+          "id": "r8309",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5696}上昇量を{r2038}か{r8309}の最小値に応じて、1につき10%増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  },
+  {
+    "id": "effect-960245",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "好印象強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9103",
+          "refId": "effect-684366",
+          "refType": 1
+        },
+        {
+          "id": "r6329",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9103}による{r6329}上昇量を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": {
+      "color": "blue",
+      "shape": "diamond",
+      "iconAssetId": "",
+      "iconScale": 1
+    }
+  }
+]

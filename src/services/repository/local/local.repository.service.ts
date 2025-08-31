@@ -1,3 +1,5 @@
+import path from "node:path"
+import { readFileSync } from "jsonfile"
 import IRepositoryService, { ReferencePopulateMethods } from "@/services/repository/repository.service"
 import {
     Result,
@@ -15,162 +17,164 @@ import {
     DBSkill,
     DBPItem,
     DBAuditionEffect,
-    DBAuditionTerminology
+    DBAuditionTerminology, DBPDrink, DBPIdol
 } from "@hatsuboshi/types"
-import CharacterDataset from "@/services/repository/local/data/Character"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
-import AuditionEffectDataset from "@/services/repository/local/data/AuditionEffect"
-import AuditionTerminologyDataset from "@/services/repository/local/data/AuditionTerminology"
-import PDrinkDataset from "@/services/repository/local/data/PDrink"
-import PIdolDataset from "@/services/repository/local/data/PIdol"
-import PItemDataset from "@/services/repository/local/data/PItem"
-import SkillDataset from "@/services/repository/local/data/Skill"
-import SupportCardDataset from "@/services/repository/local/data/SupportCard"
+import InternalServerError from "@/errors/InternalServerError"
 
 export default class LocalRepositoryService implements IRepositoryService {
-    private readonly effects: AuditionEffect[]
-    private readonly terminologies: AuditionTerminology[]
-    private readonly characters: Character[]
-    private readonly drinks: PDrink[]
-    private readonly idols: PIdol[]
-    private readonly items: PItem[]
-    private readonly skills: Skill[]
-    private readonly supportCards: SupportCard[]
+    private readonly effects: DBAuditionEffect[]
+    private readonly terminologies: DBAuditionTerminology[]
+    private readonly characters: DBCharacter[]
+    private readonly drinks: DBPDrink[]
+    private readonly idols: DBPIdol[]
+    private readonly items: DBPItem[]
+    private readonly skills: DBSkill[]
+    // private readonly supportCards: DBSupportCard[]
+
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
-            const r = await this.getAuditionEffectById(id)
-            if (!r.success) throw new InvalidReferenceError("AuditionEffect", id)
-            return r.data.toDB()
+            const data = this.effects.find(x => x.id === id)
+            if (!data) throw new InvalidReferenceError("AuditionEffect", id)
+            return data
         },
         auditionTerminology: async (id: string): Promise<DBAuditionTerminology> => {
-            const r = await this.getAuditionTerminologyById(id)
-            if (!r.success) throw new InvalidReferenceError("AuditionTerminology", id)
-            return r.data.toDB()
+            const data = this.terminologies.find(x => x.id === id)
+            if (!data) throw new InvalidReferenceError("AuditionTerminology", id)
+            return data
         },
         character: async (id: string): Promise<DBCharacter> => {
-            const r = await this.getCharacterById(id)
-            if (!r.success) throw new InvalidReferenceError("Character", id)
-            return r.data.toDB()
+            const data = this.characters.find(x => x.id === id)
+            if (!data) throw new InvalidReferenceError("Character", id)
+            return data
         },
         skill: async (id: string): Promise<DBSkill> => {
-            const r = await this.getSkillById(id)
-            if (!r.success) throw new InvalidReferenceError("Skill", id)
-            return r.data.toDB()
+            const data = this.skills.find(x => x.id === id)
+            if (!data) throw new InvalidReferenceError("Skill", id)
+            return data
         },
         pItem: async (id: string): Promise<DBPItem> => {
-            const r = await this.getPItemById(id)
-            if (!r.success) throw new InvalidReferenceError("PItem", id)
-            return r.data.toDB()
+            const data = this.items.find(x => x.id === id)
+            if (!data) throw new InvalidReferenceError("PItem", id)
+            return data
         },
     }
 
-    private async init(): Promise<void> {
-        for await (const e of AuditionEffectDataset) {
-            this.effects.push(await AuditionEffect.fromDB(e, this.populateMethods))
-        }
-        for await (const t of AuditionTerminologyDataset) {
-            this.terminologies.push(await AuditionTerminology.fromDB(t, this.populateMethods))
-        }
-        for await (const c of CharacterDataset) {
-            this.characters.push(await Character.fromDB(c))
-        }
-        for await (const it of PItemDataset) {
-            this.items.push(await PItem.fromDB(it, this.populateMethods))
-        }
-        for await (const s of SkillDataset) {
-            this.skills.push(await Skill.fromDB(s, this.populateMethods))
-        }
-        for await (const d of PDrinkDataset) {
-            this.drinks.push(await PDrink.fromDB(d, this.populateMethods))
-        }
-        for await (const id of PIdolDataset) {
-            this.idols.push(await PIdol.fromDB(id, this.populateMethods))
-        }
-        for await (const sc of SupportCardDataset) {
-            this.supportCards.push(new SupportCard())  // TODO: fix after implementation
-        }
-    }
     constructor() {
-        this.effects = []
-        this.terminologies = []
-        this.characters = []
-        this.drinks = []
-        this.idols = []
-        this.items = []
-        this.skills = []
-        this.supportCards = []
-        this.init().then()
+        const dir = path.join(__dirname, "data")
+        this.effects = readFileSync(path.join(dir, "AuditionEffect.json"))
+        this.terminologies = readFileSync(path.join(dir, "AuditionTerminology.json"))
+        this.characters = readFileSync(path.join(dir, "Character.json"))
+        this.drinks = readFileSync(path.join(dir, "PDrink.json"))
+        this.idols = readFileSync(path.join(dir, "PIdol.json"))
+        this.items = readFileSync(path.join(dir, "PItem.json"))
+        this.skills = readFileSync(path.join(dir, "Skill.json"))
+        // this.supportCards = []
     }
 
     // AuditionEffect //
     async getAllAuditionEffects(): Promise<AuditionEffect[]> {
-        return this.effects
+        const data = []
+        for await (const d of this.effects)
+            data.push(await AuditionEffect.fromDB(d, this.populateMethods))
+        return data
     }
     async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
         const r = this.effects.find(i  => i.id == id)
-        return r ? success(r) : fail()
+        return r
+            ? success(await AuditionEffect.fromDB(r, this.populateMethods))
+            : fail()
     }
 
     // AuditionTerminology //
     async getAllAuditionTerminologies(): Promise<AuditionTerminology[]> {
-        return this.terminologies
+        const data = []
+        for await (const d of this.terminologies)
+            data.push(await AuditionTerminology.fromDB(d, this.populateMethods))
+        return data
     }
     async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
         const r = this.terminologies.find(i  => i.id == id)
-        return r ? success(r) : fail()
+        return r
+            ? success(await AuditionTerminology.fromDB(r, this.populateMethods))
+            : fail()
     }
 
     // Character //
     async getAllCharacters(): Promise<Character[]> {
-        return this.characters
+        const data = []
+        for await (const d of this.characters)
+            data.push(await Character.fromDB(d))
+        return data
     }
     async getCharacterById(id: string): Promise<Result<Character>> {
-        const r = this.characters.find(i => i.id === id)
-        return r ? success(r) : fail()
+        const r = this.characters.find(i  => i.id == id)
+        return r
+            ? success(await Character.fromDB(r))
+            : fail()
     }
 
     // PDrink //
     async getAllPDrinks(): Promise<PDrink[]> {
-        return this.drinks
+        const data = []
+        for await (const d of this.drinks)
+            data.push(await PDrink.fromDB(d, this.populateMethods))
+        return data
     }
     async getPDrinkById(id: string): Promise<Result<PDrink>> {
-        const r = this.drinks.find(i => i.id === id)
-        return r ? success(r) : fail()
+        const r = this.drinks.find(i  => i.id == id)
+        return r
+            ? success(await PDrink.fromDB(r, this.populateMethods))
+            : fail()
     }
 
     // PIdol //
     async getAllPIdols(): Promise<PIdol[]> {
-        return this.idols
+        const data = []
+        for await (const d of this.idols)
+            data.push(await PIdol.fromDB(d, this.populateMethods))
+        return data
     }
     async getPIdolById(id: string): Promise<Result<PIdol>> {
-        const r = this.idols.find(i => i.id === id)
-        return r ? success(r) : fail()
+        const r = this.idols.find(i  => i.id == id)
+        return r
+            ? success(await PIdol.fromDB(r, this.populateMethods))
+            : fail()
     }
 
     // PItem //
     async getAllPItems(): Promise<PItem[]> {
-        return this.items
+        const data = []
+        for await (const d of this.items)
+            data.push(await PItem.fromDB(d, this.populateMethods))
+        return data
     }
     async getPItemById(id: string): Promise<Result<PItem>> {
-        const r = this.items.find(i => i.id === id)
-        return r ? success(r) : fail()
+        const r = this.items.find(i  => i.id == id)
+        return r
+            ? success(await PItem.fromDB(r, this.populateMethods))
+            : fail()
     }
 
     // Skill //
     async getAllSkills(): Promise<Skill[]> {
-        return this.skills
+        const data = []
+        for await (const d of this.skills)
+            data.push(await Skill.fromDB(d, this.populateMethods))
+        return data
     }
     async getSkillById(id: string): Promise<Result<Skill>> {
-        const r = this.skills.find(i => i.id === id)
-        return r ? success(r) : fail()
+        const r = this.skills.find(i  => i.id == id)
+        return r
+            ? success(await Skill.fromDB(r, this.populateMethods))
+            : fail()
     }
 
     // SupportCard //
     async getAllSupportCards(): Promise<SupportCard[]> {
-        return this.supportCards
+        throw new InternalServerError("Not implemented.")
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
-        const r = this.supportCards.find(i => i.id === id)
-        return r ? success(r) : fail()
+        throw new InternalServerError("Not implemented.")
     }
 }

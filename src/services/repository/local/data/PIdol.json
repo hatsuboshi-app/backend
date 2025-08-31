@@ -1,0 +1,4754 @@
+[
+  {
+    "id": "idol-732957",
+    "createdAt": "2025-08-31T10:25:33.324Z",
+    "updatedAt": "2025-08-31T10:25:33.324Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-521205",
+    "signaturePItem": "item-997399",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 45
+    },
+    "initialGrowth": {
+      "vo": 20,
+      "da": 4,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-663380",
+    "createdAt": "2025-08-31T10:25:33.324Z",
+    "updatedAt": "2025-08-31T10:25:33.324Z",
+    "name": {
+      "ja": "初恋",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-521113",
+    "signaturePItem": "item-955251",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 45
+    },
+    "initialGrowth": {
+      "vo": 20,
+      "da": 4,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-270344",
+    "createdAt": "2025-08-31T10:25:33.324Z",
+    "updatedAt": "2025-08-31T10:25:33.324Z",
+    "name": {
+      "ja": "はじまりはカッコよく",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "sr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-719213",
+    "signaturePItem": "item-173132",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 70,
+      "da": 60,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 21,
+      "da": 5,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-393196",
+    "createdAt": "2025-08-31T10:25:33.324Z",
+    "updatedAt": "2025-08-31T10:25:33.324Z",
+    "name": {
+      "ja": "Fluorite",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-767812",
+    "signaturePItem": "item-834358",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 6,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-373187",
+    "createdAt": "2025-08-31T10:25:33.324Z",
+    "updatedAt": "2025-08-31T10:25:33.324Z",
+    "name": {
+      "ja": "キミとセミブルー",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-805447",
+    "signaturePItem": "item-488813",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 6,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-470452",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "Feel Jewel Dream",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-665692",
+    "signaturePItem": "item-678659",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 6,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-616436",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-230396",
+    "signaturePItem": "item-153715",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 6,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-649102",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "雪解けに",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-613454",
+    "signaturePItem": "item-361304",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 6,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-588044",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "ミラクルナナウ(ﾟ∀ﾟ)！",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-400477",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-425303",
+    "signaturePItem": "item-193481",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 6,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-506050",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-921086",
+    "signaturePItem": "item-589018",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 55,
+      "da": 45,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 4,
+      "da": 17,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-583713",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "初声",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-419616",
+    "signaturePItem": "item-948597",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 55,
+      "da": 45,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 4,
+      "da": 17,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-571551",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "カワイイ♡はじめました",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "sr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-409644",
+    "signaturePItem": "item-330876",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 60,
+      "da": 50,
+      "vi": 70
+    },
+    "initialGrowth": {
+      "vo": 5,
+      "da": 17,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-611498",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "世界一可愛い私",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-176557",
+    "signaturePItem": "item-474369",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-615447",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "Yellow Big Bang！",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-347320",
+    "signaturePItem": "item-771624",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-125505",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "冠菊",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-266504",
+    "signaturePItem": "item-438533",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-193823",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "White Night! White Wish!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-569425",
+    "signaturePItem": "item-388644",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-121634",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-732274",
+    "signaturePItem": "item-471146",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-839029",
+    "createdAt": "2025-08-31T10:25:33.325Z",
+    "updatedAt": "2025-08-31T10:25:33.325Z",
+    "name": {
+      "ja": "雨上がりのアイリス",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-203352",
+    "signaturePItem": "item-263290",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-825836",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "自己肯定感爆上げ↑↑しゅきしゅきソング",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-538531",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-282007",
+    "signaturePItem": "item-685021",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 6,
+      "da": 18,
+      "vi": 22
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-171531",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-639378",
+    "rarity": "r",
+    "plan": "anomaly",
+    "subplan": "preserve",
+    "isWelfare": false,
+    "signatureSkill": "skill-624021",
+    "signaturePItem": "item-612835",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 55,
+      "da": 60,
+      "vi": 70
+    },
+    "initialGrowth": {
+      "vo": 20,
+      "da": 8,
+      "vi": 14
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-601660",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "初陣",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-639378",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-270492",
+    "signaturePItem": "item-886929",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 55,
+      "da": 60,
+      "vi": 70
+    },
+    "initialGrowth": {
+      "vo": 20,
+      "da": 8,
+      "vi": 14
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-987476",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "ゆっくり、一歩ずつ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-639378",
+    "rarity": "sr",
+    "plan": "anomaly",
+    "subplan": "preserve",
+    "isWelfare": false,
+    "signatureSkill": "skill-895014",
+    "signaturePItem": "item-552609",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 60,
+      "da": 65,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 21,
+      "da": 9,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-550502",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "ツキノカメ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-639378",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "preserve",
+    "isWelfare": false,
+    "signatureSkill": "skill-481007",
+    "signaturePItem": "item-272356",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 70,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 10,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-410467",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-639378",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-795955",
+    "signaturePItem": "item-443700",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 70,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 10,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-478993",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Star-mine",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-639378",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-567039",
+    "signaturePItem": "item-272503",
+    "initialStamina": 27,
+    "initialParameter": {
+      "vo": 65,
+      "da": 70,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 10,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-779426",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-429439",
+    "signaturePItem": "item-401888",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 50,
+      "da": 60,
+      "vi": 45
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 17,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-746716",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "初心",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-902159",
+    "signaturePItem": "item-524749",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 50,
+      "da": 60,
+      "vi": 45
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 17,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-997502",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "『私らしさ』のはじまり",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "sr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-376292",
+    "signaturePItem": "item-930343",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 55,
+      "da": 65,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 18,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-184568",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "clumsy trick",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-919971",
+    "signaturePItem": "item-334718",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-983159",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "キミとセミブルー",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-377521",
+    "signaturePItem": "item-706094",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-248792",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "L.U.V",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-354675",
+    "signaturePItem": "item-770140",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-889537",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "ようこそ初星温泉",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-235642",
+    "signaturePItem": "item-836371",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-774762",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-641750",
+    "signaturePItem": "item-594649",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-554718",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "ハッピーミルフィーユ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-259287",
+    "signaturePItem": "item-338813",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-420823",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Howling over the World",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-401440",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-920191",
+    "signaturePItem": "item-697520",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 70,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 19,
+      "vi": 21
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-475193",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-710329",
+    "signaturePItem": "item-752288",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 65,
+      "da": 65,
+      "vi": 70
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 11,
+      "vi": 13
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-115802",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "初声",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-580700",
+    "signaturePItem": "item-383936",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 65,
+      "da": 65,
+      "vi": 70
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 11,
+      "vi": 13
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-889630",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "わたしが一番！",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "sr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-814105",
+    "signaturePItem": "item-414896",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 70,
+      "da": 70,
+      "vi": 75
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 13
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-713650",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Fighting My Way",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-176002",
+    "signaturePItem": "item-248864",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-432254",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Boom Boom Pow",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-335065",
+    "signaturePItem": "item-555493",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-965343",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "冠菊",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-713247",
+    "signaturePItem": "item-428679",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-239711",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "古今東西ちょちょいのちょい",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-139200",
+    "signaturePItem": "item-790802",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-171498",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-488953",
+    "signaturePItem": "item-331631",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-769380",
+    "createdAt": "2025-08-31T10:25:33.326Z",
+    "updatedAt": "2025-08-31T10:25:33.326Z",
+    "name": {
+      "ja": "桜フォトグラフ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-683428",
+    "signaturePItem": "item-224969",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-852074",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "雨上がりのアイリス",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-301404",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-202625",
+    "signaturePItem": "item-574348",
+    "initialStamina": 32,
+    "initialParameter": {
+      "vo": 75,
+      "da": 75,
+      "vi": 80
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 12,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-943575",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-641697",
+    "signaturePItem": "item-229041",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 40,
+      "da": 50,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 16,
+      "da": 19,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-482295",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "初陣",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-366073",
+    "signaturePItem": "item-646419",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 40,
+      "da": 50,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 16,
+      "da": 19,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-781651",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "アイドル、はじめっ！",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "sr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-252843",
+    "signaturePItem": "item-358623",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 45,
+      "da": 55,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 16,
+      "da": 20,
+      "vi": 11
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-697568",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "The Rolling Riceball",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-588220",
+    "signaturePItem": "item-694686",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 50,
+      "da": 60,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 17,
+      "da": 20,
+      "vi": 12
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-604858",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "White Night! White Wish!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-183943",
+    "signaturePItem": "item-591778",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 50,
+      "da": 60,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 17,
+      "da": 20,
+      "vi": 12
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-285533",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-937307",
+    "signaturePItem": "item-390592",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 50,
+      "da": 60,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 17,
+      "da": 20,
+      "vi": 12
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-425704",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Star-mine",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-900930",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-105816",
+    "signaturePItem": "item-742024",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 50,
+      "da": 60,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 17,
+      "da": 20,
+      "vi": 12
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-711270",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "r",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-674467",
+    "signaturePItem": "item-260509",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 110,
+      "da": 80,
+      "vi": 85
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 4,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-442099",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "初陣",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-332028",
+    "signaturePItem": "item-320586",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 110,
+      "da": 80,
+      "vi": 85
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 4,
+      "vi": 15
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-707021",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "一番星",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "sr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-717041",
+    "signaturePItem": "item-564371",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 120,
+      "da": 90,
+      "vi": 95
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 5,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-128340",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "小さな野望",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-154266",
+    "signaturePItem": "item-478451",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 130,
+      "da": 100,
+      "vi": 105
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 6,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-439625",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-776034",
+    "signaturePItem": "item-423760",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 130,
+      "da": 100,
+      "vi": 105
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 6,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-485281",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "ハッピーミルフィーユ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-932994",
+    "signaturePItem": "item-106131",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 130,
+      "da": 100,
+      "vi": 105
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 6,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-314064",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Our Chant",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-760654",
+    "signaturePItem": "item-722557",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 130,
+      "da": 100,
+      "vi": 105
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 6,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-417346",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Star-mine",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-933562",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-744444",
+    "signaturePItem": "item-542168",
+    "initialStamina": 31,
+    "initialParameter": {
+      "vo": 130,
+      "da": 100,
+      "vi": 105
+    },
+    "initialGrowth": {
+      "vo": 11,
+      "da": 6,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-995731",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-656401",
+    "signaturePItem": "item-639186",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 45,
+      "da": 45,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 23,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-144269",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "初心",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-835840",
+    "signaturePItem": "item-367325",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 45,
+      "da": 45,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 23,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-617348",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "胸を張って一歩ずつ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "sr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-164521",
+    "signaturePItem": "item-493176",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 50,
+      "da": 50,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-303927",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Wonder Scale",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-868674",
+    "signaturePItem": "item-519176",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-318756",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "日々、発見的ステップ！",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-319990",
+    "signaturePItem": "item-482584",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-848624",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "仮装狂騒曲",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-618187",
+    "signaturePItem": "item-797729",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-758404",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "ようこそ初星温泉",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-828095",
+    "signaturePItem": "item-964209",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-472216",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-215941",
+    "signaturePItem": "item-725509",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-760463",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "雪解けに",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-304822",
+    "signaturePItem": "item-288169",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-284309",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "Howling over the World",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-636972",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-897002",
+    "signaturePItem": "item-544569",
+    "initialStamina": 23,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 10,
+      "da": 23,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-690647",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-214074",
+    "signaturePItem": "item-244197",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 45,
+      "da": 45,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 16,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-376154",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "初心",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-108172",
+    "signaturePItem": "item-136675",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 45,
+      "da": 45,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 12,
+      "da": 16,
+      "vi": 16
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-595825",
+    "createdAt": "2025-08-31T10:25:33.327Z",
+    "updatedAt": "2025-08-31T10:25:33.327Z",
+    "name": {
+      "ja": "一つ踏み出した先に",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "sr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-878723",
+    "signaturePItem": "item-111588",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 50,
+      "da": 50,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 13,
+      "da": 16,
+      "vi": 17
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-184782",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "白線",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-799975",
+    "signaturePItem": "item-840255",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-246803",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "冠菊",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-408463",
+    "signaturePItem": "item-741306",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-730393",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "White Night! White Wish!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-165216",
+    "signaturePItem": "item-120746",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-608937",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-106657",
+    "signaturePItem": "item-981370",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-982204",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "極光",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-848774",
+    "signaturePItem": "item-144127",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-274658",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "桜フォトグラフ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-247883",
+    "signaturePItem": "item-641970",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-875865",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Howling over the World",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-844244",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-887067",
+    "signaturePItem": "item-350143",
+    "initialStamina": 28,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 14,
+      "da": 16,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-179858",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-196059",
+    "signaturePItem": "item-167944",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 45,
+      "da": 45,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 21,
+      "da": 15,
+      "vi": 8
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-361383",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "初恋",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-315791",
+    "signaturePItem": "item-609073",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 45,
+      "da": 45,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 21,
+      "da": 15,
+      "vi": 8
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-806450",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "一番向いてないこと",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "sr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-970622",
+    "signaturePItem": "item-474643",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 50,
+      "da": 50,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 17,
+      "vi": 9
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-442976",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "光景",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-784793",
+    "signaturePItem": "item-939787",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 18,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-892976",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "コントラスト",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-831385",
+    "signaturePItem": "item-677863",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 18,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-929406",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "仮装狂騒曲",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-534494",
+    "signaturePItem": "item-509526",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 18,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-878750",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-596677",
+    "signaturePItem": "item-643545",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 18,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-461022",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "ハッピーミルフィーユ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-629169",
+    "signaturePItem": "item-424057",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 18,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-509990",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "サンフェーデッド",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-587539",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-740735",
+    "signaturePItem": "item-542176",
+    "initialStamina": 22,
+    "initialParameter": {
+      "vo": 55,
+      "da": 55,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 22,
+      "da": 18,
+      "vi": 10
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-473205",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-613030",
+    "signaturePItem": "item-770027",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 55,
+      "da": 45,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 7,
+      "da": 20,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-203668",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "初恋",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-389216",
+    "signaturePItem": "item-600069",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 55,
+      "da": 45,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 7,
+      "da": 20,
+      "vi": 18
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-414087",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "夢へのリスタート",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "sr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-297581",
+    "signaturePItem": "item-868940",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 60,
+      "da": 50,
+      "vi": 60
+    },
+    "initialGrowth": {
+      "vo": 8,
+      "da": 20,
+      "vi": 19
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-987605",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Tame-Lie-One-Step",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-891630",
+    "signaturePItem": "item-521898",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-160371",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "キミとセミブルー",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-959842",
+    "signaturePItem": "item-839081",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-818865",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "カクシタワタシ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "fullPower",
+    "isWelfare": false,
+    "signatureSkill": "skill-461436",
+    "signaturePItem": "item-309339",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-896376",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-854026",
+    "signaturePItem": "item-607382",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-121101",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "桜フォトグラフ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-355977",
+    "signaturePItem": "item-102859",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-745254",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Love & Joy",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-347423",
+    "signaturePItem": "item-207400",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-691047",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "ミラクルナナウ(ﾟ∀ﾟ)！",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-871033",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-386734",
+    "signaturePItem": "item-509692",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 65
+    },
+    "initialGrowth": {
+      "vo": 9,
+      "da": 20,
+      "vi": 20
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-999265",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "学園生活",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "r",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-699067",
+    "signaturePItem": "item-422942",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 45
+    },
+    "initialGrowth": {
+      "vo": 23,
+      "da": 15,
+      "vi": 4
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-770168",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "初声",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "r",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-343215",
+    "signaturePItem": "item-966060",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 65,
+      "da": 55,
+      "vi": 45
+    },
+    "initialGrowth": {
+      "vo": 23,
+      "da": 15,
+      "vi": 4
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-937067",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "一匹狼",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "sr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-691910",
+    "signaturePItem": "item-945039",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 70,
+      "da": 60,
+      "vi": 50
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 15,
+      "vi": 5
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-237858",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Luna say maybe",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-238774",
+    "signaturePItem": "item-413112",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 16,
+      "vi": 6
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-800015",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "アイヴイ",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "impression",
+    "isWelfare": false,
+    "signatureSkill": "skill-984428",
+    "signaturePItem": "item-382597",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 16,
+      "vi": 6
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-609065",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "仮装狂騒曲",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "ssr",
+    "plan": "logic",
+    "subplan": "motivation",
+    "isWelfare": false,
+    "signatureSkill": "skill-214845",
+    "signaturePItem": "item-274949",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 16,
+      "vi": 6
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-195809",
+    "createdAt": "2025-08-31T10:25:33.328Z",
+    "updatedAt": "2025-08-31T10:25:33.328Z",
+    "name": {
+      "ja": "Campus mode!!",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "focus",
+    "isWelfare": false,
+    "signatureSkill": "skill-820822",
+    "signaturePItem": "item-623393",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 16,
+      "vi": 6
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-693861",
+    "createdAt": "2025-08-31T10:25:33.329Z",
+    "updatedAt": "2025-08-31T10:25:33.329Z",
+    "name": {
+      "ja": "雪解けに",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "ssr",
+    "plan": "anomaly",
+    "subplan": "confident",
+    "isWelfare": false,
+    "signatureSkill": "skill-889319",
+    "signaturePItem": "item-174076",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 16,
+      "vi": 6
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  },
+  {
+    "id": "idol-674152",
+    "createdAt": "2025-08-31T10:25:33.329Z",
+    "updatedAt": "2025-08-31T10:25:33.329Z",
+    "name": {
+      "ja": "雨上がりのアイリス",
+      "en": "",
+      "ro": ""
+    },
+    "visual": {
+      "default": {
+        "regular": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        },
+        "idolized": {
+          "thumbnailAssetUrl": "",
+          "fullAssetUrl": ""
+        }
+      },
+      "another": []
+    },
+    "character": "character-881337",
+    "rarity": "ssr",
+    "plan": "sense",
+    "subplan": "goodShape",
+    "isWelfare": false,
+    "signatureSkill": "skill-493466",
+    "signaturePItem": "item-776662",
+    "initialStamina": 30,
+    "initialParameter": {
+      "vo": 75,
+      "da": 65,
+      "vi": 55
+    },
+    "initialGrowth": {
+      "vo": 24,
+      "da": 16,
+      "vi": 6
+    },
+    "initialAbilities": [],
+    "trainingLevels": [],
+    "potentialLevels": []
+  }
+]

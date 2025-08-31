@@ -1,0 +1,4197 @@
+[
+  {
+    "id": "terminology-933204",
+    "createdAt": "2025-08-31T10:25:25.130Z",
+    "updatedAt": "2025-08-31T10:25:25.130Z",
+    "name": {
+      "ja": "パラメータ",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-619465",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ボーカル上昇",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-138490",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ダンス上昇",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-199072",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ビジュアル上昇",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-167836",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ボーカル低下",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-811357",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ダンス低下",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-924678",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ビジュアル低下",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-948349",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ボーカルレッスンボーナス+",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-535726",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ダンスレッスンボーナス+",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-889478",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ビジュアルレッスンボーナス+",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-220094",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ボーカルレッスンボーナス-",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-104569",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ダンスレッスンボーナス-",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-964248",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ビジュアルレッスンボーナス-",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-511718",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力回復",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-939994",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力割合回復",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-458214",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-853741",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力割合減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-214262",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力変更",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-660283",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力回復量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-216579",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力回復量減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-657466",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力減少量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-567936",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力減少量軽減",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-708097",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "体力回復無効",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-828784",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "最大体力増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-154857",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "最大体力減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-130787",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "最大体力割合減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-145803",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-353832",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント割合減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-934340",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント変更",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-193896",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント獲得量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-662336",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント獲得量減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-862052",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント減少量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-710406",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント減少量減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-610744",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードをプロデュース終了まで強化",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-235727",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "コピー",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードをコピーし、プロデュース終了までデッキに追加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-320494",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "コピーして強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-179675",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "チェンジ",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードを異なるスキルカードに変え、プロデュース終了までデッキに追加（強化段階を引き継ぐ）",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-278137",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "チェンジして強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-664274",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "削除",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードをプロデュース終了までデッキから削除",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-366079",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント獲得",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-766597",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pポイント獲得不可",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-582935",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pアイテム獲得不可",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-363764",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "Pドリンク獲得不可",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-726846",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "報酬獲得",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-273250",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "報酬獲得",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-893873",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "スコアボーナス増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-400025",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "SPレッスン発生率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-869017",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ボーカルSPレッスン発生率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-112372",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ダンスSPレッスン発生率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-785770",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ビジュアルSPレッスン発生率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-991085",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "SPレッスン発生率減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-694806",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "レッスン時発生効果",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-679940",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "レッスン報酬のスキルカード選択肢追加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-996813",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "レッスン報酬のスキルカード選択肢減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-592564",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談の全項目を割引",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-200687",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカードを割引",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "相談のを割引",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-311544",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のPドリンクを割引",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-895130",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカード強化を割引",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-704507",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカード強化を変更",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-952773",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカード削除を割引",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-178315",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカード強化を変更",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-589530",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "プロデュース完了時の獲得マニー増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-602955",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "プロデュース完了時のサポートPt増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-308971",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "サポートイベントの体力回復量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-473614",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "サポートイベントのPポイント獲得量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-665384",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "サポートイベントのパラメータ上昇量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-531107",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "サポートイベント発生率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-449915",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "レッスン報酬のPポイント獲得量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-713265",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "レッスンサポート発生率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-421541",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "再抽選回数増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-307730",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "初期Pポイント増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-707816",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ターン数増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-845516",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ターン数減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-954027",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ライバルのスコア増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9613",
+          "refId": "terminology-149006",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "以降の{r9613}でライバルのスコアが増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-210998",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談の全項目を割増",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-187216",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカードを割増",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-519053",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のPドリンクを割増",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-164894",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカード強化を割増",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-672088",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "相談のスキルカード削除を割増",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-307199",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "授業の消費体力増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-445411",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "授業の消費体力減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-559766",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "お出かけの消費Pポイント増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-321598",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "お出かけの消費Pポイント減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-122368",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "試験前体力回復量増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-122544",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "試験前体力回復量減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-232966",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "スキルカード除去",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "除去したスキルカードは、プロデュース終了まで登場しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-614624",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "アクティブスキルカード",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r5735",
+          "refId": "terminology-933204",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5735}上昇効果を主とするスキルカード",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-507622",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "やる気値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "やる気増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-417398",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "やる気値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "やる気増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-149006",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "試験・オーディション",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-379317",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "元気値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3391",
+          "refId": "effect-819092",
+          "refType": 1
+        },
+        {
+          "id": "r5560",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r1425",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r3391}増加値を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r3391}増加効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r5560}と{r1425}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-980574",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "元気値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r7282",
+          "refId": "effect-819092",
+          "refType": 1
+        },
+        {
+          "id": "r1420",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r4832",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r7282}増加値が減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r7282}増加効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "増加値は0にならない",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r1420}と{r4832}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-719270",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "商業施設",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "強化済みのスキルカードを獲得できる営業",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-325016",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "企業イベント会場",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "Pドリンクを獲得できる営業",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-878688",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "自治体イベント会場",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "Pポイントを獲得できる営業",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-735943",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "リゾート施設",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "体力を回復する営業",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-155951",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ドロー枚数増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ドロー枚数を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-601524",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "ドロー枚数減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ドロー枚数が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-556341",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "成長効果置換",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "成長効果置換",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-410408",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2835",
+          "refId": "effect-440240",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な体力が増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "強化状態・{r2835}コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-220727",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "やる気コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6705",
+          "refId": "effect-536830",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r6705}を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-414199",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "やる気コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4300",
+          "refId": "effect-536830",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r4300}を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-640928",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "強化状態コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な強化状態コストが増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-201826",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "強化状態コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な強化状態コストを減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-992826",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "全力値コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6698",
+          "refId": "effect-587016",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r6698}を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-991499",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "全力値コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1782",
+          "refId": "effect-587016",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r1782}を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-317415",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "集中コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8741",
+          "refId": "effect-613374",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r8741}を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-568981",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "集中コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4212",
+          "refId": "effect-613374",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r4212}を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-916497",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "好調コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3893",
+          "refId": "effect-232703",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r3893}を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-687487",
+    "createdAt": "2025-08-31T10:25:25.133Z",
+    "updatedAt": "2025-08-31T10:25:25.133Z",
+    "name": {
+      "ja": "絶好調コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4482",
+          "refId": "effect-132373",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r4482}を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-910056",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "絶好調コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r7867",
+          "refId": "effect-132373",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r7867}を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-491242",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好調コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8410",
+          "refId": "effect-232703",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r8410}を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-112269",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "体力消費コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3833",
+          "refId": "effect-440240",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r3833}コストが増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-981604",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "体力消費コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4810",
+          "refId": "effect-440240",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r4810}コストを減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-362550",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8716",
+          "refId": "effect-440240",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な体力を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "強化状態・{r8716}コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-653423",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好印象コスト値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3488",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r3488}を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-763248",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好印象コスト値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8524",
+          "refId": "effect-684366",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードの使用に必要な{r8524}を減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "異なる強化状態コストには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-349069",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "効果追加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "効果追加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-736218",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "効果置換",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "効果置換",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-260614",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "効果削除",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "効果削除",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-544492",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "倍",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "強化状態や低下状態の影響を受けず、対象の効果を増加させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-913856",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "疲労",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン開始時、体力が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-544881",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "疲労",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "筋肉痛が1増加するごとに、ターン開始時に体力が1減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-445956",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "使用回数持ち越し",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン終了時に残っているスキルカード使用回数を次ターンに持ち越す",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-802137",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "カード効果増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "exam_template利用",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-605147",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "消費体力増加無効",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力増加状態にならない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-272507",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "全力値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3363",
+          "refId": "effect-587016",
+          "refType": 1
+        },
+        {
+          "id": "r6376",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r5195",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r3363}増加値を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r3363}増加効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r6376}と{r5195}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-767487",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "全力値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2006",
+          "refId": "effect-587016",
+          "refType": 1
+        },
+        {
+          "id": "r2640",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r2671",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2006}増加値が減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r2006}増加効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "増加値は0にならない",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r2640}と{r2671}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-337956",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "ほしのきらめき",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "「十王邦夫のアイドル強化月間〜星々のきらめき〜」で獲得できるアイテム。イベントガシャで使用できます。",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-435364",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "開始時手札効果付与",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "開始時手札効果付与",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-895574",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "パラメータ値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3460",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r1880",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r7977",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r3460}上昇値を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r3460}上昇効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r1880}と{r7977}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-383971",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "パラメータボーナス",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "レッスン・自主レッスン・オーディションによるパラメータ上昇を増加させる",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-125640",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "集中値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "集中増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-875437",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "集中値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "集中増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-830093",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "パラメータ上昇回数増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9334",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r1032",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r1849",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9334}上昇回数を増加",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r9334}上昇効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r1032}と{r1849}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-786172",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "パラメータ上昇回数減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r8423",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r7412",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r9943",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r8423}上昇回数が減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r8423}上昇効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "上昇回数は0にならない",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r7412}と{r9943}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-598739",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "元気分パラメータ倍率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "元気分パラメータ倍率増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-471099",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "やる気分パラメータ倍率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "やる気分パラメータ倍率増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-798096",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好印象分パラメータ倍率増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "好印象分パラメータ倍率増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-246425",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "パラメータ値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r7549",
+          "refId": "terminology-933204",
+          "refType": 0
+        },
+        {
+          "id": "r8494",
+          "refId": "effect-928926",
+          "refType": 1
+        },
+        {
+          "id": "r9717",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r7549}上昇値が減少",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r7549}上昇効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "上昇値は0にならない",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r8494}と{r9717}には影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-638114",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "一時強化",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ターン終了時まで強化",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-284106",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "メンタルスキルカード",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r4427",
+          "refId": "effect-819092",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r4427}など補助効果を主とするスキルカード",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-699538",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "[移動効果]",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "このスキルカードが指定の場所に移動した場合に発動する",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-626367",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "重複不可",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "複数所持できず、追加入手やコピーはできない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-696068",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "直接効果",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r1314",
+          "refId": "effect-106834",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "スキルカードとPドリンクの使用時に発動する効果（{r1314}を除く）",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-364192",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "絶好調値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "絶好調増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-694101",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "絶好調値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "絶好調増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-732618",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好調値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "好調増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-744694",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好調値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "好調増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-803848",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "効果発動条件を置換",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "効果発動条件を置換",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-221441",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "使用後移動先変更",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "使用後移動先変更",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-761183",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "使用可能条件を置換",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "使用可能条件を置換",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-125522",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "[成長補助]",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "レッスン終了まで、スキルカードの性能を変化させる",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "対象の効果を持たないスキルカードには影響しない",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-575027",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "レッスン中1回",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "中に1回使用すると、そのレッスンが終了するまで、除外に移動する",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-860883",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "山札の一番上",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-599672",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "山札の一番下",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-920985",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "山札のランダムな位置",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-386819",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "捨札",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-475776",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "手札",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-214453",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "保留",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r5188",
+          "refId": "effect-353609",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5188}に変更時、手札に移動する",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "スキルカードを2枚まで保存でき、2枚を超えると古い順に捨札に送る",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-153248",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "除外",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": []
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-723805",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "共通",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "全プラン共通",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-463715",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "センス",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9571",
+          "refId": "effect-232703",
+          "refType": 1
+        },
+        {
+          "id": "r3538",
+          "refId": "effect-613374",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "「{r9571}」や「{r3538}」を活用して育成するプラン",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-264769",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "ロジック",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r3258",
+          "refId": "effect-684366",
+          "refType": 1
+        },
+        {
+          "id": "r8490",
+          "refId": "effect-536830",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "「{r3258}」や「{r8490}」を活用して育成するプラン",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-984972",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "アノマリー",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6220",
+          "refId": "terminology-340783",
+          "refType": 0
+        },
+        {
+          "id": "r6078",
+          "refId": "effect-353609",
+          "refType": 1
+        },
+        {
+          "id": "r7404",
+          "refId": "effect-822062",
+          "refType": 1
+        },
+        {
+          "id": "r9538",
+          "refId": "effect-929039",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r6220}「{r6078}」「{r7404}」「{r9538}」を活用して育成するプラン",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-929611",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "【センス専用】",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r2968",
+          "refId": "terminology-463715",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "プランが{r2968}のアイドルをプロデュースしている場合のみ発動",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-168678",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "【ロジック専用】",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r9990",
+          "refId": "terminology-264769",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "プランが{r9990}のアイドルをプロデュースしている場合のみ発動",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-736772",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "【アノマリー専用】",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6699",
+          "refId": "terminology-984972",
+          "refType": 0
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "プランが{r6699}のアイドルをプロデュースしている場合のみ発動",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-337659",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "学園活動",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "学園活動は、以下のスケジュールを含む",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "授業・営業",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-782959",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "プレゼント",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "プレゼントは、以下のスケジュールを含む",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "活動支給・差し入れ",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-993312",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好印象値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "好印象増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-153950",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "好印象値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "好印象増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-995209",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "消費体力増加値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力を増加増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-241701",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "消費体力増加値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力を増加増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-962343",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "消費体力減少値増加",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力が減少増加値を増加",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-555944",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "消費体力減少値減少",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "消費体力が減少増加値が減少",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-340783",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "指針",
+      "en": ""
+    },
+    "description": {
+      "refs": [
+        {
+          "id": "r6545",
+          "refId": "effect-929039",
+          "refType": 1
+        },
+        {
+          "id": "r2609",
+          "refId": "effect-822062",
+          "refType": 1
+        },
+        {
+          "id": "r1293",
+          "refId": "effect-353609",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "「{r6545}」「{r2609}」「{r1293}」があり、それぞれが異なる効果を持つ",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  },
+  {
+    "id": "terminology-849521",
+    "createdAt": "2025-08-31T10:25:25.134Z",
+    "updatedAt": "2025-08-31T10:25:25.134Z",
+    "name": {
+      "ja": "トラブルカード",
+      "en": ""
+    },
+    "description": {
+      "refs": [],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "使用不可など、レッスンの邪魔になるスキルカード",
+            "en": ""
+          }
+        }
+      ]
+    },
+    "icon": null,
+    "isHighlighted": false
+  }
+]

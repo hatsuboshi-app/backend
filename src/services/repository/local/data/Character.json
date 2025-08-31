@@ -1,0 +1,1736 @@
+[
+  {
+    "id": "character-400477",
+    "createdAt": "2025-08-31T10:25:24.929Z",
+    "updatedAt": "2025-08-31T10:25:24.930Z",
+    "lastName": {
+      "ja": "有村",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "麻央",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "C45DC8",
+      "gradient1": "C45DC9",
+      "gradient2": "FDAFA6",
+      "text": "E14DCB",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 157,
+      "weight": 46,
+      "threeSizes": [
+        85,
+        53,
+        85
+      ],
+      "age": 17,
+      "birthday": {
+        "month": "17",
+        "day": "18"
+      },
+      "grade": {
+        "ja": "3年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "A",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "やぎ座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "七瀬 つむぎ",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "兵庫県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "格闘技、手先が器用",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "他人の面倒を見ること、観劇",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "カッコいいアイドルを目指す小柄な3年生。後輩達からは小さな王子様として慕われている。\n幼い頃から歌劇のスターに憧れ、子役として活躍していたが、\n最近は彼女の理想とするイメージと身体の成長のギャップに悩んでいる。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 10,
+          "da": 0,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 5
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 15,
+          "da": 0,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 0,
+          "da": 2,
+          "vi": 0
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-103963",
+    "createdAt": "2025-08-31T10:25:24.931Z",
+    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "lastName": {
+      "ja": "雨夜",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "燕",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "8874FF",
+      "gradient1": "8874FF",
+      "gradient2": "C8BAFF",
+      "text": "8874FF",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-538531",
+    "createdAt": "2025-08-31T10:25:24.931Z",
+    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "lastName": {
+      "ja": "藤田",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "ことね",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "FFD203",
+      "gradient1": "F8D721",
+      "gradient2": "FFB5DA",
+      "text": "E6A800",
+      "label": "333333"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 156,
+      "weight": 40,
+      "threeSizes": [
+        75,
+        55,
+        75
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "29"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "O",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "おうし座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "飯田 ヒカル",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "埼玉県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "ダンス、人の顔と名前を覚えること",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "お金を稼ぐこと",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "「稼げるアイドル」を目指すムードメーカー。\n中等部からの内部進学組。ダンスの才能に富む。\n学園評価、自己評価ともに低いが、本調子ではないように見える。\nたくさんのアルバイトを掛け持ちしているせいで、いつも疲れているようだ。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 0,
+          "da": 6,
+          "vi": 0
+        },
+        "stamina": 4
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 0,
+          "da": 10,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 2,
+          "da": 0.5,
+          "vi": 0.5
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-639378",
+    "createdAt": "2025-08-31T10:25:24.931Z",
+    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "lastName": {
+      "ja": "秦谷",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "美鈴",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "6EA3FC",
+      "gradient1": "6EA4FC",
+      "gradient2": "D4AFFF",
+      "text": "4BA5FF",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 160,
+      "weight": 42,
+      "threeSizes": [
+        73,
+        54,
+        74
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "6"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "B",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "みずがめ座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "春咲 暖",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "京都府",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "料理、生け花、体内時計が正確",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "お昼寝、お散歩",
+        "en": ""
+      },
+      "introduction": {
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 25,
+          "vi": 25
+        },
+        "growth": {
+          "vo": 4,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 0,
+          "da": 10,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 1,
+          "da": 0,
+          "vi": 2
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-401440",
+    "createdAt": "2025-08-31T10:25:24.931Z",
+    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "lastName": {
+      "ja": "姫崎",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "莉波",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "FD7EC2",
+      "gradient1": "FD7EC2",
+      "gradient2": "F4B9FF",
+      "text": "FF6EAB",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 166,
+      "weight": 56,
+      "threeSizes": [
+        90,
+        59,
+        93
+      ],
+      "age": 17,
+      "birthday": {
+        "month": "17",
+        "day": "5"
+      },
+      "grade": {
+        "ja": "3年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "A",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "うお座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "薄井 友里",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "福岡県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "料理、裁縫・手芸",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "カフェ巡り、コスメ集め",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "大人びた雰囲気のある3年生。面倒見のいい寮のみんなのお姉さん。\n過去にユニットに所属していたこともあるが、結果は振るわなかった。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 5
+        },
+        "growth": {
+          "vo": 0,
+          "da": 2.5,
+          "vi": 2.5
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 0,
+          "da": 15,
+          "vi": 25
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-301404",
+    "createdAt": "2025-08-31T10:25:24.931Z",
+    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "lastName": {
+      "ja": "花海",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "咲季",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "FF4F64",
+      "gradient1": "FF5064",
+      "gradient2": "FFBBA7",
+      "text": "F83148",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 152,
+      "weight": 45,
+      "threeSizes": [
+        84,
+        55,
+        80
+      ],
+      "age": 16,
+      "birthday": {
+        "month": "16",
+        "day": "2"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "A",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "おひつじ座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "長月 あおい",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "左",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "愛知県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "運動全般、家事全般、マッサージ",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "勝負ごと全般",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "入学試験主席の新入生。勝ち気で負けず嫌いな元アスリート。\n優れた身体能力は、全校生徒中、上位１０パーセントに入るほど。\n未経験者ながら、きわめて飲み込みがよく、成長が早い。\nすでに完成されつつある能力は、大きな成長が見込めないようにも思えるが……",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 3,
+          "da": 3,
+          "vi": 3
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 1.5,
+          "da": 1.5,
+          "vi": 2.5
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-900930",
+    "createdAt": "2025-08-31T10:25:24.931Z",
+    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "lastName": {
+      "ja": "花海",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "佑芽",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "F74C2C",
+      "gradient1": "F74B2C",
+      "gradient2": "F0CB4F",
+      "text": "FF302D",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 158,
+      "weight": 50,
+      "threeSizes": [
+        91,
+        60,
+        85
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "1"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "AB",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "おひつじ座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "松田 彩音",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "愛知県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "スポーツ全般、マッサージ",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "お姉ちゃんとの勝負",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "補欠入学の新入生。\n元気いっぱい、身体能力抜群の元アスリート。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 3,
+          "da": 3,
+          "vi": 3
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 15,
+          "da": 10,
+          "vi": 15
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-725770",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "十王",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "邦夫",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "988D83",
+      "gradient1": "988D83",
+      "gradient2": "988D83",
+      "text": "988D83",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-933562",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "十王",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "星南",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "FFAC28",
+      "gradient1": "FFAD29",
+      "gradient2": "F5EB6E",
+      "text": "FFA72C",
+      "label": "333333"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 170,
+      "weight": 54,
+      "threeSizes": [
+        88,
+        56,
+        86
+      ],
+      "age": 17,
+      "birthday": {
+        "month": "17",
+        "day": "7"
+      },
+      "grade": {
+        "ja": "3年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "A",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "いて座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "陽高 真白",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "両利き",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "東京都",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "アイドルの才能を見抜くこと",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "レッスン、才能のあるアイドルを見つけること",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "初星学園の生徒会長にして、昨年度の「一番星」。\n「学園一のアイドル」と呼ばれ、多くの生徒たちから慕われている。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 20,
+          "da": 0,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 3,
+          "da": 0,
+          "vi": 1
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 1,
+          "da": 2,
+          "vi": 2.5
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-636972",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "倉本",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "千奈",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "FE8A22",
+      "gradient1": "FF8A22",
+      "gradient2": "FF5D57",
+      "text": "FF9138",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 148,
+      "weight": 43,
+      "threeSizes": [
+        73,
+        56,
+        73
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "1"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "O",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "しし座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "伊藤 舞音",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "神奈川県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "元気なあいさつ、動物に好かれること",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "お絵描き",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "甘やかされて育った生粋のお嬢様。天真爛漫な女の子。\n「立派なアイドル」を夢見て初星学園に入学した。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 35,
+          "vi": 35
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 2
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 0,
+          "da": 5,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 0,
+          "da": 1,
+          "vi": 1.5
+        },
+        "stamina": 1
+      }
+    ]
+  },
+  {
+    "id": "character-844244",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "葛城",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "リーリヤ",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "D2E3E4",
+      "gradient1": "D2E3E5",
+      "gradient2": "94CCD9",
+      "text": "65CBC7",
+      "label": "333333"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 161,
+      "weight": 43,
+      "threeSizes": [
+        82,
+        53,
+        80
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "24"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "B",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "しし座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "花岩 香奈",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "スウェーデン",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "お菓子作り、ゲーム",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "お菓子作り、日本のアニメ",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "海外出身の新入生。\n歌やダンスの経験はなく、いつも自信がなさそうに縮こまっている。\nあまりアイドルに向いているようには見えないが……",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 0,
+          "vi": 20
+        },
+        "growth": {
+          "vo": 4,
+          "da": 4,
+          "vi": 0
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 5,
+          "da": 25,
+          "vi": 10
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-598726",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "真城",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "優",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "988D83",
+      "gradient1": "988D83",
+      "gradient2": "988D83",
+      "text": "988D83",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-373671",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "根緒",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "亜紗里",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "82D9B1",
+      "gradient1": "988D83",
+      "gradient2": "988D83",
+      "text": "988D83",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-587539",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "篠澤",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "広",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "00BED8",
+      "gradient1": "00BED8",
+      "gradient2": "577DFF",
+      "text": "00C3DA",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 159,
+      "weight": 41,
+      "threeSizes": [
+        72,
+        54,
+        76
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "21"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "AB",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "いて座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "川村 玲奈",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "左",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "秋田県",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "学業全般、物理、数学、パズル",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "苦手分野に挑戦すること、観葉植物を育てること",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "14歳で大学を卒業した天才少女。詳細な経歴は別記。\n嘱望されていた将来を捨て、アイドルを目指した理由は不明。\n入学試験は、座学満点、実技0点。学園長による面接評価は優とのこと。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 40,
+          "da": 40,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 2
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 10,
+          "da": 5,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 1,
+          "da": 1.5,
+          "vi": 0
+        },
+        "stamina": 1
+      }
+    ]
+  },
+  {
+    "id": "character-871033",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "紫雲",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "清夏",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "92DE5A",
+      "gradient1": "92DE5A",
+      "gradient2": "CEE21D",
+      "text": "51CB50",
+      "label": "333333"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 168,
+      "weight": 54,
+      "threeSizes": [
+        89,
+        58,
+        85
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "11"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "O",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "さそり座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "湊 みや",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "左",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "北海道",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "身体が柔らかい",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "カラオケ、SNS",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "元気で明るく、誰とでも仲良くなれる気質の少女。\n入学前にはバレエで世界に羽ばたいた実績もあり、期待されていた。\nしかし、授業やレッスンをよくサボっており、やる気がないように見える。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 0,
+          "da": 5,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 0,
+          "da": 3,
+          "vi": 3
+        },
+        "stamina": 0
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 10,
+          "da": 30,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0,
+          "vi": 0
+        },
+        "stamina": 0
+      }
+    ]
+  },
+  {
+    "id": "character-838886",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "ダンス",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "トレーナー",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "988D83",
+      "gradient1": "988D83",
+      "gradient2": "988D83",
+      "text": "988D83",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-747612",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "ビジュアル",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "トレーナー",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "988D83",
+      "gradient1": "988D83",
+      "gradient2": "988D83",
+      "text": "988D83",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-754644",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "ボーカル",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "トレーナー",
+      "en": ""
+    },
+    "isPlayable": false,
+    "color": {
+      "main": "988D83",
+      "gradient1": "988D83",
+      "gradient2": "988D83",
+      "text": "988D83",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "age": 0,
+      "birthday": {
+        "day": 0,
+        "month": 0
+      },
+      "birthplace": {
+        "ja": "",
+        "en": null
+      },
+      "bloodType": {
+        "ja": "",
+        "en": null
+      },
+      "cv": {
+        "ja": "",
+        "en": null
+      },
+      "dominantHand": {
+        "ja": "",
+        "en": null
+      },
+      "grade": {
+        "ja": "",
+        "en": null
+      },
+      "height": 0,
+      "hobby": {
+        "ja": "",
+        "en": null
+      },
+      "introduction": {
+        "ja": "",
+        "en": null
+      },
+      "specialSkill": {
+        "ja": "",
+        "en": null
+      },
+      "threeSizes": [
+        0,
+        0,
+        0
+      ],
+      "weight": 0,
+      "zodiacSign": {
+        "ja": "",
+        "en": null
+      }
+    },
+    "trueEndBonuses": []
+  },
+  {
+    "id": "character-881337",
+    "createdAt": "2025-08-31T10:25:24.932Z",
+    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "lastName": {
+      "ja": "月村",
+      "en": ""
+    },
+    "firstName": {
+      "ja": "手毬",
+      "en": ""
+    },
+    "isPlayable": true,
+    "color": {
+      "main": "27B4EB",
+      "gradient1": "26B4EB",
+      "gradient2": "87E9E2",
+      "text": "009FDD",
+      "label": "FFFFFF"
+    },
+    "assetUrl": "",
+    "detail": {
+      "height": 162,
+      "weight": 51,
+      "threeSizes": [
+        82,
+        58,
+        86
+      ],
+      "age": 15,
+      "birthday": {
+        "month": "15",
+        "day": "3"
+      },
+      "grade": {
+        "ja": "1年生",
+        "en": ""
+      },
+      "bloodType": {
+        "ja": "AB",
+        "en": ""
+      },
+      "zodiacSign": {
+        "ja": "ふたご座",
+        "en": ""
+      },
+      "cv": {
+        "ja": "小鹿 なお",
+        "en": ""
+      },
+      "dominantHand": {
+        "ja": "右",
+        "en": ""
+      },
+      "birthplace": {
+        "ja": "京都府",
+        "en": ""
+      },
+      "specialSkill": {
+        "ja": "歌",
+        "en": ""
+      },
+      "hobby": {
+        "ja": "美味しいものを食べること（封印中）",
+        "en": ""
+      },
+      "introduction": {
+        "ja": "中等部ナンバーワンユニット「SyngUp!」の元メンバー。\n1年生にして、すでに一線級の歌唱力を持つ。\n素行に問題あり。悪い噂多し。トラブルメーカー。",
+        "en": ""
+      }
+    },
+    "trueEndBonuses": [
+      {
+        "scenario": "hajime",
+        "parameter": {
+          "vo": 10,
+          "da": 0,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 0,
+          "da": 5,
+          "vi": 0
+        },
+        "stamina": 2
+      },
+      {
+        "scenario": "nia",
+        "parameter": {
+          "vo": 10,
+          "da": 10,
+          "vi": 0
+        },
+        "growth": {
+          "vo": 0,
+          "da": 0.5,
+          "vi": 2.5
+        },
+        "stamina": 0
+      }
+    ]
+  }
+]

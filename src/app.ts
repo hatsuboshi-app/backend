@@ -39,5 +39,5 @@ app.use(SupportCardRouter.url, SupportCardRouter.router)
 app.use(errorHandler)
 
 app.listen(config.port, () => {
-    logger.info(`Server Running! // port: ${config.port}, env: ${config.nodeEnv}\n`)
+    logger.info(`server live  //  http://localhost:${config.port}  //  env: ${config.nodeEnv}\n`)
 })
