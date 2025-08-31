@@ -9,7 +9,9 @@
   "license": "MIT",
   "author": "HuzzNZ",
   "scripts": {
-    "build": "tsc --build && tsc-alias",
+    "build": "npm run build:clean && tsc --build && tsc-alias && npm run build:copyfiles",
+    "build:clean": "rimraf ./dist",
+    "build:copyfiles": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist",
     "start": "node ./dist/app.js",
     "dev": "tsx watch --clear-screen=false src/app.ts"
   },
@@ -18,6 +20,8 @@
     "@types/express": "^5.0.3",
     "@types/jsonfile": "^6.1.4",
     "@types/node": "^24.0.15",
+    "copyfiles": "^2.4.1",
+    "rimraf": "^6.0.1",
     "tsc-alias": "^1.8.16",
     "tsx": "^4.20.3",
     "typescript": "^5.8.3"
