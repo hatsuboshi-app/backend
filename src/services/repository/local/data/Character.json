@@ -1,8 +1,8 @@
 [
   {
-    "id": "character-400477",
-    "createdAt": "2025-08-31T10:25:24.929Z",
-    "updatedAt": "2025-08-31T10:25:24.930Z",
+    "id": "character-313533",
+    "createdAt": "2025-09-02T05:07:28.493Z",
+    "updatedAt": "2025-09-02T05:07:28.494Z",
     "lastName": {
       "ja": "有村",
       "en": ""
@@ -30,7 +30,7 @@
       ],
       "age": 17,
       "birthday": {
-        "month": "17",
+        "month": "1",
         "day": "18"
       },
       "grade": {
@@ -102,9 +102,9 @@
     ]
   },
   {
-    "id": "character-103963",
-    "createdAt": "2025-08-31T10:25:24.931Z",
-    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "id": "character-569038",
+    "createdAt": "2025-09-02T05:07:28.495Z",
+    "updatedAt": "2025-09-02T05:07:28.495Z",
     "lastName": {
       "ja": "雨夜",
       "en": ""
@@ -175,9 +175,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-538531",
-    "createdAt": "2025-08-31T10:25:24.931Z",
-    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "id": "character-206077",
+    "createdAt": "2025-09-02T05:07:28.495Z",
+    "updatedAt": "2025-09-02T05:07:28.495Z",
     "lastName": {
       "ja": "藤田",
       "en": ""
@@ -205,7 +205,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "4",
         "day": "29"
       },
       "grade": {
@@ -277,9 +277,9 @@
     ]
   },
   {
-    "id": "character-639378",
-    "createdAt": "2025-08-31T10:25:24.931Z",
-    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "id": "character-790225",
+    "createdAt": "2025-09-02T05:07:28.495Z",
+    "updatedAt": "2025-09-02T05:07:28.495Z",
     "lastName": {
       "ja": "秦谷",
       "en": ""
@@ -307,7 +307,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "2",
         "day": "6"
       },
       "grade": {
@@ -378,9 +378,9 @@
     ]
   },
   {
-    "id": "character-401440",
-    "createdAt": "2025-08-31T10:25:24.931Z",
-    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "id": "character-249967",
+    "createdAt": "2025-09-02T05:07:28.495Z",
+    "updatedAt": "2025-09-02T05:07:28.495Z",
     "lastName": {
       "ja": "姫崎",
       "en": ""
@@ -408,7 +408,7 @@
       ],
       "age": 17,
       "birthday": {
-        "month": "17",
+        "month": "3",
         "day": "5"
       },
       "grade": {
@@ -480,9 +480,9 @@
     ]
   },
   {
-    "id": "character-301404",
-    "createdAt": "2025-08-31T10:25:24.931Z",
-    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "id": "character-313484",
+    "createdAt": "2025-09-02T05:07:28.495Z",
+    "updatedAt": "2025-09-02T05:07:28.495Z",
     "lastName": {
       "ja": "花海",
       "en": ""
@@ -510,7 +510,7 @@
       ],
       "age": 16,
       "birthday": {
-        "month": "16",
+        "month": "4",
         "day": "2"
       },
       "grade": {
@@ -582,9 +582,9 @@
     ]
   },
   {
-    "id": "character-900930",
-    "createdAt": "2025-08-31T10:25:24.931Z",
-    "updatedAt": "2025-08-31T10:25:24.931Z",
+    "id": "character-631847",
+    "createdAt": "2025-09-02T05:07:28.495Z",
+    "updatedAt": "2025-09-02T05:07:28.495Z",
     "lastName": {
       "ja": "花海",
       "en": ""
@@ -612,7 +612,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "4",
         "day": "1"
       },
       "grade": {
@@ -684,9 +684,9 @@
     ]
   },
   {
-    "id": "character-725770",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-835926",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "十王",
       "en": ""
@@ -757,9 +757,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-933562",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-240918",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "十王",
       "en": ""
@@ -787,7 +787,7 @@
       ],
       "age": 17,
       "birthday": {
-        "month": "17",
+        "month": "12",
         "day": "7"
       },
       "grade": {
@@ -859,9 +859,9 @@
     ]
   },
   {
-    "id": "character-636972",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-465875",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "倉本",
       "en": ""
@@ -889,7 +889,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "8",
         "day": "1"
       },
       "grade": {
@@ -961,9 +961,9 @@
     ]
   },
   {
-    "id": "character-844244",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-522975",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "葛城",
       "en": ""
@@ -991,7 +991,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "7",
         "day": "24"
       },
       "grade": {
@@ -1063,9 +1063,9 @@
     ]
   },
   {
-    "id": "character-598726",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-871899",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "真城",
       "en": ""
@@ -1136,9 +1136,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-373671",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-390570",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "根緒",
       "en": ""
@@ -1209,9 +1209,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-587539",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-966556",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "篠澤",
       "en": ""
@@ -1239,7 +1239,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "12",
         "day": "21"
       },
       "grade": {
@@ -1311,9 +1311,9 @@
     ]
   },
   {
-    "id": "character-871033",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-532668",
+    "createdAt": "2025-09-02T05:07:28.496Z",
+    "updatedAt": "2025-09-02T05:07:28.496Z",
     "lastName": {
       "ja": "紫雲",
       "en": ""
@@ -1341,7 +1341,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "11",
         "day": "11"
       },
       "grade": {
@@ -1413,9 +1413,9 @@
     ]
   },
   {
-    "id": "character-838886",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-946676",
+    "createdAt": "2025-09-02T05:07:28.497Z",
+    "updatedAt": "2025-09-02T05:07:28.497Z",
     "lastName": {
       "ja": "ダンス",
       "en": ""
@@ -1486,9 +1486,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-747612",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-580405",
+    "createdAt": "2025-09-02T05:07:28.497Z",
+    "updatedAt": "2025-09-02T05:07:28.497Z",
     "lastName": {
       "ja": "ビジュアル",
       "en": ""
@@ -1559,9 +1559,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-754644",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-708857",
+    "createdAt": "2025-09-02T05:07:28.497Z",
+    "updatedAt": "2025-09-02T05:07:28.497Z",
     "lastName": {
       "ja": "ボーカル",
       "en": ""
@@ -1632,9 +1632,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-881337",
-    "createdAt": "2025-08-31T10:25:24.932Z",
-    "updatedAt": "2025-08-31T10:25:24.932Z",
+    "id": "character-589734",
+    "createdAt": "2025-09-02T05:07:28.497Z",
+    "updatedAt": "2025-09-02T05:07:28.497Z",
     "lastName": {
       "ja": "月村",
       "en": ""
@@ -1662,7 +1662,7 @@
       ],
       "age": 15,
       "birthday": {
-        "month": "15",
+        "month": "6",
         "day": "3"
       },
       "grade": {
