@@ -1,8 +1,8 @@
 [
   {
-    "id": "idol-552302",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-131229",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -21,13 +21,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "r",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-512150",
-    "signaturePItem": "item-589217",
+    "signatureSkill": [
+      "skill-170219"
+    ],
+    "signaturePItem": "item-402206",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 65,
@@ -41,12 +43,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-582855",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-972295",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "初恋",
       "en": "",
@@ -65,13 +68,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "r",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-718745",
-    "signaturePItem": "item-447805",
+    "signatureSkill": [
+      "skill-500624"
+    ],
+    "signaturePItem": "item-140918",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 65,
@@ -85,12 +90,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-385725",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-843566",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "はじまりはカッコよく",
       "en": "",
@@ -109,13 +115,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "sr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-849916",
-    "signaturePItem": "item-870502",
+    "signatureSkill": [
+      "skill-588826"
+    ],
+    "signaturePItem": "item-473198",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 70,
@@ -129,12 +137,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-311233",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-636552",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "Fluorite",
       "en": "",
@@ -153,13 +162,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-796357",
-    "signaturePItem": "item-754919",
+    "signatureSkill": [
+      "skill-781824"
+    ],
+    "signaturePItem": "item-878773",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 75,
@@ -173,12 +184,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-883220",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-115255",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "キミとセミブルー",
       "en": "",
@@ -197,13 +209,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-492491",
-    "signaturePItem": "item-591455",
+    "signatureSkill": [
+      "skill-220827"
+    ],
+    "signaturePItem": "item-459647",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 75,
@@ -217,12 +231,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-743790",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-199746",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "Feel Jewel Dream",
       "en": "",
@@ -241,13 +256,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-169596",
-    "signaturePItem": "item-824826",
+    "signatureSkill": [
+      "skill-963170"
+    ],
+    "signaturePItem": "item-807539",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 75,
@@ -261,12 +278,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-921171",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-259045",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -285,13 +303,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-363514",
-    "signaturePItem": "item-680651",
+    "signatureSkill": [
+      "skill-724757"
+    ],
+    "signaturePItem": "item-437587",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 75,
@@ -305,12 +325,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-135149",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-698595",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "雪解けに",
       "en": "",
@@ -329,13 +350,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-962973",
-    "signaturePItem": "item-585832",
+    "signatureSkill": [
+      "skill-901259"
+    ],
+    "signaturePItem": "item-257483",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 75,
@@ -349,12 +372,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-315462",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-983239",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "ミラクルナナウ(ﾟ∀ﾟ)！",
       "en": "",
@@ -373,13 +397,15 @@
       },
       "another": []
     },
-    "character": "character-313533",
+    "character": "character-584626",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-457553",
-    "signaturePItem": "item-141472",
+    "signatureSkill": [
+      "skill-554617"
+    ],
+    "signaturePItem": "item-808844",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 75,
@@ -393,12 +419,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-502076",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-484255",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -417,13 +444,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "r",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-164040",
-    "signaturePItem": "item-424756",
+    "signatureSkill": [
+      "skill-333046"
+    ],
+    "signaturePItem": "item-232463",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 55,
@@ -437,12 +466,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-607238",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-103698",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "初声",
       "en": "",
@@ -461,13 +491,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "r",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-451507",
-    "signaturePItem": "item-274313",
+    "signatureSkill": [
+      "skill-512883"
+    ],
+    "signaturePItem": "item-441125",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 55,
@@ -481,12 +513,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-706447",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-651137",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "カワイイ♡はじめました",
       "en": "",
@@ -505,13 +538,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "sr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-201887",
-    "signaturePItem": "item-261837",
+    "signatureSkill": [
+      "skill-246773"
+    ],
+    "signaturePItem": "item-920794",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 60,
@@ -525,12 +560,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-459505",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-252148",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.673Z",
     "name": {
       "ja": "世界一可愛い私",
       "en": "",
@@ -549,13 +585,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-557461",
-    "signaturePItem": "item-430315",
+    "signatureSkill": [
+      "skill-965571"
+    ],
+    "signaturePItem": "item-971261",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -569,12 +607,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-273335",
-    "createdAt": "2025-09-02T05:07:37.198Z",
-    "updatedAt": "2025-09-02T05:07:37.198Z",
+    "id": "idol-200393",
+    "createdAt": "2026-07-08T07:35:55.673Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "Yellow Big Bang！",
       "en": "",
@@ -593,13 +632,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-890903",
-    "signaturePItem": "item-730348",
+    "signatureSkill": [
+      "skill-938901"
+    ],
+    "signaturePItem": "item-979873",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -613,12 +654,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-780544",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-913726",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "冠菊",
       "en": "",
@@ -637,13 +679,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-796929",
-    "signaturePItem": "item-567289",
+    "signatureSkill": [
+      "skill-140519"
+    ],
+    "signaturePItem": "item-771935",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -657,12 +701,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-929301",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-235588",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "White Night! White Wish!",
       "en": "",
@@ -681,13 +726,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-123748",
-    "signaturePItem": "item-956748",
+    "signatureSkill": [
+      "skill-605684"
+    ],
+    "signaturePItem": "item-959503",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 65,
@@ -701,12 +748,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-653080",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-990922",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -725,13 +773,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-760844",
-    "signaturePItem": "item-685325",
+    "signatureSkill": [
+      "skill-250246"
+    ],
+    "signaturePItem": "item-856875",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -745,12 +795,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-101755",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-646020",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "雨上がりのアイリス",
       "en": "",
@@ -769,13 +820,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-964906",
-    "signaturePItem": "item-339201",
+    "signatureSkill": [
+      "skill-939448"
+    ],
+    "signaturePItem": "item-450366",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -789,12 +842,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-913647",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-763034",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "自己肯定感爆上げ↑↑しゅきしゅきソング",
       "en": "",
@@ -813,13 +867,15 @@
       },
       "another": []
     },
-    "character": "character-206077",
+    "character": "character-384729",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-398106",
-    "signaturePItem": "item-289726",
+    "signatureSkill": [
+      "skill-567912"
+    ],
+    "signaturePItem": "item-850983",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -833,12 +889,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-511247",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-395849",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -857,13 +914,15 @@
       },
       "another": []
     },
-    "character": "character-790225",
+    "character": "character-263927",
     "rarity": "r",
     "plan": "anomaly",
     "subplan": "preserve",
     "isWelfare": false,
-    "signatureSkill": "skill-655989",
-    "signaturePItem": "item-184076",
+    "signatureSkill": [
+      "skill-824440"
+    ],
+    "signaturePItem": "item-518824",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 55,
@@ -877,12 +936,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-215890",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-498229",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "初陣",
       "en": "",
@@ -901,13 +961,15 @@
       },
       "another": []
     },
-    "character": "character-790225",
+    "character": "character-263927",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-632678",
-    "signaturePItem": "item-755519",
+    "signatureSkill": [
+      "skill-616088"
+    ],
+    "signaturePItem": "item-118042",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 55,
@@ -921,12 +983,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-870143",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-144048",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "ゆっくり、一歩ずつ",
       "en": "",
@@ -945,13 +1008,15 @@
       },
       "another": []
     },
-    "character": "character-790225",
+    "character": "character-263927",
     "rarity": "sr",
     "plan": "anomaly",
     "subplan": "preserve",
     "isWelfare": false,
-    "signatureSkill": "skill-542407",
-    "signaturePItem": "item-994131",
+    "signatureSkill": [
+      "skill-494646"
+    ],
+    "signaturePItem": "item-871444",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 60,
@@ -965,12 +1030,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-109260",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-896093",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "ツキノカメ",
       "en": "",
@@ -989,13 +1055,15 @@
       },
       "another": []
     },
-    "character": "character-790225",
+    "character": "character-263927",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "preserve",
     "isWelfare": false,
-    "signatureSkill": "skill-518051",
-    "signaturePItem": "item-772440",
+    "signatureSkill": [
+      "skill-145271"
+    ],
+    "signaturePItem": "item-551411",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -1009,12 +1077,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-835403",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-339697",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -1033,13 +1102,15 @@
       },
       "another": []
     },
-    "character": "character-790225",
+    "character": "character-263927",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-528968",
-    "signaturePItem": "item-358533",
+    "signatureSkill": [
+      "skill-870025"
+    ],
+    "signaturePItem": "item-514413",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -1053,12 +1124,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-172557",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-538656",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "Star-mine",
       "en": "",
@@ -1077,13 +1149,15 @@
       },
       "another": []
     },
-    "character": "character-790225",
+    "character": "character-263927",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-816881",
-    "signaturePItem": "item-860716",
+    "signatureSkill": [
+      "skill-818601"
+    ],
+    "signaturePItem": "item-899522",
     "initialStamina": 27,
     "initialParameter": {
       "vo": 65,
@@ -1097,12 +1171,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-611019",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-575782",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -1121,13 +1196,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "r",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-577335",
-    "signaturePItem": "item-326760",
+    "signatureSkill": [
+      "skill-131613"
+    ],
+    "signaturePItem": "item-624525",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 50,
@@ -1141,12 +1218,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-178754",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-473928",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "初心",
       "en": "",
@@ -1165,13 +1243,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-780923",
-    "signaturePItem": "item-615825",
+    "signatureSkill": [
+      "skill-857069"
+    ],
+    "signaturePItem": "item-288776",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 50,
@@ -1185,12 +1265,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-844265",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-724406",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "『私らしさ』のはじまり",
       "en": "",
@@ -1209,13 +1290,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "sr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-928759",
-    "signaturePItem": "item-728546",
+    "signatureSkill": [
+      "skill-843588"
+    ],
+    "signaturePItem": "item-706629",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 55,
@@ -1229,12 +1312,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-317409",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-711081",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "clumsy trick",
       "en": "",
@@ -1253,13 +1337,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-790740",
-    "signaturePItem": "item-914792",
+    "signatureSkill": [
+      "skill-372726"
+    ],
+    "signaturePItem": "item-807367",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1273,12 +1359,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-492832",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-401193",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "キミとセミブルー",
       "en": "",
@@ -1297,13 +1384,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-264537",
-    "signaturePItem": "item-468489",
+    "signatureSkill": [
+      "skill-338950"
+    ],
+    "signaturePItem": "item-681178",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1317,12 +1406,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-325111",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-354432",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "L.U.V",
       "en": "",
@@ -1341,13 +1431,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-114381",
-    "signaturePItem": "item-809566",
+    "signatureSkill": [
+      "skill-464943"
+    ],
+    "signaturePItem": "item-936978",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1361,12 +1453,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-130890",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-765946",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "ようこそ初星温泉",
       "en": "",
@@ -1385,13 +1478,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-384943",
-    "signaturePItem": "item-661773",
+    "signatureSkill": [
+      "skill-833450"
+    ],
+    "signaturePItem": "item-295538",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1405,12 +1500,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-278447",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-775746",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -1429,13 +1525,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-261834",
-    "signaturePItem": "item-631403",
+    "signatureSkill": [
+      "skill-708205"
+    ],
+    "signaturePItem": "item-621668",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1449,12 +1547,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-198491",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-886252",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "ハッピーミルフィーユ",
       "en": "",
@@ -1473,13 +1572,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-292837",
-    "signaturePItem": "item-820635",
+    "signatureSkill": [
+      "skill-303198"
+    ],
+    "signaturePItem": "item-672908",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1493,12 +1594,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-755325",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-607399",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "Howling over the World",
       "en": "",
@@ -1517,13 +1619,15 @@
       },
       "another": []
     },
-    "character": "character-249967",
+    "character": "character-893252",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-519425",
-    "signaturePItem": "item-553571",
+    "signatureSkill": [
+      "skill-167916"
+    ],
+    "signaturePItem": "item-173650",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -1537,12 +1641,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-421593",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-227371",
+    "createdAt": "2026-07-08T07:35:55.674Z",
+    "updatedAt": "2026-07-08T07:35:55.674Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -1561,13 +1666,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "r",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-155196",
-    "signaturePItem": "item-140271",
+    "signatureSkill": [
+      "skill-978724"
+    ],
+    "signaturePItem": "item-532881",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 65,
@@ -1581,12 +1688,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-304093",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-436438",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "初声",
       "en": "",
@@ -1605,13 +1713,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "r",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-536612",
-    "signaturePItem": "item-963852",
+    "signatureSkill": [
+      "skill-344496"
+    ],
+    "signaturePItem": "item-327589",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 65,
@@ -1625,12 +1735,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-153385",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-582689",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "わたしが一番！",
       "en": "",
@@ -1649,13 +1760,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "sr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-440165",
-    "signaturePItem": "item-251824",
+    "signatureSkill": [
+      "skill-831352"
+    ],
+    "signaturePItem": "item-138786",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 70,
@@ -1669,12 +1782,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-715090",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-168264",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Fighting My Way",
       "en": "",
@@ -1693,13 +1807,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-248717",
-    "signaturePItem": "item-713847",
+    "signatureSkill": [
+      "skill-141992"
+    ],
+    "signaturePItem": "item-857422",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1713,12 +1829,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-217573",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-633891",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Boom Boom Pow",
       "en": "",
@@ -1737,13 +1854,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-281275",
-    "signaturePItem": "item-598233",
+    "signatureSkill": [
+      "skill-522881"
+    ],
+    "signaturePItem": "item-923326",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1757,12 +1876,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-887568",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-494867",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "冠菊",
       "en": "",
@@ -1781,13 +1901,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-492903",
-    "signaturePItem": "item-702908",
+    "signatureSkill": [
+      "skill-218726"
+    ],
+    "signaturePItem": "item-832969",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1801,12 +1923,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-377320",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-235003",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "古今東西ちょちょいのちょい",
       "en": "",
@@ -1825,13 +1948,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-469678",
-    "signaturePItem": "item-558232",
+    "signatureSkill": [
+      "skill-285231"
+    ],
+    "signaturePItem": "item-142142",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1845,12 +1970,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-567624",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-585329",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -1869,13 +1995,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-989503",
-    "signaturePItem": "item-328692",
+    "signatureSkill": [
+      "skill-846953"
+    ],
+    "signaturePItem": "item-111549",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1889,12 +2017,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-109533",
-    "createdAt": "2025-09-02T05:07:37.199Z",
-    "updatedAt": "2025-09-02T05:07:37.199Z",
+    "id": "idol-626594",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "桜フォトグラフ",
       "en": "",
@@ -1913,13 +2042,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-845417",
-    "signaturePItem": "item-253221",
+    "signatureSkill": [
+      "skill-579831"
+    ],
+    "signaturePItem": "item-616886",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1933,12 +2064,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-904902",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-455323",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "雨上がりのアイリス",
       "en": "",
@@ -1957,13 +2089,15 @@
       },
       "another": []
     },
-    "character": "character-313484",
+    "character": "character-345759",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-900660",
-    "signaturePItem": "item-982465",
+    "signatureSkill": [
+      "skill-155630"
+    ],
+    "signaturePItem": "item-775247",
     "initialStamina": 32,
     "initialParameter": {
       "vo": 75,
@@ -1977,12 +2111,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-274532",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-144156",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -2001,13 +2136,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-146638",
-    "signaturePItem": "item-771900",
+    "signatureSkill": [
+      "skill-782458"
+    ],
+    "signaturePItem": "item-890368",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 40,
@@ -2021,12 +2158,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-846105",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-225187",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "初陣",
       "en": "",
@@ -2045,13 +2183,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "r",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-885086",
-    "signaturePItem": "item-703122",
+    "signatureSkill": [
+      "skill-699297"
+    ],
+    "signaturePItem": "item-692016",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 40,
@@ -2065,12 +2205,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-292651",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-998078",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "アイドル、はじめっ！",
       "en": "",
@@ -2089,13 +2230,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "sr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-653354",
-    "signaturePItem": "item-765019",
+    "signatureSkill": [
+      "skill-683954"
+    ],
+    "signaturePItem": "item-102335",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 45,
@@ -2109,12 +2252,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-866321",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-937407",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "The Rolling Riceball",
       "en": "",
@@ -2133,13 +2277,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-819501",
-    "signaturePItem": "item-455125",
+    "signatureSkill": [
+      "skill-289825"
+    ],
+    "signaturePItem": "item-583163",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 50,
@@ -2153,12 +2299,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-305212",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-829816",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "White Night! White Wish!",
       "en": "",
@@ -2177,13 +2324,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-753790",
-    "signaturePItem": "item-556164",
+    "signatureSkill": [
+      "skill-640788"
+    ],
+    "signaturePItem": "item-288117",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 50,
@@ -2197,12 +2346,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-145244",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-323108",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -2221,13 +2371,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-318803",
-    "signaturePItem": "item-184886",
+    "signatureSkill": [
+      "skill-336279"
+    ],
+    "signaturePItem": "item-248469",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 50,
@@ -2241,12 +2393,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-188873",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-209469",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Star-mine",
       "en": "",
@@ -2265,13 +2418,15 @@
       },
       "another": []
     },
-    "character": "character-631847",
+    "character": "character-260002",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-193431",
-    "signaturePItem": "item-912076",
+    "signatureSkill": [
+      "skill-878071"
+    ],
+    "signaturePItem": "item-360081",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 50,
@@ -2285,12 +2440,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-978018",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-569240",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -2309,13 +2465,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "r",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-894887",
-    "signaturePItem": "item-602829",
+    "signatureSkill": [
+      "skill-843824"
+    ],
+    "signaturePItem": "item-535700",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 110,
@@ -2329,12 +2487,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-776377",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-780436",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "初陣",
       "en": "",
@@ -2353,13 +2512,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-517583",
-    "signaturePItem": "item-465771",
+    "signatureSkill": [
+      "skill-157676"
+    ],
+    "signaturePItem": "item-397117",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 110,
@@ -2373,12 +2534,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-692227",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-661646",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "一番星",
       "en": "",
@@ -2397,13 +2559,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "sr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-251644",
-    "signaturePItem": "item-971273",
+    "signatureSkill": [
+      "skill-940784"
+    ],
+    "signaturePItem": "item-279602",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 120,
@@ -2417,12 +2581,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-472086",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-743329",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "小さな野望",
       "en": "",
@@ -2441,13 +2606,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-866589",
-    "signaturePItem": "item-994027",
+    "signatureSkill": [
+      "skill-162181"
+    ],
+    "signaturePItem": "item-374569",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 130,
@@ -2461,12 +2628,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-858839",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-561058",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -2485,13 +2653,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-797412",
-    "signaturePItem": "item-253907",
+    "signatureSkill": [
+      "skill-516340"
+    ],
+    "signaturePItem": "item-600515",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 130,
@@ -2505,12 +2675,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-649254",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-722996",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "ハッピーミルフィーユ",
       "en": "",
@@ -2529,13 +2700,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-586704",
-    "signaturePItem": "item-490373",
+    "signatureSkill": [
+      "skill-499521"
+    ],
+    "signaturePItem": "item-881462",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 130,
@@ -2549,12 +2722,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-916063",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-476202",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Our Chant",
       "en": "",
@@ -2573,13 +2747,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-590067",
-    "signaturePItem": "item-987618",
+    "signatureSkill": [
+      "skill-311576"
+    ],
+    "signaturePItem": "item-520686",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 130,
@@ -2593,12 +2769,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-992378",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-860421",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Star-mine",
       "en": "",
@@ -2617,13 +2794,15 @@
       },
       "another": []
     },
-    "character": "character-240918",
+    "character": "character-516367",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-444382",
-    "signaturePItem": "item-612519",
+    "signatureSkill": [
+      "skill-515387"
+    ],
+    "signaturePItem": "item-328461",
     "initialStamina": 31,
     "initialParameter": {
       "vo": 130,
@@ -2637,12 +2816,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-439013",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-126379",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -2661,13 +2841,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-195982",
-    "signaturePItem": "item-801147",
+    "signatureSkill": [
+      "skill-399178"
+    ],
+    "signaturePItem": "item-956143",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 45,
@@ -2681,12 +2863,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-110323",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-968788",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "初心",
       "en": "",
@@ -2705,13 +2888,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "r",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-283470",
-    "signaturePItem": "item-786888",
+    "signatureSkill": [
+      "skill-440380"
+    ],
+    "signaturePItem": "item-769385",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 45,
@@ -2725,12 +2910,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-771975",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-655962",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "胸を張って一歩ずつ",
       "en": "",
@@ -2749,13 +2935,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "sr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-767608",
-    "signaturePItem": "item-440551",
+    "signatureSkill": [
+      "skill-809455"
+    ],
+    "signaturePItem": "item-207613",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 50,
@@ -2769,12 +2957,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-269293",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-274840",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Wonder Scale",
       "en": "",
@@ -2793,13 +2982,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-155464",
-    "signaturePItem": "item-230048",
+    "signatureSkill": [
+      "skill-689541"
+    ],
+    "signaturePItem": "item-921118",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -2813,12 +3004,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-216861",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-226585",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "日々、発見的ステップ！",
       "en": "",
@@ -2837,13 +3029,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-446928",
-    "signaturePItem": "item-771344",
+    "signatureSkill": [
+      "skill-825224"
+    ],
+    "signaturePItem": "item-929624",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -2857,12 +3051,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-701276",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-796993",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "仮装狂騒曲",
       "en": "",
@@ -2881,13 +3076,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-510659",
-    "signaturePItem": "item-315497",
+    "signatureSkill": [
+      "skill-968757"
+    ],
+    "signaturePItem": "item-528700",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -2901,12 +3098,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-905923",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-332058",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "ようこそ初星温泉",
       "en": "",
@@ -2925,13 +3123,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-908609",
-    "signaturePItem": "item-672623",
+    "signatureSkill": [
+      "skill-432640"
+    ],
+    "signaturePItem": "item-499712",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -2945,12 +3145,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-728880",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-282573",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -2969,13 +3170,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-687659",
-    "signaturePItem": "item-946316",
+    "signatureSkill": [
+      "skill-843050"
+    ],
+    "signaturePItem": "item-686202",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -2989,12 +3192,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-326919",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-834775",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "雪解けに",
       "en": "",
@@ -3013,13 +3217,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-278363",
-    "signaturePItem": "item-812028",
+    "signatureSkill": [
+      "skill-187527"
+    ],
+    "signaturePItem": "item-226312",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -3033,12 +3239,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-162886",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-141153",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Howling over the World",
       "en": "",
@@ -3057,13 +3264,15 @@
       },
       "another": []
     },
-    "character": "character-465875",
+    "character": "character-863058",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-394965",
-    "signaturePItem": "item-400077",
+    "signatureSkill": [
+      "skill-733498"
+    ],
+    "signaturePItem": "item-557050",
     "initialStamina": 23,
     "initialParameter": {
       "vo": 55,
@@ -3077,12 +3286,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-370223",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-665914",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -3101,13 +3311,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "r",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-277640",
-    "signaturePItem": "item-722889",
+    "signatureSkill": [
+      "skill-361305"
+    ],
+    "signaturePItem": "item-225928",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 45,
@@ -3121,12 +3333,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-785885",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-963137",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "初心",
       "en": "",
@@ -3145,13 +3358,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "r",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-783241",
-    "signaturePItem": "item-776743",
+    "signatureSkill": [
+      "skill-446333"
+    ],
+    "signaturePItem": "item-828561",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 45,
@@ -3165,12 +3380,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-221267",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-170754",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "一つ踏み出した先に",
       "en": "",
@@ -3189,13 +3405,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "sr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-286434",
-    "signaturePItem": "item-626993",
+    "signatureSkill": [
+      "skill-482782"
+    ],
+    "signaturePItem": "item-910213",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 50,
@@ -3209,12 +3427,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-907869",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-486788",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "白線",
       "en": "",
@@ -3233,13 +3452,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-893439",
-    "signaturePItem": "item-430988",
+    "signatureSkill": [
+      "skill-781155"
+    ],
+    "signaturePItem": "item-744000",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3253,12 +3474,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-593326",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-552153",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "冠菊",
       "en": "",
@@ -3277,13 +3499,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-860527",
-    "signaturePItem": "item-257138",
+    "signatureSkill": [
+      "skill-552060"
+    ],
+    "signaturePItem": "item-327052",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3297,12 +3521,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-132725",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-893920",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "White Night! White Wish!",
       "en": "",
@@ -3321,13 +3546,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-460039",
-    "signaturePItem": "item-484288",
+    "signatureSkill": [
+      "skill-647287"
+    ],
+    "signaturePItem": "item-275955",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3341,12 +3568,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-838782",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-332177",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -3365,13 +3593,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-428953",
-    "signaturePItem": "item-130515",
+    "signatureSkill": [
+      "skill-389453"
+    ],
+    "signaturePItem": "item-434778",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3385,12 +3615,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-722062",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-228521",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "極光",
       "en": "",
@@ -3409,13 +3640,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-855524",
-    "signaturePItem": "item-415338",
+    "signatureSkill": [
+      "skill-839114"
+    ],
+    "signaturePItem": "item-921498",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3429,12 +3662,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-103917",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-973660",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "桜フォトグラフ",
       "en": "",
@@ -3453,13 +3687,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-661589",
-    "signaturePItem": "item-243810",
+    "signatureSkill": [
+      "skill-582418"
+    ],
+    "signaturePItem": "item-231076",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3473,12 +3709,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-269439",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-786948",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "Howling over the World",
       "en": "",
@@ -3497,13 +3734,15 @@
       },
       "another": []
     },
-    "character": "character-522975",
+    "character": "character-962712",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-284167",
-    "signaturePItem": "item-361853",
+    "signatureSkill": [
+      "skill-548153"
+    ],
+    "signaturePItem": "item-302524",
     "initialStamina": 28,
     "initialParameter": {
       "vo": 55,
@@ -3517,12 +3756,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-730562",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-672114",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -3541,13 +3781,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-241334",
-    "signaturePItem": "item-700557",
+    "signatureSkill": [
+      "skill-533043"
+    ],
+    "signaturePItem": "item-466049",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 45,
@@ -3561,12 +3803,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-406768",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-368358",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "初恋",
       "en": "",
@@ -3585,13 +3828,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "r",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-622617",
-    "signaturePItem": "item-254420",
+    "signatureSkill": [
+      "skill-351954"
+    ],
+    "signaturePItem": "item-466918",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 45,
@@ -3605,12 +3850,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-189698",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-304787",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "一番向いてないこと",
       "en": "",
@@ -3629,13 +3875,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "sr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-228019",
-    "signaturePItem": "item-265279",
+    "signatureSkill": [
+      "skill-981447"
+    ],
+    "signaturePItem": "item-737027",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 50,
@@ -3649,12 +3897,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-817468",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-450955",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "光景",
       "en": "",
@@ -3673,13 +3922,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-202185",
-    "signaturePItem": "item-557490",
+    "signatureSkill": [
+      "skill-242234"
+    ],
+    "signaturePItem": "item-834888",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 55,
@@ -3693,12 +3944,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-947711",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-183077",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "コントラスト",
       "en": "",
@@ -3717,13 +3969,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-626223",
-    "signaturePItem": "item-879669",
+    "signatureSkill": [
+      "skill-335260"
+    ],
+    "signaturePItem": "item-938997",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 55,
@@ -3737,12 +3991,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-898804",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-634178",
+    "createdAt": "2026-07-08T07:35:55.675Z",
+    "updatedAt": "2026-07-08T07:35:55.675Z",
     "name": {
       "ja": "仮装狂騒曲",
       "en": "",
@@ -3761,13 +4016,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-946459",
-    "signaturePItem": "item-320987",
+    "signatureSkill": [
+      "skill-172726"
+    ],
+    "signaturePItem": "item-804037",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 55,
@@ -3781,12 +4038,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-800192",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-338665",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -3805,13 +4063,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-355245",
-    "signaturePItem": "item-945995",
+    "signatureSkill": [
+      "skill-756920"
+    ],
+    "signaturePItem": "item-483604",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 55,
@@ -3825,12 +4085,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-399244",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-608232",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "ハッピーミルフィーユ",
       "en": "",
@@ -3849,13 +4110,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-879196",
-    "signaturePItem": "item-457567",
+    "signatureSkill": [
+      "skill-647011"
+    ],
+    "signaturePItem": "item-887121",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 55,
@@ -3869,12 +4132,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-708999",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-468751",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "サンフェーデッド",
       "en": "",
@@ -3893,13 +4157,15 @@
       },
       "another": []
     },
-    "character": "character-966556",
+    "character": "character-648062",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-842541",
-    "signaturePItem": "item-553564",
+    "signatureSkill": [
+      "skill-533494"
+    ],
+    "signaturePItem": "item-395553",
     "initialStamina": 22,
     "initialParameter": {
       "vo": 55,
@@ -3913,12 +4179,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-535957",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-216640",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -3937,13 +4204,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "r",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-424740",
-    "signaturePItem": "item-939060",
+    "signatureSkill": [
+      "skill-433063"
+    ],
+    "signaturePItem": "item-786861",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 55,
@@ -3957,12 +4226,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-810691",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-413908",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "初恋",
       "en": "",
@@ -3981,13 +4251,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "r",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-712544",
-    "signaturePItem": "item-535095",
+    "signatureSkill": [
+      "skill-945367"
+    ],
+    "signaturePItem": "item-826099",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 55,
@@ -4001,12 +4273,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-377751",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-517018",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "夢へのリスタート",
       "en": "",
@@ -4025,13 +4298,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "sr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-844437",
-    "signaturePItem": "item-659493",
+    "signatureSkill": [
+      "skill-782761"
+    ],
+    "signaturePItem": "item-821519",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 60,
@@ -4045,12 +4320,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-331498",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-742197",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "Tame-Lie-One-Step",
       "en": "",
@@ -4069,13 +4345,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-742973",
-    "signaturePItem": "item-124423",
+    "signatureSkill": [
+      "skill-854340"
+    ],
+    "signaturePItem": "item-202469",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4089,12 +4367,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-767141",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-744241",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "キミとセミブルー",
       "en": "",
@@ -4113,13 +4392,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-704318",
-    "signaturePItem": "item-993752",
+    "signatureSkill": [
+      "skill-572891"
+    ],
+    "signaturePItem": "item-147075",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4133,12 +4414,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-671607",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-799632",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "カクシタワタシ",
       "en": "",
@@ -4157,13 +4439,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "fullPower",
     "isWelfare": false,
-    "signatureSkill": "skill-447849",
-    "signaturePItem": "item-187311",
+    "signatureSkill": [
+      "skill-466723"
+    ],
+    "signaturePItem": "item-678003",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4177,12 +4461,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-583264",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-361826",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -4201,13 +4486,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-159681",
-    "signaturePItem": "item-976161",
+    "signatureSkill": [
+      "skill-729978"
+    ],
+    "signaturePItem": "item-196624",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4221,12 +4508,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-706904",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-688943",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "桜フォトグラフ",
       "en": "",
@@ -4245,13 +4533,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-906388",
-    "signaturePItem": "item-358141",
+    "signatureSkill": [
+      "skill-228164"
+    ],
+    "signaturePItem": "item-252395",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4265,12 +4555,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-182828",
-    "createdAt": "2025-09-02T05:07:37.200Z",
-    "updatedAt": "2025-09-02T05:07:37.200Z",
+    "id": "idol-982197",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "Love & Joy",
       "en": "",
@@ -4289,13 +4580,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-211435",
-    "signaturePItem": "item-811873",
+    "signatureSkill": [
+      "skill-749121"
+    ],
+    "signaturePItem": "item-849143",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4309,12 +4602,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-416849",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-461737",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "ミラクルナナウ(ﾟ∀ﾟ)！",
       "en": "",
@@ -4333,13 +4627,15 @@
       },
       "another": []
     },
-    "character": "character-532668",
+    "character": "character-404877",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-966490",
-    "signaturePItem": "item-939206",
+    "signatureSkill": [
+      "skill-126262"
+    ],
+    "signaturePItem": "item-205932",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4353,12 +4649,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-805876",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-630645",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "学園生活",
       "en": "",
@@ -4377,13 +4674,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "r",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-568163",
-    "signaturePItem": "item-422009",
+    "signatureSkill": [
+      "skill-281704"
+    ],
+    "signaturePItem": "item-218498",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4397,12 +4696,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-633690",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-752126",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "初声",
       "en": "",
@@ -4421,13 +4721,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "r",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-444363",
-    "signaturePItem": "item-710045",
+    "signatureSkill": [
+      "skill-130972"
+    ],
+    "signaturePItem": "item-613018",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 65,
@@ -4441,12 +4743,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-619125",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-522406",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "一匹狼",
       "en": "",
@@ -4465,13 +4768,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "sr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-870564",
-    "signaturePItem": "item-688520",
+    "signatureSkill": [
+      "skill-354340"
+    ],
+    "signaturePItem": "item-229054",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 70,
@@ -4485,12 +4790,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-123230",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-640001",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "Luna say maybe",
       "en": "",
@@ -4509,13 +4815,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-840425",
-    "signaturePItem": "item-170871",
+    "signatureSkill": [
+      "skill-991345"
+    ],
+    "signaturePItem": "item-690234",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 75,
@@ -4529,12 +4837,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-143133",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-912814",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "アイヴイ",
       "en": "",
@@ -4553,13 +4862,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "impression",
     "isWelfare": false,
-    "signatureSkill": "skill-976010",
-    "signaturePItem": "item-322241",
+    "signatureSkill": [
+      "skill-249952"
+    ],
+    "signaturePItem": "item-884057",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 75,
@@ -4573,12 +4884,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-533399",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-758426",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "仮装狂騒曲",
       "en": "",
@@ -4597,13 +4909,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "ssr",
     "plan": "logic",
     "subplan": "motivation",
     "isWelfare": false,
-    "signatureSkill": "skill-176776",
-    "signaturePItem": "item-800936",
+    "signatureSkill": [
+      "skill-109079"
+    ],
+    "signaturePItem": "item-819903",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 75,
@@ -4617,12 +4931,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-682839",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-503047",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "Campus mode!!",
       "en": "",
@@ -4641,13 +4956,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "focus",
     "isWelfare": false,
-    "signatureSkill": "skill-262190",
-    "signaturePItem": "item-204292",
+    "signatureSkill": [
+      "skill-147720"
+    ],
+    "signaturePItem": "item-384873",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 75,
@@ -4661,12 +4978,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-574102",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-232004",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "雪解けに",
       "en": "",
@@ -4685,13 +5003,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "ssr",
     "plan": "anomaly",
     "subplan": "confident",
     "isWelfare": false,
-    "signatureSkill": "skill-178745",
-    "signaturePItem": "item-739264",
+    "signatureSkill": [
+      "skill-100207"
+    ],
+    "signaturePItem": "item-423871",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 75,
@@ -4705,12 +5025,13 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   },
   {
-    "id": "idol-545074",
-    "createdAt": "2025-09-02T05:07:37.201Z",
-    "updatedAt": "2025-09-02T05:07:37.201Z",
+    "id": "idol-118720",
+    "createdAt": "2026-07-08T07:35:55.676Z",
+    "updatedAt": "2026-07-08T07:35:55.676Z",
     "name": {
       "ja": "雨上がりのアイリス",
       "en": "",
@@ -4729,13 +5050,15 @@
       },
       "another": []
     },
-    "character": "character-589734",
+    "character": "character-335552",
     "rarity": "ssr",
     "plan": "sense",
     "subplan": "goodShape",
     "isWelfare": false,
-    "signatureSkill": "skill-684896",
-    "signaturePItem": "item-588851",
+    "signatureSkill": [
+      "skill-373364"
+    ],
+    "signaturePItem": "item-521616",
     "initialStamina": 30,
     "initialParameter": {
       "vo": 75,
@@ -4749,6 +5072,7 @@
     },
     "initialAbilities": [],
     "trainingLevels": [],
-    "potentialLevels": []
+    "potentialLevels": [],
+    "primaStellaUpgrade": null
   }
 ]

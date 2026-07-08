@@ -1,8 +1,8 @@
 [
   {
-    "id": "character-313533",
-    "createdAt": "2025-09-02T05:07:28.493Z",
-    "updatedAt": "2025-09-02T05:07:28.494Z",
+    "id": "character-584626",
+    "createdAt": "2026-07-08T07:35:46.515Z",
+    "updatedAt": "2026-07-08T07:35:46.516Z",
     "lastName": {
       "ja": "有村",
       "en": ""
@@ -102,9 +102,9 @@
     ]
   },
   {
-    "id": "character-569038",
-    "createdAt": "2025-09-02T05:07:28.495Z",
-    "updatedAt": "2025-09-02T05:07:28.495Z",
+    "id": "character-610497",
+    "createdAt": "2026-07-08T07:35:46.516Z",
+    "updatedAt": "2026-07-08T07:35:46.516Z",
     "lastName": {
       "ja": "雨夜",
       "en": ""
@@ -175,9 +175,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-206077",
-    "createdAt": "2025-09-02T05:07:28.495Z",
-    "updatedAt": "2025-09-02T05:07:28.495Z",
+    "id": "character-384729",
+    "createdAt": "2026-07-08T07:35:46.516Z",
+    "updatedAt": "2026-07-08T07:35:46.516Z",
     "lastName": {
       "ja": "藤田",
       "en": ""
@@ -277,9 +277,9 @@
     ]
   },
   {
-    "id": "character-790225",
-    "createdAt": "2025-09-02T05:07:28.495Z",
-    "updatedAt": "2025-09-02T05:07:28.495Z",
+    "id": "character-263927",
+    "createdAt": "2026-07-08T07:35:46.516Z",
+    "updatedAt": "2026-07-08T07:35:46.516Z",
     "lastName": {
       "ja": "秦谷",
       "en": ""
@@ -378,9 +378,9 @@
     ]
   },
   {
-    "id": "character-249967",
-    "createdAt": "2025-09-02T05:07:28.495Z",
-    "updatedAt": "2025-09-02T05:07:28.495Z",
+    "id": "character-893252",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "姫崎",
       "en": ""
@@ -480,9 +480,9 @@
     ]
   },
   {
-    "id": "character-313484",
-    "createdAt": "2025-09-02T05:07:28.495Z",
-    "updatedAt": "2025-09-02T05:07:28.495Z",
+    "id": "character-345759",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "花海",
       "en": ""
@@ -582,9 +582,9 @@
     ]
   },
   {
-    "id": "character-631847",
-    "createdAt": "2025-09-02T05:07:28.495Z",
-    "updatedAt": "2025-09-02T05:07:28.495Z",
+    "id": "character-260002",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "花海",
       "en": ""
@@ -684,9 +684,9 @@
     ]
   },
   {
-    "id": "character-835926",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-356628",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "十王",
       "en": ""
@@ -757,9 +757,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-240918",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-516367",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "十王",
       "en": ""
@@ -859,9 +859,9 @@
     ]
   },
   {
-    "id": "character-465875",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-863058",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "倉本",
       "en": ""
@@ -961,9 +961,9 @@
     ]
   },
   {
-    "id": "character-522975",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-962712",
+    "createdAt": "2026-07-08T07:35:46.517Z",
+    "updatedAt": "2026-07-08T07:35:46.517Z",
     "lastName": {
       "ja": "葛城",
       "en": ""
@@ -1063,9 +1063,9 @@
     ]
   },
   {
-    "id": "character-871899",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-265157",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "真城",
       "en": ""
@@ -1136,9 +1136,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-390570",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-129743",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "根緒",
       "en": ""
@@ -1209,9 +1209,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-966556",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-648062",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "篠澤",
       "en": ""
@@ -1311,9 +1311,9 @@
     ]
   },
   {
-    "id": "character-532668",
-    "createdAt": "2025-09-02T05:07:28.496Z",
-    "updatedAt": "2025-09-02T05:07:28.496Z",
+    "id": "character-404877",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "紫雲",
       "en": ""
@@ -1413,9 +1413,9 @@
     ]
   },
   {
-    "id": "character-946676",
-    "createdAt": "2025-09-02T05:07:28.497Z",
-    "updatedAt": "2025-09-02T05:07:28.497Z",
+    "id": "character-931389",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "ダンス",
       "en": ""
@@ -1486,9 +1486,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-580405",
-    "createdAt": "2025-09-02T05:07:28.497Z",
-    "updatedAt": "2025-09-02T05:07:28.497Z",
+    "id": "character-502100",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "ビジュアル",
       "en": ""
@@ -1559,9 +1559,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-708857",
-    "createdAt": "2025-09-02T05:07:28.497Z",
-    "updatedAt": "2025-09-02T05:07:28.497Z",
+    "id": "character-699967",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "ボーカル",
       "en": ""
@@ -1632,9 +1632,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-589734",
-    "createdAt": "2025-09-02T05:07:28.497Z",
-    "updatedAt": "2025-09-02T05:07:28.497Z",
+    "id": "character-335552",
+    "createdAt": "2026-07-08T07:35:46.518Z",
+    "updatedAt": "2026-07-08T07:35:46.518Z",
     "lastName": {
       "ja": "月村",
       "en": ""

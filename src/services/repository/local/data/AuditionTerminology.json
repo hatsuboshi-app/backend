@@ -1,8 +1,8 @@
 [
   {
-    "id": "terminology-528351",
-    "createdAt": "2025-09-02T05:07:28.712Z",
-    "updatedAt": "2025-09-02T05:07:28.712Z",
+    "id": "terminology-553008",
+    "createdAt": "2026-07-08T07:35:46.741Z",
+    "updatedAt": "2026-07-08T07:35:46.741Z",
     "name": {
       "ja": "パラメータ",
       "en": ""
@@ -16,9 +16,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-110669",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-488754",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ボーカル上昇",
       "en": ""
@@ -32,9 +32,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-742706",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-663383",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ダンス上昇",
       "en": ""
@@ -48,9 +48,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-849144",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-412464",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ビジュアル上昇",
       "en": ""
@@ -64,9 +64,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-334733",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-903940",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ボーカル低下",
       "en": ""
@@ -80,9 +80,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-938573",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-575050",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ダンス低下",
       "en": ""
@@ -96,9 +96,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-601314",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-665635",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ビジュアル低下",
       "en": ""
@@ -112,9 +112,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-183572",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-247111",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ボーカルレッスンボーナス+",
       "en": ""
@@ -128,9 +128,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-833808",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-541592",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ダンスレッスンボーナス+",
       "en": ""
@@ -144,9 +144,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-295625",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-402707",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ビジュアルレッスンボーナス+",
       "en": ""
@@ -160,9 +160,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-315646",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-853582",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ボーカルレッスンボーナス-",
       "en": ""
@@ -176,9 +176,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-797733",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-655835",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ダンスレッスンボーナス-",
       "en": ""
@@ -192,9 +192,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-566508",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-419878",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ビジュアルレッスンボーナス-",
       "en": ""
@@ -208,9 +208,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-372464",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-486239",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力回復",
       "en": ""
@@ -224,9 +224,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-327038",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-468369",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力割合回復",
       "en": ""
@@ -240,9 +240,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-915837",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-972131",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力減少",
       "en": ""
@@ -256,9 +256,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-683345",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-602641",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力割合減少",
       "en": ""
@@ -272,9 +272,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-368211",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-380683",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力変更",
       "en": ""
@@ -288,9 +288,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-769121",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-239843",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力回復量増加",
       "en": ""
@@ -304,9 +304,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-964675",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-145411",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力回復量減少",
       "en": ""
@@ -320,9 +320,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-303501",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-693088",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力減少量増加",
       "en": ""
@@ -336,9 +336,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-718971",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-775183",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力減少量軽減",
       "en": ""
@@ -352,9 +352,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-333683",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-709359",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "体力回復無効",
       "en": ""
@@ -368,9 +368,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-306482",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-611174",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "最大体力増加",
       "en": ""
@@ -384,9 +384,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-816733",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-308976",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "最大体力減少",
       "en": ""
@@ -400,9 +400,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-360939",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-631948",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "最大体力割合減少",
       "en": ""
@@ -416,9 +416,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-619972",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-966116",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント減少",
       "en": ""
@@ -432,9 +432,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-494773",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-378534",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント割合減少",
       "en": ""
@@ -448,9 +448,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-988404",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-386602",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント変更",
       "en": ""
@@ -464,9 +464,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-485615",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-976002",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント獲得量増加",
       "en": ""
@@ -480,9 +480,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-850960",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-454176",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント獲得量減少",
       "en": ""
@@ -496,9 +496,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-293987",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-301723",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント減少量増加",
       "en": ""
@@ -512,9 +512,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-378857",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-229353",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント減少量減少",
       "en": ""
@@ -528,9 +528,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-828450",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-642378",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "強化",
       "en": ""
@@ -552,9 +552,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-694882",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-332997",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "コピー",
       "en": ""
@@ -576,9 +576,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-399910",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-904113",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "コピーして強化",
       "en": ""
@@ -592,9 +592,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-297820",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-414521",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "チェンジ",
       "en": ""
@@ -616,9 +616,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-578834",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-998900",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "チェンジして強化",
       "en": ""
@@ -632,9 +632,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-490548",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-582773",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "削除",
       "en": ""
@@ -656,9 +656,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-534678",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-975849",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント獲得",
       "en": ""
@@ -672,9 +672,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-527195",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-310503",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pポイント獲得不可",
       "en": ""
@@ -688,9 +688,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-116836",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-685025",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pアイテム獲得不可",
       "en": ""
@@ -704,9 +704,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-198463",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-142337",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "Pドリンク獲得不可",
       "en": ""
@@ -720,9 +720,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-986397",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-263379",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "報酬獲得",
       "en": ""
@@ -736,9 +736,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-676070",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-591110",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "報酬獲得",
       "en": ""
@@ -752,9 +752,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-848742",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-928093",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "スコアボーナス増加",
       "en": ""
@@ -768,9 +768,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-492244",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-891321",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "SPレッスン発生率増加",
       "en": ""
@@ -784,9 +784,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-622191",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-280513",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ボーカルSPレッスン発生率増加",
       "en": ""
@@ -800,9 +800,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-814386",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-704609",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ダンスSPレッスン発生率増加",
       "en": ""
@@ -816,9 +816,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-371769",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-415687",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "ビジュアルSPレッスン発生率増加",
       "en": ""
@@ -832,9 +832,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-418327",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-875819",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "SPレッスン発生率減少",
       "en": ""
@@ -848,9 +848,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-867937",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-381750",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "レッスン時発生効果",
       "en": ""
@@ -864,9 +864,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-614899",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-154628",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "レッスン報酬のスキルカード選択肢追加",
       "en": ""
@@ -880,9 +880,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-255956",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-145996",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "レッスン報酬のスキルカード選択肢減少",
       "en": ""
@@ -896,9 +896,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-931901",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-367255",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談の全項目を割引",
       "en": ""
@@ -912,9 +912,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-771510",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-547565",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談のスキルカードを割引",
       "en": ""
@@ -936,9 +936,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-564586",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-577564",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談のPドリンクを割引",
       "en": ""
@@ -952,9 +952,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-763655",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-502307",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談のスキルカード強化を割引",
       "en": ""
@@ -968,9 +968,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-909616",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-755898",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談のスキルカード強化を変更",
       "en": ""
@@ -984,9 +984,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-634880",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-595639",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談のスキルカード削除を割引",
       "en": ""
@@ -1000,9 +1000,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-316793",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-315593",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "相談のスキルカード強化を変更",
       "en": ""
@@ -1016,9 +1016,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-423268",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-483980",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "プロデュース完了時の獲得マニー増加",
       "en": ""
@@ -1032,9 +1032,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-518216",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-787402",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "プロデュース完了時のサポートPt増加",
       "en": ""
@@ -1048,9 +1048,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-638613",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-449071",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "サポートイベントの体力回復量増加",
       "en": ""
@@ -1064,9 +1064,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-639902",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-764284",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "サポートイベントのPポイント獲得量増加",
       "en": ""
@@ -1080,9 +1080,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-901601",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-364128",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "サポートイベントのパラメータ上昇量増加",
       "en": ""
@@ -1096,9 +1096,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-204310",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.715Z",
+    "id": "terminology-826326",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "サポートイベント発生率増加",
       "en": ""
@@ -1112,9 +1112,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-850592",
-    "createdAt": "2025-09-02T05:07:28.715Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-127494",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "レッスン報酬のPポイント獲得量増加",
       "en": ""
@@ -1128,9 +1128,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-692200",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-260102",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "レッスンサポート発生率増加",
       "en": ""
@@ -1144,9 +1144,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-750415",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-738136",
+    "createdAt": "2026-07-08T07:35:46.743Z",
+    "updatedAt": "2026-07-08T07:35:46.743Z",
     "name": {
       "ja": "再抽選回数増加",
       "en": ""
@@ -1160,9 +1160,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-600981",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-840051",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "初期Pポイント増加",
       "en": ""
@@ -1176,9 +1176,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-167380",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-527478",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "ターン数増加",
       "en": ""
@@ -1192,9 +1192,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-501622",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-671602",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "ターン数減少",
       "en": ""
@@ -1208,9 +1208,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-940585",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-231335",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "ライバルのスコア増加",
       "en": ""
@@ -1218,8 +1218,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4286",
-          "refId": "terminology-807579",
+          "id": "r5461",
+          "refId": "terminology-189615",
           "refType": 0
         }
       ],
@@ -1228,7 +1228,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "以降の{r4286}でライバルのスコアが増加",
+            "ja": "以降の{r5461}でライバルのスコアが増加",
             "en": ""
           }
         }
@@ -1238,9 +1238,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-544728",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-270396",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "相談の全項目を割増",
       "en": ""
@@ -1254,9 +1254,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-365563",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-458652",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "相談のスキルカードを割増",
       "en": ""
@@ -1270,9 +1270,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-507616",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-254226",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "相談のPドリンクを割増",
       "en": ""
@@ -1286,9 +1286,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-150427",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-448407",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "相談のスキルカード強化を割増",
       "en": ""
@@ -1302,9 +1302,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-767061",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-237397",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "相談のスキルカード削除を割増",
       "en": ""
@@ -1318,9 +1318,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-759388",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-707580",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "授業の消費体力増加",
       "en": ""
@@ -1334,9 +1334,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-724655",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-443478",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "授業の消費体力減少",
       "en": ""
@@ -1350,9 +1350,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-399745",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-434724",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "お出かけの消費Pポイント増加",
       "en": ""
@@ -1366,9 +1366,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-711575",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-918948",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "お出かけの消費Pポイント減少",
       "en": ""
@@ -1382,9 +1382,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-615201",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-262622",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "試験前体力回復量増加",
       "en": ""
@@ -1398,9 +1398,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-944617",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-261193",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "試験前体力回復量減少",
       "en": ""
@@ -1414,9 +1414,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-759168",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-572270",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "スキルカード除去",
       "en": ""
@@ -1438,9 +1438,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-849949",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-578035",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "アクティブスキルカード",
       "en": ""
@@ -1448,8 +1448,8 @@
     "description": {
       "refs": [
         {
-          "id": "r9877",
-          "refId": "terminology-528351",
+          "id": "r7172",
+          "refId": "terminology-553008",
           "refType": 0
         }
       ],
@@ -1458,7 +1458,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r9877}上昇効果を主とするスキルカード",
+            "ja": "{r7172}上昇効果を主とするスキルカード",
             "en": ""
           }
         }
@@ -1468,9 +1468,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-999877",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-292227",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "やる気値増加",
       "en": ""
@@ -1492,9 +1492,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-996407",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-694745",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "やる気値減少",
       "en": ""
@@ -1516,9 +1516,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-807579",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-189615",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "試験・オーディション",
       "en": ""
@@ -1532,9 +1532,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-721851",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-301077",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "元気値増加",
       "en": ""
@@ -1542,18 +1542,18 @@
     "description": {
       "refs": [
         {
-          "id": "r4223",
-          "refId": "effect-498238",
+          "id": "r5821",
+          "refId": "effect-732388",
           "refType": 1
         },
         {
-          "id": "r6172",
-          "refId": "effect-417891",
+          "id": "r4468",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r5000",
-          "refId": "effect-617839",
+          "id": "r5539",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -1562,21 +1562,21 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4223}増加値を増加",
+            "ja": "{r5821}増加値を増加",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r4223}増加効果を持たないスキルカードには影響しない",
+            "ja": "{r5821}増加効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "{r6172}と{r5000}には影響しない",
+            "ja": "{r4468}と{r5539}には影響しない",
             "en": ""
           }
         }
@@ -1586,9 +1586,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-217027",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-825984",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "元気値減少",
       "en": ""
@@ -1596,18 +1596,18 @@
     "description": {
       "refs": [
         {
-          "id": "r3761",
-          "refId": "effect-498238",
+          "id": "r4053",
+          "refId": "effect-732388",
           "refType": 1
         },
         {
-          "id": "r3018",
-          "refId": "effect-417891",
+          "id": "r2658",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r5601",
-          "refId": "effect-617839",
+          "id": "r9957",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -1616,14 +1616,14 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r3761}増加値が減少",
+            "ja": "{r4053}増加値が減少",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r3761}増加効果を持たないスキルカードには影響しない",
+            "ja": "{r4053}増加効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
@@ -1637,7 +1637,7 @@
         {
           "position": 3,
           "body": {
-            "ja": "{r3018}と{r5601}には影響しない",
+            "ja": "{r2658}と{r9957}には影響しない",
             "en": ""
           }
         }
@@ -1647,9 +1647,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-139479",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-752457",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "商業施設",
       "en": ""
@@ -1671,9 +1671,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-473142",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-975741",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "企業イベント会場",
       "en": ""
@@ -1695,9 +1695,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-281762",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-285877",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "自治体イベント会場",
       "en": ""
@@ -1719,9 +1719,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-821249",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-410609",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "リゾート施設",
       "en": ""
@@ -1743,9 +1743,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-517142",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-652769",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "ドロー枚数増加",
       "en": ""
@@ -1767,9 +1767,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-516552",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-128966",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "ドロー枚数減少",
       "en": ""
@@ -1791,9 +1791,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-637649",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-836517",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "成長効果置換",
       "en": ""
@@ -1815,9 +1815,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-856019",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-122821",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "コスト値増加",
       "en": ""
@@ -1825,8 +1825,8 @@
     "description": {
       "refs": [
         {
-          "id": "r9723",
-          "refId": "effect-852766",
+          "id": "r7274",
+          "refId": "effect-139563",
           "refType": 1
         }
       ],
@@ -1842,7 +1842,7 @@
         {
           "position": 1,
           "body": {
-            "ja": "強化状態・{r9723}コストには影響しない",
+            "ja": "強化状態・{r7274}コストには影響しない",
             "en": ""
           }
         }
@@ -1852,9 +1852,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-625202",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-955289",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "やる気コスト値増加",
       "en": ""
@@ -1862,8 +1862,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3190",
-          "refId": "effect-216381",
+          "id": "r5626",
+          "refId": "effect-607497",
           "refType": 1
         }
       ],
@@ -1872,7 +1872,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r3190}を増加",
+            "ja": "スキルカードの使用に必要な{r5626}を増加",
             "en": ""
           }
         },
@@ -1889,9 +1889,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-572438",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-716231",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "やる気コスト値減少",
       "en": ""
@@ -1899,8 +1899,8 @@
     "description": {
       "refs": [
         {
-          "id": "r1433",
-          "refId": "effect-216381",
+          "id": "r1229",
+          "refId": "effect-607497",
           "refType": 1
         }
       ],
@@ -1909,7 +1909,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r1433}を減少",
+            "ja": "スキルカードの使用に必要な{r1229}を減少",
             "en": ""
           }
         },
@@ -1926,9 +1926,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-800981",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-722679",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "強化状態コスト値増加",
       "en": ""
@@ -1957,9 +1957,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-370623",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-929145",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "強化状態コスト値減少",
       "en": ""
@@ -1988,9 +1988,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-735008",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-701399",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "全力値コスト値増加",
       "en": ""
@@ -1998,8 +1998,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5116",
-          "refId": "effect-993259",
+          "id": "r1445",
+          "refId": "effect-207551",
           "refType": 1
         }
       ],
@@ -2008,7 +2008,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r5116}を増加",
+            "ja": "スキルカードの使用に必要な{r1445}を増加",
             "en": ""
           }
         },
@@ -2025,9 +2025,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-710424",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-709109",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "全力値コスト値減少",
       "en": ""
@@ -2035,8 +2035,8 @@
     "description": {
       "refs": [
         {
-          "id": "r8203",
-          "refId": "effect-993259",
+          "id": "r4020",
+          "refId": "effect-207551",
           "refType": 1
         }
       ],
@@ -2045,7 +2045,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r8203}を減少",
+            "ja": "スキルカードの使用に必要な{r4020}を減少",
             "en": ""
           }
         },
@@ -2062,9 +2062,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-924176",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-252144",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "集中コスト値増加",
       "en": ""
@@ -2072,8 +2072,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4418",
-          "refId": "effect-606034",
+          "id": "r9530",
+          "refId": "effect-377685",
           "refType": 1
         }
       ],
@@ -2082,7 +2082,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r4418}を増加",
+            "ja": "スキルカードの使用に必要な{r9530}を増加",
             "en": ""
           }
         },
@@ -2099,9 +2099,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-680479",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-174394",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "集中コスト値減少",
       "en": ""
@@ -2109,8 +2109,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4956",
-          "refId": "effect-606034",
+          "id": "r1970",
+          "refId": "effect-377685",
           "refType": 1
         }
       ],
@@ -2119,7 +2119,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r4956}を減少",
+            "ja": "スキルカードの使用に必要な{r1970}を減少",
             "en": ""
           }
         },
@@ -2136,9 +2136,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-318368",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-216799",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好調コスト値増加",
       "en": ""
@@ -2146,8 +2146,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3714",
-          "refId": "effect-864501",
+          "id": "r5165",
+          "refId": "effect-239127",
           "refType": 1
         }
       ],
@@ -2156,7 +2156,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r3714}を増加",
+            "ja": "スキルカードの使用に必要な{r5165}を増加",
             "en": ""
           }
         },
@@ -2173,9 +2173,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-289240",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-366593",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "絶好調コスト値増加",
       "en": ""
@@ -2183,8 +2183,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5610",
-          "refId": "effect-131776",
+          "id": "r5547",
+          "refId": "effect-446387",
           "refType": 1
         }
       ],
@@ -2193,7 +2193,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r5610}を増加",
+            "ja": "スキルカードの使用に必要な{r5547}を増加",
             "en": ""
           }
         },
@@ -2210,9 +2210,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-522275",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-783933",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "絶好調コスト値減少",
       "en": ""
@@ -2220,8 +2220,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3533",
-          "refId": "effect-131776",
+          "id": "r5861",
+          "refId": "effect-446387",
           "refType": 1
         }
       ],
@@ -2230,7 +2230,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r3533}を減少",
+            "ja": "スキルカードの使用に必要な{r5861}を減少",
             "en": ""
           }
         },
@@ -2247,9 +2247,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-371389",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-118530",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好調コスト値減少",
       "en": ""
@@ -2257,8 +2257,8 @@
     "description": {
       "refs": [
         {
-          "id": "r9923",
-          "refId": "effect-864501",
+          "id": "r1002",
+          "refId": "effect-239127",
           "refType": 1
         }
       ],
@@ -2267,7 +2267,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r9923}を減少",
+            "ja": "スキルカードの使用に必要な{r1002}を減少",
             "en": ""
           }
         },
@@ -2284,9 +2284,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-417529",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-462969",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "体力消費コスト値増加",
       "en": ""
@@ -2294,8 +2294,8 @@
     "description": {
       "refs": [
         {
-          "id": "r2524",
-          "refId": "effect-852766",
+          "id": "r1033",
+          "refId": "effect-139563",
           "refType": 1
         }
       ],
@@ -2304,7 +2304,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r2524}コストが増加",
+            "ja": "スキルカードの使用に必要な{r1033}コストが増加",
             "en": ""
           }
         }
@@ -2314,9 +2314,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-191021",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-680156",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "体力消費コスト値減少",
       "en": ""
@@ -2324,8 +2324,8 @@
     "description": {
       "refs": [
         {
-          "id": "r7069",
-          "refId": "effect-852766",
+          "id": "r1952",
+          "refId": "effect-139563",
           "refType": 1
         }
       ],
@@ -2334,7 +2334,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r7069}コストを減少",
+            "ja": "スキルカードの使用に必要な{r1952}コストを減少",
             "en": ""
           }
         }
@@ -2344,9 +2344,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-423892",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-967170",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "コスト値減少",
       "en": ""
@@ -2354,8 +2354,8 @@
     "description": {
       "refs": [
         {
-          "id": "r1105",
-          "refId": "effect-852766",
+          "id": "r2117",
+          "refId": "effect-139563",
           "refType": 1
         }
       ],
@@ -2371,7 +2371,7 @@
         {
           "position": 1,
           "body": {
-            "ja": "強化状態・{r1105}コストには影響しない",
+            "ja": "強化状態・{r2117}コストには影響しない",
             "en": ""
           }
         }
@@ -2381,9 +2381,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-143291",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-514913",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好印象コスト値増加",
       "en": ""
@@ -2391,8 +2391,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5026",
-          "refId": "effect-957886",
+          "id": "r3134",
+          "refId": "effect-620334",
           "refType": 1
         }
       ],
@@ -2401,7 +2401,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r5026}を増加",
+            "ja": "スキルカードの使用に必要な{r3134}を増加",
             "en": ""
           }
         },
@@ -2418,9 +2418,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-541853",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-492595",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好印象コスト値減少",
       "en": ""
@@ -2428,8 +2428,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3587",
-          "refId": "effect-957886",
+          "id": "r6069",
+          "refId": "effect-620334",
           "refType": 1
         }
       ],
@@ -2438,7 +2438,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの使用に必要な{r3587}を減少",
+            "ja": "スキルカードの使用に必要な{r6069}を減少",
             "en": ""
           }
         },
@@ -2455,9 +2455,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-222705",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-222276",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "効果追加",
       "en": ""
@@ -2479,9 +2479,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-836577",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-745818",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "効果置換",
       "en": ""
@@ -2503,9 +2503,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-213972",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-305294",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "効果削除",
       "en": ""
@@ -2527,9 +2527,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-120860",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-430293",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "倍",
       "en": ""
@@ -2548,12 +2548,12 @@
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-258780",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-985050",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "疲労",
       "en": ""
@@ -2575,9 +2575,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-993715",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-152649",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "疲労",
       "en": ""
@@ -2599,9 +2599,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-301105",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-764489",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "使用回数持ち越し",
       "en": ""
@@ -2623,9 +2623,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-259326",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-498714",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "カード効果増加",
       "en": ""
@@ -2647,9 +2647,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-442068",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-239748",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "消費体力増加無効",
       "en": ""
@@ -2671,9 +2671,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-377346",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-757714",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "全力値増加",
       "en": ""
@@ -2681,18 +2681,18 @@
     "description": {
       "refs": [
         {
-          "id": "r6326",
-          "refId": "effect-993259",
+          "id": "r8458",
+          "refId": "effect-207551",
           "refType": 1
         },
         {
-          "id": "r6403",
-          "refId": "effect-417891",
+          "id": "r3547",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r8907",
-          "refId": "effect-617839",
+          "id": "r7044",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -2701,21 +2701,21 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r6326}増加値を増加",
+            "ja": "{r8458}増加値を増加",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r6326}増加効果を持たないスキルカードには影響しない",
+            "ja": "{r8458}増加効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "{r6403}と{r8907}には影響しない",
+            "ja": "{r3547}と{r7044}には影響しない",
             "en": ""
           }
         }
@@ -2725,9 +2725,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-476387",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-108141",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "全力値減少",
       "en": ""
@@ -2735,18 +2735,18 @@
     "description": {
       "refs": [
         {
-          "id": "r2917",
-          "refId": "effect-993259",
+          "id": "r9819",
+          "refId": "effect-207551",
           "refType": 1
         },
         {
-          "id": "r1781",
-          "refId": "effect-417891",
+          "id": "r1085",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r4810",
-          "refId": "effect-617839",
+          "id": "r6395",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -2755,14 +2755,14 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r2917}増加値が減少",
+            "ja": "{r9819}増加値が減少",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r2917}増加効果を持たないスキルカードには影響しない",
+            "ja": "{r9819}増加効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
@@ -2776,7 +2776,7 @@
         {
           "position": 3,
           "body": {
-            "ja": "{r1781}と{r4810}には影響しない",
+            "ja": "{r1085}と{r6395}には影響しない",
             "en": ""
           }
         }
@@ -2786,9 +2786,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-188546",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-595696",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "ほしのきらめき",
       "en": ""
@@ -2810,9 +2810,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-482568",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-771700",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "開始時手札効果付与",
       "en": ""
@@ -2834,9 +2834,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-107264",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-848789",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "パラメータ値増加",
       "en": ""
@@ -2844,18 +2844,18 @@
     "description": {
       "refs": [
         {
-          "id": "r5376",
-          "refId": "terminology-528351",
+          "id": "r5654",
+          "refId": "terminology-553008",
           "refType": 0
         },
         {
-          "id": "r4164",
-          "refId": "effect-417891",
+          "id": "r8015",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r8820",
-          "refId": "effect-617839",
+          "id": "r8204",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -2864,21 +2864,21 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5376}上昇値を増加",
+            "ja": "{r5654}上昇値を増加",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r5376}上昇効果を持たないスキルカードには影響しない",
+            "ja": "{r5654}上昇効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "{r4164}と{r8820}には影響しない",
+            "ja": "{r8015}と{r8204}には影響しない",
             "en": ""
           }
         }
@@ -2888,9 +2888,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-479694",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-351078",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "パラメータボーナス",
       "en": ""
@@ -2912,9 +2912,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-637889",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-954062",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "集中値増加",
       "en": ""
@@ -2936,9 +2936,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-106246",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-982633",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "集中値減少",
       "en": ""
@@ -2960,9 +2960,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-787747",
-    "createdAt": "2025-09-02T05:07:28.716Z",
-    "updatedAt": "2025-09-02T05:07:28.716Z",
+    "id": "terminology-134574",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "パラメータ上昇回数増加",
       "en": ""
@@ -2970,18 +2970,18 @@
     "description": {
       "refs": [
         {
-          "id": "r9359",
-          "refId": "terminology-528351",
+          "id": "r9660",
+          "refId": "terminology-553008",
           "refType": 0
         },
         {
-          "id": "r8145",
-          "refId": "effect-417891",
+          "id": "r8650",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r3984",
-          "refId": "effect-617839",
+          "id": "r9496",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -2990,21 +2990,21 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r9359}上昇回数を増加",
+            "ja": "{r9660}上昇回数を増加",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r9359}上昇効果を持たないスキルカードには影響しない",
+            "ja": "{r9660}上昇効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "{r8145}と{r3984}には影響しない",
+            "ja": "{r8650}と{r9496}には影響しない",
             "en": ""
           }
         }
@@ -3014,9 +3014,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-930324",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-921053",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "パラメータ上昇回数減少",
       "en": ""
@@ -3024,18 +3024,18 @@
     "description": {
       "refs": [
         {
-          "id": "r1985",
-          "refId": "terminology-528351",
+          "id": "r3212",
+          "refId": "terminology-553008",
           "refType": 0
         },
         {
-          "id": "r4027",
-          "refId": "effect-417891",
+          "id": "r2429",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r1300",
-          "refId": "effect-617839",
+          "id": "r7762",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -3044,14 +3044,14 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r1985}上昇回数が減少",
+            "ja": "{r3212}上昇回数が減少",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r1985}上昇効果を持たないスキルカードには影響しない",
+            "ja": "{r3212}上昇効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
@@ -3065,7 +3065,7 @@
         {
           "position": 3,
           "body": {
-            "ja": "{r4027}と{r1300}には影響しない",
+            "ja": "{r2429}と{r7762}には影響しない",
             "en": ""
           }
         }
@@ -3075,9 +3075,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-848165",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-660615",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "元気分パラメータ倍率増加",
       "en": ""
@@ -3099,9 +3099,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-405037",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-358686",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "やる気分パラメータ倍率増加",
       "en": ""
@@ -3123,9 +3123,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-486113",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-408560",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好印象分パラメータ倍率増加",
       "en": ""
@@ -3147,9 +3147,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-187771",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-957028",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "パラメータ値減少",
       "en": ""
@@ -3157,18 +3157,18 @@
     "description": {
       "refs": [
         {
-          "id": "r5451",
-          "refId": "terminology-528351",
+          "id": "r8173",
+          "refId": "terminology-553008",
           "refType": 0
         },
         {
-          "id": "r4896",
-          "refId": "effect-417891",
+          "id": "r1875",
+          "refId": "effect-366462",
           "refType": 1
         },
         {
-          "id": "r1840",
-          "refId": "effect-617839",
+          "id": "r3874",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -3177,14 +3177,14 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5451}上昇値が減少",
+            "ja": "{r8173}上昇値が減少",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r5451}上昇効果を持たないスキルカードには影響しない",
+            "ja": "{r8173}上昇効果を持たないスキルカードには影響しない",
             "en": ""
           }
         },
@@ -3198,7 +3198,7 @@
         {
           "position": 3,
           "body": {
-            "ja": "{r4896}と{r1840}には影響しない",
+            "ja": "{r1875}と{r3874}には影響しない",
             "en": ""
           }
         }
@@ -3208,9 +3208,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-330754",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-577362",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "一時強化",
       "en": ""
@@ -3232,9 +3232,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-613438",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-668435",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "メンタルスキルカード",
       "en": ""
@@ -3242,8 +3242,8 @@
     "description": {
       "refs": [
         {
-          "id": "r6345",
-          "refId": "effect-498238",
+          "id": "r7895",
+          "refId": "effect-732388",
           "refType": 1
         }
       ],
@@ -3252,7 +3252,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r6345}など補助効果を主とするスキルカード",
+            "ja": "{r7895}など補助効果を主とするスキルカード",
             "en": ""
           }
         }
@@ -3262,9 +3262,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-731066",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-210431",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "[移動効果]",
       "en": ""
@@ -3286,9 +3286,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-302045",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-499917",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "重複不可",
       "en": ""
@@ -3310,9 +3310,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-770314",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-472678",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "直接効果",
       "en": ""
@@ -3320,8 +3320,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4748",
-          "refId": "effect-617839",
+          "id": "r3657",
+          "refId": "effect-177960",
           "refType": 1
         }
       ],
@@ -3330,19 +3330,19 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードとPドリンクの使用時に発動する効果（{r4748}を除く）",
+            "ja": "スキルカードとPドリンクの使用時に発動する効果（{r3657}を除く）",
             "en": ""
           }
         }
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-377375",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-858165",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "絶好調値増加",
       "en": ""
@@ -3364,9 +3364,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-421778",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-715061",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "絶好調値減少",
       "en": ""
@@ -3388,9 +3388,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-136230",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-406450",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好調値増加",
       "en": ""
@@ -3412,9 +3412,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-898490",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-451219",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "好調値減少",
       "en": ""
@@ -3436,9 +3436,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-176289",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-726860",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "効果発動条件を置換",
       "en": ""
@@ -3460,9 +3460,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-571509",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-171470",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "使用後移動先変更",
       "en": ""
@@ -3484,9 +3484,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-168804",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-678894",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "使用可能条件を置換",
       "en": ""
@@ -3508,9 +3508,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-581111",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-178585",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "[成長補助]",
       "en": ""
@@ -3539,9 +3539,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-498501",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-529844",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "レッスン中1回",
       "en": ""
@@ -3563,9 +3563,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-488133",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-541319",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "山札の一番上",
       "en": ""
@@ -3579,9 +3579,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-402776",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-641791",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "山札の一番下",
       "en": ""
@@ -3595,9 +3595,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-341432",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-414953",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "山札のランダムな位置",
       "en": ""
@@ -3611,9 +3611,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-135433",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-211876",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "捨札",
       "en": ""
@@ -3627,9 +3627,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-991114",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-425456",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "手札",
       "en": ""
@@ -3643,9 +3643,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-751101",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-433839",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "保留",
       "en": ""
@@ -3653,8 +3653,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5946",
-          "refId": "effect-922290",
+          "id": "r6309",
+          "refId": "effect-745384",
           "refType": 1
         }
       ],
@@ -3663,7 +3663,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5946}に変更時、手札に移動する",
+            "ja": "{r6309}に変更時、手札に移動する",
             "en": ""
           }
         },
@@ -3677,12 +3677,12 @@
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-526128",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-767412",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "除外",
       "en": ""
@@ -3696,9 +3696,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-432929",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-156132",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "共通",
       "en": ""
@@ -3720,9 +3720,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-434263",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-150173",
+    "createdAt": "2026-07-08T07:35:46.744Z",
+    "updatedAt": "2026-07-08T07:35:46.744Z",
     "name": {
       "ja": "センス",
       "en": ""
@@ -3730,13 +3730,13 @@
     "description": {
       "refs": [
         {
-          "id": "r7099",
-          "refId": "effect-864501",
+          "id": "r5922",
+          "refId": "effect-239127",
           "refType": 1
         },
         {
-          "id": "r5078",
-          "refId": "effect-606034",
+          "id": "r8613",
+          "refId": "effect-377685",
           "refType": 1
         }
       ],
@@ -3745,19 +3745,19 @@
         {
           "position": 0,
           "body": {
-            "ja": "「{r7099}」や「{r5078}」を活用して育成するプラン",
+            "ja": "「{r5922}」や「{r8613}」を活用して育成するプラン",
             "en": ""
           }
         }
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-976479",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-610462",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "ロジック",
       "en": ""
@@ -3765,13 +3765,13 @@
     "description": {
       "refs": [
         {
-          "id": "r1685",
-          "refId": "effect-957886",
+          "id": "r2589",
+          "refId": "effect-620334",
           "refType": 1
         },
         {
-          "id": "r7995",
-          "refId": "effect-216381",
+          "id": "r2249",
+          "refId": "effect-607497",
           "refType": 1
         }
       ],
@@ -3780,19 +3780,19 @@
         {
           "position": 0,
           "body": {
-            "ja": "「{r1685}」や「{r7995}」を活用して育成するプラン",
+            "ja": "「{r2589}」や「{r2249}」を活用して育成するプラン",
             "en": ""
           }
         }
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-451865",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-716077",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "アノマリー",
       "en": ""
@@ -3800,23 +3800,18 @@
     "description": {
       "refs": [
         {
-          "id": "r4283",
-          "refId": "terminology-849871",
-          "refType": 0
-        },
-        {
-          "id": "r6052",
-          "refId": "effect-922290",
+          "id": "r3628",
+          "refId": "effect-745384",
           "refType": 1
         },
         {
-          "id": "r8403",
-          "refId": "effect-277179",
+          "id": "r7448",
+          "refId": "effect-486259",
           "refType": 1
         },
         {
-          "id": "r4135",
-          "refId": "effect-345012",
+          "id": "r3826",
+          "refId": "effect-431513",
           "refType": 1
         }
       ],
@@ -3825,19 +3820,19 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4283}「{r6052}」「{r8403}」「{r4135}」を活用して育成するプラン",
+            "ja": "「{r3628}」「{r7448}」「{r3826}」を活用して育成するプラン",
             "en": ""
           }
         }
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-754894",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-256181",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "【センス専用】",
       "en": ""
@@ -3845,8 +3840,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4074",
-          "refId": "terminology-434263",
+          "id": "r7625",
+          "refId": "terminology-150173",
           "refType": 0
         }
       ],
@@ -3855,7 +3850,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "プランが{r4074}のアイドルをプロデュースしている場合のみ発動",
+            "ja": "プランが{r7625}のアイドルをプロデュースしている場合のみ発動",
             "en": ""
           }
         }
@@ -3865,9 +3860,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-762614",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-378660",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "【ロジック専用】",
       "en": ""
@@ -3875,8 +3870,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4320",
-          "refId": "terminology-976479",
+          "id": "r8610",
+          "refId": "terminology-610462",
           "refType": 0
         }
       ],
@@ -3885,7 +3880,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "プランが{r4320}のアイドルをプロデュースしている場合のみ発動",
+            "ja": "プランが{r8610}のアイドルをプロデュースしている場合のみ発動",
             "en": ""
           }
         }
@@ -3895,9 +3890,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-639095",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-775763",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "【アノマリー専用】",
       "en": ""
@@ -3905,8 +3900,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3104",
-          "refId": "terminology-451865",
+          "id": "r1918",
+          "refId": "terminology-716077",
           "refType": 0
         }
       ],
@@ -3915,7 +3910,7 @@
         {
           "position": 0,
           "body": {
-            "ja": "プランが{r3104}のアイドルをプロデュースしている場合のみ発動",
+            "ja": "プランが{r1918}のアイドルをプロデュースしている場合のみ発動",
             "en": ""
           }
         }
@@ -3925,9 +3920,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-214620",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-844057",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "学園活動",
       "en": ""
@@ -3956,9 +3951,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-661219",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-993700",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "プレゼント",
       "en": ""
@@ -3987,9 +3982,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-734685",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-545724",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "好印象値増加",
       "en": ""
@@ -4011,9 +4006,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-772755",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-188292",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "好印象値減少",
       "en": ""
@@ -4035,9 +4030,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-170711",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-692360",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "消費体力増加値減少",
       "en": ""
@@ -4059,9 +4054,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-346194",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-139394",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "消費体力増加値増加",
       "en": ""
@@ -4083,9 +4078,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-833397",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-603585",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "消費体力減少値増加",
       "en": ""
@@ -4107,9 +4102,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-762699",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-490475",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "消費体力減少値減少",
       "en": ""
@@ -4131,9 +4126,9 @@
     "isHighlighted": false
   },
   {
-    "id": "terminology-849871",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-643059",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "指針",
       "en": ""
@@ -4141,18 +4136,18 @@
     "description": {
       "refs": [
         {
-          "id": "r7665",
-          "refId": "effect-345012",
+          "id": "r7156",
+          "refId": "effect-431513",
           "refType": 1
         },
         {
-          "id": "r2098",
-          "refId": "effect-277179",
+          "id": "r5234",
+          "refId": "effect-486259",
           "refType": 1
         },
         {
-          "id": "r3650",
-          "refId": "effect-922290",
+          "id": "r3991",
+          "refId": "effect-745384",
           "refType": 1
         }
       ],
@@ -4161,19 +4156,19 @@
         {
           "position": 0,
           "body": {
-            "ja": "「{r7665}」「{r2098}」「{r3650}」があり、それぞれが異なる効果を持つ",
+            "ja": "「{r7156}」「{r5234}」「{r3991}」があり、それぞれが異なる効果を持つ",
             "en": ""
           }
         }
       ]
     },
     "icon": null,
-    "isHighlighted": false
+    "isHighlighted": true
   },
   {
-    "id": "terminology-235590",
-    "createdAt": "2025-09-02T05:07:28.717Z",
-    "updatedAt": "2025-09-02T05:07:28.717Z",
+    "id": "terminology-479754",
+    "createdAt": "2026-07-08T07:35:46.745Z",
+    "updatedAt": "2026-07-08T07:35:46.745Z",
     "name": {
       "ja": "トラブルカード",
       "en": ""
