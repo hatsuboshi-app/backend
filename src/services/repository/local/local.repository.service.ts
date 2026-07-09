@@ -1,6 +1,8 @@
 import path from "node:path"
 import { readFileSync } from "jsonfile"
-import IRepositoryService, { ReferencePopulateMethods } from "@/services/repository/repository.service"
+import IRepositoryService, { FilterSortOptions,
+    ReferencePopulateMethods
+} from "@/services/repository/repository.service"
 import {
     Result,
     Character,
@@ -17,7 +19,24 @@ import {
     DBSkill,
     DBPItem,
     DBAuditionEffect,
-    DBAuditionTerminology, DBPDrink, DBPIdol
+    DBAuditionTerminology, DBPDrink, DBPIdol,
+    AuditionEffectFilterOptions,
+    AuditionTerminologyFilterOptions,
+    CharacterFilterOptions,
+    IAuditionEffect,
+    IAuditionTerminology,
+    ICharacter,
+    IPDrink,
+    IPIdol,
+    IPItem,
+    ISkill,
+    ISupportCard,
+    Paginator,
+    PDrinkFilterOptions,
+    PIdolFilterOptions,
+    PItemFilterOptions,
+    SkillFilterOptions,
+    SupportCardFilterOptions, DBSupportCard
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
@@ -30,7 +49,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     private readonly idols: DBPIdol[]
     private readonly items: DBPItem[]
     private readonly skills: DBSkill[]
-    // private readonly supportCards: DBSupportCard[]
+    private readonly supportCards: DBSupportCard[]
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
             const data = this.effects.find(x => x.id === id)
@@ -68,7 +87,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.idols = readFileSync(path.join(dir, "PIdol.json"))
         this.items = readFileSync(path.join(dir, "PItem.json"))
         this.skills = readFileSync(path.join(dir, "Skill.json"))
-        // this.supportCards = []
+        this.supportCards = []
     }
 
     // AuditionEffect //
@@ -77,6 +96,9 @@ export default class LocalRepositoryService implements IRepositoryService {
         for await (const d of this.effects)
             data.push(await AuditionEffect.fromDB(d, this.populateMethods))
         return data
+    }
+    async getAuditionEffects(o: FilterSortOptions<IAuditionEffect, AuditionEffectFilterOptions>): Promise<Paginator<AuditionEffect>> {
+        throw new InternalServerError("Method not implemented.")
     }
     async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
         const r = this.effects.find(i  => i.id == id)
@@ -92,6 +114,9 @@ export default class LocalRepositoryService implements IRepositoryService {
             data.push(await AuditionTerminology.fromDB(d, this.populateMethods))
         return data
     }
+    async getAuditionTerminologies(o: FilterSortOptions<IAuditionTerminology, AuditionTerminologyFilterOptions>): Promise<Paginator<AuditionTerminology>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
         const r = this.terminologies.find(i  => i.id == id)
         return r
@@ -105,6 +130,9 @@ export default class LocalRepositoryService implements IRepositoryService {
         for await (const d of this.characters)
             data.push(await Character.fromDB(d))
         return data
+    }
+    async getCharacters(o: FilterSortOptions<ICharacter, CharacterFilterOptions>): Promise<Paginator<Character>> {
+        throw new InternalServerError("Method not implemented.")
     }
     async getCharacterById(id: string): Promise<Result<Character>> {
         const r = this.characters.find(i  => i.id == id)
@@ -120,6 +148,9 @@ export default class LocalRepositoryService implements IRepositoryService {
             data.push(await PDrink.fromDB(d, this.populateMethods))
         return data
     }
+    async getPDrinks(o: FilterSortOptions<IPDrink, PDrinkFilterOptions>): Promise<Paginator<PDrink>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getPDrinkById(id: string): Promise<Result<PDrink>> {
         const r = this.drinks.find(i  => i.id == id)
         return r
@@ -133,6 +164,9 @@ export default class LocalRepositoryService implements IRepositoryService {
         for await (const d of this.idols)
             data.push(await PIdol.fromDB(d, this.populateMethods))
         return data
+    }
+    async getPIdols(o: FilterSortOptions<IPIdol, PIdolFilterOptions>): Promise<Paginator<PDrink>> {
+        throw new InternalServerError("Method not implemented.")
     }
     async getPIdolById(id: string): Promise<Result<PIdol>> {
         const r = this.idols.find(i  => i.id == id)
@@ -148,6 +182,9 @@ export default class LocalRepositoryService implements IRepositoryService {
             data.push(await PItem.fromDB(d, this.populateMethods))
         return data
     }
+    async getPItems(o: FilterSortOptions<IPItem, PItemFilterOptions>): Promise<Paginator<PItem>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getPItemById(id: string): Promise<Result<PItem>> {
         const r = this.items.find(i  => i.id == id)
         return r
@@ -162,6 +199,9 @@ export default class LocalRepositoryService implements IRepositoryService {
             data.push(await Skill.fromDB(d, this.populateMethods))
         return data
     }
+    async getSkills(o: FilterSortOptions<ISkill, SkillFilterOptions>): Promise<Paginator<Skill>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getSkillById(id: string): Promise<Result<Skill>> {
         const r = this.skills.find(i  => i.id == id)
         return r
@@ -172,6 +212,9 @@ export default class LocalRepositoryService implements IRepositoryService {
     // SupportCard //
     async getAllSupportCards(): Promise<SupportCard[]> {
         throw new InternalServerError("Not implemented.")
+    }
+    async getSupportCards(o: FilterSortOptions<ISupportCard, SupportCardFilterOptions>): Promise<Paginator<SupportCard>> {
+        throw new InternalServerError("Method not implemented.")
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
         throw new InternalServerError("Not implemented.")

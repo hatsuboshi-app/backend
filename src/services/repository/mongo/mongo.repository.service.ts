@@ -1,4 +1,7 @@
-import IRepositoryService, { ReferencePopulateMethods } from "@/services/repository/repository.service"
+import IRepositoryService, {
+    FilterSortOptions,
+    ReferencePopulateMethods
+} from "@/services/repository/repository.service"
 import { Collection, Db, MongoClient, ServerApiVersion } from "mongodb"
 import {
     AuditionEffect,
@@ -10,7 +13,20 @@ import {
     PItem,
     Skill,
     SupportCard,
-    fail, success, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBSkill, DBPItem, DBPIdol, DBPDrink
+    fail, success, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBSkill, DBPItem, DBPIdol, DBPDrink, Paginator,
+    IAuditionTerminology, AuditionTerminologyFilterOptions, IAuditionEffect, AuditionEffectFilterOptions,
+    CharacterFilterOptions,
+    ICharacter,
+    IPDrink,
+    IPIdol,
+    IPItem,
+    ISkill,
+    ISupportCard,
+    PDrinkFilterOptions,
+    PIdolFilterOptions,
+    PItemFilterOptions,
+    SkillFilterOptions,
+    SupportCardFilterOptions
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
@@ -31,7 +47,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     private readonly idols: Collection
     private readonly items: Collection
     private readonly skills: Collection
-    // private readonly supportCards: Collection
+    private readonly supportCards: Collection
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
@@ -72,11 +88,14 @@ export default class MongoRepositoryService implements IRepositoryService {
         this.idols = this.db.collection("PIdol")
         this.items = this.db.collection("PItem")
         this.skills = this.db.collection("Skill")
-        // this.supportCards = this.db.collection("SupportCard")
+        this.supportCards = this.db.collection("SupportCard")
     }
 
     // AuditionEffect //
     async getAllAuditionEffects(): Promise<AuditionEffect[]> {
+        throw new InternalServerError("Method not implemented.")
+    }
+    async getAuditionEffects({ sort, filter }: FilterSortOptions<IAuditionEffect, AuditionEffectFilterOptions>): Promise<Paginator<AuditionEffect>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
@@ -90,6 +109,9 @@ export default class MongoRepositoryService implements IRepositoryService {
     async getAllAuditionTerminologies(): Promise<AuditionTerminology[]> {
         throw new InternalServerError("Method not implemented.")
     }
+    async getAuditionTerminologies({ sort, filter }: FilterSortOptions<IAuditionTerminology, AuditionTerminologyFilterOptions>): Promise<Paginator<AuditionTerminology>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
         const d = await this.terminologies.findOne({ id: id })
         return d
@@ -99,6 +121,9 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     // Character //
     async getAllCharacters(): Promise<Character[]> {
+        throw new InternalServerError("Method not implemented.")
+    }
+    async getCharacters({ sort, filter }: FilterSortOptions<ICharacter, CharacterFilterOptions>): Promise<Paginator<Character>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getCharacterById(id: string): Promise<Result<Character>> {
@@ -112,6 +137,9 @@ export default class MongoRepositoryService implements IRepositoryService {
     async getAllPDrinks(): Promise<PDrink[]> {
         throw new InternalServerError("Method not implemented.")
     }
+    async getPDrinks({ sort, filter }: FilterSortOptions<IPDrink, PDrinkFilterOptions>): Promise<Paginator<PDrink>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getPDrinkById(id: string): Promise<Result<PDrink>> {
         const d = await this.drinks.findOne({ id: id })
         return d
@@ -121,6 +149,9 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     // PIdol //
     async getAllPIdols(): Promise<PIdol[]> {
+        throw new InternalServerError("Method not implemented.")
+    }
+    async getPIdols({ sort, filter }: FilterSortOptions<IPIdol, PIdolFilterOptions>): Promise<Paginator<PDrink>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getPIdolById(id: string): Promise<Result<PIdol>> {
@@ -134,6 +165,9 @@ export default class MongoRepositoryService implements IRepositoryService {
     async getAllPItems(): Promise<PItem[]> {
         throw new InternalServerError("Method not implemented.")
     }
+    async getPItems({ sort, filter }: FilterSortOptions<IPItem, PItemFilterOptions>): Promise<Paginator<PItem>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getPItemById(id: string): Promise<Result<PItem>> {
         const d = await this.items.findOne({ id: id })
         return d
@@ -145,6 +179,9 @@ export default class MongoRepositoryService implements IRepositoryService {
     async getAllSkills(): Promise<Skill[]> {
         throw new InternalServerError("Method not implemented.")
     }
+    async getSkills({ sort, filter }: FilterSortOptions<ISkill, SkillFilterOptions>): Promise<Paginator<Skill>> {
+        throw new InternalServerError("Method not implemented.")
+    }
     async getSkillById(id: string): Promise<Result<Skill>> {
         const d = await this.skills.findOne({ id: id })
         return d
@@ -154,6 +191,9 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     // SupportCard //
     async getAllSupportCards(): Promise<SupportCard[]> {
+        throw new InternalServerError("Method not implemented.")
+    }
+    async getSupportCards({ sort, filter }: FilterSortOptions<ISupportCard, SupportCardFilterOptions>): Promise<Paginator<SupportCard>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
