@@ -1,6 +1,5 @@
 import express, { Request, Response } from "express"
 import config from "@/config/config"
-import dotenv from 'dotenv'
 import cors from "cors"
 import { logger } from "@/services"
 import CharacterRouter from "@/routes/Character.router"
@@ -13,8 +12,6 @@ import PItemRouter from "@/routes/PItem.router"
 import SkillRouter from "@/routes/Skill.router"
 import SupportCardRouter from "@/routes/SupportCard.router"
 
-dotenv.config({ quiet: true })
-
 const app = express()
 
 app.use(express.json())
@@ -23,7 +20,7 @@ app.use(cors())
 app.get("/", (req: Request, res: Response) => {
     res.json({
         message: "ok",
-        env: config.nodeEnv
+        env: config.env
     })
 })
 
@@ -39,5 +36,5 @@ app.use(SupportCardRouter.url, SupportCardRouter.router)
 app.use(errorHandler)
 
 app.listen(config.port, () => {
-    logger.info(`server live  //  http://localhost:${config.port}  //  env: ${config.nodeEnv}\n`)
+    logger.info(`server live  //  http://localhost:${config.port}  //  env: ${config.env}\n`)
 })
