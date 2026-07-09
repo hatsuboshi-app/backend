@@ -31,7 +31,6 @@ export default class LocalRepositoryService implements IRepositoryService {
     private readonly items: DBPItem[]
     private readonly skills: DBSkill[]
     // private readonly supportCards: DBSupportCard[]
-
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
             const data = this.effects.find(x => x.id === id)
