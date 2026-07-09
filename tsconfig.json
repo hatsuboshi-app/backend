@@ -1,7 +1,8 @@
 {
   "compilerOptions": {
-    "target": "es2016",
+    "target": "es2015",
     "module": "commonjs",
+    "moduleResolution": "node",
     "esModuleInterop": true,
     "outDir": "./dist",
     "incremental": false,
@@ -9,12 +10,8 @@
     "strict": true,
     "skipLibCheck": true,
     "paths": {
-      "@types": ["./types/src"],
       "@/*": ["./src/*"]
     }
   },
   "include": ["src/**/*"],
-  "exclude": [
-    "src/types/tsup.config.ts"
-  ]
 }
