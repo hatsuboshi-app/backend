@@ -1,6 +1,7 @@
 import path from "node:path"
 import { readFileSync } from "jsonfile"
-import IRepositoryService, { FilterSortOptions,
+import IRepositoryService, {
+    PaginateOptions,
     ReferencePopulateMethods
 } from "@/services/repository/repository.service"
 import {
@@ -37,18 +38,13 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, DBSupportCard, LocaleString, LocaleStringWithRomaji, LocaleStringFilterOptions,
-    DateFilterOptions
+    DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
+import config from "@/config/config"
 
-type LocaleStringFieldOptions = {
-    field: LocaleStringWithRomaji
-    hasRom: true
-} | {
-    field: LocaleString
-    hasRom: false
-}
+type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
 export default class LocalRepositoryService implements IRepositoryService {
     private readonly effects: DBAuditionEffect[]
@@ -99,6 +95,23 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.supportCards = []
     }
 
+    private handlePagination<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
+        const page = (options?.page || 1) - 1
+        const perPage = options?.perPage || config.defaults.pageSize
+        const startIndex = page * perPage
+        const endIndex = startIndex + perPage
+        return {
+            data: data.slice(startIndex, endIndex),
+            meta: {
+                currentPage: page + 1,
+                pageSize: perPage,
+                totalItems: data.length,
+                totalPages: Math.ceil(data.length / perPage),
+                prevPageLocation: null,
+                nextPageLocation: null
+            }
+        }
+    }
     private handleDateFilter(field: string, filter?: DateFilterOptions): boolean {
         if (!filter) return true
         let isMatch = true
@@ -114,7 +127,14 @@ export default class LocalRepositoryService implements IRepositoryService {
         }
         return isMatch
     }
-    private handleLocaleStringFilter({ field, hasRom }: LocaleStringFieldOptions, filter: LocaleStringFilterOptions): boolean {
+    private handleNumberFilter(field: number, filter?: NumberFilterOptions): boolean {
+        if (!filter) return true
+        const { gte, lte } = filter
+        if (gte !== undefined && field < gte) return false  // false if gte is defined and field is less than gte
+        return !(lte !== undefined && field > lte)  // false if lte is defined and field is larger than lte
+    }
+    private handleLocaleStringFilter({ field, hasRom }: LocaleStringFieldOptions, filter?: LocaleStringFilterOptions): boolean {
+        if (!filter) return true
         switch (filter.type) {
             case "IncompleteLocale": {
                 return [
@@ -143,28 +163,42 @@ export default class LocalRepositoryService implements IRepositoryService {
             }
         }
     }
+    private handleEnumFilter<E>(field: E, filter?: EnumFilterOptions<E>): boolean {
+        if (!filter) return true
+        if (filter.include) {
+            return filter.include.includes(field)  // false if field value is not an accepted value, true otherwise
+        } else {
+            if (!filter.exclude) return true
+            return !(filter.exclude.includes(field))  // false if field value is a rejected value, true otherwise
+        }
+    }
+    private handleSort<T extends { createdAt: string }>({ a, b }: { a: T, b: T }, sort?: SortOption<T>[]): number {
+        if (!sort) return new Date(a.createdAt) > new Date(a.createdAt) ? 1 : -1
+        const compareValue = <K>(v: K[keyof K]): string | number => {
+            if (v instanceof Date) return v.getTime()
+            if (typeof v === 'object' && v !== null && 'ja' in v) {
+                return (v as unknown as LocaleString).ja
+            }
+            return v as string | number
+        }
+        for (const s of sort) {
+            const av = compareValue(a[s.attribute])
+            const bv = compareValue(b[s.attribute])
+            if (av < bv) return s.ascending ? -1 : 1
+            if (av > bv) return s.ascending ? 1 : -1
+        }
+        return 0
+    }
 
     // AuditionEffect //
-    async getAllAuditionEffects(): Promise<AuditionEffect[]> {
-        const data = []
-        for await (const d of this.effects)
-            data.push(await AuditionEffect.fromDB(d, this.populateMethods))
-        return data
-    }
-    async getAuditionEffects({ sort, filter }: FilterSortOptions<IAuditionEffect, AuditionEffectFilterOptions>): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
-        const matches = this.effects.filter(e => {
-            let isMatch = false
-            if (!filter) return true
-            isMatch = isMatch || !!(filter.createdAt && this.handleDateFilter(e.createdAt, filter.createdAt))
-            isMatch = isMatch || !!(filter.updatedAt && this.handleDateFilter(e.updatedAt, filter.updatedAt))
-            isMatch = isMatch || !!(filter.name && this.handleLocaleStringFilter({ field: e.name, hasRom: false }, filter.name))
-            return isMatch
-        })
-        const data = []
-        for await (const m of matches) {
-            data.push(await AuditionEffect.fromDB(m, this.populateMethods))
-        }
-        return new Paginator<AuditionEffect, IAuditionEffect>(AuditionEffect, { data:  data.map(d => d.toJSON()) })
+    async getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
+        const data = (await Promise.all(this.effects
+            .filter(e => this.handleDateFilter(e.createdAt, f?.createdAt))
+            .filter(e => this.handleDateFilter(e.updatedAt, f?.updatedAt))
+            .filter(e => this.handleLocaleStringFilter({ field: e.name, hasRom: false }, f?.name))
+            .map(async (m) => (await AuditionEffect.fromDB(m, this.populateMethods)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(AuditionEffect, this.handlePagination(data, p))
     }
     async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
         const r = this.effects.find(i  => i.id == id)
@@ -174,14 +208,14 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // AuditionTerminology //
-    async getAllAuditionTerminologies(): Promise<AuditionTerminology[]> {
-        const data = []
-        for await (const d of this.terminologies)
-            data.push(await AuditionTerminology.fromDB(d, this.populateMethods))
-        return data
-    }
-    async getAuditionTerminologies(o: FilterSortOptions<IAuditionTerminology, AuditionTerminologyFilterOptions>): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
-        throw new InternalServerError("Method not implemented.")
+    async getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
+        const data = (await Promise.all(this.terminologies
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: false }, f?.name))
+            .map(async (i) => (await AuditionTerminology.fromDB(i, this.populateMethods)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(AuditionTerminology, this.handlePagination(data, p))
     }
     async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
         const r = this.terminologies.find(i  => i.id == id)
@@ -191,14 +225,21 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // Character //
-    async getAllCharacters(): Promise<Character[]> {
-        const data = []
-        for await (const d of this.characters)
-            data.push(await Character.fromDB(d))
-        return data
-    }
-    async getCharacters(o: FilterSortOptions<ICharacter, CharacterFilterOptions>): Promise<Paginator<Character, ICharacter>> {
-        throw new InternalServerError("Method not implemented.")
+    async getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]): Promise<Paginator<Character, ICharacter>> {
+        const combineName = (fn: LocaleString, ln: LocaleString): LocaleString => {
+            return {
+                ja: `${ln.ja}${fn.ja}`,
+                en: fn.en || ln.en ? `${fn.en} ${ln.en} ${fn.en}` : null
+            }
+        }
+        const data = (await Promise.all(this.characters
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleLocaleStringFilter({ field: combineName(i.firstName, i.lastName), hasRom: false }, f?.name))
+            .filter(i => f?.isPlayable !== undefined ? i.isPlayable == f.isPlayable : true )
+            .map(async (i) => (await Character.fromDB(i)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(Character, this.handlePagination(data, p))
     }
     async getCharacterById(id: string): Promise<Result<Character>> {
         const r = this.characters.find(i  => i.id == id)
@@ -208,14 +249,17 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // PDrink //
-    async getAllPDrinks(): Promise<PDrink[]> {
-        const data = []
-        for await (const d of this.drinks)
-            data.push(await PDrink.fromDB(d, this.populateMethods))
-        return data
-    }
-    async getPDrinks(o: FilterSortOptions<IPDrink, PDrinkFilterOptions>): Promise<Paginator<PDrink, IPDrink>> {
-        throw new InternalServerError("Method not implemented.")
+    async getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]): Promise<Paginator<PDrink, IPDrink>> {
+        const data = (await Promise.all(this.drinks
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: true }, f?.name))
+            .filter(i => this.handleEnumFilter(i.plan, f?.plan))
+            .filter(i => this.handleEnumFilter(i.rarity, f?.rarity))
+            .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
+            .map(async (i) => (await PDrink.fromDB(i, this.populateMethods)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(PDrink, this.handlePagination(data, p))
     }
     async getPDrinkById(id: string): Promise<Result<PDrink>> {
         const r = this.drinks.find(i  => i.id == id)
@@ -225,14 +269,20 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // PIdol //
-    async getAllPIdols(): Promise<PIdol[]> {
-        const data = []
-        for await (const d of this.idols)
-            data.push(await PIdol.fromDB(d, this.populateMethods))
-        return data
-    }
-    async getPIdols(o: FilterSortOptions<IPIdol, PIdolFilterOptions>): Promise<Paginator<PIdol, IPIdol>> {
-        throw new InternalServerError("Method not implemented.")
+    async getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]): Promise<Paginator<PIdol, IPIdol>> {
+        const data = (await Promise.all(this.idols
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: false }, f?.name))
+            .filter(i => this.handleEnumFilter(i.character, f?.character))
+            .filter(i => this.handleEnumFilter(i.rarity, f?.rarity))
+            .filter(i => this.handleEnumFilter(i.plan, f?.plan))
+            .filter(i => f?.isWelfare !== undefined ? i.isWelfare == f.isWelfare : true)
+            .filter(i => f?.hasPrimaStellaUpgrade !== undefined ? (i.primaStellaUpgrade !== null) == f.hasPrimaStellaUpgrade : true)
+            .filter(i => f?.hasTrainingLv7 !== undefined ? (i.trainingLevels.length === 7) == f.hasTrainingLv7 : true)
+            .map(async (i) => (await PIdol.fromDB(i, this.populateMethods)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(PIdol, this.handlePagination(data, p))
     }
     async getPIdolById(id: string): Promise<Result<PIdol>> {
         const r = this.idols.find(i  => i.id == id)
@@ -242,14 +292,18 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // PItem //
-    async getAllPItems(): Promise<PItem[]> {
-        const data = []
-        for await (const d of this.items)
-            data.push(await PItem.fromDB(d, this.populateMethods))
-        return data
-    }
-    async getPItems(o: FilterSortOptions<IPItem, PItemFilterOptions>): Promise<Paginator<PItem, IPItem>> {
-        throw new InternalServerError("Method not implemented.")
+    async getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]): Promise<Paginator<PItem, IPItem>> {
+        const data = (await Promise.all(this.items
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: false }, f?.name))
+            .filter(i => this.handleEnumFilter(i.plan, f?.plan))
+            .filter(i => this.handleEnumFilter(i.rarity, f?.rarity))
+            .filter(i => this.handleEnumFilter(i.source, f?.source))
+            .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
+            .map(async (i) => (await PItem.fromDB(i, this.populateMethods)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(PItem, this.handlePagination(data, p))
     }
     async getPItemById(id: string): Promise<Result<PItem>> {
         const r = this.items.find(i  => i.id == id)
@@ -259,14 +313,20 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // Skill //
-    async getAllSkills(): Promise<Skill[]> {
-        const data = []
-        for await (const d of this.skills)
-            data.push(await Skill.fromDB(d, this.populateMethods))
-        return data
-    }
-    async getSkills(o: FilterSortOptions<ISkill, SkillFilterOptions>): Promise<Paginator<Skill, ISkill>> {
-        throw new InternalServerError("Method not implemented.")
+    async getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]): Promise<Paginator<Skill, ISkill>> {
+        const data = (await Promise.all(this.skills
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: false }, f?.name))
+            .filter(i => this.handleEnumFilter(i.plan, f?.plan))
+            .filter(i => this.handleEnumFilter(i.rarity, f?.rarity))
+            .filter(i => this.handleEnumFilter(i.category, f?.category))
+            .filter(i => this.handleEnumFilter(i.source, f?.source))
+            .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
+            .filter(i => f?.isCustomizable !== undefined ? (i.customizeOptions.length != 0) == f.isCustomizable : true)
+            .map(async (i) => (await Skill.fromDB(i, this.populateMethods)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(Skill, this.handlePagination(data, p))
     }
     async getSkillById(id: string): Promise<Result<Skill>> {
         const r = this.skills.find(i  => i.id == id)
@@ -276,10 +336,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // SupportCard //
-    async getAllSupportCards(): Promise<SupportCard[]> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async getSupportCards(o: FilterSortOptions<ISupportCard, SupportCardFilterOptions>): Promise<Paginator<SupportCard, ISupportCard>> {
+    async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {

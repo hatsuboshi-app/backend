@@ -3,7 +3,8 @@ import {
     AuditionEffect, AuditionEffectFilterOptions,
     AuditionTerminology, AuditionTerminologyFilterOptions,
     Character,
-    CharacterFilterOptions, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBPItem, DBSkill, IAuditionEffect,
+    CharacterFilterOptions, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBPItem, DBSkill,
+    decodeSortOptions, IAuditionEffect,
     IAuditionTerminology, ICharacter, IPDrink, IPIdol, IPItem, ISkill, ISupportCard, Paginator,
     PDrink, PDrinkFilterOptions,
     PIdol, PIdolFilterOptions,
@@ -12,6 +13,7 @@ import {
     Skill, SkillFilterOptions, SortOption,
     SupportCard, SupportCardFilterOptions
 } from "@hatsuboshi/types"
+import { Request } from "express"
 
 export type ReferencePopulateMethods = {
     auditionEffect: AsyncPopulateMethod<DBAuditionEffect>,
@@ -20,50 +22,73 @@ export type ReferencePopulateMethods = {
     skill: AsyncPopulateMethod<DBSkill>,
     pItem: AsyncPopulateMethod<DBPItem>
 }
-
-export type FilterSortOptions<T, U> = Partial<{
-    filter: U,
-    sort: SortOption<T>
+export type PaginateOptions = Partial<{
+    page: number
+    perPage: number
 }>
+export type PFS<F, S> = Partial<{
+    p: PaginateOptions,
+    f: F,
+    s: SortOption<S>[]
+}>
+export function parsePfs<F, S>(req: Request): PFS<F, S> {
+    const page = req.query.p ? Number(req.query.p) : undefined
+    const perPage = req.query.pp ? Number(req.query.pp) : undefined
+    const filter = req.query.f ? JSON.parse(String(req.query.f)) as F : undefined
+    const sort = req.query.s ? decodeSortOptions<S>(String(req.query.s)) : undefined
+    return {
+        p: page || perPage ? { page, perPage } : undefined,
+        f: filter,
+        s: sort
+    }
+}
 
 export default interface IRepositoryService {
     // AuditionEffect //
-    getAllAuditionEffects(): Promise<AuditionEffect[]>
-    getAuditionEffects(o: FilterSortOptions<IAuditionEffect, AuditionEffectFilterOptions>): Promise<Paginator<AuditionEffect, IAuditionEffect>>
-    getAuditionEffectById(id: string): Promise<Result<AuditionEffect>>
+    getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]):
+        Promise<Paginator<AuditionEffect, IAuditionEffect>>
+    getAuditionEffectById(id: string):
+        Promise<Result<AuditionEffect>>
 
     // AuditionTerminology //
-    getAllAuditionTerminologies(): Promise<AuditionTerminology[]>
-    getAuditionTerminologies(o: FilterSortOptions<IAuditionTerminology, AuditionTerminologyFilterOptions>): Promise<Paginator<AuditionTerminology, IAuditionTerminology>>
-    getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>>
+    getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]):
+        Promise<Paginator<AuditionTerminology, IAuditionTerminology>>
+    getAuditionTerminologyById(id: string):
+        Promise<Result<AuditionTerminology>>
 
     // Character //
-    getAllCharacters(): Promise<Character[]>
-    getCharacters(o: FilterSortOptions<ICharacter, CharacterFilterOptions>): Promise<Paginator<Character, ICharacter>>
-    getCharacterById(id: string): Promise<Result<Character>>
+    getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]):
+        Promise<Paginator<Character, ICharacter>>
+    getCharacterById(id: string):
+        Promise<Result<Character>>
 
     // PDrink //
-    getAllPDrinks(): Promise<PDrink[]>
-    getPDrinks(o: FilterSortOptions<IPDrink, PDrinkFilterOptions>): Promise<Paginator<PDrink, IPDrink>>
-    getPDrinkById(id: string): Promise<Result<PDrink>>
+    getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]):
+        Promise<Paginator<PDrink, IPDrink>>
+    getPDrinkById(id: string):
+        Promise<Result<PDrink>>
 
     // PIdol //
-    getAllPIdols(): Promise<PIdol[]>
-    getPIdols(o: FilterSortOptions<IPIdol, PIdolFilterOptions>): Promise<Paginator<PIdol, IPIdol>>
-    getPIdolById(id: string): Promise<Result<PIdol>>
+    getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]):
+        Promise<Paginator<PIdol, IPIdol>>
+    getPIdolById(id: string):
+        Promise<Result<PIdol>>
 
     // PItem //
-    getAllPItems(): Promise<PItem[]>
-    getPItems(o: FilterSortOptions<IPItem, PItemFilterOptions>): Promise<Paginator<PItem, IPItem>>
-    getPItemById(id: string): Promise<Result<PItem>>
+    getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]):
+        Promise<Paginator<PItem, IPItem>>
+    getPItemById(id: string):
+        Promise<Result<PItem>>
 
     // Skill //
-    getAllSkills(): Promise<Skill[]>
-    getSkills(o: FilterSortOptions<ISkill, SkillFilterOptions>): Promise<Paginator<Skill, ISkill>>
-    getSkillById(id: string): Promise<Result<Skill>>
+    getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]):
+        Promise<Paginator<Skill, ISkill>>
+    getSkillById(id: string):
+        Promise<Result<Skill>>
 
     // SupportCard //
-    getAllSupportCards(): Promise<SupportCard[]>
-    getSupportCards(o: FilterSortOptions<ISupportCard, SupportCardFilterOptions>): Promise<Paginator<SupportCard, ISupportCard>>
-    getSupportCardById(id: string): Promise<Result<SupportCard>>
+    getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]):
+        Promise<Paginator<SupportCard, ISupportCard>>
+    getSupportCardById(id: string):
+        Promise<Result<SupportCard>>
 }

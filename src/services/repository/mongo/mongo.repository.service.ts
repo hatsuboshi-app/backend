@@ -1,7 +1,4 @@
-import IRepositoryService, {
-    FilterSortOptions,
-    ReferencePopulateMethods
-} from "@/services/repository/repository.service"
+import IRepositoryService, { PaginateOptions, ReferencePopulateMethods } from "@/services/repository/repository.service"
 import { Collection, Db, MongoClient, ServerApiVersion } from "mongodb"
 import {
     AuditionEffect,
@@ -26,7 +23,7 @@ import {
     PIdolFilterOptions,
     PItemFilterOptions,
     SkillFilterOptions,
-    SupportCardFilterOptions
+    SupportCardFilterOptions, SortOption
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
@@ -92,10 +89,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // AuditionEffect //
-    async getAllAuditionEffects(): Promise<AuditionEffect[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getAuditionEffects({ sort, filter }: FilterSortOptions<IAuditionEffect, AuditionEffectFilterOptions>): Promise<Paginator<AuditionEffect>> {
+    async getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
@@ -106,10 +100,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // AuditionTerminology //
-    async getAllAuditionTerminologies(): Promise<AuditionTerminology[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getAuditionTerminologies({ sort, filter }: FilterSortOptions<IAuditionTerminology, AuditionTerminologyFilterOptions>): Promise<Paginator<AuditionTerminology>> {
+    async getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
@@ -120,10 +111,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // Character //
-    async getAllCharacters(): Promise<Character[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getCharacters({ sort, filter }: FilterSortOptions<ICharacter, CharacterFilterOptions>): Promise<Paginator<Character>> {
+    async getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]): Promise<Paginator<Character, ICharacter>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getCharacterById(id: string): Promise<Result<Character>> {
@@ -134,10 +122,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // PDrink //
-    async getAllPDrinks(): Promise<PDrink[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getPDrinks({ sort, filter }: FilterSortOptions<IPDrink, PDrinkFilterOptions>): Promise<Paginator<PDrink>> {
+    async getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]): Promise<Paginator<PDrink, IPDrink>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getPDrinkById(id: string): Promise<Result<PDrink>> {
@@ -148,10 +133,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // PIdol //
-    async getAllPIdols(): Promise<PIdol[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getPIdols({ sort, filter }: FilterSortOptions<IPIdol, PIdolFilterOptions>): Promise<Paginator<PDrink>> {
+    async getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]): Promise<Paginator<PIdol, IPIdol>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getPIdolById(id: string): Promise<Result<PIdol>> {
@@ -162,10 +144,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // PItem //
-    async getAllPItems(): Promise<PItem[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getPItems({ sort, filter }: FilterSortOptions<IPItem, PItemFilterOptions>): Promise<Paginator<PItem>> {
+    async getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]): Promise<Paginator<PItem, IPItem>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getPItemById(id: string): Promise<Result<PItem>> {
@@ -176,10 +155,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // Skill //
-    async getAllSkills(): Promise<Skill[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getSkills({ sort, filter }: FilterSortOptions<ISkill, SkillFilterOptions>): Promise<Paginator<Skill>> {
+    async getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]): Promise<Paginator<Skill, ISkill>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getSkillById(id: string): Promise<Result<Skill>> {
@@ -190,10 +166,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // SupportCard //
-    async getAllSupportCards(): Promise<SupportCard[]> {
-        throw new InternalServerError("Method not implemented.")
-    }
-    async getSupportCards({ sort, filter }: FilterSortOptions<ISupportCard, SupportCardFilterOptions>): Promise<Paginator<SupportCard>> {
+    async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
         throw new InternalServerError("Method not implemented.")
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
