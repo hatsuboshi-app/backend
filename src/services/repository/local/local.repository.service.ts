@@ -95,7 +95,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.supportCards = []
     }
 
-    private handlePagination<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
+    private constructPaginator<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
         const page = (options?.page || 1) - 1
         const perPage = options?.perPage || config.defaults.pageSize
         const startIndex = page * perPage
@@ -106,12 +106,11 @@ export default class LocalRepositoryService implements IRepositoryService {
                 currentPage: page + 1,
                 pageSize: perPage,
                 totalItems: data.length,
-                totalPages: Math.ceil(data.length / perPage),
-                prevPageLocation: null,
-                nextPageLocation: null
+                totalPages: Math.ceil(data.length / perPage)
             }
         }
     }
+
     private handleDateFilter(field: string, filter?: DateFilterOptions): boolean {
         if (!filter) return true
         let isMatch = true
@@ -198,7 +197,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(e => this.handleLocaleStringFilter({ field: e.name, hasRom: false }, f?.name))
             .map(async (m) => (await AuditionEffect.fromDB(m, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(AuditionEffect, this.handlePagination(data, p))
+        return new Paginator(AuditionEffect, this.constructPaginator(data, p))
     }
     async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
         const r = this.effects.find(i  => i.id == id)
@@ -215,7 +214,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: false }, f?.name))
             .map(async (i) => (await AuditionTerminology.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(AuditionTerminology, this.handlePagination(data, p))
+        return new Paginator(AuditionTerminology, this.constructPaginator(data, p))
     }
     async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
         const r = this.terminologies.find(i  => i.id == id)
@@ -239,7 +238,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => f?.isPlayable !== undefined ? i.isPlayable == f.isPlayable : true )
             .map(async (i) => (await Character.fromDB(i)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(Character, this.handlePagination(data, p))
+        return new Paginator(Character, this.constructPaginator(data, p))
     }
     async getCharacterById(id: string): Promise<Result<Character>> {
         const r = this.characters.find(i  => i.id == id)
@@ -259,7 +258,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
             .map(async (i) => (await PDrink.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(PDrink, this.handlePagination(data, p))
+        return new Paginator(PDrink, this.constructPaginator(data, p))
     }
     async getPDrinkById(id: string): Promise<Result<PDrink>> {
         const r = this.drinks.find(i  => i.id == id)
@@ -282,7 +281,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => f?.hasTrainingLv7 !== undefined ? (i.trainingLevels.length === 7) == f.hasTrainingLv7 : true)
             .map(async (i) => (await PIdol.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(PIdol, this.handlePagination(data, p))
+        return new Paginator(PIdol, this.constructPaginator(data, p))
     }
     async getPIdolById(id: string): Promise<Result<PIdol>> {
         const r = this.idols.find(i  => i.id == id)
@@ -303,7 +302,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
             .map(async (i) => (await PItem.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(PItem, this.handlePagination(data, p))
+        return new Paginator(PItem, this.constructPaginator(data, p))
     }
     async getPItemById(id: string): Promise<Result<PItem>> {
         const r = this.items.find(i  => i.id == id)
@@ -326,7 +325,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => f?.isCustomizable !== undefined ? (i.customizeOptions.length != 0) == f.isCustomizable : true)
             .map(async (i) => (await Skill.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(Skill, this.handlePagination(data, p))
+        return new Paginator(Skill, this.constructPaginator(data, p))
     }
     async getSkillById(id: string): Promise<Result<Skill>> {
         const r = this.skills.find(i  => i.id == id)
