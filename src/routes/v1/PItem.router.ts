@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import PItemController from "@/controllers/PItem.controller"
 
-export default class PItemRouter {
-    static url = "/item"
+export default class PItemRouterV1 {
+    static url = `/p-items`
 
     static get router(): Router {
         const router = express.Router()

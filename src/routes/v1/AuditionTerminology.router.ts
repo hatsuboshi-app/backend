@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import AuditionTerminologyController from "@/controllers/AuditionTerminology.controller"
 
-export default class AuditionTerminologyRouter {
-    static url = "/terminology"
+export default class AuditionTerminologyRouterV1 {
+    static url = `/terminologies`
 
     static get router(): Router {
         const router = express.Router()

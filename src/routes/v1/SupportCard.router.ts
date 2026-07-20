@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import SupportCardController from "@/controllers/SupportCard.controller"
 
-export default class SupportCardRouter {
-    static url = "/support-card"
+export default class SupportCardRouterV1 {
+    static url = `/support-cards`
 
     static get router(): Router {
         const router = express.Router()

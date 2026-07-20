@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import PIdolController from "@/controllers/PIdol.controller"
 
-export default class PIdolRouter {
-    static url = "/idol"
+export default class PIdolRouterV1 {
+    static url = `/p-idols`
 
     static get router(): Router {
         const router = express.Router()

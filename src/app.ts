@@ -2,15 +2,15 @@ import express, { Request, Response } from "express"
 import config from "@/config/config"
 import cors from "cors"
 import { logger } from "@/services"
-import CharacterRouter from "@/routes/Character.router"
+import CharacterRouterV1 from "@/routes/v1/Character.router"
 import { errorHandler } from "@/middlewares/errorHandler"
-import AuditionEffectRouter from "@/routes/AuditionEffect.router"
-import AuditionTerminologyRouter from "@/routes/AuditionTerminology.router"
-import PDrinkRouter from "@/routes/PDrink.router"
-import PIdolRouter from "@/routes/PIdol.router"
-import PItemRouter from "@/routes/PItem.router"
-import SkillRouter from "@/routes/Skill.router"
-import SupportCardRouter from "@/routes/SupportCard.router"
+import AuditionEffectRouterV1 from "@/routes/v1/AuditionEffectRouter"
+import AuditionTerminologyRouterV1 from "@/routes/v1/AuditionTerminology.router"
+import PDrinkRouterV1 from "@/routes/v1/PDrink.router"
+import PIdolRouterV1 from "@/routes/v1/PIdol.router"
+import PItemRouterV1 from "@/routes/v1/PItem.router"
+import SkillRouterV1 from "@/routes/v1/Skill.router"
+import SupportCardRouterV1 from "@/routes/v1/SupportCard.router"
 
 const app = express()
 
@@ -19,19 +19,20 @@ app.use(cors())
 
 app.get("/", (req: Request, res: Response) => {
     res.json({
-        message: "ok",
+        version: "v1",
         env: config.env
     })
 })
 
-app.use(AuditionEffectRouter.url, AuditionEffectRouter.router)
-app.use(AuditionTerminologyRouter.url, AuditionTerminologyRouter.router)
-app.use(CharacterRouter.url, CharacterRouter.router)
-app.use(PDrinkRouter.url, PDrinkRouter.router)
-app.use(PIdolRouter.url, PIdolRouter.router)
-app.use(PItemRouter.url, PItemRouter.router)
-app.use(SkillRouter.url, SkillRouter.router)
-app.use(SupportCardRouter.url, SupportCardRouter.router)
+// v1
+app.use("/v1" + AuditionEffectRouterV1.url, AuditionEffectRouterV1.router)
+app.use("/v1" + AuditionTerminologyRouterV1.url, AuditionTerminologyRouterV1.router)
+app.use("/v1" + CharacterRouterV1.url, CharacterRouterV1.router)
+app.use("/v1" + PDrinkRouterV1.url, PDrinkRouterV1.router)
+app.use("/v1" + PIdolRouterV1.url, PIdolRouterV1.router)
+app.use("/v1" + PItemRouterV1.url, PItemRouterV1.router)
+app.use("/v1" + SkillRouterV1.url, SkillRouterV1.router)
+app.use("/v1" + SupportCardRouterV1.url, SupportCardRouterV1.router)
 
 app.use(errorHandler)
 

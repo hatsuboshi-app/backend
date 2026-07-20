@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import CharacterController from "@/controllers/Character.controller"
 
-export default class CharacterRouter {
-    static url = "/character"
+export default class CharacterRouterV1 {
+    static url = `/characters`
 
     static get router(): Router {
         const router = express.Router()

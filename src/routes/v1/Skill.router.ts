@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import SkillController from "@/controllers/Skill.controller"
 
-export default class SkillRouter {
-    static url = "/skill"
+export default class SkillRouterV1 {
+    static url = `/skills`
 
     static get router(): Router {
         const router = express.Router()
