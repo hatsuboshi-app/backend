@@ -1,8 +1,8 @@
 import express, { Router } from "express"
 import PDrinkController from "@/controllers/PDrink.controller"
 
-export default class PDrinkRouter {
-    static url = "/drink"
+export default class PDrinkRouterV1 {
+    static url = `/p-drinks`
 
     static get router(): Router {
         const router = express.Router()
