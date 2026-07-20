@@ -1,11 +1,14 @@
 import { RequestHandler } from "express"
 import { db } from "@/services"
 import NotFoundError from "@/errors/NotFoundError"
+import { AuditionEffectFilterOptions, IAuditionEffect } from "@hatsuboshi/types"
+import { parsePfs } from "@/services/repository/repository.service"
 
 export default class AuditionEffectController {
     static getMany: RequestHandler = async (req, res) => {
-        const r = await db.getAllAuditionEffects()
-        res.json(r.map(i => i.toJSON()))
+        const pfs = parsePfs<AuditionEffectFilterOptions, IAuditionEffect>(req)
+        const r = await db.getAuditionEffects(pfs.p, pfs.f, pfs.s)
+        res.json(r.toJSON())
     }
 
     static getOneById: RequestHandler = async (req, res) => {

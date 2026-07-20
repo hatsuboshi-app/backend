@@ -30,7 +30,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@hatsuboshi/types": "^1.1.0",
+    "@hatsuboshi/types": "^1.2.5",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "jsonfile": "^6.2.0",
