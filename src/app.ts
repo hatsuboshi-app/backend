@@ -11,9 +11,11 @@ import PIdolRouterV1 from "@/routes/v1/PIdol.router"
 import PItemRouterV1 from "@/routes/v1/PItem.router"
 import SkillRouterV1 from "@/routes/v1/Skill.router"
 import SupportCardRouterV1 from "@/routes/v1/SupportCard.router"
+import morgan from "morgan"
 
 const app = express()
 
+app.use(morgan(':date :method :url :status :res[content-length] - :response-time ms'))
 app.use(express.json())
 app.use(cors())
 
