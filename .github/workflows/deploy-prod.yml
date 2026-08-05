@@ -1,0 +1,36 @@
+name: main
+env:
+  VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
+  VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_PROD }}
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    environment: production
+    runs-on: hatsuboshi
+    steps:
+      - uses: actions/checkout@v7
+      - name: setup environment variables
+        run: |
+          touch .env
+          echo API_ENV=production >> .env
+          echo PORT=3001 >> .env
+          echo MONGO_SHARED="${{ secrets.MONGO_SHARED }}" >> .env
+          echo MONGO_CLUSTER="${{ secrets.MONGO_CLUSTER }}" >> .env
+          echo MONGO_USER="${{ secrets.MONGO_USER }}" >> .env
+          echo MONGO_PASS="${{ secrets.MONGO_PASS }}" >> .env
+          echo S3_KEY="${{ secrets.S3_KEY }}" >> .env
+          echo S3_SECRET="${{ secrets.S3_SECRET }}" >> .env
+          echo S3_REGION="${{ secrets.S3_REGION }}" >> .env
+          echo S3_BUCKET="${{ secrets.S3_BUCKET }}" >> .env
+      - name: install vercel cli
+        run: |
+          npm install --global vercel@latest
+      - name: build & deploy
+        run: |
+          vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
+          vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
+          vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
