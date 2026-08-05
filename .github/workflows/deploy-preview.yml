@@ -9,7 +9,9 @@ on:
       - main
 jobs:
   deploy:
-    environment: development
+    environment:
+      name: development
+      deployment: false
     runs-on: hatsuboshi
     steps:
       - uses: actions/checkout@v7
