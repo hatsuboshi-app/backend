@@ -11,7 +11,7 @@
   "scripts": {
     "prebuild": "rimraf ./dist",
     "build": "tsc --build && resolve-tspaths",
-    "postbuild": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist",
+    "postbuild": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist && copyfiles .env ./dist",
     "start": "node ./dist/app.js",
     "dev": "tsx watch --clear-screen=false src/app.ts",
     "dev:development": "tsx watch --env-file=.env.development --clear-screen=false src/app.ts",
