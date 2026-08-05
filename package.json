@@ -6,7 +6,7 @@
     "type": "git",
     "url": "git+https://github.com/hatsuboshi-app/backend.git"
   },
-  "license": "MIT",
+  "license": "LGPL-3.0-only",
   "author": "HuzzNZ",
   "scripts": {
     "prebuild": "rimraf ./dist",
