@@ -9,23 +9,12 @@ on:
 
 jobs:
   deploy:
-    environment: production
+    environment:
+      name: production
+      url: https://api.hatsuboshi.app
     runs-on: hatsuboshi
     steps:
       - uses: actions/checkout@v7
-      - name: setup environment variables
-        run: |
-          touch .env
-          echo API_ENV=production >> .env
-          echo PORT=3001 >> .env
-          echo MONGO_SHARED="${{ secrets.MONGO_SHARED }}" >> .env
-          echo MONGO_CLUSTER="${{ secrets.MONGO_CLUSTER }}" >> .env
-          echo MONGO_USER="${{ secrets.MONGO_USER }}" >> .env
-          echo MONGO_PASS="${{ secrets.MONGO_PASS }}" >> .env
-          echo S3_KEY="${{ secrets.S3_KEY }}" >> .env
-          echo S3_SECRET="${{ secrets.S3_SECRET }}" >> .env
-          echo S3_REGION="${{ secrets.S3_REGION }}" >> .env
-          echo S3_BUCKET="${{ secrets.S3_BUCKET }}" >> .env
       - name: install vercel cli
         run: |
           npm install --global vercel@latest
