@@ -1,7 +1,6 @@
 declare global {
     namespace NodeJS {
         interface ProcessEnv {
-            PORT?: number
             API_ENV?: "local" | "development" | "production"
             MONGO_SHARED?: string
             MONGO_CLUSTER?: string
