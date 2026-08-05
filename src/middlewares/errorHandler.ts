@@ -1,6 +1,7 @@
 import { ErrorRequestHandler, NextFunction, Request, Response } from "express"
-import { HTTPError, InternalServerError } from "@/errors"
 import { logger } from "@/services"
+import InternalServerError from "@/errors/InternalServerError"
+import HTTPError from "@/errors/HTTPError"
 
 export const errorHandler: ErrorRequestHandler = (
     err: HTTPError,

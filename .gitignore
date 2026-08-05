@@ -2,4 +2,7 @@ node_modules
 .idea
 dist
 tsconfig.tsbuildinfo
-.env
+.env*
+bruno
+bruno/*
+.vercel

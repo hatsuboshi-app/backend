@@ -1,6 +1,6 @@
-import { HTTPError } from "@/errors/HTTPError";
+import HTTPError from "@/errors/HTTPError"
 
-export class InternalServerError extends HTTPError {
+export default class InternalServerError extends HTTPError {
     constructor(message?: string) {
         super(500)
         this.message = message ?? "Internal Server Error"

@@ -1,15 +1,17 @@
-import dotenv from "dotenv"
-
-dotenv.config({ quiet: true })
-
 interface Config {
     port: number
-    nodeEnv: string
+    env: string
+    defaults: {
+        pageSize: number
+    }
 }
 
 const config: Config = {
     port: Number(process.env.PORT) || 3001,
-    nodeEnv: process.env.NODE_ENV || 'local',
+    env: process.env.API_ENV || 'local',
+    defaults: {
+        pageSize: 20
+    }
 }
 
 export default config

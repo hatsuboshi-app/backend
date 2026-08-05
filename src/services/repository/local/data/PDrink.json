@@ -1,0 +1,1415 @@
+[
+  {
+    "id": "drink-564013",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "初星水",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-001",
+    "plan": "free",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r5978",
+          "refId": "terminology-553008",
+          "refType": 0
+        }
+      ],
+      "vars": [
+        {
+          "id": "v3699",
+          "value": 10
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5978}+{v3699}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-321979",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "烏龍茶",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-004",
+    "plan": "free",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r5856",
+          "refId": "effect-732388",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v8103",
+          "value": 7
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5856}+{v8103}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-750100",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ミックススムージー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-001",
+    "plan": "free",
+    "rarity": "sr",
+    "unlockLevel": 8,
+    "effect": {
+      "refs": [
+        {
+          "id": "r2494",
+          "refId": "effect-665528",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v6281",
+          "value": 2
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "手札をすべて入れ替える",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r2494}{v6281}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-226204",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "リカバリドリンク",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-003",
+    "plan": "free",
+    "rarity": "sr",
+    "unlockLevel": 15,
+    "effect": {
+      "refs": [
+        {
+          "id": "r9839",
+          "refId": "effect-665528",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v9177",
+          "value": 6
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9839}{v9177}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-617447",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "フレッシュビネガー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-004",
+    "plan": "free",
+    "rarity": "sr",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r4507",
+          "refId": "effect-943999",
+          "refType": 1
+        },
+        {
+          "id": "r4540",
+          "refId": "effect-665528",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v2000",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "手札をすべて{r4507}",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r4540}{v2000}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-891183",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ブーストエキス",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-008",
+    "plan": "free",
+    "rarity": "sr",
+    "unlockLevel": 55,
+    "effect": {
+      "refs": [
+        {
+          "id": "r3373",
+          "refId": "effect-359058",
+          "refType": 1
+        },
+        {
+          "id": "r5523",
+          "refId": "effect-865294",
+          "refType": 1
+        },
+        {
+          "id": "r5959",
+          "refId": "effect-139563",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v2958",
+          "value": 30
+        },
+        {
+          "id": "v8062",
+          "value": 3
+        },
+        {
+          "id": "v9685",
+          "value": 3
+        },
+        {
+          "id": "v7302",
+          "value": 2
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r3373}{v2958}%（{v8062}ターン）",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r5523}{v9685}ターン",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r5959}{v7302}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-628641",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "パワフル漢方ドリンク",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-009",
+    "plan": "free",
+    "rarity": "sr",
+    "unlockLevel": 60,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1468",
+          "refId": "terminology-425456",
+          "refType": 0
+        },
+        {
+          "id": "r3033",
+          "refId": "effect-865294",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v4584",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "山札か捨札にあるアイドル固有スキルカード1枚を{r1468}に移動",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r3033}{v4584}ターン",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-211714",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "センブリソーダ",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-010",
+    "plan": "free",
+    "rarity": "sr",
+    "unlockLevel": 61,
+    "effect": {
+      "refs": [
+        {
+          "id": "r9490",
+          "refId": "effect-359058",
+          "refType": 1
+        },
+        {
+          "id": "r9360",
+          "refId": "effect-139563",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v1421",
+          "value": 10
+        },
+        {
+          "id": "v5548",
+          "value": 5
+        },
+        {
+          "id": "v8724",
+          "value": 2
+        },
+        {
+          "id": "v6526",
+          "value": 2
+        },
+        {
+          "id": "v4396",
+          "value": 5
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9490}{v1421}%（{v5548}ターン）",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "スキルカードを{v8724}枚引く",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r9360}{v6526}",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "以降の{v4396}ターンの間、ターン開始時、スキルカードを引く",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-941847",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "初星ホエイプロテイン",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-001",
+    "plan": "free",
+    "rarity": "ssr",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1806",
+          "refId": "effect-512285",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v6482",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r1806}+{v6482}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-753367",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "初星スペシャル青汁",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-005",
+    "plan": "free",
+    "rarity": "ssr",
+    "unlockLevel": 15,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1425",
+          "refId": "terminology-425456",
+          "refType": 0
+        },
+        {
+          "id": "r5852",
+          "refId": "effect-660632",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ランダムな強化済みスキルカード（SSR）を、{r1425}に{r5852}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-302067",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "初星スペシャル青汁X",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-013",
+    "plan": "free",
+    "rarity": "ssr",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r5924",
+          "refId": "effect-660632",
+          "refType": 1
+        }
+      ],
+      "vars": [],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "ランダムな{r5924}した強化済み固有スキルカード（SSR）を、コストを消費せず使用",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-444836",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ビタミンドリンク",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-002",
+    "plan": "sense",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r6375",
+          "refId": "effect-239127",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v7050",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r6375}{v7050}ターン",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-414285",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "アイスコーヒー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-003",
+    "plan": "sense",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r9780",
+          "refId": "effect-377685",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v3826",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9780}+{v3826}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-471669",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "スタミナ爆発ドリンク",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-005",
+    "plan": "sense",
+    "rarity": "sr",
+    "unlockLevel": 21,
+    "effect": {
+      "refs": [
+        {
+          "id": "r9423",
+          "refId": "effect-446387",
+          "refType": 1
+        },
+        {
+          "id": "r9913",
+          "refId": "effect-732388",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v8992",
+          "value": 1
+        },
+        {
+          "id": "v3056",
+          "value": 9
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r9423}{v8992}ターン",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r9913}+{v3056}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-644877",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "厳選初星マキアート",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-002",
+    "plan": "sense",
+    "rarity": "ssr",
+    "unlockLevel": 27,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1018",
+          "refId": "effect-377685",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v3257",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "以降、ターン終了時、{r1018}+{v3257}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-164140",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "初星ブーストエナジー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-004",
+    "plan": "sense",
+    "rarity": "ssr",
+    "unlockLevel": 26,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1017",
+          "refId": "effect-446387",
+          "refType": 1
+        },
+        {
+          "id": "r2489",
+          "refId": "effect-943999",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v9314",
+          "value": 2
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r1017}{v9314}ターン",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "手札をすべて{r2489}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-748642",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "初星黒酢",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-012",
+    "plan": "sense",
+    "rarity": "ssr",
+    "unlockLevel": 61,
+    "effect": {
+      "refs": [
+        {
+          "id": "r5550",
+          "refId": "terminology-425456",
+          "refType": 0
+        },
+        {
+          "id": "r9526",
+          "refId": "effect-139563",
+          "refType": 1
+        },
+        {
+          "id": "r7233",
+          "refId": "effect-109646",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v9949",
+          "value": 0
+        },
+        {
+          "id": "v2711",
+          "value": 2
+        },
+        {
+          "id": "v9897",
+          "value": 2
+        },
+        {
+          "id": "v9815",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "山札か捨札にあるスキルカードを選択し、{r5550}に移動",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "次に使用したスキルカードの消費体力を{v9949}にする（{v2711}回）",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r9526}{v9897}",
+            "en": ""
+          }
+        },
+        {
+          "position": 3,
+          "body": {
+            "ja": "{r7233}{v9815}ターン",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-576127",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ルイボスティー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-006",
+    "plan": "logic",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r4506",
+          "refId": "effect-620334",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v4552",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r4506}+{v4552}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-184392",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ホットコーヒー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-008",
+    "plan": "logic",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r6368",
+          "refId": "effect-607497",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v9956",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r6368}+{v9956}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-287757",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "おしゃれハーブティー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-006",
+    "plan": "logic",
+    "rarity": "sr",
+    "unlockLevel": 21,
+    "effect": {
+      "refs": [
+        {
+          "id": "r7135",
+          "refId": "effect-620334",
+          "refType": 1
+        },
+        {
+          "id": "r4846",
+          "refId": "terminology-553008",
+          "refType": 0
+        },
+        {
+          "id": "r7640",
+          "refId": "effect-732388",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v5180",
+          "value": 100
+        },
+        {
+          "id": "v3370",
+          "value": 3
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r7135}の{v5180}%分{r4846}上昇",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r7640}+{v3370}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-789613",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "厳選初星ティー",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-006",
+    "plan": "logic",
+    "rarity": "ssr",
+    "unlockLevel": 27,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1128",
+          "refId": "effect-620334",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v1480",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "以降、ターン終了時、{r1128}+{v1480}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-276523",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "厳選初星ブレンド",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-007",
+    "plan": "logic",
+    "rarity": "ssr",
+    "unlockLevel": 26,
+    "effect": {
+      "refs": [
+        {
+          "id": "r9598",
+          "refId": "effect-607497",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v1542",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "以降、ターン終了時、{r9598}+{v1542}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-183127",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "特製ハツボシエキス",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-010",
+    "plan": "logic",
+    "rarity": "ssr",
+    "unlockLevel": 55,
+    "effect": {
+      "refs": [
+        {
+          "id": "r1007",
+          "refId": "terminology-578035",
+          "refType": 0
+        },
+        {
+          "id": "r8430",
+          "refId": "effect-139563",
+          "refType": 1
+        },
+        {
+          "id": "r4427",
+          "refId": "effect-109646",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v6016",
+          "value": 1
+        },
+        {
+          "id": "v8888",
+          "value": 1
+        },
+        {
+          "id": "v4167",
+          "value": 1
+        },
+        {
+          "id": "v8879",
+          "value": 2
+        },
+        {
+          "id": "v1465",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "次に使用する{r1007}の効果をもう{v6016}回発動（{v8888}回・{v4167}ターン）",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r8430}{v8879}",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r4427}{v1465}ターン",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-678166",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ジンジャーエール",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-009",
+    "plan": "anomaly",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r8875",
+          "refId": "effect-486259",
+          "refType": 1
+        },
+        {
+          "id": "r7833",
+          "refId": "effect-207551",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v2940",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r8875}に変更",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r7833}+{v2940}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-347031",
+    "createdAt": "2026-07-08T07:35:53.168Z",
+    "updatedAt": "2026-07-08T07:35:53.168Z",
+    "name": {
+      "ja": "ほうじ茶",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_1-010",
+    "plan": "anomaly",
+    "rarity": "r",
+    "unlockLevel": 0,
+    "effect": {
+      "refs": [
+        {
+          "id": "r2511",
+          "refId": "effect-431513",
+          "refType": 1
+        },
+        {
+          "id": "r9651",
+          "refId": "effect-207551",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v8041",
+          "value": 2
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r2511}に変更",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r9651}+{v8041}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-878693",
+    "createdAt": "2026-07-08T07:35:53.169Z",
+    "updatedAt": "2026-07-08T07:35:53.169Z",
+    "name": {
+      "ja": "ほっと緑茶",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_2-007",
+    "plan": "anomaly",
+    "rarity": "sr",
+    "unlockLevel": 21,
+    "effect": {
+      "refs": [
+        {
+          "id": "r8004",
+          "refId": "effect-431513",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v3847",
+          "value": 2
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "山札か捨札にあるスキルカードを選択し、に移動",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r8004}{v3847}段階目に変更",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-465327",
+    "createdAt": "2026-07-08T07:35:53.169Z",
+    "updatedAt": "2026-07-08T07:35:53.169Z",
+    "name": {
+      "ja": "厳選初星チャイ",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-008",
+    "plan": "anomaly",
+    "rarity": "ssr",
+    "unlockLevel": 27,
+    "effect": {
+      "refs": [
+        {
+          "id": "r5163",
+          "refId": "effect-207551",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v2419",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "以降、ターン開始時、{r5163}+{v2419}",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-142953",
+    "createdAt": "2026-07-08T07:35:53.169Z",
+    "updatedAt": "2026-07-08T07:35:53.169Z",
+    "name": {
+      "ja": "初星スーパーソーダ",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-009",
+    "plan": "anomaly",
+    "rarity": "ssr",
+    "unlockLevel": 26,
+    "effect": {
+      "refs": [
+        {
+          "id": "r5656",
+          "refId": "effect-486259",
+          "refType": 1
+        },
+        {
+          "id": "r1920",
+          "refId": "effect-865294",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v5197",
+          "value": 2
+        },
+        {
+          "id": "v1633",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r5656}{v5197}段階目に変更",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r1920}{v1633}ターン",
+            "en": ""
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id": "drink-158573",
+    "createdAt": "2026-07-08T07:35:53.169Z",
+    "updatedAt": "2026-07-08T07:35:53.169Z",
+    "name": {
+      "ja": "初星湯",
+      "en": "",
+      "ro": ""
+    },
+    "assetUrl": "img_general_pdrink_3-011",
+    "plan": "anomaly",
+    "rarity": "ssr",
+    "unlockLevel": 60,
+    "effect": {
+      "refs": [
+        {
+          "id": "r7142",
+          "refId": "effect-926137",
+          "refType": 1
+        },
+        {
+          "id": "r4740",
+          "refId": "effect-139563",
+          "refType": 1
+        },
+        {
+          "id": "r6020",
+          "refId": "effect-109646",
+          "refType": 1
+        }
+      ],
+      "vars": [
+        {
+          "id": "v7211",
+          "value": 2
+        },
+        {
+          "id": "v7364",
+          "value": 1
+        }
+      ],
+      "lines": [
+        {
+          "position": 0,
+          "body": {
+            "ja": "{r7142}+1",
+            "en": ""
+          }
+        },
+        {
+          "position": 1,
+          "body": {
+            "ja": "{r4740}{v7211}",
+            "en": ""
+          }
+        },
+        {
+          "position": 2,
+          "body": {
+            "ja": "{r6020}{v7364}ターン",
+            "en": ""
+          }
+        }
+      ]
+    }
+  }
+]
