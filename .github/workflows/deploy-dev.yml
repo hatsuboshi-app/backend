@@ -9,7 +9,9 @@ on:
 
 jobs:
   deploy:
-    environment: development
+    environment:
+      name: development
+      url: https://api-dev.hatsuboshi.app
     runs-on: hatsuboshi
     steps:
       - uses: actions/checkout@v7
