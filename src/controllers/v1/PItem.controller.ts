@@ -1,19 +1,23 @@
 import { db } from "@/services"
-import NotFoundError, { NotFoundErrorJSON } from "@/errors/NotFoundError"
+import NotFoundError from "@/errors/NotFoundError"
 import { decodeSortOptions, IPaginator, IPItem, PItemFilterOptions, SortOption } from "@hatsuboshi/types"
-import { Controller, Get, Path, Query, Response, Route, Tags } from "tsoa"
+import { Controller, Get, OperationId, Path, Query, Response, Route, Tags } from "tsoa"
+import { ErrorResponse } from "@/errors/response/ErrorResponse"
 
 @Route("p-items")
 @Tags("PItem")
 export class PItemController extends Controller {
     /**
      * Retrieves a paginated list of `IPItem` (JSON-serializable) objects that match an optional filter.
-     * @param p   The (1-indexed) page number to retrieve.
+     * @param p   Page number to retrieve. (1-indexed)
      * @param pp  Number of results to return per page.
      * @param f   JSON-serialized string of an `PItemFilterOptions` object.
      * @param s   String representation of a `SortOption<IPItem>[]` list.
      */
     @Get()
+    @OperationId("List PItems")
+    @Response<ErrorResponse<400>>(400, "Bad Request")
+    @Response<ErrorResponse<500>>(500, "Internal Server Error")
     public async getMany(
         @Query() p?: number,
         @Query() pp?: number,
@@ -31,7 +35,9 @@ export class PItemController extends Controller {
      * @param id  The `id` of the `PItem` to retrieve.
      */
     @Get("{id}")
-    @Response<NotFoundErrorJSON>(404, "Not Found")
+    @OperationId("Retrieve a PItem")
+    @Response<ErrorResponse<404>>(404, "Not Found")
+    @Response<ErrorResponse<500>>(500, "Internal Server Error")
     public async getOneById(
         @Path() id: string
     ): Promise<IPItem> {

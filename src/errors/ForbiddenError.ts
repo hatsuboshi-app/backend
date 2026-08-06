@@ -1,9 +1,11 @@
 import HTTPError from "@/errors/HTTPError"
 
-export default class ForbiddenError extends HTTPError {
-    constructor(message?: string) {
+export default class ForbiddenError extends HTTPError<403> {
+    public name = "ForbiddenError"
+
+    constructor(message?: string, details?: { [key: string]: any }) {
         super(403)
         this.message = message ?? "Forbidden"
-        this.name = this.status.toString()
+        this.details = details
     }
 }
