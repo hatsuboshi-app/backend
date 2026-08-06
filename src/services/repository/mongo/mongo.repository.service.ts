@@ -28,7 +28,7 @@ import {
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
-import config from "@/config/config"
+import config from "@/config"
 import { StringFilterOptions } from "@hatsuboshi/types/dist/type/utility/FilterOptions";
 
 export type MongoCredentials = {
