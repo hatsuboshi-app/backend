@@ -1,7 +1,7 @@
 {
-  "name": "hatsuboshi-backend",
-  "version": "0.1.0",
-  "description": "The backend server for Hatsuboshi App.",
+  "name": "hatsuboshi-api",
+  "version": "0.2.0",
+  "description": "A stateless RESTful API designed to serve structured data from Gakuen iDOLM@STER.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/hatsuboshi-app/backend.git"
@@ -9,13 +9,15 @@
   "license": "LGPL-3.0-only",
   "author": "HuzzNZ",
   "scripts": {
+    "tsoa:v1": "tsoa spec-and-routes -c config/tsoa.v1.json",
+    "tsoa": "npm run tsoa:v1 -s",
     "prebuild": "rimraf ./dist",
-    "build": "tsc --build && resolve-tspaths",
-    "postbuild": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist && copyfiles .env ./dist",
+    "build": "npm run tsoa && tsc --build && resolve-tspaths",
+    "postbuild": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist",
     "start": "node ./dist/app.js",
-    "dev": "tsx watch --clear-screen=false src/app.ts",
-    "dev:development": "tsx watch --env-file=.env.development --clear-screen=false src/app.ts",
-    "dev:production": "tsx watch --env-file=.env.production --clear-screen=false src/app.ts"
+    "dev": "nodemon",
+    "dev:development": "nodemon --env-file=.env.development",
+    "dev:production": "nodemon --env-file=.env.production"
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",
@@ -24,9 +26,11 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.0.15",
     "copyfiles": "^2.4.1",
+    "nodemon": "^3.1.14",
     "resolve-tspaths": "^0.8.23",
     "rimraf": "^6.0.1",
-    "tsx": "^4.20.3",
+    "tsc-alias": "^1.8.16",
+    "tsx": "^4.23.8",
     "typescript": "^5.8.3"
   },
   "dependencies": {
@@ -35,6 +39,7 @@
     "express": "^5.1.0",
     "jsonfile": "^6.2.0",
     "mongodb": "^6.21.0",
-    "morgan": "^1.11.0"
+    "morgan": "^1.11.0",
+    "tsoa": "^7.0.0-alpha.0"
   }
 }

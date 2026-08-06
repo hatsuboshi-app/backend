@@ -42,11 +42,13 @@ import {
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
-import config from "@/config/config"
+import config from "@/config"
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
 export default class LocalRepositoryService implements IRepositoryService {
+    id = "local"
+
     private readonly effects: DBAuditionEffect[]
     private readonly terminologies: DBAuditionTerminology[]
     private readonly characters: DBCharacter[]

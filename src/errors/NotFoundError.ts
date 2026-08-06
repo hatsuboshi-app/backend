@@ -7,3 +7,7 @@ export default class NotFoundError extends HTTPError {
         this.name = this.status.toString()
     }
 }
+
+export type NotFoundErrorJSON = {
+    message: string
+}
