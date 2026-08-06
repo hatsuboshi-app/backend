@@ -47,6 +47,7 @@ type PaginationHandlerParams<T extends JSONSerializable<I>, I extends {}> = {
 }
 
 export default class MongoRepositoryService implements IRepositoryService {
+    id = "mongo"
     private readonly db: Db
     private readonly effects: Collection
     private readonly terminologies: Collection

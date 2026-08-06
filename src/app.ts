@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express"
 import config from "@/config"
 import cors from "cors"
-import { logger } from "@/services"
+import { db, logger } from "@/services"
 import { errorHandler } from "@/middlewares/errorHandler"
 import morgan from "morgan"
 // @ts-ignore
@@ -14,8 +14,9 @@ app.use(express.json())
 app.use(cors())
 app.get("/", (req: Request, res: Response) => {
     res.json({
-        version: "v1",
-        env: config.env
+        version: "1",
+        environment: config.env,
+        repository: db.id
     })
 })
 
