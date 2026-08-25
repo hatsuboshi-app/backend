@@ -6,5 +6,9 @@ dist
 tsconfig.tsbuildinfo
 .env*
 
+# bruno
 bruno
 bruno/*
+
+# tsoa
+src/routes

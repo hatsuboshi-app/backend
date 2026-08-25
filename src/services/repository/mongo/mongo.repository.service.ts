@@ -24,12 +24,11 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
-    LocaleStringFilterOptions, IPaginator, JSONSerializable
+    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
-import config from "@/config/config"
-import { StringFilterOptions } from "@hatsuboshi/types/dist/type/utility/FilterOptions";
+import config from "@/config"
 
 export type MongoCredentials = {
     shared: string,
@@ -47,6 +46,7 @@ type PaginationHandlerParams<T extends JSONSerializable<I>, I extends {}> = {
 }
 
 export default class MongoRepositoryService implements IRepositoryService {
+    id = "mongo"
     private readonly db: Db
     private readonly effects: Collection
     private readonly terminologies: Collection

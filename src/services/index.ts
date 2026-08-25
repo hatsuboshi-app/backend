@@ -3,7 +3,7 @@ import ILoggerService from "@/services/logger/logger.service"
 import IRepositoryService from "@/services/repository/repository.service"
 import LocalRepositoryService from "@/services/repository/local/local.repository.service"
 import ProcessEnv = NodeJS.ProcessEnv
-import MongoRepositoryService from "@/services/repository/mongo/mongo.repository.service";
+import MongoRepositoryService from "@/services/repository/mongo/mongo.repository.service"
 // import AuthContext from "@/services/auth/auth.context"
 // import IAuthService from "@/services/auth/auth.service"
 // import ICDNService from "@/services/cdn/cdn.service"

@@ -3,18 +3,11 @@ import { logger } from "@/services"
 import InternalServerError from "@/errors/InternalServerError"
 import HTTPError from "@/errors/HTTPError"
 
-export const errorHandler: ErrorRequestHandler = (
-    err: HTTPError,
-    _: Request,
-    res: Response,
-    __: NextFunction
-) => {
-    logger.error(err.message)
-    if (!err.status) {
-        throw new InternalServerError(err.message)
+export const errorHandler: ErrorRequestHandler = (err: Error, _: Request, res: Response, __: NextFunction) => {
+    logger.warn(err.message)
+    if (err instanceof HTTPError) {
+        res.status(err.status).json(err.payload)
     } else {
-        res.status(err.status).json({
-            message: err.message
-        })
+        throw new InternalServerError(err.message)
     }
 }

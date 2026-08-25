@@ -1,10 +1,10 @@
 import {
-    AsyncPopulateMethod,
+    Populate,
     AuditionEffect, AuditionEffectFilterOptions,
     AuditionTerminology, AuditionTerminologyFilterOptions,
     Character,
     CharacterFilterOptions, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBPItem, DBSkill,
-    decodeSortOptions, IAuditionEffect,
+    IAuditionEffect,
     IAuditionTerminology, ICharacter, IPDrink, IPIdol, IPItem, ISkill, ISupportCard, Paginator,
     PDrink, PDrinkFilterOptions,
     PIdol, PIdolFilterOptions,
@@ -13,37 +13,22 @@ import {
     Skill, SkillFilterOptions, SortOption,
     SupportCard, SupportCardFilterOptions
 } from "@hatsuboshi/types"
-import { Request } from "express"
 
 export type ReferencePopulateMethods = {
-    auditionEffect: AsyncPopulateMethod<DBAuditionEffect>,
-    auditionTerminology: AsyncPopulateMethod<DBAuditionTerminology>,
-    character: AsyncPopulateMethod<DBCharacter>,
-    skill: AsyncPopulateMethod<DBSkill>,
-    pItem: AsyncPopulateMethod<DBPItem>
+    auditionEffect: Populate<DBAuditionEffect>,
+    auditionTerminology: Populate<DBAuditionTerminology>,
+    character: Populate<DBCharacter>,
+    skill: Populate<DBSkill>,
+    pItem: Populate<DBPItem>
 }
 export type PaginateOptions = Partial<{
     page: number
     perPage: number
 }>
-export type PFS<F, S> = Partial<{
-    p: PaginateOptions,
-    f: F,
-    s: SortOption<S>[]
-}>
-export function parsePfs<F, S>(req: Request): PFS<F, S> {
-    const page = req.query.p ? Number(req.query.p) : undefined
-    const perPage = req.query.pp ? Number(req.query.pp) : undefined
-    const filter = req.query.f ? JSON.parse(String(req.query.f)) as F : undefined
-    const sort = req.query.s ? decodeSortOptions<S>(String(req.query.s)) : undefined
-    return {
-        p: page || perPage ? { page, perPage } : undefined,
-        f: filter,
-        s: sort
-    }
-}
 
 export default interface IRepositoryService {
+    id: string
+
     // AuditionEffect //
     getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]):
         Promise<Paginator<AuditionEffect, IAuditionEffect>>
