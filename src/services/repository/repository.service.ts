@@ -1,5 +1,5 @@
 import {
-    AsyncPopulateMethod,
+    Populate,
     AuditionEffect, AuditionEffectFilterOptions,
     AuditionTerminology, AuditionTerminologyFilterOptions,
     Character,
@@ -15,11 +15,11 @@ import {
 } from "@hatsuboshi/types"
 
 export type ReferencePopulateMethods = {
-    auditionEffect: AsyncPopulateMethod<DBAuditionEffect>,
-    auditionTerminology: AsyncPopulateMethod<DBAuditionTerminology>,
-    character: AsyncPopulateMethod<DBCharacter>,
-    skill: AsyncPopulateMethod<DBSkill>,
-    pItem: AsyncPopulateMethod<DBPItem>
+    auditionEffect: Populate<DBAuditionEffect>,
+    auditionTerminology: Populate<DBAuditionTerminology>,
+    character: Populate<DBCharacter>,
+    skill: Populate<DBSkill>,
+    pItem: Populate<DBPItem>
 }
 export type PaginateOptions = Partial<{
     page: number

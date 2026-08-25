@@ -24,12 +24,11 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
-    LocaleStringFilterOptions, IPaginator, JSONSerializable
+    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
-import { StringFilterOptions } from "@hatsuboshi/types/dist/type/utility/FilterOptions";
 
 export type MongoCredentials = {
     shared: string,

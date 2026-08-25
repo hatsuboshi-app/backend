@@ -1,9 +1,21 @@
-export default abstract class HTTPError extends Error {
-    public status: number
+import { ErrorResponse } from "@/errors/response/ErrorResponse"
 
-    protected constructor(status: number) {
-        super()
+export default abstract class HTTPError<S extends number> extends Error {
+    public name = "HTTPError"
+    public status: S
+    public details?: { [key: string]: any }
+
+    protected constructor(status: S, message?: string, details?: { [key: string]: any }) {
+        super(message)
         this.status = status
-        this.name = "HTTPError"
+        this.details = details
+    }
+
+    get payload(): ErrorResponse<S> {
+        return {
+            "status": this.status,
+            "message": this.message,
+            "details": this.details
+        }
     }
 }

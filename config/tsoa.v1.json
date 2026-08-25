@@ -3,9 +3,63 @@
   "noImplicitAdditionalProperties": "throw-on-extras",
   "controllerPathGlobs": ["src/controllers/v1/*.ts"],
   "spec": {
+    "specVersion": 3.1,
+    "specMerging": "recursive",
     "outputDirectory": "src/routes/v1",
     "basePath": "v1",
-    "specVersion": 3.1
+    "name": "Hatsuboshi API",
+    "version": "v1",
+    "contact": {
+      "url": "https://github.com/hatsuboshi-app/backend"
+    },
+    "description": "Hatsuboshi API is a stateless RESTful API served by [Hatsuboshi App](https://github.com/hatsuboshi-app). This page contains the documentation on how interact with the API. Hatsuboshi App is not affiliated with BNEI, QualiArts Inc. or its partners.\n\n\n### Request Content-Type\nThe `Content-Type` for POST and PUT requests should be set to `application/json`.\n\nHatsuboshi API ignores any fields included in a request body if it does not match the structure of the expected request body as specified by the API documentation.\n### Response Content-Type\nMost endpoints, in the event of a successful call, will return a JSON response. Successful POST and PUT calls may return a response with no content.\n\nHatsuboshi API may seldom return objects with extra properties to that specified by the API documentation.\n# Versioning\n**You are currently reading the documentation for API endpoints on the `v1` version.**\n\nHatuboshi API's endpoints are versioned to ensure backwards-compability on breaking changes. The version of each API route is prefixed to its URL, e.g. `/v1/characters`.\n\nYou **must** specify the version of an endpoint in order to call it.\n# Errors\nHatsuboshi API uses standard HTTP status codes to indicate the success or failure of the API call. The body of an error response will always be in JSON, following the following format: \n```json\n{\n    \"status\": 400\n    \"message\": \"One or more query parameter(s) failed to validate.\"\n    \"detail\": {\n        \"keys\": [ \"f\" ]\n    }\n}\n```",
+    "license": "GNU GPLv3",
+    "tags": [
+      {
+        "name": "AuditionEffect",
+        "description": "API endpoints involving the `AuditionEffect` data type."
+      },
+      {
+        "name": "AuditionTerminology",
+        "description": "API endpoints involving the `AuditionTerminology` data type."
+      },
+      {
+        "name": "Character",
+        "description": "API endpoints involving the `Character` data type."
+      },
+      {
+        "name": "PDrink",
+        "description": "API endpoints involving the `PDrink` data type."
+      },
+      {
+        "name": "PIdol",
+        "description": "API endpoints involving the `PIdol` data type."
+      },
+      {
+        "name": "PItem",
+        "description": "API endpoints involving the `PItem` data type."
+      },
+      {
+        "name": "Skill",
+        "description": "API endpoints involving the `Skill` data type."
+      },
+      {
+        "name": "SupportCard",
+        "description": "API endpoints involving the `SupportCard` data type."
+      }
+    ],
+    "spec": {
+      "info": {
+        "license": {
+          "url": "https://spdx.org/licenses/GPL-3.0-or-later.html"
+        }
+      },
+      "servers": [
+        { "url": "https://api.hatsuboshi.app/v1", "description": "Production API" },
+        { "url": "https://api-dev.hatsuboshi.app/v1", "description": "Development API" },
+        { "url": "https://localhost:3001/v1", "description": "Local API" }
+      ]
+    }
   },
   "routes": {
     "routesDir": "src/routes/v1"
