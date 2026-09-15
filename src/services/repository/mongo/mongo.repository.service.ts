@@ -437,7 +437,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     async updateUser(obj: Partial<New<IUser>>): Promise<Result<User>> {
         throw new InternalServerError("Not implemented.")
     }
-    async deleteUser(id: string): Promise<Result<void>> {
+    async deleteUser(id: string): Promise<Result<null>> {
         throw new InternalServerError("Not implemented.")
     }
 
@@ -457,7 +457,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
         throw new InternalServerError("Not implemented.")
     }
-    async deleteSession(id: string): Promise<Result<void>> {
+    async deleteSession(id: string): Promise<Result<null>> {
         throw new InternalServerError("Not implemented.")
     }
 }

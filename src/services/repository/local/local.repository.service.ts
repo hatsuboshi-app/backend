@@ -38,7 +38,7 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, DBSupportCard, LocaleString, LocaleStringWithRomaji, LocaleStringFilterOptions,
-    DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions, New
+    DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions, New, SimpleStringFilterOptions
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
@@ -117,6 +117,15 @@ export default class LocalRepositoryService implements IRepositoryService {
             }
         }
     }
+    private getNewId(): string {
+        const chars = "abcdefghijklmnopqrstuvwxyz0123456789"
+        const len = 8
+        let id = "";
+        for (let i = 0; i < len; i++) {
+            id += chars[Math.floor(Math.random() * chars.length)];
+        }
+        return id
+    }
 
     private handleDateFilter(field: string, filter?: DateFilterOptions): boolean {
         if (!filter) return true
@@ -169,13 +178,32 @@ export default class LocalRepositoryService implements IRepositoryService {
             }
         }
     }
-    private handleEnumFilter<E>(field: E, filter?: EnumFilterOptions<E>): boolean {
+    private handleSimpleStringFilter(field: string, filter?: SimpleStringFilterOptions): boolean {
         if (!filter) return true
+        if (!filter.search) return true
+        switch (filter.method) {
+            case "regex":
+                return !!(field.match(filter.search) ?? false)
+            case "simple":
+            default:
+                return field.includes(filter.search)
+        }
+    }
+    private handleEnumFilter<E>(field: E | E[], filter?: EnumFilterOptions<E>): boolean {
+        if (!filter) return true
+        const vals: E[] = Array.isArray(field) ? field : [field]
         if (filter.include) {
-            return filter.include.includes(field)  // false if field value is not an accepted value, true otherwise
+            for (const v of vals) {
+                if (filter.include.includes(v)) return true
+            }
+            return false
+        } else if (filter.exclude) {
+            for (const v of vals) {
+                if (filter.exclude.includes(v)) return false
+            }
+            return true
         } else {
-            if (!filter.exclude) return true
-            return !(filter.exclude.includes(field))  // false if field value is a rejected value, true otherwise
+            return true
         }
     }
     private handleSort<T extends { createdAt: string }>({ a, b }: { a: T, b: T }, sort?: SortOption<T>[]): number {
@@ -351,19 +379,47 @@ export default class LocalRepositoryService implements IRepositoryService {
 
     // User //
     async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
-        throw new InternalServerError("Not implemented.")
+        const data = (await Promise.all(this.users
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleSimpleStringFilter(i.displayName, f?.displayName))
+            .filter(i => this.handleEnumFilter(i.roles, f?.roles))
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(User, this.constructPaginator(data, p))
     }
     async getUserById(id: string): Promise<Result<User>> {
-        throw new InternalServerError("Not implemented.")
+        const r = this.users.find(i => i.id === id)
+        return r
+            ? success(await User.fromDB(r))
+            : fail()
     }
     async createUser(obj: New<IUser>): Promise<Result<User>> {
-        throw new InternalServerError("Not implemented.")
+        const created = new User({
+            ...obj,
+            id: this.getNewId(),
+            createdAt: new Date().toISOString(),
+            updatedAt: new Date().toISOString()
+        })
+        this.users.push(created.toDB())
+        return success(created)
     }
-    async updateUser(obj: Partial<New<IUser>>): Promise<Result<User>> {
-        throw new InternalServerError("Not implemented.")
+    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<Result<User>> {
+        const toUpdateIndex = this.users.findIndex(i => i.id === id)
+        if (toUpdateIndex === -1) return fail()
+        const toUpdate = this.users[toUpdateIndex]
+        const updated = new User({
+            ...((await User.fromDB(toUpdate)).toJSON()),
+            ...obj,
+            updatedAt: new Date().toISOString()
+        })
+        this.users[toUpdateIndex] = updated
+        return success(updated)
     }
-    async deleteUser(id: string): Promise<Result<void>> {
-        throw new InternalServerError("Not implemented.")
+    async deleteUser(id: string): Promise<Result<null>> {
+        const toDelete = this.users.findIndex(i => i.id === id)
+        if (toDelete === -1) return fail()
+        this.users.splice(toDelete, 1)
+        return success(null)
     }
 
     // Session //
@@ -382,7 +438,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
         throw new InternalServerError("Not implemented.")
     }
-    async deleteSession(id: string): Promise<Result<void>> {
+    async deleteSession(id: string): Promise<Result<null>> {
         throw new InternalServerError("Not implemented.")
     }
 }

@@ -86,10 +86,10 @@ export default interface IRepositoryService {
         Promise<Result<User>>
     createUser(obj: New<IUser>):
         Promise<Result<User>>
-    updateUser(obj: Partial<New<IUser>>):
+    updateUser(id: string, obj: Partial<New<IUser>>):
         Promise<Result<User>>
     deleteUser(id: string):
-        Promise<Result<void>>
+        Promise<Result<null>>
 
     // Session //
     getSessions(p?: PaginateOptions, f?: any, s?: SortOption<ISession>):
@@ -103,5 +103,5 @@ export default interface IRepositoryService {
     createSession(obj: New<ISession>, token: string, ip?: string):
         Promise<Result<Session>>
     deleteSession(id: string):
-        Promise<Result<void>>
+        Promise<Result<null>>
 }
