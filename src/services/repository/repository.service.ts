@@ -11,8 +11,9 @@ import {
     PItem, PItemFilterOptions,
     Result,
     Skill, SkillFilterOptions, SortOption,
-    SupportCard, SupportCardFilterOptions
+    SupportCard, SupportCardFilterOptions, New
 } from "@hatsuboshi/types"
+import { ISession, IUser, Session, User, UserFilterOptions } from "@hatsuboshi/types/auth"
 
 export type ReferencePopulateMethods = {
     auditionEffect: Populate<DBAuditionEffect>,
@@ -21,6 +22,7 @@ export type ReferencePopulateMethods = {
     skill: Populate<DBSkill>,
     pItem: Populate<DBPItem>
 }
+
 export type PaginateOptions = Partial<{
     page: number
     perPage: number
@@ -76,4 +78,30 @@ export default interface IRepositoryService {
         Promise<Paginator<SupportCard, ISupportCard>>
     getSupportCardById(id: string):
         Promise<Result<SupportCard>>
+
+    // User //
+    getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]):
+        Promise<Paginator<User, IUser>>
+    getUserById(id: string):
+        Promise<Result<User>>
+    createUser(obj: New<IUser>):
+        Promise<Result<User>>
+    updateUser(obj: Partial<New<IUser>>):
+        Promise<Result<User>>
+    deleteUser(id: string):
+        Promise<Result<void>>
+
+    // Session //
+    getSessions(p?: PaginateOptions, f?: any, s?: SortOption<ISession>):
+        Promise<Paginator<Session, ISession>>
+    getUserSessions(userId: string, p?: PaginateOptions, f?: never, s?: SortOption<ISession>):
+        Promise<Paginator<Session, ISession>>
+    getSessionById(id: string):
+        Promise<Result<Session>>  // don't update last seen
+    getSessionByToken(token: string):
+        Promise<Result<Session>>  // also update last seen
+    createSession(obj: New<ISession>, token: string, ip?: string):
+        Promise<Result<Session>>
+    deleteSession(id: string):
+        Promise<Result<void>>
 }
