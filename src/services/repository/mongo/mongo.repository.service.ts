@@ -24,11 +24,12 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
-    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions
+    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions, New
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
+import { ISession, IUser, Session, User, UserFilterOptions } from "@hatsuboshi/types/auth";
 
 export type MongoCredentials = {
     shared: string,
@@ -421,5 +422,42 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
         throw new InternalServerError("Method not implemented.")
+    }
+
+    // User //
+    async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserById(id: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async createUser(obj: New<IUser>): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async updateUser(obj: Partial<New<IUser>>): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteUser(id: string): Promise<Result<void>> {
+        throw new InternalServerError("Not implemented.")
+    }
+
+    // Session //
+    async getSessions(p?: PaginateOptions, f?: any, s?: SortOption<ISession>): Promise<Paginator<Session, ISession>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserSessions(userId: string, p?: PaginateOptions, f?: never, s?: SortOption<ISession>): Promise<Paginator<Session, ISession>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getSessionById(id: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getSessionByToken(token: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteSession(id: string): Promise<Result<void>> {
+        throw new InternalServerError("Not implemented.")
     }
 }

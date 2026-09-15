@@ -6,14 +6,14 @@ import {
     AuthVerb
 } from "@hatsuboshi/types/auth"
 
-export const AUTH_ROLES: readonly AuthRole[] = [
+export const AUTH_ROLES = [
     "user",
     "translator",
     "maintainer",
     "admin"
 ] as const satisfies readonly AuthRole[]
 
-export const AUTH_ANONYMOUS_RESOURCES: readonly AuthAnonymousResource[] = [
+export const AUTH_ANONYMOUS_RESOURCES = [
     "auditionEffect",
     "auditionTerminology",
     "character",
@@ -24,13 +24,13 @@ export const AUTH_ANONYMOUS_RESOURCES: readonly AuthAnonymousResource[] = [
     "supportCard"
 ] as const satisfies readonly AuthAnonymousResource[]
 
-export const AUTH_OWNED_RESOURCES: readonly AuthOwnedResource[] = [
+export const AUTH_OWNED_RESOURCES = [
     "user",
     "session",
     "apikey"
 ] as const satisfies readonly AuthOwnedResource[]
 
-export const AUTH_VERBS: readonly AuthVerb[] = [
+export const AUTH_VERBS = [
     "history",
     "create",
     "translate",

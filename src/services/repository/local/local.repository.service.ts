@@ -38,11 +38,12 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, DBSupportCard, LocaleString, LocaleStringWithRomaji, LocaleStringFilterOptions,
-    DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions
+    DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions, New
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
+import { DBSession, DBUser, ISession, IUser, Session, User, UserFilterOptions } from "@hatsuboshi/types/auth"
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
@@ -57,6 +58,8 @@ export default class LocalRepositoryService implements IRepositoryService {
     private readonly items: DBPItem[]
     private readonly skills: DBSkill[]
     private readonly supportCards: DBSupportCard[]
+    private readonly users: DBUser[]
+    private readonly sessions: DBSession[]
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
             const data = this.effects.find(x => x.id === id)
@@ -95,6 +98,8 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.items = readFileSync(path.join(dir, "PItem.json"))
         this.skills = readFileSync(path.join(dir, "Skill.json"))
         this.supportCards = []
+        this.users = []
+        this.sessions = []
     }
 
     private constructPaginator<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
@@ -341,6 +346,43 @@ export default class LocalRepositoryService implements IRepositoryService {
         throw new InternalServerError("Method not implemented.")
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
+        throw new InternalServerError("Not implemented.")
+    }
+
+    // User //
+    async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserById(id: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async createUser(obj: New<IUser>): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async updateUser(obj: Partial<New<IUser>>): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteUser(id: string): Promise<Result<void>> {
+        throw new InternalServerError("Not implemented.")
+    }
+
+    // Session //
+    async getSessions(p?: PaginateOptions, f?: any, s?: SortOption<ISession>): Promise<Paginator<Session, ISession>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserSessions(userId: string, p?: PaginateOptions, f?: never, s?: SortOption<ISession>): Promise<Paginator<Session, ISession>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getSessionById(id: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getSessionByToken(token: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteSession(id: string): Promise<Result<void>> {
         throw new InternalServerError("Not implemented.")
     }
 }
