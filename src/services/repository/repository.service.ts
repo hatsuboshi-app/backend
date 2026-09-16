@@ -13,7 +13,16 @@ import {
     Skill, SkillFilterOptions, SortOption,
     SupportCard, SupportCardFilterOptions, New
 } from "@hatsuboshi/types"
-import { DBUser, ISession, IUser, Session, SessionFilterOptions, User, UserFilterOptions } from "@hatsuboshi/types/auth"
+import {
+    AuthProvider,
+    DBUser,
+    ISession,
+    IUser,
+    Session,
+    SessionFilterOptions,
+    User,
+    UserFilterOptions
+} from "@hatsuboshi/types/auth"
 
 export type ReferencePopulateMethods = {
     auditionEffect: Populate<DBAuditionEffect>,
@@ -84,6 +93,10 @@ export default interface IRepositoryService {
     getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]):
         Promise<Paginator<User, IUser>>
     getUserById(id: string):
+        Promise<Result<User>>
+    getUserByIdentity(provider: AuthProvider, subject: string):
+        Promise<Result<User>>
+    getUserByEmail(email: string):
         Promise<Result<User>>
     createUser(obj: New<IUser>):
         Promise<Result<User>>

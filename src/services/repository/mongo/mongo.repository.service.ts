@@ -30,6 +30,7 @@ import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
 import {
+    AuthProvider,
     DBUser,
     ISession,
     IUser,
@@ -449,6 +450,12 @@ export default class MongoRepositoryService implements IRepositoryService {
         throw new InternalServerError("Not implemented.")
     }
     async getUserById(id: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserByEmail(email: string): Promise<Result<User>> {
         throw new InternalServerError("Not implemented.")
     }
     async createUser(obj: New<IUser>): Promise<Result<User>> {

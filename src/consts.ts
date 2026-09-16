@@ -39,14 +39,6 @@ export const AUTH_VERBS = [
     "delete"
 ] as const satisfies readonly AuthVerb[]
 
-export const HASH_REPRESENTATION = "base64url"
-
-export const HASH_FUNCTION = (token: string): string => {
-    return createHash("sha256").update(token).digest(HASH_REPRESENTATION)
-}
-
-export const SESSION_REFRESH_TIME = 30 * 24 * 3600 * 1000  // 30 days
-
 export const AUTH_ROLE_SCOPES: AuthRoleScopeMapping = {
     user: [
 
@@ -62,3 +54,11 @@ export const AUTH_ROLE_SCOPES: AuthRoleScopeMapping = {
         "*"
     ]
 }
+
+export const HASH_REPRESENTATION = "base64url"
+
+export const HASH_FUNCTION = (token: string): string => {
+    return createHash("sha256").update(token).digest(HASH_REPRESENTATION)
+}
+
+export const SESSION_REFRESH_TIME = 30 * 24 * 3600 * 1000  // 30 days

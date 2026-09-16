@@ -45,6 +45,7 @@ import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
 import {
+    AuthProvider,
     DBSession,
     DBUser,
     ISession,
@@ -54,7 +55,7 @@ import {
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
-import { HASH_FUNCTION, SESSION_REFRESH_TIME } from "@/consts";
+import { HASH_FUNCTION, SESSION_REFRESH_TIME } from "@/consts"
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
@@ -429,6 +430,22 @@ export default class LocalRepositoryService implements IRepositoryService {
 
     async getUserById(id: string): Promise<Result<User>> {
         const r = this.users.find(i => i.id === id)
+        return r
+            ? success(await User.fromDB(r))
+            : fail()
+    }
+
+    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<Result<User>> {
+        const r = this.users.find(i =>
+            i.identities.some(id => id.subject === subject && id.provider === provider)
+        )
+        return r
+            ? success(await User.fromDB(r))
+            : fail()
+    }
+
+    async getUserByEmail(email: string): Promise<Result<User>> {
+        const r = this.users.find(i => i.email === email)
         return r
             ? success(await User.fromDB(r))
             : fail()
