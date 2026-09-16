@@ -13,14 +13,15 @@ import {
     Skill, SkillFilterOptions, SortOption,
     SupportCard, SupportCardFilterOptions, New
 } from "@hatsuboshi/types"
-import { ISession, IUser, Session, User, UserFilterOptions } from "@hatsuboshi/types/auth"
+import { DBUser, ISession, IUser, Session, SessionFilterOptions, User, UserFilterOptions } from "@hatsuboshi/types/auth"
 
 export type ReferencePopulateMethods = {
     auditionEffect: Populate<DBAuditionEffect>,
     auditionTerminology: Populate<DBAuditionTerminology>,
     character: Populate<DBCharacter>,
     skill: Populate<DBSkill>,
-    pItem: Populate<DBPItem>
+    pItem: Populate<DBPItem>,
+    user: Populate<DBUser>
 }
 
 export type PaginateOptions = Partial<{
@@ -92,9 +93,9 @@ export default interface IRepositoryService {
         Promise<Result<null>>
 
     // Session //
-    getSessions(p?: PaginateOptions, f?: any, s?: SortOption<ISession>):
+    getSessions(p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]):
         Promise<Paginator<Session, ISession>>
-    getUserSessions(userId: string, p?: PaginateOptions, f?: never, s?: SortOption<ISession>):
+    getUserSessions(userId: string, p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]):
         Promise<Paginator<Session, ISession>>
     getSessionById(id: string):
         Promise<Result<Session>>  // don't update last seen
