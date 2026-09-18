@@ -21,11 +21,6 @@ export interface SessionResult {
     token: string
 }
 
-export interface SignUpResult {
-    user: User
-    intentToken: string
-}
-
 export interface AuthIdentity {
     provider: AuthProvider
     subject: string
@@ -33,10 +28,6 @@ export interface AuthIdentity {
     emailIdPVerified: boolean
     displayName: string
 }
-
-export type VerifyProof =
-    | { type: "intent", token: string }
-    | { type: "password", email: string, password: string }
 
 export default class AuthContext {
     authServiceProvider: IAuthService
@@ -64,6 +55,9 @@ export default class AuthContext {
     }
 
     private async completeSignUp(a: AuthIdentity): Promise<User> {
+        if (a.provider !== "email" && !a.emailIdPVerified) {
+            throw new ForbiddenError("Unverified email on new sign-in method.")
+        }
         const r = await this.repositoryServiceProvider.createUser({
             disabledAt: null,
             identities: [{ provider: a.provider, subject: a.subject }],
@@ -75,8 +69,9 @@ export default class AuthContext {
             roles: ["user"],
             extraScopes: []
         })
-        if (!r.success)
+        if (!r.success) {
             throw new InternalServerError("Failed to create user.")
+        }
         return r.data
     }
 
@@ -87,21 +82,39 @@ export default class AuthContext {
             // cannot find existing identity, try finding an existing account with the same email
             const re = await this.repositoryServiceProvider.getUserByEmail(a.email)
             if (re.success) {
-                // existing identity is not verified, do not link new identity
-                if (!re.data.verified) throw new ForbiddenError("Unverified email.")
-                // incoming identity is not verified, do not link new identity
-                if (!a.emailIdPVerified) throw new ForbiddenError("Unverified email.")
-                // link new identity
-                const rx = await this.repositoryServiceProvider.updateUser(re.data.id, {
-                    identities: [
-                        ...re.data.identities,
-                        { provider: a.provider, subject: a.subject }
-                    ]
-                })
-                if (!rx.success) throw new InternalServerError("Failed to update user.")
-                u = rx.data
+                if (a.provider === "email") {
+                    // incoming identity is email: do not link incoming identity
+                    throw new ForbiddenError("Sign-in with the method you last used to sign-in.")
+                }
+                if (!a.emailIdPVerified) {
+                    // incoming identity is not verified: do not link incoming identity
+                    throw new ForbiddenError("Unverified email on new sign-in method.")
+                }
+                if (!re.data.verified) {
+                    // existing identity is not verified:
+                    //   - abandon existing identity on User
+                    //   - assume new identity
+                    const rx = await this.repositoryServiceProvider.updateUser(re.data.id, {
+                        identities: [{ provider: a.provider, subject: a.subject }],
+                        verified: a.emailIdPVerified
+                    })
+                    if (!rx.success) throw new InternalServerError("Failed to update user.")
+                    const rr = await this.repositoryServiceProvider.deleteUserSessions(re.data.id)
+                    if (!rr.success) this.loggerServiceProvider.warn("Failed to revoke all user sessions.")
+                    u = rx.data
+                } else {
+                    // existing identity is verified: link new identity
+                    const rx = await this.repositoryServiceProvider.updateUser(re.data.id, {
+                        identities: [
+                            ...re.data.identities,
+                            { provider: a.provider, subject: a.subject }
+                        ]
+                    })
+                    if (!rx.success) throw new InternalServerError("Failed to update user.")
+                    u = rx.data
+                }
             } else {
-                // cannot find existing account: must be bugged sign-up, redo sign-up process
+                // sign up with IdP path - or fixing a bugged password sign-up process
                 u = await this.completeSignUp(a)
             }
         } else {
@@ -126,7 +139,11 @@ export default class AuthContext {
         return { session: r.data, token: t }
     }
 
-    async signUp(email: string, password: string, displayName: string): Promise<SignUpResult> {
+    async signUp(email: string, password: string, displayName: string): Promise<User> {
+        const rc = await this.repositoryServiceProvider.getUserByEmail(email)
+        if (rc.success) {
+            throw new HTTPError(409)
+        }
         const ra = await this.authServiceProvider.signUp(email, password, displayName)
         if (!ra.success) {
             switch (ra.message?.split(" ")[0].trim()) {
@@ -143,13 +160,13 @@ export default class AuthContext {
             }
         }
         const u = await this.completeSignUp(ra.data)
-        const rv = await this.authServiceProvider.initializeEmailVerification(u.email)
-        if (!rv.success)
-            this.loggerServiceProvider.warn(`Failed to send verification email for ${u.email} after sign-up.`)
-        return {
-            user: u,
-            intentToken: ""  // TODO: return intent token
+        if (!u.verified) {
+            const rv = await this.authServiceProvider.initializeEmailVerification(u.email)
+            if (!rv.success) {
+                this.loggerServiceProvider.warn(`Failed to send verification email for ${u.email} after sign-up.`)
+            }
         }
+        return u
     }
 
     async signIn(email: string, password: string, meta: SessionMeta): Promise<SessionResult> {
@@ -157,8 +174,6 @@ export default class AuthContext {
         if (!ra.success) {
             switch (ra.message?.split(" ")[0].trim()) {
                 case "INVALID_LOGIN_CREDENTIALS":
-                case "EMAIL_NOT_FOUND":
-                case "INVALID_PASSWORD":
                     throw new UnauthorizedError("Invalid email / password.")
                 default:
                     throw this.errorFor(ra.message)
@@ -167,26 +182,19 @@ export default class AuthContext {
         return this.completeSignIn(ra.data, meta)
     }
 
-    async initializeEmailVerification(email: string): Promise<string> {
-        // TODO: add rate limiting
+    async signInWithIdP(provider: Exclude<AuthProvider, "email">, idToken: string, meta: SessionMeta): Promise<SessionResult> {
+        const rs = await this.authServiceProvider.signInWithIdP(provider, idToken)
+        if (!rs.success) throw this.errorFor(rs.message)
+        return this.completeSignIn(rs.data, meta)
+    }
+
+    async initializeEmailVerification(email: string): Promise<void> {
         const r = await this.authServiceProvider.initializeEmailVerification(email)
         if (!r.success && r.message?.startsWith("TOO_MANY_ATTEMPTS_TRY_LATER")) throw new HTTPError(429)
         if (!r.success && r.message) this.loggerServiceProvider.warn(r.message)
-        return ""  // TODO: return intent token
     }
 
-    async confirmEmailVerification(code: string, proof: VerifyProof): Promise<void> {
-        // extract firebase id from proof
-        let sub: string
-        switch (proof.type) {
-            case "intent":
-                sub = ""
-                break  // TODO: unpack intent token, throw if invalid
-            case "password":
-                const rs = await this.authServiceProvider.signIn(proof.email, proof.password)
-                if (!rs.success) throw new UnauthorizedError("Invalid email / password.")
-                sub = rs.data.subject
-        }
+    async confirmEmailVerification(code: string): Promise<void> {
         // consume oob
         const r = await this.authServiceProvider.confirmEmailVerification(code)
         if (!r.success) {
@@ -199,8 +207,6 @@ export default class AuthContext {
                     throw this.errorFor(r.message)
             }
         }
-        // dont update verified status if firebase sub doesn't match
-        if (sub !== r.data.subject) throw new ForbiddenError("User mismatch.")
         const ru = await this.repositoryServiceProvider.getUserByIdentity(r.data.provider, r.data.subject)
         if (!ru.success) throw new NotFoundError()
         const rx = await this.repositoryServiceProvider.updateUser(ru.data.id, { verified: true })
@@ -208,7 +214,6 @@ export default class AuthContext {
     }
 
     async initializePasswordReset(email: string): Promise<void> {
-        // TODO: add rate limiting
         const r = await this.authServiceProvider.initializePasswordReset(email)
         if (!r.success && r.message?.startsWith("TOO_MANY_ATTEMPTS_TRY_LATER")) throw new HTTPError(429)
         if (!r.success && r.message) this.loggerServiceProvider.warn(r.message)
@@ -234,7 +239,8 @@ export default class AuthContext {
         // verifies user upon resetting password
         const rx = await this.repositoryServiceProvider.updateUser(ru.data.id, { verified: true })
         if (!rx.success) throw new InternalServerError("Failed to update user.")
-        // TODO: Revoke user sessions
+        const rr = await this.repositoryServiceProvider.deleteUserSessions(ru.data.id)
+        if (!rr.success) this.loggerServiceProvider.warn("Failed to revoke all user sessions.")
     }
 }
 
@@ -244,6 +250,8 @@ export interface IAuthService {
     signUp(email: string, password: string, displayName: string):
         Promise<Result<AuthIdentity>>
     signIn(email: string, password: string):
+        Promise<Result<AuthIdentity>>
+    signInWithIdP(provider: Exclude<AuthProvider, "email">, idToken: string):
         Promise<Result<AuthIdentity>>
     initializeEmailVerification(email: string):
         Promise<Result<null>>

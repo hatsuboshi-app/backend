@@ -115,7 +115,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.items = readFileSync(path.join(dir, "PItem.json"))
         this.skills = readFileSync(path.join(dir, "Skill.json"))
         this.supportCards = []
-        this.users = []
+        this.users = readFileSync(path.join(dir, "User.json"))
         this.sessions = []
     }
 
@@ -528,6 +528,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         })
         this.sessions.push(created.toDBInsert(HASH_FUNCTION(token), ip ?? null))
         return success(created)
+    }
+
+    async deleteUserSessions(userId: string): Promise<Result<null>> {
+        this.sessions.splice(0, this.sessions.length, ...this.sessions.filter(i => i.user !== userId))
+        return success(null)
     }
 
     async deleteSession(id: string): Promise<Result<null>> {

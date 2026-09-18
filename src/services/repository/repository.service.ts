@@ -116,6 +116,8 @@ export default interface IRepositoryService {
         Promise<Result<Session>>  // also update last seen
     createSession(obj: New<ISession>, token: string, ip?: string):
         Promise<Result<Session>>
+    deleteUserSessions(userId: string):
+        Promise<Result<null>>
     deleteSession(id: string):
         Promise<Result<null>>
 }
