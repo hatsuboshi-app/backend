@@ -1,0 +1,90 @@
+[
+  {
+    "id": "user-k3m9x2qa",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "email",
+        "subject": "dc3ZCeLkC0P8rfw6c6y3eU1zR7L1"
+      }
+    ],
+    "displayName": "Admin",
+    "displayIcon": null,
+    "description": "Local admin!",
+    "email": "admin@hatsuboshi.local",
+    "verified": true,
+    "roles": [
+      "user",
+      "admin"
+    ],
+    "extraScopes": []
+  },
+  {
+    "id": "user-p7w2n4rt",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "email",
+        "subject": "h8xreg9tHOj1jSzlKi2Loa8ZKhwo"
+      }
+    ],
+    "displayName": "User",
+    "displayIcon": null,
+    "description": "Local user",
+    "email": "user@hatsuboshi.local",
+    "verified": true,
+    "roles": [
+      "user"
+    ],
+    "extraScopes": []
+  },
+  {
+    "id": "user-b5h8c1ve",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "email",
+        "subject": "pG0mRWZgw2mZ4DcXka99rXfTmENT"
+      }
+    ],
+    "displayName": "Translator",
+    "displayIcon": null,
+    "description": "Local translator",
+    "email": "translator@hatsuboshi.local",
+    "verified": true,
+    "roles": [
+      "user",
+      "translator"
+    ],
+    "extraScopes": []
+  },
+  {
+    "id": "user-z6d3j9ly",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "email",
+        "subject": "rn8QwkcOgnFQvZ3bb5jKyG6fcf95"
+      }
+    ],
+    "displayName": "Maintainer",
+    "displayIcon": null,
+    "description": "Local maintainer",
+    "email": "maintainer@hatsuboshi.local",
+    "verified": true,
+    "roles": [
+      "user",
+      "translator",
+      "maintainer"
+    ],
+    "extraScopes": []
+  }
+]
