@@ -1,4 +1,4 @@
-name: docs
+name: Publish docs
 
 on:
   workflow_call:
@@ -60,15 +60,21 @@ jobs:
         run: |
           TARGET="docs-repo/public/$DOCS_DIR"
           mkdir -p "$TARGET"
-          rsync -a --delete --exclude /index.html "$OUT_DIR/" "$TARGET/"
-          find "$OUT_DIR" -mindepth 1 -maxdepth 1 -type d -printf '%f\n' \
+          rsync -a --delete --delete-excluded --prune-empty-dirs \
+            --filter 'P /index.html' \
+            --include '*/' --include 'swagger.json' --exclude '*' \
+            "$OUT_DIR/" "$TARGET/"
+          find "$OUT_DIR" -mindepth 2 -maxdepth 2 -name swagger.json -printf '%h\n' \
+            | xargs -n1 basename \
             | sort -V \
             | jq -R -s -c 'split("\n") | map(select(length > 0))' \
             > "$TARGET/versions.json"
+      - name: Short commit SHA
+        run: echo "SHORT_SHA=${GITHUB_SHA::8}" >> "$GITHUB_ENV"
       - name: Commit and push
         uses: stefanzweifel/git-auto-commit-action@v7
         with:
           repository: docs-repo
-          commit_message: "docs(${{ inputs.docs_dir }}): publish ${{ github.sha }}"
+          commit_message: "docs(${{ inputs.docs_dir }}): publish ${{ env.SHORT_SHA }}"
           before_push_hook: |
             git pull --rebase
