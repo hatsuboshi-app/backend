@@ -12,7 +12,8 @@
 </div>
 <br>
 
-**[Hatsuboshi API](https://docs.hatsuboshi.app/api/) is an unofficial, public, stateless RESTful API that provides programmatic access to a variety of data from _Gakuen IDOLM@STER_.**
+**[Hatsuboshi API](https://docs.hatsuboshi.app/api/) is an unofficial, public, stateless RESTful API that provides programmatic access to a variety of data from _Gakuen IDOLM@STER_.** It serves as the backend service of [Hatsuboshi App](https://hatsuboshi.app/), and is fully accessible to public consumption.
+
 - CRUD operations for various in-game resources (e.g. Skills, P-Idols, Support Cards, etc.)
 - Strongly typed request & response data models, serialized as JSON
 - Authentication for privileged actions, using either cookies or API keys
