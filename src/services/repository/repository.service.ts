@@ -11,16 +11,28 @@ import {
     PItem, PItemFilterOptions,
     Result,
     Skill, SkillFilterOptions, SortOption,
-    SupportCard, SupportCardFilterOptions
+    SupportCard, SupportCardFilterOptions, New
 } from "@hatsuboshi/types"
+import {
+    AuthProvider,
+    DBUser,
+    ISession,
+    IUser,
+    Session,
+    SessionFilterOptions,
+    User,
+    UserFilterOptions
+} from "@hatsuboshi/types/auth"
 
 export type ReferencePopulateMethods = {
     auditionEffect: Populate<DBAuditionEffect>,
     auditionTerminology: Populate<DBAuditionTerminology>,
     character: Populate<DBCharacter>,
     skill: Populate<DBSkill>,
-    pItem: Populate<DBPItem>
+    pItem: Populate<DBPItem>,
+    user: Populate<DBUser>
 }
+
 export type PaginateOptions = Partial<{
     page: number
     perPage: number
@@ -76,4 +88,36 @@ export default interface IRepositoryService {
         Promise<Paginator<SupportCard, ISupportCard>>
     getSupportCardById(id: string):
         Promise<Result<SupportCard>>
+
+    // User //
+    getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]):
+        Promise<Paginator<User, IUser>>
+    getUserById(id: string):
+        Promise<Result<User>>
+    getUserByIdentity(provider: AuthProvider, subject: string):
+        Promise<Result<User>>
+    getUserByEmail(email: string):
+        Promise<Result<User>>
+    createUser(obj: New<IUser>):
+        Promise<Result<User>>
+    updateUser(id: string, obj: Partial<New<IUser>>):
+        Promise<Result<User>>
+    deleteUser(id: string):
+        Promise<Result<null>>
+
+    // Session //
+    getSessions(p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]):
+        Promise<Paginator<Session, ISession>>
+    getUserSessions(userId: string, p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]):
+        Promise<Paginator<Session, ISession>>
+    getSessionById(id: string):
+        Promise<Result<Session>>  // don't update last seen
+    getSessionByToken(token: string):
+        Promise<Result<Session>>  // also update last seen
+    createSession(obj: New<ISession>, token: string, ip?: string):
+        Promise<Result<Session>>
+    deleteUserSessions(userId: string):
+        Promise<Result<null>>
+    deleteSession(id: string):
+        Promise<Result<null>>
 }

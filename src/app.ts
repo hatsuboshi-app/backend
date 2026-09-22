@@ -11,7 +11,7 @@ const app = express()
 
 app.use(morgan(':date :method :url :status :res[content-length] - :response-time ms'))
 app.use(express.json())
-app.use(cors())
+app.use(cors())  // TODO: update cors rules for cookies
 
 app.get("/", (_: Request, res: Response) => {
     res.json({

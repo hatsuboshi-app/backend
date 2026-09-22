@@ -24,11 +24,21 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
-    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions
+    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions, New
 } from "@hatsuboshi/types"
 import InvalidReferenceError from "@/errors/InvalidReferenceError"
 import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
+import {
+    AuthProvider,
+    DBUser,
+    ISession,
+    IUser,
+    Session,
+    SessionFilterOptions,
+    User,
+    UserFilterOptions
+} from "@hatsuboshi/types/auth";
 
 export type MongoCredentials = {
     shared: string,
@@ -47,7 +57,8 @@ type PaginationHandlerParams<T extends JSONSerializable<I>, I extends {}> = {
 
 export default class MongoRepositoryService implements IRepositoryService {
     id = "mongo"
-    private readonly db: Db
+    private readonly gameDataDb: Db
+    private readonly metaDataDb: Db
     private readonly effects: Collection
     private readonly terminologies: Collection
     private readonly characters: Collection
@@ -56,6 +67,8 @@ export default class MongoRepositoryService implements IRepositoryService {
     private readonly items: Collection
     private readonly skills: Collection
     private readonly supportCards: Collection
+    private readonly users: Collection
+    private readonly sessions: Collection
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
@@ -82,21 +95,30 @@ export default class MongoRepositoryService implements IRepositoryService {
             if (r) return <DBPItem><unknown>r
             else throw new InvalidReferenceError("PItem", id)
         },
+        user: async (id: string) => {
+            const r = await this.users.findOne({ id: id })
+            if (r) return <DBUser><unknown>r
+            else throw new InvalidReferenceError("User", id)
+        }
     }
 
     constructor({ shared, cluster, username, password }: MongoCredentials) {
-        this.db = new MongoClient(
+        const client = new MongoClient(
             `mongodb+srv://${username}:${password}@${cluster}.${shared}.mongodb.net/?appName=${cluster}`,
             { serverApi: ServerApiVersion.v1 }
-        ).db("GameData")
-        this.effects = this.db.collection("AuditionEffect")
-        this.terminologies = this.db.collection("AuditionTerminology")
-        this.characters = this.db.collection("Character")
-        this.drinks = this.db.collection("PDrink")
-        this.idols = this.db.collection("PIdol")
-        this.items = this.db.collection("PItem")
-        this.skills = this.db.collection("Skill")
-        this.supportCards = this.db.collection("SupportCard")
+        )
+        this.gameDataDb = client.db("GameData")
+        this.metaDataDb = client.db("MetaData")
+        this.effects = this.gameDataDb.collection("AuditionEffect")
+        this.terminologies = this.gameDataDb.collection("AuditionTerminology")
+        this.characters = this.gameDataDb.collection("Character")
+        this.drinks = this.gameDataDb.collection("PDrink")
+        this.idols = this.gameDataDb.collection("PIdol")
+        this.items = this.gameDataDb.collection("PItem")
+        this.skills = this.gameDataDb.collection("Skill")
+        this.supportCards = this.gameDataDb.collection("SupportCard")
+        this.users = this.metaDataDb.collection("User")
+        this.sessions = this.metaDataDb.collection("Session")
     }
 
     private async fetchAndConstructPaginator<T extends JSONSerializable<I>, I extends {}>({ collection, populate, filter, options, sort }: PaginationHandlerParams<T, I>): Promise<IPaginator<I>> {
@@ -421,5 +443,51 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
     async getSupportCardById(id: string): Promise<Result<SupportCard>> {
         throw new InternalServerError("Method not implemented.")
+    }
+
+    // User //
+    async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserById(id: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserByEmail(email: string): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async createUser(obj: New<IUser>): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<Result<User>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteUser(id: string): Promise<Result<null>> {
+        throw new InternalServerError("Not implemented.")
+    }
+
+    // Session //
+    async getSessions(p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]): Promise<Paginator<Session, ISession>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getUserSessions(userId: string, p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]): Promise<Paginator<Session, ISession>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getSessionById(id: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async getSessionByToken(token: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteUserSessions(userId: string): Promise<Result<null>> {
+        throw new InternalServerError("Not implemented.")
+    }
+    async deleteSession(id: string): Promise<Result<null>> {
+        throw new InternalServerError("Not implemented.")
     }
 }
