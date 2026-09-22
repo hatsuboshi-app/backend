@@ -1,4 +1,4 @@
-name: dev
+name: Deploy to vercel (development)
 env:
   VERCEL_ORG_ID: ${{ vars.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ vars.VERCEL_PROJECT_ID_DEV }}
@@ -11,7 +11,7 @@ jobs:
   deploy:
     environment:
       name: development
-      url: https://api-dev.hatsuboshi.app
+      url: ${{ vars.API_ORIGIN_URL_DEV }}
     runs-on: hatsuboshi
     steps:
       - uses: actions/checkout@v7
@@ -24,3 +24,14 @@ jobs:
           vercel pull --yes --environment=production --token=${{ secrets.VERCEL_TOKEN }}
           vercel build --prod --token=${{ secrets.VERCEL_TOKEN }}
           vercel deploy --prebuilt --prod --token=${{ secrets.VERCEL_TOKEN }}
+
+  docs:
+    needs: deploy
+    permissions:
+      contents: read
+    uses: ./.github/workflows/publish-docs.yml
+    with:
+      docs_dir: api-dev
+      api_origin: ${{ vars.API_ORIGIN_URL_DEV }}
+    secrets:
+      DOCS_PUBLISH_TOKEN: ${{ secrets.DOCS_PUBLISH_TOKEN }}
