@@ -7,7 +7,7 @@ type Config = {
 const config: Config = {
     port: Number(process.env.PORT) || 3001,
     env: process.env.API_ENV || 'local',
-    defaults: { pageSize: 20 }
+    defaults: { pageSize: 15 }
 }
 
 export default config
