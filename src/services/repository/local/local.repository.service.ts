@@ -2,10 +2,9 @@ import path from "node:path"
 import { readFileSync } from "jsonfile"
 import IRepositoryService, {
     PaginateOptions,
-    ReferencePopulateMethods
+    ReferencePopulateMethods, RepositoryResult
 } from "@/services/repository/repository.service"
 import {
-    Result,
     Character,
     fail,
     success,
@@ -46,22 +45,15 @@ import InternalServerError from "@/errors/InternalServerError"
 import config from "@/config"
 import {
     AuthProvider,
-    DBSession,
     DBUser,
-    ISession,
     IUser,
-    Session,
-    SessionFilterOptions,
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
-import { HASH_FUNCTION, SESSION_REFRESH_TIME } from "@/consts"
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
 export default class LocalRepositoryService implements IRepositoryService {
-    id = "local"
-
     private readonly effects: DBAuditionEffect[]
     private readonly terminologies: DBAuditionTerminology[]
     private readonly characters: DBCharacter[]
@@ -71,7 +63,6 @@ export default class LocalRepositoryService implements IRepositoryService {
     private readonly skills: DBSkill[]
     private readonly supportCards: DBSupportCard[]
     private readonly users: DBUser[]
-    private readonly sessions: DBSession[]
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
             const data = this.effects.find(x => x.id === id)
@@ -116,7 +107,6 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.skills = readFileSync(path.join(dir, "Skill.json"))
         this.supportCards = []
         this.users = readFileSync(path.join(dir, "User.json"))
-        this.sessions = []
     }
 
     private constructPaginator<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
@@ -266,11 +256,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(AuditionEffect, this.constructPaginator(data, p))
     }
 
-    async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
+    async getAuditionEffectById(id: string): Promise<RepositoryResult<AuditionEffect>> {
         const r = this.effects.find(i  => i.id == id)
         return r
             ? success(await AuditionEffect.fromDB(r, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // AuditionTerminology //
@@ -284,11 +274,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(AuditionTerminology, this.constructPaginator(data, p))
     }
 
-    async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
+    async getAuditionTerminologyById(id: string): Promise<RepositoryResult<AuditionTerminology>> {
         const r = this.terminologies.find(i  => i.id == id)
         return r
             ? success(await AuditionTerminology.fromDB(r, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // Character //
@@ -309,11 +299,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(Character, this.constructPaginator(data, p))
     }
 
-    async getCharacterById(id: string): Promise<Result<Character>> {
+    async getCharacterById(id: string): Promise<RepositoryResult<Character>> {
         const r = this.characters.find(i  => i.id == id)
         return r
             ? success(await Character.fromDB(r))
-            : fail()
+            : fail("not-found")
     }
 
     // PDrink //
@@ -330,11 +320,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(PDrink, this.constructPaginator(data, p))
     }
 
-    async getPDrinkById(id: string): Promise<Result<PDrink>> {
+    async getPDrinkById(id: string): Promise<RepositoryResult<PDrink>> {
         const r = this.drinks.find(i  => i.id == id)
         return r
             ? success(await PDrink.fromDB(r, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // PIdol //
@@ -354,11 +344,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(PIdol, this.constructPaginator(data, p))
     }
 
-    async getPIdolById(id: string): Promise<Result<PIdol>> {
+    async getPIdolById(id: string): Promise<RepositoryResult<PIdol>> {
         const r = this.idols.find(i  => i.id == id)
         return r
             ? success(await PIdol.fromDB(r, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // PItem //
@@ -376,11 +366,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(PItem, this.constructPaginator(data, p))
     }
 
-    async getPItemById(id: string): Promise<Result<PItem>> {
+    async getPItemById(id: string): Promise<RepositoryResult<PItem>> {
         const r = this.items.find(i  => i.id == id)
         return r
             ? success(await PItem.fromDB(r, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // Skill //
@@ -400,11 +390,11 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(Skill, this.constructPaginator(data, p))
     }
 
-    async getSkillById(id: string): Promise<Result<Skill>> {
+    async getSkillById(id: string): Promise<RepositoryResult<Skill>> {
         const r = this.skills.find(i  => i.id == id)
         return r
             ? success(await Skill.fromDB(r, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // SupportCard //
@@ -412,7 +402,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         throw new InternalServerError("Method not implemented.")
     }
 
-    async getSupportCardById(id: string): Promise<Result<SupportCard>> {
+    async getSupportCardById(id: string): Promise<RepositoryResult<SupportCard>> {
         throw new InternalServerError("Not implemented.")
     }
 
@@ -428,30 +418,30 @@ export default class LocalRepositoryService implements IRepositoryService {
         return new Paginator(User, this.constructPaginator(data, p))
     }
 
-    async getUserById(id: string): Promise<Result<User>> {
+    async getUserById(id: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i => i.id === id)
         return r
             ? success(await User.fromDB(r))
-            : fail()
+            : fail("not-found")
     }
 
-    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<Result<User>> {
+    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i =>
             i.identities.some(id => id.subject === subject && id.provider === provider)
         )
         return r
             ? success(await User.fromDB(r))
-            : fail()
+            : fail("not-found")
     }
 
-    async getUserByEmail(email: string): Promise<Result<User>> {
+    async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i => i.email === email)
         return r
             ? success(await User.fromDB(r))
-            : fail()
+            : fail("not-found")
     }
 
-    async createUser(obj: New<IUser>): Promise<Result<User>> {
+    async createUser(obj: New<IUser>): Promise<RepositoryResult<User>> {
         const created = new User({
             ...obj,
             ...this.getNewObj()
@@ -460,85 +450,24 @@ export default class LocalRepositoryService implements IRepositoryService {
         return success(created)
     }
 
-    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<Result<User>> {
+    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<RepositoryResult<User>> {
         let toUpdate = this.users.find(i => i.id === id)
-        if (!toUpdate) return fail()
+        if (!toUpdate) return fail("not-found")
         const updated = new User({
             ...((await User.fromDB(toUpdate)).toJSON()),
             ...obj,
             updatedAt: new Date().toISOString()
         })
         const toUpdateIndex = this.users.findIndex(i => i.id === id)
-        if (toUpdateIndex === -1) return fail()
+        if (toUpdateIndex === -1) return fail("not-found")
         this.users[toUpdateIndex] = updated.toDB()
         return success(updated)
     }
 
-    async deleteUser(id: string): Promise<Result<null>> {
+    async deleteUser(id: string): Promise<RepositoryResult<null>> {
         const toDelete = this.users.findIndex(i => i.id === id)
-        if (toDelete === -1) return fail()
+        if (toDelete === -1) return fail("not-found")
         this.users.splice(toDelete, 1)
-        return success(null)
-    }
-
-    // Session //
-    async getSessions(p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]): Promise<Paginator<Session, ISession>> {
-        const data = (await Promise.all(this.sessions
-            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
-            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
-            .filter(i => this.handleDateFilter(i.lastSeenAt, f?.lastSeenAt))
-            .filter(i => this.handleSimpleStringFilter(i.userAgent ?? "", f?.userAgent))
-            .filter(i => this.handleEnumFilter(i.user, f?.user))
-            .map(async (i) => (await Session.fromDB(i, this.populateMethods.user)).toJSON())
-        )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(Session, this.constructPaginator(data, p))
-    }
-
-    async getUserSessions(userId: string, p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]): Promise<Paginator<Session, ISession>> {
-        const data = (await Promise.all(this.sessions
-            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
-            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
-            .filter(i => this.handleDateFilter(i.lastSeenAt, f?.lastSeenAt))
-            .filter(i => this.handleSimpleStringFilter(i.userAgent ?? "", f?.userAgent))
-            .filter(i => i.user === userId && i.expiresAt > new Date())
-            .map(async (i) => (await Session.fromDB(i, this.populateMethods.user)).toJSON())
-        )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(Session, this.constructPaginator(data, p))
-    }
-
-    async getSessionById(id: string): Promise<Result<Session>> {
-        const r = this.sessions.find(i => i.id === id)
-        return r
-            ? success(await Session.fromDB(r, this.populateMethods.user))
-            : fail()
-    }
-
-    async getSessionByToken(token: string): Promise<Result<Session>> {
-        const r = this.sessions.find(i => i.tokenHash === HASH_FUNCTION(token) && i.expiresAt > new Date())
-        if (!r) return fail()
-        r.lastSeenAt = new Date().toISOString()
-        r.expiresAt = new Date(Date.now() + SESSION_REFRESH_TIME)
-        return success(await Session.fromDB(r, this.populateMethods.user))
-    }
-
-    async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
-        const created = new Session({
-            ...obj,
-            ...this.getNewObj()
-        })
-        this.sessions.push(created.toDBInsert(HASH_FUNCTION(token), ip ?? null))
-        return success(created)
-    }
-
-    async deleteUserSessions(userId: string): Promise<Result<null>> {
-        this.sessions.splice(0, this.sessions.length, ...this.sessions.filter(i => i.user !== userId))
-        return success(null)
-    }
-
-    async deleteSession(id: string): Promise<Result<null>> {
-        const toDelete = this.sessions.findIndex(i => i.id === id)
-        if (toDelete === -1) return fail()
-        this.sessions.splice(toDelete, 1)
         return success(null)
     }
 }

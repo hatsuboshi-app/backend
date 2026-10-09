@@ -1,4 +1,8 @@
-import IRepositoryService, { PaginateOptions, ReferencePopulateMethods } from "@/services/repository/repository.service"
+import IRepositoryService, {
+    PaginateOptions,
+    ReferencePopulateMethods,
+    RepositoryResult
+} from "@/services/repository/repository.service"
 import { Collection, Db, Document, Filter, MongoClient, ServerApiVersion, WithId } from "mongodb"
 import {
     AuditionEffect,
@@ -32,13 +36,10 @@ import config from "@/config"
 import {
     AuthProvider,
     DBUser,
-    ISession,
     IUser,
-    Session,
-    SessionFilterOptions,
     User,
     UserFilterOptions
-} from "@hatsuboshi/types/auth";
+} from "@hatsuboshi/types/auth"
 
 export type MongoCredentials = {
     shared: string,
@@ -56,7 +57,6 @@ type PaginationHandlerParams<T extends JSONSerializable<I>, I extends {}> = {
 }
 
 export default class MongoRepositoryService implements IRepositoryService {
-    id = "mongo"
     private readonly gameDataDb: Db
     private readonly metaDataDb: Db
     private readonly effects: Collection
@@ -68,7 +68,6 @@ export default class MongoRepositoryService implements IRepositoryService {
     private readonly skills: Collection
     private readonly supportCards: Collection
     private readonly users: Collection
-    private readonly sessions: Collection
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
@@ -118,7 +117,6 @@ export default class MongoRepositoryService implements IRepositoryService {
         this.skills = this.gameDataDb.collection("Skill")
         this.supportCards = this.gameDataDb.collection("SupportCard")
         this.users = this.metaDataDb.collection("User")
-        this.sessions = this.metaDataDb.collection("Session")
     }
 
     private async fetchAndConstructPaginator<T extends JSONSerializable<I>, I extends {}>({ collection, populate, filter, options, sort }: PaginationHandlerParams<T, I>): Promise<IPaginator<I>> {
@@ -254,11 +252,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(AuditionEffect, data)
     }
-    async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
+    async getAuditionEffectById(id: string): Promise<RepositoryResult<AuditionEffect>> {
         const d = await this.effects.findOne({ id: id })
         return d
             ? success(await AuditionEffect.fromDB(<DBAuditionEffect><unknown>d, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // AuditionTerminology //
@@ -276,11 +274,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(AuditionTerminology, data)
     }
-    async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
+    async getAuditionTerminologyById(id: string): Promise<RepositoryResult<AuditionTerminology>> {
         const d = await this.terminologies.findOne({ id: id })
         return d
             ? success(await AuditionTerminology.fromDB(<DBAuditionTerminology><unknown>d, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // Character //
@@ -315,11 +313,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(Character, data)
     }
-    async getCharacterById(id: string): Promise<Result<Character>> {
+    async getCharacterById(id: string): Promise<RepositoryResult<Character>> {
         const d = await this.characters.findOne({ id: id })
         return d
             ? success(await Character.fromDB(<DBCharacter><unknown>d))
-            : fail()
+            : fail("not-found")
     }
 
     // PDrink //
@@ -340,11 +338,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(PDrink, data)
     }
-    async getPDrinkById(id: string): Promise<Result<PDrink>> {
+    async getPDrinkById(id: string): Promise<RepositoryResult<PDrink>> {
         const d = await this.drinks.findOne({ id: id })
         return d
             ? success(await PDrink.fromDB(<DBPDrink><unknown>d, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // PIdol //
@@ -374,11 +372,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(PIdol, data)
     }
-    async getPIdolById(id: string): Promise<Result<PIdol>> {
+    async getPIdolById(id: string): Promise<RepositoryResult<PIdol>> {
         const d = await this.idols.findOne({ id: id })
         return d
             ? success(await PIdol.fromDB(<DBPIdol><unknown>d, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // PItem //
@@ -400,11 +398,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(PItem, data)
     }
-    async getPItemById(id: string): Promise<Result<PItem>> {
+    async getPItemById(id: string): Promise<RepositoryResult<PItem>> {
         const d = await this.items.findOne({ id: id })
         return d
             ? success(await PItem.fromDB(<DBPItem><unknown>d, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // Skill //
@@ -430,18 +428,18 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(Skill, data)
     }
-    async getSkillById(id: string): Promise<Result<Skill>> {
+    async getSkillById(id: string): Promise<RepositoryResult<Skill>> {
         const d = await this.skills.findOne({ id: id })
         return d
             ? success(await Skill.fromDB(<DBSkill><unknown>d, this.populateMethods))
-            : fail()
+            : fail("not-found")
     }
 
     // SupportCard //
     async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
         throw new InternalServerError("Method not implemented.")
     }
-    async getSupportCardById(id: string): Promise<Result<SupportCard>> {
+    async getSupportCardById(id: string): Promise<RepositoryResult<SupportCard>> {
         throw new InternalServerError("Method not implemented.")
     }
 
@@ -449,45 +447,22 @@ export default class MongoRepositoryService implements IRepositoryService {
     async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
         throw new InternalServerError("Not implemented.")
     }
-    async getUserById(id: string): Promise<Result<User>> {
+    async getUserById(id: string): Promise<RepositoryResult<User>> {
         throw new InternalServerError("Not implemented.")
     }
-    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<Result<User>> {
+    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
         throw new InternalServerError("Not implemented.")
     }
-    async getUserByEmail(email: string): Promise<Result<User>> {
+    async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
         throw new InternalServerError("Not implemented.")
     }
-    async createUser(obj: New<IUser>): Promise<Result<User>> {
+    async createUser(obj: New<IUser>): Promise<RepositoryResult<User>> {
         throw new InternalServerError("Not implemented.")
     }
-    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<Result<User>> {
+    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<RepositoryResult<User>> {
         throw new InternalServerError("Not implemented.")
     }
-    async deleteUser(id: string): Promise<Result<null>> {
-        throw new InternalServerError("Not implemented.")
-    }
-
-    // Session //
-    async getSessions(p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]): Promise<Paginator<Session, ISession>> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async getUserSessions(userId: string, p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]): Promise<Paginator<Session, ISession>> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async getSessionById(id: string): Promise<Result<Session>> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async getSessionByToken(token: string): Promise<Result<Session>> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async createSession(obj: New<ISession>, token: string, ip?: string): Promise<Result<Session>> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async deleteUserSessions(userId: string): Promise<Result<null>> {
-        throw new InternalServerError("Not implemented.")
-    }
-    async deleteSession(id: string): Promise<Result<null>> {
+    async deleteUser(id: string): Promise<RepositoryResult<null>> {
         throw new InternalServerError("Not implemented.")
     }
 }

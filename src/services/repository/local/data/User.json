@@ -6,7 +6,7 @@
     "disabledAt": null,
     "identities": [
       {
-        "provider": "email",
+        "provider": "local",
         "subject": "dc3ZCeLkC0P8rfw6c6y3eU1zR7L1"
       }
     ],
@@ -28,7 +28,7 @@
     "disabledAt": null,
     "identities": [
       {
-        "provider": "email",
+        "provider": "local",
         "subject": "h8xreg9tHOj1jSzlKi2Loa8ZKhwo"
       }
     ],
@@ -49,7 +49,7 @@
     "disabledAt": null,
     "identities": [
       {
-        "provider": "email",
+        "provider": "local",
         "subject": "pG0mRWZgw2mZ4DcXka99rXfTmENT"
       }
     ],
@@ -71,7 +71,7 @@
     "disabledAt": null,
     "identities": [
       {
-        "provider": "email",
+        "provider": "local",
         "subject": "rn8QwkcOgnFQvZ3bb5jKyG6fcf95"
       }
     ],

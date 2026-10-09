@@ -16,10 +16,7 @@ import {
 import {
     AuthProvider,
     DBUser,
-    ISession,
     IUser,
-    Session,
-    SessionFilterOptions,
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
@@ -38,86 +35,73 @@ export type PaginateOptions = Partial<{
     perPage: number
 }>
 
-export default interface IRepositoryService {
-    id: string
+export type RepositoryResult<T> = Result<T, RepositoryError>
 
+export type RepositoryError =
+    | "not-found"
+
+export default interface IRepositoryService {
     // AuditionEffect //
     getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]):
         Promise<Paginator<AuditionEffect, IAuditionEffect>>
     getAuditionEffectById(id: string):
-        Promise<Result<AuditionEffect>>
+        Promise<RepositoryResult<AuditionEffect>>
 
     // AuditionTerminology //
     getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]):
         Promise<Paginator<AuditionTerminology, IAuditionTerminology>>
     getAuditionTerminologyById(id: string):
-        Promise<Result<AuditionTerminology>>
+        Promise<RepositoryResult<AuditionTerminology>>
 
     // Character //
     getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]):
         Promise<Paginator<Character, ICharacter>>
     getCharacterById(id: string):
-        Promise<Result<Character>>
+        Promise<RepositoryResult<Character>>
 
     // PDrink //
     getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]):
         Promise<Paginator<PDrink, IPDrink>>
     getPDrinkById(id: string):
-        Promise<Result<PDrink>>
+        Promise<RepositoryResult<PDrink>>
 
     // PIdol //
     getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]):
         Promise<Paginator<PIdol, IPIdol>>
     getPIdolById(id: string):
-        Promise<Result<PIdol>>
+        Promise<RepositoryResult<PIdol>>
 
     // PItem //
     getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]):
         Promise<Paginator<PItem, IPItem>>
     getPItemById(id: string):
-        Promise<Result<PItem>>
+        Promise<RepositoryResult<PItem>>
 
     // Skill //
     getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]):
         Promise<Paginator<Skill, ISkill>>
     getSkillById(id: string):
-        Promise<Result<Skill>>
+        Promise<RepositoryResult<Skill>>
 
     // SupportCard //
     getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]):
         Promise<Paginator<SupportCard, ISupportCard>>
     getSupportCardById(id: string):
-        Promise<Result<SupportCard>>
+        Promise<RepositoryResult<SupportCard>>
 
     // User //
     getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]):
         Promise<Paginator<User, IUser>>
     getUserById(id: string):
-        Promise<Result<User>>
+        Promise<RepositoryResult<User>>
     getUserByIdentity(provider: AuthProvider, subject: string):
-        Promise<Result<User>>
+        Promise<RepositoryResult<User>>
     getUserByEmail(email: string):
-        Promise<Result<User>>
+        Promise<RepositoryResult<User>>
     createUser(obj: New<IUser>):
-        Promise<Result<User>>
+        Promise<RepositoryResult<User>>
     updateUser(id: string, obj: Partial<New<IUser>>):
-        Promise<Result<User>>
+        Promise<RepositoryResult<User>>
     deleteUser(id: string):
-        Promise<Result<null>>
-
-    // Session //
-    getSessions(p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]):
-        Promise<Paginator<Session, ISession>>
-    getUserSessions(userId: string, p?: PaginateOptions, f?: SessionFilterOptions, s?: SortOption<ISession>[]):
-        Promise<Paginator<Session, ISession>>
-    getSessionById(id: string):
-        Promise<Result<Session>>  // don't update last seen
-    getSessionByToken(token: string):
-        Promise<Result<Session>>  // also update last seen
-    createSession(obj: New<ISession>, token: string, ip?: string):
-        Promise<Result<Session>>
-    deleteUserSessions(userId: string):
-        Promise<Result<null>>
-    deleteSession(id: string):
-        Promise<Result<null>>
+        Promise<RepositoryResult<null>>
 }
