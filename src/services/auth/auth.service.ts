@@ -19,11 +19,16 @@ export type AuthContext =
 
 export type AuthResult<T> = Result<T, AuthError>
 
-export type AuthError =
-    | ""
+export type AuthError = `auth/${
+    | "credential-missing"
+    | "credential-malformed"
+    | "user-not-registered"
+    | "user-disabled"
+}`  | IdPError
+    | APIKeyError
 
 export class AuthService {
-    async authenticate(claim: string): Promise<AuthResult<AuthContext>> {
+    async authenticate(claim?: string): Promise<AuthResult<AuthContext>> {
         throw Error("")
     }
 }

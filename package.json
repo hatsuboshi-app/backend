@@ -37,6 +37,7 @@
     "@hatsuboshi/types": "^2.2.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
+    "firebase-admin": "12.7",
     "jsonfile": "^6.2.0",
     "mongodb": "^6.21.0",
     "morgan": "^1.11.0",

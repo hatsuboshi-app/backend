@@ -4,21 +4,24 @@ import { Result } from "@hatsuboshi/types"
 export interface Identity {
     provider: AuthProvider
     subject: string
-    email: string
+    email: string | null
     isVerified: boolean
     authTime: Date
 }
 
 export type IdPResult<T> = Result<T, IdPError>
 
-export type IdPError =
-    | ""
+export type IdPError = `auth/${
+    | "credential-invalid"
+    | "credential-expired"
+    | "service-unavailable"
+}`
 
 export default interface IIdPService {
     provider: AuthProvider
 
-    verifyIdToken(token: string): Promise<IdPResult<Identity>>
-    verifySession(session: string): Promise<IdPResult<Identity>>
+    verifyIdToken(token: string, checkRevoked?: boolean): Promise<IdPResult<Identity>>
+    verifySession(session: string, checkRevoked?: boolean): Promise<IdPResult<Identity>>
     createSession(token: string): Promise<IdPResult<string>>
     revokeAllSessions(subject: string): Promise<IdPResult<null>>
 }
