@@ -3,7 +3,7 @@ import { type Auth, getAuth } from "firebase-admin/auth"
 import IIdPService, { Identity, IdPError, IdPResult } from "@/services/auth/idp/idp.service"
 import { AuthProvider } from "@hatsuboshi/types/auth"
 import { fail, success } from "@hatsuboshi/types"
-import config from "@/config";
+import config from "@/config"
 
 export type FirebaseCredentials = {
     projectId: string
@@ -11,8 +11,9 @@ export type FirebaseCredentials = {
     privateKey: string
 }
 
-export class FirebaseIdpService implements IIdPService {
+export class FirebaseIdPService implements IIdPService {
     readonly provider: AuthProvider
+
     private readonly app: Auth
 
     constructor({ projectId, clientEmail, privateKey }: FirebaseCredentials) {
@@ -88,7 +89,7 @@ export class FirebaseIdpService implements IIdPService {
             return verified
         // check auth time
         if (Date.now() - verified.data.authTime.getTime() > config.defaults.idp.sessionMaxSignInAgeMs)
-            return fail("auth/credential-invalid", "id token too old to mint session cookie")
+            return fail("auth/credential-stale")
         // mint the cookie
         try {
             const cookie = await this.app.createSessionCookie(token, { expiresIn: config.defaults.idp.sessionDurationMs })

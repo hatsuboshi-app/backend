@@ -1,4 +1,4 @@
-import HTTPError from "@/errors/HTTPError"
+import HTTPError from "@/errors/types/HTTPError"
 
 export default class ForbiddenError extends HTTPError<403> {
     public name = "ForbiddenError"

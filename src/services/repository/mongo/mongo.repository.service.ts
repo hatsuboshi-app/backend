@@ -6,7 +6,6 @@ import IRepositoryService, {
 import { Collection, Db, Document, Filter, MongoClient, ServerApiVersion, WithId } from "mongodb"
 import {
     AuditionEffect,
-    Result,
     AuditionTerminology,
     Character,
     PDrink,
@@ -30,8 +29,8 @@ import {
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
     LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions, New
 } from "@hatsuboshi/types"
-import InvalidReferenceError from "@/errors/InvalidReferenceError"
-import InternalServerError from "@/errors/InternalServerError"
+import InvalidReferenceError from "@/errors/types/InvalidReferenceError"
+import InternalServerError from "@/errors/types/InternalServerError"
 import config from "@/config"
 import {
     AuthProvider,

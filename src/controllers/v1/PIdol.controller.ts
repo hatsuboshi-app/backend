@@ -1,5 +1,5 @@
 import { db } from "@/services"
-import NotFoundError from "@/errors/NotFoundError"
+import NotFoundError from "@/errors/types/NotFoundError"
 import { decodeSortOptions, IPaginator, IPIdol, PIdolFilterOptions, SortOption } from "@hatsuboshi/types"
 import { Controller, Get, OperationId, Path, Query, Response, Route, Tags } from "tsoa"
 import { ErrorResponse } from "@/errors/response/ErrorResponse"

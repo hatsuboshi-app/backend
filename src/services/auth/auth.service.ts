@@ -1,6 +1,6 @@
 import { Result } from "@hatsuboshi/types"
 import { User } from "@hatsuboshi/types/auth"
-import { IdPError } from "@/services/auth/idp/idp.service";
+import IIdPService, { IdPError } from "@/services/auth/idp/idp.service";
 import { APIKeyError } from "@/services/auth/api-key/api-key.service";
 
 export type AuthContext =
@@ -28,6 +28,12 @@ export type AuthError = `auth/${
     | APIKeyError
 
 export class AuthService {
+    idp: IIdPService
+
+    constructor(idp: IIdPService) {
+        this.idp = idp
+    }
+
     async authenticate(claim?: string): Promise<AuthResult<AuthContext>> {
         throw Error("")
     }

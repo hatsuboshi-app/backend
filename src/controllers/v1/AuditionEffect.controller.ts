@@ -1,6 +1,6 @@
 import { Controller, Get, OperationId, Path, Query, Response, Route, Tags } from "tsoa"
 import { db } from "@/services"
-import NotFoundError from "@/errors/NotFoundError"
+import NotFoundError from "@/errors/types/NotFoundError"
 import {
     AuditionEffectFilterOptions,
     decodeSortOptions,

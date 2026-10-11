@@ -1,4 +1,4 @@
-import HTTPError from "@/errors/HTTPError"
+import HTTPError from "@/errors/types/HTTPError"
 
 export default class UnauthorizedError extends HTTPError<401> {
     public name = "UnauthorizedError"

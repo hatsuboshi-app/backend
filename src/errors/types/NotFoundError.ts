@@ -1,4 +1,4 @@
-import HTTPError from "@/errors/HTTPError"
+import HTTPError from "@/errors/types/HTTPError"
 
 export default class NotFoundError extends HTTPError<404> {
     public name = "NotFoundError"

@@ -1,5 +1,5 @@
 import { db } from "@/services"
-import NotFoundError from "@/errors/NotFoundError"
+import NotFoundError from "@/errors/types/NotFoundError"
 import {
     AuditionTerminologyFilterOptions,
     decodeSortOptions,

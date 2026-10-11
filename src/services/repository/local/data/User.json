@@ -7,13 +7,13 @@
     "identities": [
       {
         "provider": "local",
-        "subject": "dc3ZCeLkC0P8rfw6c6y3eU1zR7L1"
+        "subject": "admin"
       }
     ],
     "displayName": "Admin",
     "displayIcon": null,
-    "description": "Local admin!",
-    "email": "admin@hatsuboshi.local",
+    "description": "Local admin",
+    "email": "admin@hatsuboshi.app",
     "verified": true,
     "roles": [
       "user",
@@ -29,13 +29,13 @@
     "identities": [
       {
         "provider": "local",
-        "subject": "h8xreg9tHOj1jSzlKi2Loa8ZKhwo"
+        "subject": "user"
       }
     ],
     "displayName": "User",
     "displayIcon": null,
     "description": "Local user",
-    "email": "user@hatsuboshi.local",
+    "email": "user@hatsuboshi.app",
     "verified": true,
     "roles": [
       "user"
@@ -50,13 +50,13 @@
     "identities": [
       {
         "provider": "local",
-        "subject": "pG0mRWZgw2mZ4DcXka99rXfTmENT"
+        "subject": "translator"
       }
     ],
     "displayName": "Translator",
     "displayIcon": null,
     "description": "Local translator",
-    "email": "translator@hatsuboshi.local",
+    "email": "translator@hatsuboshi.app",
     "verified": true,
     "roles": [
       "user",
@@ -72,13 +72,13 @@
     "identities": [
       {
         "provider": "local",
-        "subject": "rn8QwkcOgnFQvZ3bb5jKyG6fcf95"
+        "subject": "maintainer"
       }
     ],
     "displayName": "Maintainer",
     "displayIcon": null,
     "description": "Local maintainer",
-    "email": "maintainer@hatsuboshi.local",
+    "email": "maintainer@hatsuboshi.app",
     "verified": true,
     "roles": [
       "user",

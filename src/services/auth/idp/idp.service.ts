@@ -13,6 +13,7 @@ export type IdPResult<T> = Result<T, IdPError>
 
 export type IdPError = `auth/${
     | "credential-invalid"
+    | "credential-stale"
     | "credential-expired"
     | "service-unavailable"
 }`

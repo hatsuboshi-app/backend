@@ -1,4 +1,4 @@
-import HTTPError from "@/errors/HTTPError"
+import HTTPError from "@/errors/types/HTTPError"
 
 export default class BadRequestError extends HTTPError<400> {
     public name = "BadRequestError"

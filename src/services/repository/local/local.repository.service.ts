@@ -40,8 +40,8 @@ import {
     DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions, New, SimpleStringFilterOptions,
     IPersistentObject
 } from "@hatsuboshi/types"
-import InvalidReferenceError from "@/errors/InvalidReferenceError"
-import InternalServerError from "@/errors/InternalServerError"
+import InvalidReferenceError from "@/errors/types/InvalidReferenceError"
+import InternalServerError from "@/errors/types/InternalServerError"
 import config from "@/config"
 import {
     AuthProvider,
