@@ -1,6 +1,6 @@
 import { cert, type FirebaseError, initializeApp } from "firebase-admin/app"
 import { type Auth, getAuth } from "firebase-admin/auth"
-import IIdPService, { Identity, IdPError, IdPResult } from "@/services/auth/idp/idp.service"
+import IIdPService, { Identity, IdPCredentialKind, IdPError, IdPResult } from "@/services/auth/idp/idp.service"
 import { AuthProvider } from "@hatsuboshi/types/auth"
 import { fail, success } from "@hatsuboshi/types"
 import config from "@/config"
@@ -14,10 +14,12 @@ export type FirebaseCredentials = {
 export class FirebaseIdPService implements IIdPService {
     readonly provider: AuthProvider
 
+    private readonly projectId: string
     private readonly app: Auth
 
     constructor({ projectId, clientEmail, privateKey }: FirebaseCredentials) {
         this.provider = "firebase"
+        this.projectId = projectId
         this.app = getAuth(initializeApp({
             credential: cert({
                 projectId, clientEmail, privateKey
@@ -108,5 +110,19 @@ export class FirebaseIdPService implements IIdPService {
                 return success(null)
             return fail(this.toError(e), this.isFirebaseError(e) ? `${e.code}: ${e.message}` : undefined)
         }
+    }
+
+    classify(credential: string): IdPCredentialKind | null {
+        const parts = credential.split(".")
+        if (parts.length !== 3)
+            return null
+        try {
+            const { iss } = JSON.parse(Buffer.from(parts[1], "base64url").toString("utf-8"))
+            if (iss === `https://securetoken.google.com/${this.projectId}`)
+                return "id-token"
+            if (iss === `https://session.firebase.google.com/${this.projectId}`)
+                return "session"
+        } catch {}
+        return null
     }
 }

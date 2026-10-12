@@ -33,8 +33,11 @@ import InvalidReferenceError from "@/errors/types/InvalidReferenceError"
 import InternalServerError from "@/errors/types/InternalServerError"
 import config from "@/config"
 import {
+    APIKey,
+    APIKeyFilterOptions,
     AuthProvider,
     DBUser,
+    IAPIKey,
     IUser,
     User,
     UserFilterOptions
@@ -255,7 +258,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.effects.findOne({ id: id })
         return d
             ? success(await AuditionEffect.fromDB(<DBAuditionEffect><unknown>d, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // AuditionTerminology //
@@ -277,7 +280,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.terminologies.findOne({ id: id })
         return d
             ? success(await AuditionTerminology.fromDB(<DBAuditionTerminology><unknown>d, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // Character //
@@ -316,7 +319,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.characters.findOne({ id: id })
         return d
             ? success(await Character.fromDB(<DBCharacter><unknown>d))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // PDrink //
@@ -341,7 +344,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.drinks.findOne({ id: id })
         return d
             ? success(await PDrink.fromDB(<DBPDrink><unknown>d, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // PIdol //
@@ -375,7 +378,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.idols.findOne({ id: id })
         return d
             ? success(await PIdol.fromDB(<DBPIdol><unknown>d, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // PItem //
@@ -401,7 +404,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.items.findOne({ id: id })
         return d
             ? success(await PItem.fromDB(<DBPItem><unknown>d, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // Skill //
@@ -431,7 +434,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         const d = await this.skills.findOne({ id: id })
         return d
             ? success(await Skill.fromDB(<DBSkill><unknown>d, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // SupportCard //
@@ -463,5 +466,25 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
         throw new InternalServerError("Not implemented.")
+    }
+
+    // APIKey //
+    async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async createAPIKey(obj: New<IAPIKey>, secretHash: string): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async updateAPIKey(id: string, obj: Partial<IAPIKey>): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
+        throw new Error("Method not implemented.")
     }
 }

@@ -16,8 +16,9 @@ export type Error =
 export type ErrorMapping = Record<Error, HTTPErrorStatus>
 
 export const errorMapping: ErrorMapping = {
-    "not-found": 404,
-    "": 500,
+    "db/not-found":                 404,    // RepositoryService
+    "db/already-exists":            409,    // RepositoryService
+    "auth/email-unverified":        403,    // AuthService
     "auth/user-not-registered":     403,    // AuthService
     "auth/user-disabled":           403,    // AuthService
     "auth/credential-missing":      401,    // AuthService
@@ -26,4 +27,5 @@ export const errorMapping: ErrorMapping = {
     "auth/credential-stale":        401,    // IdPService
     "auth/credential-expired":      401,    // IdPService
     "auth/service-unavailable":     500,    // IdPService
+    "": 500,
 } as const satisfies ErrorMapping

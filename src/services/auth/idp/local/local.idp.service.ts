@@ -1,4 +1,4 @@
-import IIdPService, { Identity, IdPResult } from "@/services/auth/idp/idp.service"
+import IIdPService, { Identity, IdPCredentialKind, IdPResult } from "@/services/auth/idp/idp.service"
 import { AuthProvider } from "@hatsuboshi/types/auth"
 import { fail, success } from "@hatsuboshi/types"
 import config from "@/config";
@@ -118,5 +118,13 @@ export class LocalIdPService implements IIdPService {
             uf.tokensValidAfter = new Date()
         }
         return success(null)
+    }
+
+    classify(credential: string): IdPCredentialKind | null {
+        if (this.tokens.some(t => t.id === credential))
+            return "id-token"
+        if (this.sessions.some(s => s.id === credential))
+            return "session"
+        return null
     }
 }

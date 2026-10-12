@@ -7,9 +7,11 @@ import MongoRepositoryService from "@/services/repository/mongo/mongo.repository
 import { AuthService } from "@/services/auth/auth.service"
 import { FirebaseIdPService } from "@/services/auth/idp/firebase/firebase.idp.service"
 import { LocalIdPService } from "@/services/auth/idp/local/local.idp.service"
+import APIKeyService from "@/services/auth/api-key/api-key.service"
 
 export let logger: ILoggerService
 export let db: IRepositoryService
+export let apiKeys: APIKeyService
 export let auth: AuthService
 
 switch (process.env.API_ENV) {
@@ -34,25 +36,34 @@ switch (process.env.API_ENV) {
         }
 
         logger = new ConsoleLoggerService()
+
         db = new MongoRepositoryService({
             shared: <string>process.env.MONGO_SHARED,
             cluster: <string>process.env.MONGO_CLUSTER,
             username: <string>process.env.MONGO_USER,
             password: <string>process.env.MONGO_PASS,
         })
+
+        apiKeys = new APIKeyService(db)
+
         auth = new AuthService(
+            db,
             new FirebaseIdPService({
                 projectId: <string>process.env.FIREBASE_PROJECT_ID,
                 clientEmail: <string>process.env.FIREBASE_CLIENT_EMAIL,
                 privateKey: <string>process.env.FIREBASE_PRIVATE_KEY
-            })
+            }),
+            apiKeys
         )
     } break
     default: {
         logger = new ConsoleLoggerService()
         db = new LocalRepositoryService()
+        apiKeys = new APIKeyService(db)
         auth = new AuthService(
-            new LocalIdPService()
+            db,
+            new LocalIdPService(),
+            apiKeys
         )
     }
 }

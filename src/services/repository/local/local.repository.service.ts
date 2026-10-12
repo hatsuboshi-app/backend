@@ -44,12 +44,15 @@ import InvalidReferenceError from "@/errors/types/InvalidReferenceError"
 import InternalServerError from "@/errors/types/InternalServerError"
 import config from "@/config"
 import {
+    APIKey,
+    APIKeyFilterOptions,
     AuthProvider,
-    DBUser,
+    DBUser, IAPIKey,
     IUser,
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
+import { ROLE_SCOPES } from "@/services/auth/scopes";
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
@@ -260,7 +263,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.effects.find(i  => i.id == id)
         return r
             ? success(await AuditionEffect.fromDB(r, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // AuditionTerminology //
@@ -278,7 +281,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.terminologies.find(i  => i.id == id)
         return r
             ? success(await AuditionTerminology.fromDB(r, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // Character //
@@ -303,7 +306,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.characters.find(i  => i.id == id)
         return r
             ? success(await Character.fromDB(r))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // PDrink //
@@ -324,7 +327,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.drinks.find(i  => i.id == id)
         return r
             ? success(await PDrink.fromDB(r, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // PIdol //
@@ -348,7 +351,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.idols.find(i  => i.id == id)
         return r
             ? success(await PIdol.fromDB(r, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // PItem //
@@ -370,7 +373,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.items.find(i  => i.id == id)
         return r
             ? success(await PItem.fromDB(r, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // Skill //
@@ -394,7 +397,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const r = this.skills.find(i  => i.id == id)
         return r
             ? success(await Skill.fromDB(r, this.populateMethods))
-            : fail("not-found")
+            : fail("db/not-found")
     }
 
     // SupportCard //
@@ -413,7 +416,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
             .filter(i => this.handleSimpleStringFilter(i.displayName, f?.displayName))
             .filter(i => this.handleEnumFilter(i.roles, f?.roles))
-            .map(async (i) => (await User.fromDB(i)).toJSON())
+            .map(async (i) => (await User.fromDB(i, ROLE_SCOPES)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
         return new Paginator(User, this.constructPaginator(data, p))
     }
@@ -421,8 +424,8 @@ export default class LocalRepositoryService implements IRepositoryService {
     async getUserById(id: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i => i.id === id)
         return r
-            ? success(await User.fromDB(r))
-            : fail("not-found")
+            ? success(await User.fromDB(r, ROLE_SCOPES))
+            : fail("db/not-found")
     }
 
     async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
@@ -430,44 +433,71 @@ export default class LocalRepositoryService implements IRepositoryService {
             i.identities.some(id => id.subject === subject && id.provider === provider)
         )
         return r
-            ? success(await User.fromDB(r))
-            : fail("not-found")
+            ? success(await User.fromDB(r, ROLE_SCOPES))
+            : fail("db/not-found")
     }
 
     async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i => i.email === email)
         return r
-            ? success(await User.fromDB(r))
-            : fail("not-found")
+            ? success(await User.fromDB(r, ROLE_SCOPES))
+            : fail("db/not-found")
     }
 
     async createUser(obj: New<IUser>): Promise<RepositoryResult<User>> {
+        if (obj.identities) {
+            for (const i of obj.identities) {
+                const t1 = await this.getUserByIdentity(i.provider, i.subject)
+                if (t1.success)
+                    return fail("db/already-exists")
+            }
+        }
         const created = new User({
             ...obj,
             ...this.getNewObj()
-        })
+        }, ROLE_SCOPES)
         this.users.push(created.toDB())
         return success(created)
     }
 
     async updateUser(id: string, obj: Partial<New<IUser>>): Promise<RepositoryResult<User>> {
         let toUpdate = this.users.find(i => i.id === id)
-        if (!toUpdate) return fail("not-found")
+        if (!toUpdate) return fail("db/not-found")
         const updated = new User({
             ...((await User.fromDB(toUpdate)).toJSON()),
             ...obj,
             updatedAt: new Date().toISOString()
-        })
+        }, ROLE_SCOPES)
         const toUpdateIndex = this.users.findIndex(i => i.id === id)
-        if (toUpdateIndex === -1) return fail("not-found")
+        if (toUpdateIndex === -1) return fail("db/not-found")
         this.users[toUpdateIndex] = updated.toDB()
         return success(updated)
     }
 
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
         const toDelete = this.users.findIndex(i => i.id === id)
-        if (toDelete === -1) return fail("not-found")
+        if (toDelete === -1) return fail("db/not-found")
         this.users.splice(toDelete, 1)
         return success(null)
+    }
+
+    // APIKey //
+    async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async createAPIKey(obj: New<IAPIKey>, secretHash: string): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async updateAPIKey(id: string, obj: Partial<IAPIKey>): Promise<RepositoryResult<APIKey>> {
+        throw new Error("Method not implemented.")
+    }
+    async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
+        throw new Error("Method not implemented.")
     }
 }

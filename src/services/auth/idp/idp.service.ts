@@ -1,6 +1,8 @@
 import { AuthProvider } from "@hatsuboshi/types/auth"
 import { Result } from "@hatsuboshi/types"
 
+export type IdPCredentialKind = "id-token" | "session"
+
 export interface Identity {
     provider: AuthProvider
     subject: string
@@ -25,4 +27,5 @@ export default interface IIdPService {
     verifySession(session: string, checkRevoked?: boolean): Promise<IdPResult<Identity>>
     createSession(token: string): Promise<IdPResult<string>>
     revokeAllSessions(subject: string): Promise<IdPResult<null>>
+    classify(credential: string): IdPCredentialKind | null
 }

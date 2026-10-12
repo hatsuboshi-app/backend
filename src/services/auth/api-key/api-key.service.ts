@@ -1,6 +1,97 @@
-import { Result } from "@hatsuboshi/types";
+import { fail, Result, success } from "@hatsuboshi/types"
+import IRepositoryService, { RepositoryError } from "@/services/repository/repository.service"
+import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
+import { APIKey, AuthScopePattern, ICreatedAPIKey, User } from "@hatsuboshi/types/auth";
+import config from "@/config";
 
 export type APIKeyResult<T> = Result<T, APIKeyError>
 
-export type APIKeyError =
-    | ""
+export type APIKeyError = `auth/${
+    | "credential-invalid"
+    | "credential-expired"
+    | "credential-malformed"
+    | "service-unavailable"
+}`  | Extract<RepositoryError, "db/not-found">
+
+export default class APIKeyService {
+    private readonly db: IRepositoryService
+
+    constructor(db: IRepositoryService) {
+        this.db = db
+    }
+
+    private randomHex(length: number): string {
+        return randomBytes(Math.ceil(length / 2)).toString("hex").slice(0, length)
+    }
+
+    private hash(secret: string): string {
+        return createHash("sha256").update(secret).digest("hex")
+    }
+
+    private matches(secret: string, hash: string): boolean {
+        const a = Buffer.from(this.hash(secret), "hex")
+        const b = Buffer.from(hash, "hex")
+        return a.length === b.length && timingSafeEqual(a, b)
+    }
+
+    private touch(key: APIKey): void {
+        const last = key.lastUsedAt ? Date.parse(key.lastUsedAt) : 0
+        if (Date.now() - last < config.defaults.apiKey.lastUsedThrottleMs)
+            return
+        this.db.updateAPIKey(key.id, { lastUsedAt: new Date().toISOString() }).catch(() => {})
+    }
+
+    async create(user: User, label: string, scopes: AuthScopePattern[], expiresAt?: Date | null): Promise<APIKeyResult<ICreatedAPIKey>> {
+        const secret = this.randomHex(config.defaults.apiKey.secretLength)
+        const secretHash = this.hash(secret)
+        for (let attempt = 0; attempt < 5; attempt++) {
+            const prefix = this.randomHex(config.defaults.apiKey.prefixLength)
+            const r = await this.db.createAPIKey({
+                user: user.toJSON(),
+                label,
+                prefix,
+                suffix: secret.slice(-config.defaults.apiKey.suffixLength),
+                scopes,
+                expiresAt: expiresAt?.toISOString() ?? null,
+                lastUsedAt: null,
+                revokedAt: null
+            }, secretHash)
+            if (r.success) {
+                const key = `${config.defaults.apiKey.tag}_${prefix}_${secret}`
+                return success(r.data.toCreatedAPIKey(key))
+            }
+            if (r.error !== "db/already-exists") {
+                break
+            }
+        }
+        return fail("auth/service-unavailable")
+    }
+
+    async verify(raw: string): Promise<APIKeyResult<APIKey>> {
+        const parts = raw.split("_")
+        if (parts.length !== 3 || parts[0] !== config.defaults.apiKey.tag || !parts[1] || !parts[2])
+            return fail("auth/credential-malformed")
+        const [_, prefix, secret] = parts
+
+        const r = await this.db.getAPIKeyByPrefix(prefix)
+        if (!r.success || !this.matches(secret, r.data.toDB().secretHash))
+            return fail("auth/credential-invalid")
+        if (r.data.revokedAt)
+            return fail("auth/credential-invalid")
+        if (r.data.expiresAt && new Date(r.data.expiresAt) < new Date())
+            return fail("auth/credential-expired")
+
+        this.touch(r.data)
+        return success(r.data)
+    }
+
+    async revoke(id: string, userId: string): Promise<APIKeyResult<null>> {
+        const r = await this.db.getAPIKeyById(id)
+        if (!r.success || r.data.user.id !== userId)
+            return fail("db/not-found")
+        if (r.data.revokedAt)
+            return success(null)
+        const u = await this.db.updateAPIKey(id, { revokedAt: new Date().toISOString() })
+        return u.success ? success(null) : fail("db/not-found")
+    }
+}

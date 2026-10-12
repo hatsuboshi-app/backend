@@ -18,7 +18,8 @@ import {
     DBUser,
     IUser,
     User,
-    UserFilterOptions
+    UserFilterOptions,
+    APIKeyFilterOptions, IAPIKey, APIKey
 } from "@hatsuboshi/types/auth"
 
 export type ReferencePopulateMethods = {
@@ -37,8 +38,10 @@ export type PaginateOptions = Partial<{
 
 export type RepositoryResult<T> = Result<T, RepositoryError>
 
-export type RepositoryError =
+export type RepositoryError = `db/${
     | "not-found"
+    | "already-exists"
+}`
 
 export default interface IRepositoryService {
     // AuditionEffect //
@@ -103,5 +106,19 @@ export default interface IRepositoryService {
     updateUser(id: string, obj: Partial<New<IUser>>):
         Promise<RepositoryResult<User>>
     deleteUser(id: string):
+        Promise<RepositoryResult<null>>
+
+    // APIKey //
+    getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]):
+        Promise<Paginator<APIKey, IAPIKey>>
+    getAPIKeyById(id: string):
+        Promise<RepositoryResult<APIKey>>
+    getAPIKeyByPrefix(prefix: string):
+        Promise<RepositoryResult<APIKey>>
+    createAPIKey(obj: New<IAPIKey>, secretHash: string):
+        Promise<RepositoryResult<APIKey>>
+    updateAPIKey(id: string, obj: Partial<IAPIKey>):
+        Promise<RepositoryResult<APIKey>>
+    deleteAPIKey(id: string):
         Promise<RepositoryResult<null>>
 }
