@@ -1,23 +1,23 @@
 import { fail, Result, success } from "@hatsuboshi/types"
-import { APIKey, AuthScope, AuthScopePattern, User } from "@hatsuboshi/types/auth"
-import IIdPService, { Identity, IdPCredentialKind, IdPError } from "@/services/auth/idp/idp.service";
-import APIKeyService, { APIKeyError } from "@/services/auth/api-key/api-key.service";
-import IRepositoryService from "@/services/repository/repository.service";
-import config from "@/config";
-import { expandScopes } from "@/services/auth/scopes";
+import { APIKey, AuthScope, User } from "@hatsuboshi/types/auth"
+import IIdPService, { Identity, IdPCredentialKind, IdPError } from "@/services/auth/idp/idp.service"
+import APIKeyService, { APIKeyError } from "@/services/auth/api-key/api-key.service"
+import IRepositoryService from "@/services/repository/repository.service"
+import config from "@/config"
+import { expandScopes, grantedPatterns } from "@/services/auth/scopes"
 
 export type AuthContext =
 | {
     kind: "session" | "id-token"
     user: User
-    scopes: AuthScope[]
+    scopes: readonly AuthScope[]
     authTime: Date
     apiKeyId?: never
   }
 | {
     kind: "api-key"
     user: User
-    scopes: AuthScope[]
+    scopes: readonly AuthScope[]
     authTime?: never
     apiKeyId: string
   }
@@ -76,12 +76,16 @@ export class AuthService {
         const r = await this.apiKey.verify(credential)
         if (!r.success)
             return r
-        if (r.data.user.disabledAt)
+        const u = await this.db.getUserById(r.data.userId)
+        if (!u.success)
+            return fail("auth/credential-invalid")
+        if (u.data.disabledAt)
             return fail("auth/user-disabled")
+        this.apiKey.touch(r.data)
         return success({
             kind: "api-key",
-            user: r.data.user,
-            scopes: this.effectiveScopes(r.data.user, r.data),
+            user: u.data,
+            scopes: this.effectiveScopes(u.data, r.data),
             apiKeyId: r.data.id
         })
     }
@@ -89,7 +93,7 @@ export class AuthService {
     private async authenticateIdentity(kind: IdPCredentialKind, credential: string): Promise<AuthResult<AuthContext>> {
         const id = kind === "session"
             ? await this.idp.verifySession(credential, true)
-            : await this.idp.verifyIdToken(credential)
+            : await this.idp.verifyIdToken(credential, true)
         if (!id.success)
             return id
 
@@ -136,13 +140,13 @@ export class AuthService {
 
         // first time user, create user from idp
         const created = await this.db.createUser({
-            displayName: identity.email?.split("@")[0] ?? "Producer",
+            displayName: "New Producer",
             displayIcon: null,
             description: null,
             roles: ["user"],
             extraScopes: [],
             disabledAt: null,
-            email: identity.email ?? undefined,
+            email: identity.email,
             verified: identity.isVerified,
             identities: [{ provider: identity.provider, subject: identity.subject }],
         })
@@ -159,10 +163,9 @@ export class AuthService {
         return fail("auth/service-unavailable")
     }
 
-    private effectiveScopes(user: User, key?: APIKey): AuthScope[] {
-        const granted = expandScopes(user.totalScopes ?? [])
-        if (!key)
-            return granted
+    private effectiveScopes(user: User, key?: APIKey): readonly AuthScope[] {
+        const granted = expandScopes(grantedPatterns(user))
+        if (!key) return granted
         const allowed = expandScopes(key.scopes)
         return granted.filter(s => allowed.includes(s))
     }

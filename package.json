@@ -14,8 +14,8 @@
     "prebuild": "rimraf ./dist",
     "build": "npm run tsoa && tsc --build && resolve-tspaths",
     "postbuild": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist",
-    "start": "node ./dist/app.js",
-    "dev": "nodemon",
+    "start": "cross-env API_ENV=local node ./dist/app.js",
+    "dev": "cross-env API_ENV=local nodemon",
     "dev:development": "nodemon --env-file=.env.development",
     "dev:production": "nodemon --env-file=.env.production"
   },
@@ -26,6 +26,7 @@
     "@types/morgan": "^1.9.10",
     "@types/node": "^24.0.15",
     "copyfiles": "^2.4.1",
+    "cross-env": "^10.1.0",
     "nodemon": "^3.1.14",
     "resolve-tspaths": "^0.8.23",
     "rimraf": "^6.0.1",
@@ -34,7 +35,7 @@
     "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@hatsuboshi/types": "^2.3.2",
+    "@hatsuboshi/types": "^2.4.1",
     "cors": "^2.8.5",
     "express": "^5.1.0",
     "firebase-admin": "12.7",

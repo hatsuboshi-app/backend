@@ -26,6 +26,6 @@ export const errorMapping: ErrorMapping = {
     "auth/credential-invalid":      401,    // IdPService
     "auth/credential-stale":        401,    // IdPService
     "auth/credential-expired":      401,    // IdPService
-    "auth/service-unavailable":     500,    // IdPService
-    "": 500,
+    "auth/service-unavailable":     503,    // IdPService
+    "":                             500,    // Placeholder
 } as const satisfies ErrorMapping

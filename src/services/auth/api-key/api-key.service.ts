@@ -34,11 +34,12 @@ export default class APIKeyService {
         return a.length === b.length && timingSafeEqual(a, b)
     }
 
-    private touch(key: APIKey): void {
+    touch(key: APIKey): void {
         const last = key.lastUsedAt ? Date.parse(key.lastUsedAt) : 0
-        if (Date.now() - last < config.defaults.apiKey.lastUsedThrottleMs)
+        const now = new Date()
+        if (now.getTime() - last < config.defaults.apiKey.lastUsedThrottleMs)
             return
-        this.db.updateAPIKey(key.id, { lastUsedAt: new Date().toISOString() }).catch(() => {})
+        this.db.recordAPIKeyUse(key.id, now).catch(() => {})
     }
 
     async create(user: User, label: string, scopes: AuthScopePattern[], expiresAt?: Date | null): Promise<APIKeyResult<ICreatedAPIKey>> {
@@ -47,15 +48,16 @@ export default class APIKeyService {
         for (let attempt = 0; attempt < 5; attempt++) {
             const prefix = this.randomHex(config.defaults.apiKey.prefixLength)
             const r = await this.db.createAPIKey({
-                user: user.toJSON(),
+                userId:     user.id,
                 label,
                 prefix,
-                suffix: secret.slice(-config.defaults.apiKey.suffixLength),
+                suffix:     secret.slice(-config.defaults.apiKey.suffixLength),
                 scopes,
-                expiresAt: expiresAt?.toISOString() ?? null,
+                expiresAt:  expiresAt?.toISOString() ?? null,
                 lastUsedAt: null,
-                revokedAt: null
-            }, secretHash)
+                revokedAt:  null,
+                secretHash
+            })
             if (r.success) {
                 const key = `${config.defaults.apiKey.tag}_${prefix}_${secret}`
                 return success(r.data.toCreatedAPIKey(key))
@@ -74,20 +76,20 @@ export default class APIKeyService {
         const [_, prefix, secret] = parts
 
         const r = await this.db.getAPIKeyByPrefix(prefix)
-        if (!r.success || !this.matches(secret, r.data.toDB().secretHash))
+        if (!r.success || !this.matches(secret, r.data.secretHash))
             return fail("auth/credential-invalid")
-        if (r.data.revokedAt)
+        const key = r.data.key
+        if (key.revokedAt)
             return fail("auth/credential-invalid")
-        if (r.data.expiresAt && new Date(r.data.expiresAt) < new Date())
+        if (key.expiresAt && new Date(key.expiresAt) < new Date())
             return fail("auth/credential-expired")
 
-        this.touch(r.data)
-        return success(r.data)
+        return success(key)
     }
 
     async revoke(id: string, userId: string): Promise<APIKeyResult<null>> {
         const r = await this.db.getAPIKeyById(id)
-        if (!r.success || r.data.user.id !== userId)
+        if (!r.success || r.data.userId !== userId)
             return fail("db/not-found")
         if (r.data.revokedAt)
             return success(null)

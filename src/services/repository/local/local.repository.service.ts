@@ -1,8 +1,9 @@
 import path from "node:path"
 import { readFileSync } from "jsonfile"
 import IRepositoryService, {
+    APIKeyCredential, APIKeyPatch,
     PaginateOptions,
-    ReferencePopulateMethods, RepositoryResult
+    ReferencePopulateMethods, RepositoryResult, UserPatch
 } from "@/services/repository/repository.service"
 import {
     Character,
@@ -46,27 +47,29 @@ import config from "@/config"
 import {
     APIKey,
     APIKeyFilterOptions,
-    AuthProvider,
+    AuthProvider, DBAPIKey,
     DBUser, IAPIKey,
     IUser,
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
-import { ROLE_SCOPES } from "@/services/auth/scopes";
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
 export default class LocalRepositoryService implements IRepositoryService {
-    private readonly effects: DBAuditionEffect[]
-    private readonly terminologies: DBAuditionTerminology[]
-    private readonly characters: DBCharacter[]
-    private readonly drinks: DBPDrink[]
-    private readonly idols: DBPIdol[]
-    private readonly items: DBPItem[]
-    private readonly skills: DBSkill[]
-    private readonly supportCards: DBSupportCard[]
-    private readonly users: DBUser[]
-    private readonly populateMethods: ReferencePopulateMethods = {
+    private effects: DBAuditionEffect[]
+    private terminologies: DBAuditionTerminology[]
+    private characters: DBCharacter[]
+    private drinks: DBPDrink[]
+    private idols: DBPIdol[]
+    private items: DBPItem[]
+    private skills: DBSkill[]
+    private supportCards: DBSupportCard[]
+
+    private users: DBUser[]
+    private apiKeys: DBAPIKey[]
+
+    private populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
             const data = this.effects.find(x => x.id === id)
             if (!data) throw new InvalidReferenceError("AuditionEffect", id)
@@ -91,11 +94,6 @@ export default class LocalRepositoryService implements IRepositoryService {
             const data = this.items.find(x => x.id === id)
             if (!data) throw new InvalidReferenceError("PItem", id)
             return data
-        },
-        user: async (id: string): Promise<DBUser> => {
-            const data = this.users.find(x => x.id === id)
-            if (!data) throw new InvalidReferenceError("User", id)
-            return data
         }
     }
 
@@ -110,6 +108,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.skills = readFileSync(path.join(dir, "Skill.json"))
         this.supportCards = []
         this.users = readFileSync(path.join(dir, "User.json"))
+        this.apiKeys = readFileSync(path.join(dir, "APIKey.json"))
     }
 
     private constructPaginator<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
@@ -146,8 +145,9 @@ export default class LocalRepositoryService implements IRepositoryService {
         }
     }
 
-    private handleDateFilter(field: string, filter?: DateFilterOptions): boolean {
+    private handleDateFilter(field: string | null, filter?: DateFilterOptions): boolean {
         if (!filter) return true
+        if (!field) return false
         let isMatch = true
         if (filter.before) {
             const d1 = new Date(field)
@@ -231,7 +231,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     private handleSort<T extends { createdAt: string }>({ a, b }: { a: T, b: T }, sort?: SortOption<T>[]): number {
-        if (!sort) return new Date(a.createdAt) > new Date(a.createdAt) ? 1 : -1
+        if (!sort) return new Date(a.createdAt) > new Date(b.createdAt) ? 1 : -1
         const compareValue = <K>(v: K[keyof K]): string | number => {
             if (v instanceof Date) return v.getTime()
             if (typeof v === 'object' && v !== null && 'ja' in v) {
@@ -416,88 +416,137 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
             .filter(i => this.handleSimpleStringFilter(i.displayName, f?.displayName))
             .filter(i => this.handleEnumFilter(i.roles, f?.roles))
-            .map(async (i) => (await User.fromDB(i, ROLE_SCOPES)).toJSON())
+            .map(async (i) => (await User.fromDB(i)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
         return new Paginator(User, this.constructPaginator(data, p))
     }
 
     async getUserById(id: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i => i.id === id)
-        return r
-            ? success(await User.fromDB(r, ROLE_SCOPES))
-            : fail("db/not-found")
+        return r ? success(await User.fromDB(r)) : fail("db/not-found")
     }
 
     async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
-        const r = this.users.find(i =>
-            i.identities.some(id => id.subject === subject && id.provider === provider)
-        )
-        return r
-            ? success(await User.fromDB(r, ROLE_SCOPES))
-            : fail("db/not-found")
+        const r = this.users.find(i => i.identities.some(id => id.subject === subject && id.provider === provider))
+        return r ? success(await User.fromDB(r)) : fail("db/not-found")
     }
 
     async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
         const r = this.users.find(i => i.email === email)
-        return r
-            ? success(await User.fromDB(r, ROLE_SCOPES))
-            : fail("db/not-found")
+        return r ? success(await User.fromDB(r)) : fail("db/not-found")
     }
 
-    async createUser(obj: New<IUser>): Promise<RepositoryResult<User>> {
-        if (obj.identities) {
-            for (const i of obj.identities) {
-                const t1 = await this.getUserByIdentity(i.provider, i.subject)
-                if (t1.success)
-                    return fail("db/already-exists")
-            }
-        }
+    async createUser(obj: New<DBUser>): Promise<RepositoryResult<User>> {
+        for (const i of obj.identities)
+            if ((await this.getUserByIdentity(i.provider, i.subject)).success)
+                return fail("db/already-exists")
         const created = new User({
-            ...obj,
-            ...this.getNewObj()
-        }, ROLE_SCOPES)
+            ...await User.fromDB({
+                ...obj,
+                ...this.getNewObj()
+            })
+        })
         this.users.push(created.toDB())
         return success(created)
     }
 
-    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<RepositoryResult<User>> {
-        let toUpdate = this.users.find(i => i.id === id)
-        if (!toUpdate) return fail("db/not-found")
+    async updateUser(id: string, patch: UserPatch): Promise<RepositoryResult<User>> {
+        const index = this.users.findIndex(i => i.id === id)
+        if (index === -1) return fail("db/not-found")
         const updated = new User({
-            ...((await User.fromDB(toUpdate)).toJSON()),
-            ...obj,
+            ...(await User.fromDB({
+                ...this.users[index],
+                ...patch
+            })).toJSON(),
             updatedAt: new Date().toISOString()
-        }, ROLE_SCOPES)
-        const toUpdateIndex = this.users.findIndex(i => i.id === id)
-        if (toUpdateIndex === -1) return fail("db/not-found")
-        this.users[toUpdateIndex] = updated.toDB()
+        })
+        this.users[index] = updated.toDB()
         return success(updated)
     }
 
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
-        const toDelete = this.users.findIndex(i => i.id === id)
-        if (toDelete === -1) return fail("db/not-found")
-        this.users.splice(toDelete, 1)
+        this.users = this.users.filter(u => u.id !== id)
+        this.apiKeys = this.apiKeys.filter(k => k.userId !== id)
         return success(null)
     }
 
     // APIKey //
     async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
-        throw new Error("Method not implemented.")
+        const now = new Date()
+        const data = (await Promise.all(this.apiKeys
+            .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
+            .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
+            .filter(i => this.handleSimpleStringFilter(i.label, f?.label))
+            .filter(i => this.handleEnumFilter(i.userId, f?.userId))
+            .filter(i => this.handleDateFilter(i.lastUsedAt, f?.lastUsedAt))
+            .filter(i => {
+                if (f?.isExpired === undefined) return true
+                const isExpired = i.expiresAt !== null && new Date(i.expiresAt) < now
+                return isExpired === f.isExpired
+            })
+            .filter(i => {
+                if (f?.isRevoked === undefined) return true
+                return (i.revokedAt !== null) === f.isRevoked
+            })
+            .map(async (i) => (await APIKey.fromDB(i)).toJSON())
+        )).sort((a, b) => this.handleSort({ a, b }, s))
+        return new Paginator(APIKey, this.constructPaginator(data, p))
     }
+
     async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+        const r = this.apiKeys.find(i => i.id === id)
+        return r ? success(await APIKey.fromDB(r)) : fail("db/not-found")
     }
-    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+
+    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKeyCredential>> {
+        const r = this.apiKeys.find(i => i.prefix === prefix)
+        return r ? success({ key: await APIKey.fromDB(r), secretHash: r.secretHash }) : fail("db/not-found")
     }
-    async createAPIKey(obj: New<IAPIKey>, secretHash: string): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+
+    async createAPIKey(obj: New<DBAPIKey>): Promise<RepositoryResult<APIKey>> {
+        if ((await this.getAPIKeyByPrefix(obj.prefix)).success)
+            return fail("db/already-exists")
+        const created = new APIKey({
+            ...(await APIKey.fromDB({
+                ...obj,
+                ...this.getNewObj()
+            }))
+        })
+        this.apiKeys.push({ ...created.toDB(), secretHash: obj.secretHash })
+        return success(created)
     }
-    async updateAPIKey(id: string, obj: Partial<IAPIKey>): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+
+    async recordAPIKeyUse(id: string, at?: Date): Promise<RepositoryResult<APIKey>> {
+        const index = this.apiKeys.findIndex(i => i.id === id)
+        if (index === -1) return fail("db/not-found")
+        const updated = new APIKey({
+            ...(await APIKey.fromDB({
+                ...this.apiKeys[index],
+                lastUsedAt: at?.toISOString() ?? new Date().toISOString()
+            })).toJSON()
+        })
+        const secretHash = this.apiKeys[index].secretHash
+        this.apiKeys[index] = { ...updated.toDB(), secretHash  }
+        return success(updated)
     }
+
+    async updateAPIKey(id: string, patch: APIKeyPatch): Promise<RepositoryResult<APIKey>> {
+        const index = this.apiKeys.findIndex(i => i.id === id)
+        if (index === -1) return fail("db/not-found")
+        const updated = new APIKey({
+            ...(await APIKey.fromDB({
+                ...this.apiKeys[index],
+                ...patch
+            })).toJSON(),
+            updatedAt: new Date().toISOString()
+        })
+        const secretHash = this.apiKeys[index].secretHash
+        this.apiKeys[index] = { ...updated.toDB(), secretHash  }
+        return success(updated)
+    }
+
     async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
-        throw new Error("Method not implemented.")
+        this.apiKeys = this.apiKeys.filter(k => k.id !== id)
+        return success(null)
     }
 }

@@ -4,10 +4,12 @@ import InternalServerError from "@/errors/types/InternalServerError"
 import HTTPError from "@/errors/types/HTTPError"
 
 export const errorHandler: ErrorRequestHandler = (err: Error, _: Request, res: Response, __: NextFunction) => {
-    logger.warn(err.message)
     if (err instanceof HTTPError) {
+        logger.warn(err.message)
         res.status(err.status).json(err.payload)
-    } else {
-        throw new InternalServerError(err.message)
+        return
     }
+    logger.warn(err.stack ?? err.message)
+    const internal = new InternalServerError("Internal server error")
+    res.status(internal.status).json(internal.payload)
 }

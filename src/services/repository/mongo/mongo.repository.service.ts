@@ -1,7 +1,10 @@
 import IRepositoryService, {
+    APIKeyCredential,
+    APIKeyPatch,
     PaginateOptions,
     ReferencePopulateMethods,
-    RepositoryResult
+    RepositoryResult,
+    UserPatch
 } from "@/services/repository/repository.service"
 import { Collection, Db, Document, Filter, MongoClient, ServerApiVersion, WithId } from "mongodb"
 import {
@@ -35,7 +38,7 @@ import config from "@/config"
 import {
     APIKey,
     APIKeyFilterOptions,
-    AuthProvider,
+    AuthProvider, DBAPIKey,
     DBUser,
     IAPIKey,
     IUser,
@@ -95,11 +98,6 @@ export default class MongoRepositoryService implements IRepositoryService {
             const r = await this.items.findOne({ id: id })
             if (r) return <DBPItem><unknown>r
             else throw new InvalidReferenceError("PItem", id)
-        },
-        user: async (id: string) => {
-            const r = await this.users.findOne({ id: id })
-            if (r) return <DBUser><unknown>r
-            else throw new InvalidReferenceError("User", id)
         }
     }
 
@@ -360,7 +358,7 @@ export default class MongoRepositoryService implements IRepositoryService {
             filter = this.addCustomFilter(filter, { "isWelfare": f.isWelfare })
         }
         if (f?.hasPrimaStellaUpgrade != undefined) {
-            filter = this.addCustomFilter(filter, { "primaStellaUpgrade": f.hasPrimaStellaUpgrade ? null : { $ne: null } })
+            filter = this.addCustomFilter(filter, { "primaStellaUpgrade": f.hasPrimaStellaUpgrade ? { $ne: null } : null })
         }
         if (f?.hasTrainingLv7 != undefined) {
             filter = this.addCustomFilter(filter, { "upgradeLevels.6": { $exists: f.hasTrainingLv7 }})
@@ -447,44 +445,47 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     // User //
     async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
-        throw new InternalServerError("Not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
     async getUserById(id: string): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
     async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
     async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
-    async createUser(obj: New<IUser>): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Not implemented.")
+    async createUser(obj: New<DBUser>): Promise<RepositoryResult<User>> {
+        throw new InternalServerError("Method not implemented.")
     }
-    async updateUser(id: string, obj: Partial<New<IUser>>): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Not implemented.")
+    async updateUser(id: string, patch: UserPatch): Promise<RepositoryResult<User>> {
+        throw new InternalServerError("Method not implemented.")
     }
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
-        throw new InternalServerError("Not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
 
     // APIKey //
     async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
-        throw new Error("Method not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
     async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
-    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKeyCredential>> {
+        throw new InternalServerError("Method not implemented.")
     }
-    async createAPIKey(obj: New<IAPIKey>, secretHash: string): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+    async createAPIKey(obj: New<DBAPIKey>): Promise<RepositoryResult<APIKey>> {
+        throw new InternalServerError("Method not implemented.")
     }
-    async updateAPIKey(id: string, obj: Partial<IAPIKey>): Promise<RepositoryResult<APIKey>> {
-        throw new Error("Method not implemented.")
+    async recordAPIKeyUse(id: string, at?: Date): Promise<RepositoryResult<APIKey>> {
+        throw new InternalServerError("Method not implemented.")
+    }
+    async updateAPIKey(id: string, patch: APIKeyPatch): Promise<RepositoryResult<APIKey>> {
+        throw new InternalServerError("Method not implemented.")
     }
     async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
-        throw new Error("Method not implemented.")
+        throw new InternalServerError("Method not implemented.")
     }
 }

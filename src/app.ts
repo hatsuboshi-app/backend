@@ -11,12 +11,12 @@ const app = express()
 
 app.use(morgan(':date :method :url :status :res[content-length] - :response-time ms'))
 app.use(express.json())
-app.use(cors())  // TODO: update cors rules for cookies
+app.use(cors())
 
 app.get("/", (_: Request, res: Response) => {
     res.json({
         status: "ok",
-        environment: config.env
+        environment: process.env.API_ENV
     })
 })
 
@@ -28,5 +28,5 @@ app.use('/v1', v1Router)
 app.use(errorHandler)
 
 app.listen(config.port, () => {
-    logger.info(`server live  @  http://localhost:${config.port}  @  env: ${config.env}\n`)
+    logger.info(`server live  @  http://localhost:${config.port}  @  env: ${process.env.API_ENV}\n`)
 })

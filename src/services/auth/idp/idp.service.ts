@@ -1,11 +1,9 @@
-import { AuthProvider } from "@hatsuboshi/types/auth"
+import { AuthProvider, AuthUserIdentity } from "@hatsuboshi/types/auth"
 import { Result } from "@hatsuboshi/types"
 
 export type IdPCredentialKind = "id-token" | "session"
 
-export interface Identity {
-    provider: AuthProvider
-    subject: string
+export interface Identity extends AuthUserIdentity {
     email: string | null
     isVerified: boolean
     authTime: Date
