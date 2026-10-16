@@ -82,12 +82,12 @@
       },
       "user": {
         "type": "http",
-        "scheme": "user",
+        "scheme": "bearer",
         "description": "Accepts ID tokens & Sessions."
       },
       "sensitive": {
         "type": "http",
-        "scheme": "sensitive",
+        "scheme": "bearer",
         "description": "Accepts ID tokens & Sessions from a sign-in within the last 10 minutes."
       }
     }
