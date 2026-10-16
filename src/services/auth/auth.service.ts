@@ -1,5 +1,5 @@
 import { fail, Result, success } from "@hatsuboshi/types"
-import { APIKey, AuthScope, User } from "@hatsuboshi/types/auth"
+import { APIKey, AuthScope, AuthUserIdentity, User } from "@hatsuboshi/types/auth"
 import IIdPService, { Identity, IdPCredentialKind, IdPError } from "@/services/auth/idp/idp.service"
 import APIKeyService, { APIKeyError } from "@/services/auth/api-key/api-key.service"
 import IRepositoryService from "@/services/repository/repository.service"
@@ -13,14 +13,14 @@ export type AuthContext =
     scopes: readonly AuthScope[]
     authTime: Date
     apiKeyId?: never
-  }
+  } & AuthUserIdentity
 | {
     kind: "api-key"
     user: User
     scopes: readonly AuthScope[]
     authTime?: never
     apiKeyId: string
-  }
+  } & Partial<{ [K in keyof AuthUserIdentity]: never }>
 
 export type AuthResult<T> = Result<T, AuthError>
 
@@ -30,6 +30,9 @@ export type AuthError = `auth/${
     | "user-not-registered"
     | "user-disabled"
     | "email-unverified"
+    | "api-key-not-allowed"
+    | "session-not-allowed"
+    | "insufficient-scope"
 }`  | IdPError
     | APIKeyError
 
@@ -44,7 +47,19 @@ export class AuthService {
         this.apiKey = apiKey
     }
 
-    async createSession(token: string): Promise<AuthResult<string>> {
+    classify(claim?: string): AuthResult<{ kind: AuthContext['kind'], credential: string }> {
+        if (!claim)
+            return fail("auth/credential-missing")
+        const [scheme, credential, ...rest] = claim.trim().split(/\s+/)
+        if (scheme.toLowerCase() !== "bearer" || !credential || rest.length > 0)
+            return fail("auth/credential-malformed")
+        if (credential.startsWith(`${config.defaults.apiKey.tag}_`))
+            return success({ kind: "api-key", credential })
+        const kind = this.idp.classify(credential)
+        return kind ? success({ kind, credential }) : fail("auth/credential-malformed")
+    }
+
+    async createSession(token: string): Promise<AuthResult<{ session: string, expiresAt: string }>> {
         const ctx = await this.authenticateIdentity("id-token", token)
         if (!ctx.success)
             return ctx
@@ -55,20 +70,13 @@ export class AuthService {
     }
 
     async authenticate(claim?: string): Promise<AuthResult<AuthContext>> {
-        if (!claim)
-            return fail("auth/credential-missing")
-
-        const [scheme, credential, ...rest] = claim.trim().split(/\s+/)
-        if (scheme.toLowerCase() !== "bearer" || !credential || rest.length > 0)
-            return fail("auth/credential-malformed")
-
-        if (credential.startsWith(`${config.defaults.apiKey.tag}_`))
-            return this.authenticateAPIKey(credential)
-
-        switch (this.idp.classify(credential)) {
-            case "session":     return this.authenticateIdentity("session", credential)
-            case "id-token":    return this.authenticateIdentity("id-token", credential)
-            default:            return fail("auth/credential-malformed")
+        const r = this.classify(claim)
+        if (!r.success)
+            return r
+        switch (r.data.kind) {
+            case "id-token":    return this.authenticateIdentity("id-token", r.data.credential)
+            case "session":     return this.authenticateIdentity("session", r.data.credential)
+            case "api-key":     return this.authenticateAPIKey(r.data.credential)
         }
     }
 
@@ -118,7 +126,9 @@ export class AuthService {
             kind,
             user: user.data,
             scopes: this.effectiveScopes(user.data),
-            authTime: id.data.authTime
+            authTime: id.data.authTime,
+            provider: id.data.provider,
+            subject: id.data.subject
         })
     }
 

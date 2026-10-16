@@ -8,7 +8,7 @@ import { ErrorResponse } from "@/errors/response/ErrorResponse"
 @Tags("Skill")
 export class SkillController extends Controller {
     /**
-     * Retrieves a paginated list of `ISkill` (JSON-serializable) objects that match an optional filter.
+     * Retrieves a paginated list of skills that match an optional filter.
      * @param p   Page number to retrieve. (1-indexed)
      * @param pp  Number of results to return per page.
      * @param f   JSON-serialized string of an `SkillFilterOptions` object.
@@ -31,7 +31,7 @@ export class SkillController extends Controller {
     }
 
     /**
-     * Retrieves a single `ISkill` (JSON-serializable) object.
+     * Retrieves a skill.
      * @param id  The `id` of the `Skill` to retrieve.
      */
     @Get("{id}")

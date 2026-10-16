@@ -93,7 +93,7 @@ export class LocalIdPService implements IIdPService {
         })
     }
 
-    async createSession(token: string): Promise<IdPResult<string>> {
+    async createSession(token: string): Promise<IdPResult<{ session: string, expiresAt: string }>> {
         // verify with revocation check first
         const t = await this.verifyIdToken(token, true)
         if (!t.success)
@@ -103,13 +103,14 @@ export class LocalIdPService implements IIdPService {
             return fail("auth/credential-stale")
         // mint the cookie
         const cookie = randomBytes(32).toString("base64url")
+        const expiresAt = new Date(Date.now() + config.defaults.idp.sessionDurationMs)
         this.sessions.push({
             id: cookie,
             subject: t.data.subject,
             authTime: t.data.authTime,
-            expiresAt: new Date(Date.now() + config.defaults.idp.sessionDurationMs),
+            expiresAt: expiresAt,
         })
-        return success(cookie)
+        return success({ session: cookie, expiresAt: expiresAt.toISOString() })
     }
 
     async revokeAllSessions(subject: string): Promise<IdPResult<null>> {

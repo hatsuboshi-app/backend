@@ -23,7 +23,7 @@ export default interface IIdPService {
 
     verifyIdToken(token: string, checkRevoked?: boolean): Promise<IdPResult<Identity>>
     verifySession(session: string, checkRevoked?: boolean): Promise<IdPResult<Identity>>
-    createSession(token: string): Promise<IdPResult<string>>
+    createSession(token: string): Promise<IdPResult<{ session: string, expiresAt: string }>>
     revokeAllSessions(subject: string): Promise<IdPResult<null>>
     classify(credential: string): IdPCredentialKind | null
 }

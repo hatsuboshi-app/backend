@@ -1,7 +1,7 @@
 import { fail, Result, success } from "@hatsuboshi/types"
-import IRepositoryService, { RepositoryError } from "@/services/repository/repository.service"
-import { createHash, randomBytes, timingSafeEqual } from "node:crypto";
-import { APIKey, AuthScopePattern, ICreatedAPIKey, User } from "@hatsuboshi/types/auth";
+import IRepositoryService from "@/services/repository/repository.service"
+import { createHash, randomBytes, timingSafeEqual } from "node:crypto"
+import { APIKey, AuthScopePattern, ICreatedAPIKey, User } from "@hatsuboshi/types/auth"
 import config from "@/config";
 
 export type APIKeyResult<T> = Result<T, APIKeyError>
@@ -11,7 +11,7 @@ export type APIKeyError = `auth/${
     | "credential-expired"
     | "credential-malformed"
     | "service-unavailable"
-}`  | Extract<RepositoryError, "db/not-found">
+}`  | "db/not-found"
 
 export default class APIKeyService {
     private readonly db: IRepositoryService
@@ -87,9 +87,9 @@ export default class APIKeyService {
         return success(key)
     }
 
-    async revoke(id: string, userId: string): Promise<APIKeyResult<null>> {
+    async revoke(id: string): Promise<APIKeyResult<null>> {
         const r = await this.db.getAPIKeyById(id)
-        if (!r.success || r.data.userId !== userId)
+        if (!r.success)
             return fail("db/not-found")
         if (r.data.revokedAt)
             return success(null)

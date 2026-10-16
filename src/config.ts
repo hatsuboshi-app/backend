@@ -13,6 +13,9 @@ type Config = {
             secretLength: number
             lastUsedThrottleMs: number
         }
+        auth: {
+            sensitiveMaxAgeMs: number
+        }
     }
 }
 
@@ -30,6 +33,9 @@ const config: Config = {
             suffixLength: 4,
             secretLength: 48,
             lastUsedThrottleMs: 60 * 1000                   // 60 seconds
+        },
+        auth: {
+            sensitiveMaxAgeMs: 10 * 60 * 1000,              // 10 minutes
         }
     }
 }

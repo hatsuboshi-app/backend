@@ -23,7 +23,6 @@ export class AuditionEffectController extends Controller {
     @Get()
     @OperationId("List AuditionEffects")
     @Response<ErrorResponse<400>>(400, "Bad Request")
-    @Response<ErrorResponse<500>>(500, "Internal Server Error")
     public async getMany(
         @Query() p?: number,
         @Query() pp?: number,
@@ -43,7 +42,6 @@ export class AuditionEffectController extends Controller {
     @Get("{id}")
     @OperationId("Retrieve an AuditionEffect")
     @Response<ErrorResponse<404>>(404, "Not Found")
-    @Response<ErrorResponse<500>>(500, "Internal Server Error")
     public async getOneById(
         @Path() id: string
     ): Promise<IAuditionEffect> {

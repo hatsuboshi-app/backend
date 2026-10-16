@@ -1,3 +1,5 @@
+import { Error } from "@/errors/mapping"
+
 /**
  * Error payload returned by all API endpoints on failure.
  */
@@ -16,4 +18,20 @@ export type ErrorResponse<S extends number> = {
      * Additional error details.
      */
     details?: { [key: string]: any }
+}
+
+/**
+ * Error payload returned by all API endpoints on failure.
+ */
+export type ErrorResponseWithCode<S extends number, E extends Error> = ErrorResponse<S> & {
+    /**
+     * Additional error details.
+     */
+    details: {
+        /**
+         * Machine-readable code of the specific error.
+         */
+        code: E,
+        [key: string]: any
+    }
 }

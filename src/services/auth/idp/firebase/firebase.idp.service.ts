@@ -84,7 +84,7 @@ export class FirebaseIdPService implements IIdPService {
         }
     }
 
-    async createSession(token: string): Promise<IdPResult<string>> {
+    async createSession(token: string): Promise<IdPResult<{ session: string, expiresAt: string }>> {
         // verify with revocation check first
         const verified = await this.verifyIdToken(token, true)
         if (!verified.success)
@@ -94,8 +94,9 @@ export class FirebaseIdPService implements IIdPService {
             return fail("auth/credential-stale")
         // mint the cookie
         try {
+            const expiresAt = new Date(Date.now() + config.defaults.idp.sessionDurationMs).toISOString()
             const cookie = await this.app.createSessionCookie(token, { expiresIn: config.defaults.idp.sessionDurationMs })
-            return success(cookie)
+            return success({ session: cookie, expiresAt })
         } catch (e) {
             return fail(this.toError(e), this.isFirebaseError(e) ? `${e.code}: ${e.message}` : undefined)
         }

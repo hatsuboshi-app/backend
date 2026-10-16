@@ -6,16 +6,16 @@ import {
 type ScopeGroupDef = { resources: readonly string[], verbs: readonly string[] }
 const GROUPS = Object.entries(AUTH_SCOPE_GROUPS) as [AuthScopeGroup, ScopeGroupDef][]
 
-// list of all scopes e.g. pidol:translate, skill:delete, etc.
+// list of all scopes e.g. translate:pidol, delete:skill, etc.
 const ALL_SCOPES: readonly AuthScope[] = GROUPS.flatMap(([, g]) => {
     return g.resources.flatMap(r => {
         return g.verbs.map(v => {
-            return `${r}:${v}` as AuthScope
+            return `${v}:${r}` as AuthScope
         })
     })
 })
 
-// maps each resource to its group e.g. { pdrink: "content", user: "owned" } etc.
+// maps each resource to its group e.g. { pdrink: "content", user: "identity" } etc.
 const GROUP_OF: Readonly<Record<string, AuthScopeGroup>> = Object.fromEntries(
     GROUPS.flatMap(([name, g]) => g.resources.map(r => [r, name]))
 )
@@ -23,8 +23,8 @@ const GROUP_OF: Readonly<Record<string, AuthScopeGroup>> = Object.fromEntries(
 // defines what each role has access to, which patterns
 export const ROLE_SCOPES: AuthRoleScopeMapping = {
     user:       [],
-    translator: ["content:history", "content:translate"],
-    maintainer: ["content:*"],
+    translator: ["history:content", "translate:content"],
+    maintainer: ["*:content"],
     admin:      ["*"]
 }
 
@@ -37,8 +37,8 @@ export function grantedPatterns(user: Pick<IUser, "roles" | "extraScopes">): Aut
 export function scopeMatches(pattern: AuthScopePattern, scope: AuthScope): boolean {
     if (pattern === "*")
         return true
-    const [pr, pv] = pattern.split(":")
-    const [sr, sv] = scope.split(":")
+    const [pv, pr] = pattern.split(":")
+    const [sv, sr] = scope.split(":")
     return (pr === sr || pr === GROUP_OF[sr]) && (pv === sv || pv === "*")
 }
 

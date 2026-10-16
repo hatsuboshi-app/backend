@@ -46,6 +46,10 @@
       {
         "name": "SupportCard",
         "description": "API endpoints involving the `SupportCard` data type."
+      },
+      {
+        "name": "Session",
+        "description": "API endpoints involving the `Session` data type."
       }
     ],
     "spec": {
@@ -57,14 +61,44 @@
       "servers": [
         { "url": "https://api.hatsuboshi.app/v1", "description": "Production API" },
         { "url": "https://api-dev.hatsuboshi.app/v1", "description": "Development API" },
-        { "url": "https://localhost:3001/v1", "description": "Local API" }
+        { "url": "http://localhost:3001/v1", "description": "Local API" }
+      ],
+      "x-tagGroups": [
+        {
+          "name": "Game Data",
+          "tags": ["AuditionEffect", "AuditionTerminology", "Character", "PDrink", "PIdol", "PItem", "Skill", "SupportCard"]
+        },
+        {
+          "name": "Authentication",
+          "tags": ["Session", "Me", "APIKey", "User"]
+        }
       ]
+    },
+    "securityDefinitions": {
+      "bearer": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "Accepts ID tokens, Sessions & API keys."
+      },
+      "user": {
+        "type": "http",
+        "scheme": "user",
+        "description": "Accepts ID tokens & Sessions."
+      },
+      "sensitive": {
+        "type": "http",
+        "scheme": "sensitive",
+        "description": "Accepts ID tokens & Sessions from a sign-in within the last 10 minutes."
+      }
     }
   },
   "routes": {
-    "routesDir": "src/routes/v1"
+    "routesDir": "src/routes/v1",
+    "authenticationModule": "src/middlewares/authentication.ts"
   },
   "compilerOptions": {
+    "module": 100,
+    "moduleResolution": 3,
     "paths": {
       "@/*": ["./src/*"]
     }
