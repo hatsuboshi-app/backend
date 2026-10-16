@@ -1,0 +1,90 @@
+[
+  {
+    "id": "user-k3m9x2qa",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "local",
+        "subject": "admin"
+      }
+    ],
+    "displayName": "Admin",
+    "displayIcon": null,
+    "description": "Local admin",
+    "email": "admin@hatsuboshi.app",
+    "verified": true,
+    "roles": [
+      "user",
+      "admin"
+    ],
+    "extraScopes": []
+  },
+  {
+    "id": "user-p7w2n4rt",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "local",
+        "subject": "user"
+      }
+    ],
+    "displayName": "User",
+    "displayIcon": null,
+    "description": "Local user",
+    "email": "user@hatsuboshi.app",
+    "verified": true,
+    "roles": [
+      "user"
+    ],
+    "extraScopes": []
+  },
+  {
+    "id": "user-b5h8c1ve",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "local",
+        "subject": "translator"
+      }
+    ],
+    "displayName": "Translator",
+    "displayIcon": null,
+    "description": "Local translator",
+    "email": "translator@hatsuboshi.app",
+    "verified": true,
+    "roles": [
+      "user",
+      "translator"
+    ],
+    "extraScopes": []
+  },
+  {
+    "id": "user-z6d3j9ly",
+    "createdAt": "2026-07-08T07:35:56.000Z",
+    "updatedAt": "2026-07-08T07:35:56.000Z",
+    "disabledAt": null,
+    "identities": [
+      {
+        "provider": "local",
+        "subject": "maintainer"
+      }
+    ],
+    "displayName": "Maintainer",
+    "displayIcon": null,
+    "description": "Local maintainer",
+    "email": "maintainer@hatsuboshi.app",
+    "verified": true,
+    "roles": [
+      "user",
+      "translator",
+      "maintainer"
+    ],
+    "extraScopes": []
+  }
+]

@@ -1,5 +1,4 @@
 import { db } from "@/services"
-import NotFoundError from "@/errors/NotFoundError"
 import {
     AuditionTerminologyFilterOptions,
     decodeSortOptions,
@@ -7,24 +6,26 @@ import {
     IPaginator,
     SortOption
 } from "@hatsuboshi/types"
-import { Controller, Get, OperationId, Path, Query, Response, Route, Tags } from "tsoa"
-import { ErrorResponse } from "@/errors/response/ErrorResponse"
+import { Controller, Get, Path, Query, Response, Route, Tags } from "tsoa"
+import { NotFoundEC, UnprocessableEC } from "@/lib/errorCodes"
+import ControllerError, { ErrorResponse } from "@/lib/errors"
 
 @Route("terminologies")
 @Tags("AuditionTerminology")
 export class AuditionTerminologyController extends Controller {
     /**
      * Retrieves a paginated list of `IAuditionTerminology` (JSON-serializable) objects that match an optional filter.
+     *
+     * @summary List terminologies
+     *
      * @param p   Page number to retrieve. (1-indexed)
      * @param pp  Number of results to return per page.
      * @param f   JSON-serialized string of an `AuditionTerminologyFilterOptions` object.
      * @param s   String representation of a `SortOption<IAuditionTerminology>[]` list.
      */
     @Get()
-    @OperationId("List AuditionTerminologies")
-    @Response<ErrorResponse<400>>(400, "Bad Request")
-    @Response<ErrorResponse<500>>(500, "Internal Server Error")
-    public async getMany(
+    @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
+    public async listTerminologies(
         @Query() p?: number,
         @Query() pp?: number,
         @Query() f?: string,
@@ -38,20 +39,19 @@ export class AuditionTerminologyController extends Controller {
 
     /**
      * Retrieves a single `IAuditionTerminology` (JSON-serializable) object.
+     *
+     * @summary Retrieve a terminology
+     *
      * @param id  The `id` of the `AuditionTerminology` to retrieve.
      */
     @Get("{id}")
-    @OperationId("Retrieve an AuditionTerminology")
-    @Response<ErrorResponse<404>>(404, "Not Found")
-    @Response<ErrorResponse<500>>(500, "Internal Server Error")
-    public async getOneById(
+    @Response<ErrorResponse<404, NotFoundEC>>(404, "Not Found")
+    public async getTerminologyById(
         @Path() id: string
     ): Promise<IAuditionTerminology> {
         const r = await db.getAuditionTerminologyById(id)
-        if (r.success) {
-            return r.data.toJSON()
-        } else {
-            throw new NotFoundError()
-        }
+        if (!r.success)
+            throw new ControllerError(r.error, r.message)
+        return r.data.toJSON()
     }
 }

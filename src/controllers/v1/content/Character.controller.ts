@@ -1,24 +1,25 @@
 import { db } from "@/services"
-import NotFoundError from "@/errors/NotFoundError"
 import { CharacterFilterOptions, decodeSortOptions, ICharacter, IPaginator, SortOption } from "@hatsuboshi/types"
-import { Controller, Get, OperationId, Path, Query, Response, Route, Tags } from "tsoa"
-import { ErrorResponse } from "@/errors/response/ErrorResponse"
+import { Controller, Get, Path, Query, Response, Route, Tags } from "tsoa"
+import ControllerError, { ErrorResponse } from "@/lib/errors"
+import { NotFoundEC, UnprocessableEC } from "@/lib/errorCodes"
 
 @Route("characters")
 @Tags("Character")
 export class CharacterController extends Controller {
     /**
      * Retrieves a paginated list of `ICharacter` (JSON-serializable) objects that match an optional filter.
+     *
+     * @summary List characters
+     *
      * @param p   Page number to retrieve. (1-indexed)
      * @param pp  Number of results to return per page.
      * @param f   JSON-serialized string of an `CharacterFilterOptions` object.
      * @param s   String representation of a `SortOption<ICharacter>[]` list.
      */
     @Get()
-    @OperationId("List Characters")
-    @Response<ErrorResponse<400>>(400, "Bad Request")
-    @Response<ErrorResponse<500>>(500, "Internal Server Error")
-    public async getMany(
+    @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
+    public async listCharacters(
         @Query() p?: number,
         @Query() pp?: number,
         @Query() f?: string,
@@ -32,20 +33,19 @@ export class CharacterController extends Controller {
 
     /**
      * Retrieves a single `ICharacter` (JSON-serializable) object.
+     *
+     * @summary Retrieve a character
+     *
      * @param id  The `id` of the `Character` to retrieve.
      */
     @Get("{id}")
-    @OperationId("Retrieve a Character")
-    @Response<ErrorResponse<404>>(404, "Not Found")
-    @Response<ErrorResponse<500>>(500, "Internal Server Error")
-    public async getOneById(
+    @Response<ErrorResponse<404, NotFoundEC>>(404, "Not Found")
+    public async getCharacterById(
         @Path() id: string
     ): Promise<ICharacter> {
         const r = await db.getCharacterById(id)
-        if (r.success) {
-            return r.data.toJSON()
-        } else {
-            throw new NotFoundError()
-        }
+        if (!r.success)
+            throw new ControllerError(r.error, r.message)
+        return r.data.toJSON()
     }
 }

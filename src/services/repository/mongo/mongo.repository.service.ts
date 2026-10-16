@@ -1,8 +1,14 @@
-import IRepositoryService, { PaginateOptions, ReferencePopulateMethods } from "@/services/repository/repository.service"
+import IRepositoryService, {
+    APIKeyCredential,
+    APIKeyPatch,
+    PaginateOptions,
+    ReferencePopulateMethods,
+    RepositoryResult,
+    UserPatch
+} from "@/services/repository/repository.service"
 import { Collection, Db, Document, Filter, MongoClient, ServerApiVersion, WithId } from "mongodb"
 import {
     AuditionEffect,
-    Result,
     AuditionTerminology,
     Character,
     PDrink,
@@ -24,11 +30,20 @@ import {
     PItemFilterOptions,
     SkillFilterOptions,
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
-    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions
+    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions, New
 } from "@hatsuboshi/types"
-import InvalidReferenceError from "@/errors/InvalidReferenceError"
-import InternalServerError from "@/errors/InternalServerError"
-import config from "@/config"
+import config from "@/lib/config"
+import {
+    APIKey,
+    APIKeyFilterOptions,
+    AuthProvider, DBAPIKey,
+    DBUser,
+    IAPIKey,
+    IUser,
+    User,
+    UserFilterOptions
+} from "@hatsuboshi/types/auth"
+import ControllerError from "@/lib/errors";
 
 export type MongoCredentials = {
     shared: string,
@@ -46,8 +61,8 @@ type PaginationHandlerParams<T extends JSONSerializable<I>, I extends {}> = {
 }
 
 export default class MongoRepositoryService implements IRepositoryService {
-    id = "mongo"
-    private readonly db: Db
+    private readonly gameDataDb: Db
+    private readonly metaDataDb: Db
     private readonly effects: Collection
     private readonly terminologies: Collection
     private readonly characters: Collection
@@ -56,47 +71,71 @@ export default class MongoRepositoryService implements IRepositoryService {
     private readonly items: Collection
     private readonly skills: Collection
     private readonly supportCards: Collection
+    private readonly users: Collection
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
             if (r) return <DBAuditionEffect><unknown>r
-            else throw new InvalidReferenceError("AuditionEffect", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "auditionEffect", id }
+            )
         },
         auditionTerminology: async (id: string) => {
             const r = await this.terminologies.findOne({ id: id })
             if (r) return <DBAuditionTerminology><unknown>r
-            else throw new InvalidReferenceError("AuditionTerminology", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "auditionTerminology", id }
+            )
         },
         character: async (id: string) => {
             const r = await this.characters.findOne({ id: id })
             if (r) return <DBCharacter><unknown>r
-            else throw new InvalidReferenceError("Character", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "character", id }
+            )
         },
         skill: async (id: string) => {
             const r = await this.skills.findOne({ id: id })
             if (r) return <DBSkill><unknown>r
-            else throw new InvalidReferenceError("Skill", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "skill", id }
+            )
         },
         pItem: async (id: string) => {
             const r = await this.items.findOne({ id: id })
             if (r) return <DBPItem><unknown>r
-            else throw new InvalidReferenceError("PItem", id)
-        },
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "pItem", id }
+            )
+        }
     }
 
     constructor({ shared, cluster, username, password }: MongoCredentials) {
-        this.db = new MongoClient(
+        const client = new MongoClient(
             `mongodb+srv://${username}:${password}@${cluster}.${shared}.mongodb.net/?appName=${cluster}`,
             { serverApi: ServerApiVersion.v1 }
-        ).db("GameData")
-        this.effects = this.db.collection("AuditionEffect")
-        this.terminologies = this.db.collection("AuditionTerminology")
-        this.characters = this.db.collection("Character")
-        this.drinks = this.db.collection("PDrink")
-        this.idols = this.db.collection("PIdol")
-        this.items = this.db.collection("PItem")
-        this.skills = this.db.collection("Skill")
-        this.supportCards = this.db.collection("SupportCard")
+        )
+        this.gameDataDb = client.db("GameData")
+        this.metaDataDb = client.db("MetaData")
+        this.effects = this.gameDataDb.collection("AuditionEffect")
+        this.terminologies = this.gameDataDb.collection("AuditionTerminology")
+        this.characters = this.gameDataDb.collection("Character")
+        this.drinks = this.gameDataDb.collection("PDrink")
+        this.idols = this.gameDataDb.collection("PIdol")
+        this.items = this.gameDataDb.collection("PItem")
+        this.skills = this.gameDataDb.collection("Skill")
+        this.supportCards = this.gameDataDb.collection("SupportCard")
+        this.users = this.metaDataDb.collection("User")
     }
 
     private async fetchAndConstructPaginator<T extends JSONSerializable<I>, I extends {}>({ collection, populate, filter, options, sort }: PaginationHandlerParams<T, I>): Promise<IPaginator<I>> {
@@ -184,26 +223,15 @@ export default class MongoRepositoryService implements IRepositoryService {
                     })
                 } break
                 case "Search": {
-                    switch (filter.method) {
-                        case "regex":
-                            // NOT implemented yet
-                            // filter.search && rf.$and.push({
-                            //     $or: [
-                            //         { [`${fieldName}.ja`]: { $regex: {} } },
-                            //         { [`${fieldName}.en`]: { $regex: {} } },
-                            //         { [`${fieldName}.ro`]: { $regex: {} } }
-                            //     ]
-                            // })
-                        case "simple":
-                        default: {
-                            filter.search && rf.$and.push({
-                                $or: [
-                                    { [`${fieldName}.ja`]: { $regex: filter.search, $options: "i" }},
-                                    { [`${fieldName}.en`]: { $regex: filter.search, $options: "i" }},
-                                    { [`${fieldName}.ro`]: { $regex: filter.search, $options: "i" }}
-                                ]
-                            })
-                        }
+                    if (filter.search) {
+                        const contains = { $regex: filter.search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), $options: "i" }
+                        rf.$and.push({
+                            $or: [
+                                { [`${fieldName}.ja`]: contains},
+                                { [`${fieldName}.en`]: contains},
+                                { [`${fieldName}.ro`]: contains}
+                            ]
+                        })
                     }
                 }
             }
@@ -232,11 +260,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(AuditionEffect, data)
     }
-    async getAuditionEffectById(id: string): Promise<Result<AuditionEffect>> {
+    async getAuditionEffectById(id: string): Promise<RepositoryResult<AuditionEffect>> {
         const d = await this.effects.findOne({ id: id })
         return d
             ? success(await AuditionEffect.fromDB(<DBAuditionEffect><unknown>d, this.populateMethods))
-            : fail()
+            : fail("db/not-found")
     }
 
     // AuditionTerminology //
@@ -254,11 +282,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(AuditionTerminology, data)
     }
-    async getAuditionTerminologyById(id: string): Promise<Result<AuditionTerminology>> {
+    async getAuditionTerminologyById(id: string): Promise<RepositoryResult<AuditionTerminology>> {
         const d = await this.terminologies.findOne({ id: id })
         return d
             ? success(await AuditionTerminology.fromDB(<DBAuditionTerminology><unknown>d, this.populateMethods))
-            : fail()
+            : fail("db/not-found")
     }
 
     // Character //
@@ -293,11 +321,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(Character, data)
     }
-    async getCharacterById(id: string): Promise<Result<Character>> {
+    async getCharacterById(id: string): Promise<RepositoryResult<Character>> {
         const d = await this.characters.findOne({ id: id })
         return d
             ? success(await Character.fromDB(<DBCharacter><unknown>d))
-            : fail()
+            : fail("db/not-found")
     }
 
     // PDrink //
@@ -318,11 +346,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(PDrink, data)
     }
-    async getPDrinkById(id: string): Promise<Result<PDrink>> {
+    async getPDrinkById(id: string): Promise<RepositoryResult<PDrink>> {
         const d = await this.drinks.findOne({ id: id })
         return d
             ? success(await PDrink.fromDB(<DBPDrink><unknown>d, this.populateMethods))
-            : fail()
+            : fail("db/not-found")
     }
 
     // PIdol //
@@ -338,7 +366,7 @@ export default class MongoRepositoryService implements IRepositoryService {
             filter = this.addCustomFilter(filter, { "isWelfare": f.isWelfare })
         }
         if (f?.hasPrimaStellaUpgrade != undefined) {
-            filter = this.addCustomFilter(filter, { "primaStellaUpgrade": f.hasPrimaStellaUpgrade ? null : { $ne: null } })
+            filter = this.addCustomFilter(filter, { "primaStellaUpgrade": f.hasPrimaStellaUpgrade ? { $ne: null } : null })
         }
         if (f?.hasTrainingLv7 != undefined) {
             filter = this.addCustomFilter(filter, { "upgradeLevels.6": { $exists: f.hasTrainingLv7 }})
@@ -352,11 +380,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(PIdol, data)
     }
-    async getPIdolById(id: string): Promise<Result<PIdol>> {
+    async getPIdolById(id: string): Promise<RepositoryResult<PIdol>> {
         const d = await this.idols.findOne({ id: id })
         return d
             ? success(await PIdol.fromDB(<DBPIdol><unknown>d, this.populateMethods))
-            : fail()
+            : fail("db/not-found")
     }
 
     // PItem //
@@ -378,11 +406,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(PItem, data)
     }
-    async getPItemById(id: string): Promise<Result<PItem>> {
+    async getPItemById(id: string): Promise<RepositoryResult<PItem>> {
         const d = await this.items.findOne({ id: id })
         return d
             ? success(await PItem.fromDB(<DBPItem><unknown>d, this.populateMethods))
-            : fail()
+            : fail("db/not-found")
     }
 
     // Skill //
@@ -408,18 +436,64 @@ export default class MongoRepositoryService implements IRepositoryService {
         })
         return new Paginator(Skill, data)
     }
-    async getSkillById(id: string): Promise<Result<Skill>> {
+    async getSkillById(id: string): Promise<RepositoryResult<Skill>> {
         const d = await this.skills.findOne({ id: id })
         return d
             ? success(await Skill.fromDB(<DBSkill><unknown>d, this.populateMethods))
-            : fail()
+            : fail("db/not-found")
     }
 
     // SupportCard //
     async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
-    async getSupportCardById(id: string): Promise<Result<SupportCard>> {
-        throw new InternalServerError("Method not implemented.")
+    async getSupportCardById(id: string): Promise<RepositoryResult<SupportCard>> {
+        throw new ControllerError("core/not-implemented")
+    }
+
+    // User //
+    async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async getUserById(id: string): Promise<RepositoryResult<User>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async createUser(obj: New<DBUser>): Promise<RepositoryResult<User>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async updateUser(id: string, patch: UserPatch): Promise<RepositoryResult<User>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async deleteUser(id: string): Promise<RepositoryResult<null>> {
+        throw new ControllerError("core/not-implemented")
+    }
+
+    // APIKey //
+    async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKeyCredential>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async createAPIKey(obj: New<DBAPIKey>): Promise<RepositoryResult<APIKey>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async recordAPIKeyUse(id: string, at?: Date): Promise<RepositoryResult<APIKey>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async updateAPIKey(id: string, patch: APIKeyPatch): Promise<RepositoryResult<APIKey>> {
+        throw new ControllerError("core/not-implemented")
+    }
+    async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
+        throw new ControllerError("core/not-implemented")
     }
 }
