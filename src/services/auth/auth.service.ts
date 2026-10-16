@@ -1,10 +1,10 @@
 import { fail, Result, success } from "@hatsuboshi/types"
 import { APIKey, AuthScope, AuthUserIdentity, User } from "@hatsuboshi/types/auth"
-import IIdPService, { Identity, IdPCredentialKind, IdPError } from "@/services/auth/idp/idp.service"
-import APIKeyService, { APIKeyError } from "@/services/auth/api-key/api-key.service"
+import IIdPService, { Identity, IdPCredentialKind, IdPEC } from "@/services/auth/idp/idp.service"
+import APIKeyService, { APIKeyEC } from "@/services/auth/api-key/api-key.service"
 import IRepositoryService from "@/services/repository/repository.service"
-import config from "@/config"
-import { expandScopes, grantedPatterns } from "@/services/auth/scopes"
+import config from "@/lib/config"
+import { expandScopes, grantedPatterns } from "@/lib/authScopes"
 
 export type AuthContext =
 | {
@@ -22,9 +22,9 @@ export type AuthContext =
     apiKeyId: string
   } & Partial<{ [K in keyof AuthUserIdentity]: never }>
 
-export type AuthResult<T> = Result<T, AuthError>
+export type AuthResult<T> = Result<T, AuthEC>
 
-export type AuthError = `auth/${
+export type AuthEC = `auth/${
     | "credential-missing"
     | "credential-malformed"
     | "user-not-registered"
@@ -33,8 +33,8 @@ export type AuthError = `auth/${
     | "api-key-not-allowed"
     | "session-not-allowed"
     | "insufficient-scope"
-}`  | IdPError
-    | APIKeyError
+}`  | IdPEC
+    | APIKeyEC
 
 export class AuthService {
     private readonly db: IRepositoryService

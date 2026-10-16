@@ -1,18 +1,19 @@
 import { Body, Controller, Get, Patch, Path, Post, Query, Request, Response, Route, SuccessResponse, Tags } from "tsoa"
 import { Request as ExpressRequest } from "express"
-import { ErrorResponse, ErrorResponseWithCode } from "@/errors/response/ErrorResponse"
-import { ForbiddenAuthError, UnauthorizedAuthError } from "@/errors/mapping"
-import { Security } from "@/middlewares/authentication"
+import { ForbiddenEC, NotFoundEC, UnauthorizedEC, UnprocessableEC } from "@/lib/errorCodes"
+import { isOwner, Security } from "@/lib/auth"
 import { AuthContext } from "@/services/auth/auth.service"
-import { IPaginator } from "@hatsuboshi/types"
-import { IAPIKey, ICreatedAPIKey, IUpdateAPIKey, ICreateAPIKey } from "@hatsuboshi/types/auth"
-import InternalServerError from "@/errors/types/InternalServerError"
+import { decodeSortOptions, IPaginator, SortOption } from "@hatsuboshi/types"
+import { IAPIKey, ICreatedAPIKey, IUpdateAPIKey, ICreateAPIKey, APIKeyFilterOptions } from "@hatsuboshi/types/auth"
+import { apiKeys, db } from "@/services"
+import ControllerError, { ErrorResponse } from "@/lib/errors"
+import { expandScopes, grantedPatterns } from "@/lib/authScopes"
 
 @Route("me/keys")
 @Tags("APIKey")
 @Security("user")
-@Response<ErrorResponseWithCode<401, UnauthorizedAuthError>>(401, "Unauthorized")
-@Response<ErrorResponseWithCode<403, ForbiddenAuthError>>(403, "Forbidden")
+@Response<ErrorResponse<401, UnauthorizedEC>>(401, "Unauthorized")
+@Response<ErrorResponse<403, ForbiddenEC>>(403, "Forbidden")
 export class MyAPIKeyController extends Controller {
     /**
      * Retrieves a paginated list of all API keys belonging to
@@ -28,7 +29,7 @@ export class MyAPIKeyController extends Controller {
      * @param s   String representation of a `SortOption<IAPIKey>[]` list.
      */
     @Get()
-    @Response<ErrorResponse<422>>(422, "Unprocessable Content")
+    @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listMyAPIKeys(
         @Request() req: ExpressRequest,
         @Query() p?: number,
@@ -37,8 +38,9 @@ export class MyAPIKeyController extends Controller {
         @Query() s?: string
     ): Promise<IPaginator<IAPIKey>> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-
-        throw new InternalServerError("Not implemented.")
+        const filter: APIKeyFilterOptions = f ? JSON.parse(f) : {}
+        const sort: SortOption<IAPIKey>[] = s ? decodeSortOptions(s) : []
+        return (await db.getAPIKeys({ page: p, perPage: pp }, { ...filter, userId: { include: [ctx.user.id] } }, sort)).toJSON()
     }
 
     /**
@@ -50,14 +52,16 @@ export class MyAPIKeyController extends Controller {
      * @param id The `id` of the API key to retrieve.
      */
     @Get("{id}")
-    @Response<ErrorResponseWithCode<404, "db/not-found">>(404, "Not Found")
+    @Response<ErrorResponse<404, NotFoundEC>>(404, "Not Found")
     public async getMyAPIKey(
         @Request() req: ExpressRequest,
         @Path() id: string
     ): Promise<IAPIKey> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-
-        throw new InternalServerError("Not implemented.")
+        const r = await db.getAPIKeyById(id)
+        if (!r.success || !isOwner(ctx, r.data))
+            throw new ControllerError("db/not-found")
+        return r.data.toJSON()
     }
 
     /**
@@ -71,15 +75,29 @@ export class MyAPIKeyController extends Controller {
     @Post()
     @Security("sensitive")
     @SuccessResponse(201, "Created")
-    @Response<ErrorResponse<422>>(422, "Unprocessable Content")
+    @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async createMyAPIKey(
         @Request() req: ExpressRequest,
         @Body() body: ICreateAPIKey
     ): Promise<ICreatedAPIKey> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
 
+        // check for expiry in the past
+        if (body.expiresAt && (isNaN(new Date(body.expiresAt).getTime()) || new Date(body.expiresAt) <= new Date()))
+            throw new ControllerError("core/validation-failed", "expiresAt is in the past, or in an invalid format")
+
+        // check for all new key scopes owned by user
+        const granted = expandScopes(grantedPatterns(ctx.user))
+        const notHeld = body.scopes.filter(p => !expandScopes([p]).every(s => granted.includes(s)))
+        if (notHeld.length > 0)
+            throw new ControllerError("auth/insufficient-scope", undefined, { missing: notHeld })
+
+        const r = await apiKeys.create(ctx.user, body.label, body.scopes, body.expiresAt)
+        if (!r.success)
+            throw new ControllerError(r.error, r.message)
+
         this.setStatus(201)
-        throw new InternalServerError("Not implemented.")
+        return r.data
     }
 
     /**
@@ -92,16 +110,21 @@ export class MyAPIKeyController extends Controller {
      * @param body An `IUpdateAPIKey` object.
      */
     @Patch("{id}")
-    @Response<ErrorResponseWithCode<404, "db/not-found">>(404, "Not Found")
-    @Response<ErrorResponse<422>>(422, "Unprocessable Content")
+    @Response<ErrorResponse<404, NotFoundEC>>(404, "Not Found")
+    @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async updateMyAPIKey(
         @Request() req: ExpressRequest,
         @Path() id: string,
         @Body() body: IUpdateAPIKey
     ): Promise<IAPIKey> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-
-        throw new InternalServerError("Not implemented.")
+        const r = await db.getAPIKeyById(id)
+        if (!r.success || !isOwner(ctx, r.data))
+            throw new ControllerError("db/not-found")
+        const u = await db.updateAPIKey(id, body)
+        if (!u.success)
+            throw new ControllerError(u.error, u.message)
+        return u.data.toJSON()
     }
 
     /**
@@ -113,13 +136,18 @@ export class MyAPIKeyController extends Controller {
      * @param id The `id` of the API key to revoke.
      */
     @Post("{id}/revoke")
-    @Response<ErrorResponseWithCode<404, "db/not-found">>(404, "Not Found")
+    @Response<ErrorResponse<404, NotFoundEC>>(404, "Not Found")
     public async revokeMyAPIKey(
         @Request() req: ExpressRequest,
         @Path() id: string
     ): Promise<IAPIKey> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-
-        throw new InternalServerError("Not implemented.")
+        const r = await db.getAPIKeyById(id)
+        if (!r.success || !isOwner(ctx, r.data))
+            throw new ControllerError("db/not-found")
+        const v = await apiKeys.revoke(id)
+        if (!v.success)
+            throw new ControllerError(v.error, v.message)
+        return v.data.toJSON()
     }
 }

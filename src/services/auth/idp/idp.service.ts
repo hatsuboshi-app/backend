@@ -9,9 +9,9 @@ export interface Identity extends AuthUserIdentity {
     authTime: Date
 }
 
-export type IdPResult<T> = Result<T, IdPError>
+export type IdPResult<T> = Result<T, IdPEC>
 
-export type IdPError = `auth/${
+export type IdPEC = `auth/${
     | "credential-invalid"
     | "credential-stale"
     | "credential-expired"

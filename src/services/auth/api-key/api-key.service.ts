@@ -2,11 +2,11 @@ import { fail, Result, success } from "@hatsuboshi/types"
 import IRepositoryService from "@/services/repository/repository.service"
 import { createHash, randomBytes, timingSafeEqual } from "node:crypto"
 import { APIKey, AuthScopePattern, ICreatedAPIKey, User } from "@hatsuboshi/types/auth"
-import config from "@/config";
+import config from "@/lib/config";
 
-export type APIKeyResult<T> = Result<T, APIKeyError>
+export type APIKeyResult<T> = Result<T, APIKeyEC>
 
-export type APIKeyError = `auth/${
+export type APIKeyEC = `auth/${
     | "credential-invalid"
     | "credential-expired"
     | "credential-malformed"
@@ -42,7 +42,7 @@ export default class APIKeyService {
         this.db.recordAPIKeyUse(key.id, now).catch(() => {})
     }
 
-    async create(user: User, label: string, scopes: AuthScopePattern[], expiresAt?: Date | null): Promise<APIKeyResult<ICreatedAPIKey>> {
+    async create(user: User, label: string, scopes: AuthScopePattern[], expiresAt?: string | null): Promise<APIKeyResult<ICreatedAPIKey>> {
         const secret = this.randomHex(config.defaults.apiKey.secretLength)
         const secretHash = this.hash(secret)
         for (let attempt = 0; attempt < 5; attempt++) {
@@ -53,7 +53,7 @@ export default class APIKeyService {
                 prefix,
                 suffix:     secret.slice(-config.defaults.apiKey.suffixLength),
                 scopes,
-                expiresAt:  expiresAt?.toISOString() ?? null,
+                expiresAt:  expiresAt ? new Date(expiresAt).toISOString() : null,
                 lastUsedAt: null,
                 revokedAt:  null,
                 secretHash
@@ -87,13 +87,13 @@ export default class APIKeyService {
         return success(key)
     }
 
-    async revoke(id: string): Promise<APIKeyResult<null>> {
+    async revoke(id: string): Promise<APIKeyResult<APIKey>> {
         const r = await this.db.getAPIKeyById(id)
         if (!r.success)
             return fail("db/not-found")
         if (r.data.revokedAt)
-            return success(null)
+            return success(r.data)
         const u = await this.db.updateAPIKey(id, { revokedAt: new Date().toISOString() })
-        return u.success ? success(null) : fail("db/not-found")
+        return u.success ? success(u.data) : fail("db/not-found")
     }
 }

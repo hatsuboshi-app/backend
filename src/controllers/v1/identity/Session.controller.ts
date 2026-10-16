@@ -1,11 +1,10 @@
 import { Controller, Post, Tags, Request, Route, Response, SuccessResponse } from "tsoa"
 import { Request as ExpressRequest } from "express"
 import { auth, idp } from "@/services"
-import ServiceError from "@/errors/types/ServiceError"
-import { ErrorResponseWithCode } from "@/errors/response/ErrorResponse"
+import ControllerError, { ErrorResponse } from "@/lib/errors"
 import { AuthContext } from "@/services/auth/auth.service"
-import { ForbiddenAuthError, UnauthorizedAuthError } from "@/errors/mapping"
-import { Security } from "@/middlewares/authentication"
+import { ForbiddenEC, UnauthorizedEC } from "@/lib/errorCodes"
+import { Security } from "@/lib/auth"
 
 type NewSession = {
     /**
@@ -23,8 +22,8 @@ type NewSession = {
 
 @Route("sessions")
 @Tags("Session")
-@Response<ErrorResponseWithCode<401, UnauthorizedAuthError>>(401, "Unauthorized")
-@Response<ErrorResponseWithCode<403, ForbiddenAuthError>>(403, "Forbidden")
+@Response<ErrorResponse<401, UnauthorizedEC>>(401, "Unauthorized")
+@Response<ErrorResponse<403, ForbiddenEC>>(403, "Forbidden")
 export class SessionController extends Controller {
     /**
      * Creates a session from an ID token.
@@ -44,17 +43,17 @@ export class SessionController extends Controller {
     ): Promise<NewSession> {
         const r = auth.classify(req.headers.authorization)
         if (!r.success)
-            throw new ServiceError(r.error, r.message)
+            throw new ControllerError(r.error, r.message)
 
         const { kind, credential } = r.data
         if (kind === "api-key")
-            throw new ServiceError("auth/api-key-not-allowed")
+            throw new ControllerError("auth/api-key-not-allowed")
         if (kind === "session")
-            throw new ServiceError("auth/session-not-allowed")
+            throw new ControllerError("auth/session-not-allowed")
 
         const c = await auth.createSession(credential)
         if (!c.success)
-            throw new ServiceError(c.error, c.message)
+            throw new ControllerError(c.error, c.message)
         this.setStatus(201)
         return c.data
     }
@@ -75,7 +74,7 @@ export class SessionController extends Controller {
         const ctx = req.user! as AuthContext & { kind: "session" | "id-token" }
         const r = await idp.revokeAllSessions(ctx.subject)
         if (!r.success)
-            throw new ServiceError(r.error, r.message)
+            throw new ControllerError(r.error, r.message)
         this.setStatus(204)
     }
 }

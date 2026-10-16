@@ -1,11 +1,10 @@
 import { Request } from "express"
 import { AuthContext } from "@/services/auth/auth.service"
 import { Security as TsoaSecurity } from "tsoa"
-import InternalServerError from "@/errors/types/InternalServerError"
 import { auth } from "@/services"
-import ServiceError from "@/errors/types/ServiceError"
+import ControllerError from "@/lib/errors"
 import { AuthScope } from "@hatsuboshi/types/auth"
-import config from "@/config"
+import config from "@/lib/config"
 
 export type SecurityName = "bearer" | "user" | "sensitive"
 
@@ -16,7 +15,7 @@ export const Security: {
 export async function expressAuthentication(req: Request, securityName: string, scopes: string[] = []): Promise<AuthContext> {
     const r = await auth.authenticate(req.headers.authorization)
     if (!r.success)
-        throw new ServiceError(r.error, r.message)
+        throw new ControllerError(r.error, r.message)
     const ctx = r.data
 
     const name = securityName as SecurityName
@@ -25,21 +24,25 @@ export async function expressAuthentication(req: Request, securityName: string, 
             break
         case "sensitive": {
             if (ctx.kind !== "api-key" && Date.now() - ctx.authTime.getTime() > config.defaults.auth.sensitiveMaxAgeMs)
-                throw new ServiceError("auth/credential-stale")
+                throw new ControllerError("auth/credential-stale")
         } // falls through
         case "user": {
             if (ctx.kind === "api-key")
-                throw new ServiceError("auth/api-key-not-allowed")
+                throw new ControllerError("auth/api-key-not-allowed")
         } break
         default: {
             const _: never = name
-            throw new InternalServerError(`Unknown security scheme "${securityName}"`)
+            throw new Error(`Unknown security scheme "${securityName}"`)
         }
     }
 
     const missing = scopes.filter(s => !ctx.scopes.includes(s as AuthScope))
     if (missing.length > 0)
-        throw new ServiceError("auth/insufficient-scope", undefined, { missing })
+        throw new ControllerError("auth/insufficient-scope", undefined, { missing })
 
     return ctx
+}
+
+export function isOwner<T extends { userId: string }>(ctx: AuthContext, obj: T): boolean {
+    return ctx.user.id === obj.userId
 }

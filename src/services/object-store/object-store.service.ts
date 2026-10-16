@@ -1,8 +1,8 @@
 import { Result } from "@hatsuboshi/types"
 
-export type ObjectStoreResult<T> = Result<T, ObjectStoreError>
+export type ObjectStoreResult<T> = Result<T, ObjectStoreEC>
 
-export type ObjectStoreError =
+export type ObjectStoreEC =
     | ""
 
 export default interface IObjectStoreService {

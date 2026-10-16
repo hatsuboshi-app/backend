@@ -32,9 +32,7 @@ import {
     SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
     LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions, New
 } from "@hatsuboshi/types"
-import InvalidReferenceError from "@/errors/types/InvalidReferenceError"
-import InternalServerError from "@/errors/types/InternalServerError"
-import config from "@/config"
+import config from "@/lib/config"
 import {
     APIKey,
     APIKeyFilterOptions,
@@ -45,6 +43,7 @@ import {
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
+import ControllerError from "@/lib/errors";
 
 export type MongoCredentials = {
     shared: string,
@@ -77,27 +76,47 @@ export default class MongoRepositoryService implements IRepositoryService {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
             if (r) return <DBAuditionEffect><unknown>r
-            else throw new InvalidReferenceError("AuditionEffect", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "auditionEffect", id }
+            )
         },
         auditionTerminology: async (id: string) => {
             const r = await this.terminologies.findOne({ id: id })
             if (r) return <DBAuditionTerminology><unknown>r
-            else throw new InvalidReferenceError("AuditionTerminology", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "auditionTerminology", id }
+            )
         },
         character: async (id: string) => {
             const r = await this.characters.findOne({ id: id })
             if (r) return <DBCharacter><unknown>r
-            else throw new InvalidReferenceError("Character", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "character", id }
+            )
         },
         skill: async (id: string) => {
             const r = await this.skills.findOne({ id: id })
             if (r) return <DBSkill><unknown>r
-            else throw new InvalidReferenceError("Skill", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "skill", id }
+            )
         },
         pItem: async (id: string) => {
             const r = await this.items.findOne({ id: id })
             if (r) return <DBPItem><unknown>r
-            else throw new InvalidReferenceError("PItem", id)
+            else throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "pItem", id }
+            )
         }
     }
 
@@ -204,26 +223,15 @@ export default class MongoRepositoryService implements IRepositoryService {
                     })
                 } break
                 case "Search": {
-                    switch (filter.method) {
-                        case "regex":
-                            // NOT implemented yet
-                            // filter.search && rf.$and.push({
-                            //     $or: [
-                            //         { [`${fieldName}.ja`]: { $regex: {} } },
-                            //         { [`${fieldName}.en`]: { $regex: {} } },
-                            //         { [`${fieldName}.ro`]: { $regex: {} } }
-                            //     ]
-                            // })
-                        case "simple":
-                        default: {
-                            filter.search && rf.$and.push({
-                                $or: [
-                                    { [`${fieldName}.ja`]: { $regex: filter.search, $options: "i" }},
-                                    { [`${fieldName}.en`]: { $regex: filter.search, $options: "i" }},
-                                    { [`${fieldName}.ro`]: { $regex: filter.search, $options: "i" }}
-                                ]
-                            })
-                        }
+                    if (filter.search) {
+                        const contains = { $regex: filter.search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), $options: "i" }
+                        rf.$and.push({
+                            $or: [
+                                { [`${fieldName}.ja`]: contains},
+                                { [`${fieldName}.en`]: contains},
+                                { [`${fieldName}.ro`]: contains}
+                            ]
+                        })
                     }
                 }
             }
@@ -437,55 +445,55 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     // SupportCard //
     async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async getSupportCardById(id: string): Promise<RepositoryResult<SupportCard>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
 
     // User //
     async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async getUserById(id: string): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async createUser(obj: New<DBUser>): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async updateUser(id: string, patch: UserPatch): Promise<RepositoryResult<User>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
 
     // APIKey //
     async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKeyCredential>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async createAPIKey(obj: New<DBAPIKey>): Promise<RepositoryResult<APIKey>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async recordAPIKeyUse(id: string, at?: Date): Promise<RepositoryResult<APIKey>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async updateAPIKey(id: string, patch: APIKeyPatch): Promise<RepositoryResult<APIKey>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
     async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
 }

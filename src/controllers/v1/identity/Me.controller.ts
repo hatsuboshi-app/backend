@@ -1,17 +1,18 @@
-import { Body, Controller, Get, Patch, Post, Request, Response, Route, SuccessResponse, Tags } from "tsoa"
+import { Body, Controller, Get, Hidden, Patch, Post, Request, Response, Route, SuccessResponse, Tags } from "tsoa"
 import { Request as ExpressRequest } from "express"
-import { ErrorResponse, ErrorResponseWithCode } from "@/errors/response/ErrorResponse"
-import { ForbiddenAuthError, UnauthorizedAuthError } from "@/errors/mapping"
-import { Security } from "@/middlewares/authentication"
+import { ForbiddenEC, UnauthorizedEC, UnprocessableEC } from "@/lib/errorCodes"
+import { Security } from "@/lib/auth"
 import { AuthContext } from "@/services/auth/auth.service"
-import { ISelfUser, IUpdateUser } from "@hatsuboshi/types/auth";
-import InternalServerError from "@/errors/types/InternalServerError";
+import { ISelfUser, IUpdateUser } from "@hatsuboshi/types/auth"
+import { db } from "@/services"
+import { grantedPatterns } from "@/lib/authScopes"
+import ControllerError, { ErrorResponse } from "@/lib/errors"
 
 @Route("me")
 @Tags("Me")
 @Security("user")
-@Response<ErrorResponseWithCode<401, UnauthorizedAuthError>>(401, "Unauthorized")
-@Response<ErrorResponseWithCode<403, ForbiddenAuthError>>(403, "Forbidden")
+@Response<ErrorResponse<401, UnauthorizedEC>>(401, "Unauthorized")
+@Response<ErrorResponse<403, ForbiddenEC>>(403, "Forbidden")
 export class MeController extends Controller {
     /**
      * Retrieves the user who owns the credential the request is made with.
@@ -24,8 +25,7 @@ export class MeController extends Controller {
         @Request() req: ExpressRequest
     ): Promise<ISelfUser> {
         const ctx = req.user!
-
-        throw new InternalServerError("Not implemented.")
+        return ctx.user.toSelfUser(grantedPatterns(ctx.user))
     }
 
     /**
@@ -36,14 +36,16 @@ export class MeController extends Controller {
      * @param body An `IUpdateUser` object.
      */
     @Patch()
-    @Response<ErrorResponse<422>>(422, "Unprocessable Content")
+    @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async updateMe(
         @Request() req: ExpressRequest,
         @Body() body: IUpdateUser
     ): Promise<ISelfUser> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-
-        throw new InternalServerError("Not implemented.")
+        const r = await db.updateUser(ctx.user.id, body)
+        if (!r.success)
+            throw new ControllerError(r.error, r.message)
+        return r.data.toSelfUser(grantedPatterns(r.data))
     }
 
     /**
@@ -53,6 +55,7 @@ export class MeController extends Controller {
      *
      * @summary Anonymize the current user
      */
+    @Hidden()
     @Post("anonymize")
     @Security("sensitive")
     @SuccessResponse(204, "No Content")
@@ -60,8 +63,8 @@ export class MeController extends Controller {
         @Request() req: ExpressRequest
     ): Promise<void> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-
+        // TODO
         this.setStatus(204)
-        throw new InternalServerError("Not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
 }

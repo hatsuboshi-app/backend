@@ -1,7 +1,7 @@
 import IIdPService, { Identity, IdPCredentialKind, IdPResult } from "@/services/auth/idp/idp.service"
 import { AuthProvider } from "@hatsuboshi/types/auth"
 import { fail, success } from "@hatsuboshi/types"
-import config from "@/config";
+import config from "@/lib/config";
 import { randomBytes } from "node:crypto"
 
 type IdPUser = {

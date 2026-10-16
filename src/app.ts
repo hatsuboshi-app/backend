@@ -1,5 +1,5 @@
 import express, { Request, Response } from "express"
-import config from "@/config"
+import config from "@/lib/config"
 import cors from "cors"
 import { logger } from "@/services"
 import { errorHandler } from "@/middlewares/errorHandler"

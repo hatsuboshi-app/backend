@@ -43,11 +43,13 @@ export type APIKeyPatch = Partial<Pick<DBAPIKey,
 
 export type APIKeyCredential = { key: APIKey, secretHash: string }
 
-export type RepositoryResult<T> = Result<T, RepositoryError>
+export type RepositoryResult<T> = Result<T, RepositoryEC>
 
-export type RepositoryError = `db/${
+export type RepositoryEC = `db/${
     | "not-found"
     | "already-exists"
+    | "is-referenced"
+    | "bad-reference"
 }`
 
 export default interface IRepositoryService {

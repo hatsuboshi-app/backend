@@ -41,9 +41,7 @@ import {
     DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions, New, SimpleStringFilterOptions,
     IPersistentObject
 } from "@hatsuboshi/types"
-import InvalidReferenceError from "@/errors/types/InvalidReferenceError"
-import InternalServerError from "@/errors/types/InternalServerError"
-import config from "@/config"
+import config from "@/lib/config"
 import {
     APIKey,
     APIKeyFilterOptions,
@@ -53,6 +51,7 @@ import {
     User,
     UserFilterOptions
 } from "@hatsuboshi/types/auth"
+import ControllerError from "@/lib/errors"
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
@@ -72,27 +71,47 @@ export default class LocalRepositoryService implements IRepositoryService {
     private populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string): Promise<DBAuditionEffect> => {
             const data = this.effects.find(x => x.id === id)
-            if (!data) throw new InvalidReferenceError("AuditionEffect", id)
+            if (!data) throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "auditionEffect", id }
+            )
             return data
         },
         auditionTerminology: async (id: string): Promise<DBAuditionTerminology> => {
             const data = this.terminologies.find(x => x.id === id)
-            if (!data) throw new InvalidReferenceError("AuditionTerminology", id)
+            if (!data) throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "auditionTerminology", id }
+            )
             return data
         },
         character: async (id: string): Promise<DBCharacter> => {
             const data = this.characters.find(x => x.id === id)
-            if (!data) throw new InvalidReferenceError("Character", id)
+            if (!data) throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "character", id }
+            )
             return data
         },
         skill: async (id: string): Promise<DBSkill> => {
             const data = this.skills.find(x => x.id === id)
-            if (!data) throw new InvalidReferenceError("Skill", id)
+            if (!data) throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "skill", id }
+            )
             return data
         },
         pItem: async (id: string): Promise<DBPItem> => {
             const data = this.items.find(x => x.id === id)
-            if (!data) throw new InvalidReferenceError("PItem", id)
+            if (!data) throw new ControllerError(
+                "db/bad-reference",
+                "One or more references failed to resolve",
+                { resource: "pItem", id }
+            )
             return data
         }
     }
@@ -181,21 +200,11 @@ export default class LocalRepositoryService implements IRepositoryService {
             }
             case "Search": {
                 if (!filter.search) return true
-                switch (filter.method) {
-                    case "regex":
-                        return [
-                            !!(field.ja.match(filter.search) ?? false),
-                            !!(field.en?.match(filter.search) ?? false),
-                            !!(hasRom && (field.ro?.match(filter.search) ?? false))
-                        ].some(v => v)  // false if regex matches no fields, true if regex matches any field
-                    case "simple":
-                    default:
-                        return [
-                            field.ja.includes(filter.search),
-                            !!(field.en?.includes(filter.search)),
-                            !!(hasRom && field.ro?.includes(filter.search))
-                        ].some(v => v)  // false if no field includes string, true if any field includes string
-                }
+                return [
+                    field.ja.toLowerCase().includes(filter.search.trim().toLowerCase()),
+                    !!(field.en?.toLowerCase().includes(filter.search.trim().toLowerCase())),
+                    !!(hasRom && field.ro?.toLowerCase().includes(filter.search.trim().toLowerCase()))
+                ].some(v => v)  // false if no field includes string, true if any field includes string
             }
         }
     }
@@ -203,13 +212,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     private handleSimpleStringFilter(field: string, filter?: SimpleStringFilterOptions): boolean {
         if (!filter) return true
         if (!filter.search) return true
-        switch (filter.method) {
-            case "regex":
-                return !!(field.match(filter.search) ?? false)
-            case "simple":
-            default:
-                return field.includes(filter.search)
-        }
+        return field.toLowerCase().includes(filter.search.trim().toLowerCase())
     }
 
     private handleEnumFilter<E>(field: E | E[], filter?: EnumFilterOptions<E>): boolean {
@@ -402,11 +405,11 @@ export default class LocalRepositoryService implements IRepositoryService {
 
     // SupportCard //
     async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
-        throw new InternalServerError("Method not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
 
     async getSupportCardById(id: string): Promise<RepositoryResult<SupportCard>> {
-        throw new InternalServerError("Not implemented.")
+        throw new ControllerError("core/not-implemented")
     }
 
     // User //

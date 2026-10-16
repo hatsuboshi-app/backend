@@ -1,9 +1,9 @@
 import { cert, type FirebaseError, initializeApp } from "firebase-admin/app"
 import { type Auth, getAuth } from "firebase-admin/auth"
-import IIdPService, { Identity, IdPCredentialKind, IdPError, IdPResult } from "@/services/auth/idp/idp.service"
+import IIdPService, { Identity, IdPCredentialKind, IdPEC, IdPResult } from "@/services/auth/idp/idp.service"
 import { AuthProvider } from "@hatsuboshi/types/auth"
 import { fail, success } from "@hatsuboshi/types"
-import config from "@/config"
+import config from "@/lib/config"
 
 export type FirebaseCredentials = {
     projectId: string
@@ -31,7 +31,7 @@ export class FirebaseIdPService implements IIdPService {
         return typeof e === "object" && e !== null && typeof (e as { code?: unknown }).code === "string"
     }
 
-    private toError(e: unknown): IdPError {
+    private toError(e: unknown): IdPEC {
         if (!this.isFirebaseError(e))
             return "auth/service-unavailable"
 
