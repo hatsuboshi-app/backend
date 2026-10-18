@@ -49,7 +49,19 @@
       },
       {
         "name": "Session",
-        "description": "API endpoints involving the `Session` data type."
+        "description": "API endpoints involving creating / revoking sessions."
+      },
+      {
+        "name": "Me",
+        "description": "API endpoints involving the caller's user data."
+      },
+      {
+        "name": "APIKey",
+        "description": "API endpoints involving API keys."
+      },
+      {
+        "name": "User",
+        "description": "API endpoints involving user data."
       }
     ],
     "spec": {

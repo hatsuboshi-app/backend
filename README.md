@@ -23,7 +23,8 @@ Hatsuboshi API's production URI is [`https://api.hatsuboshi.app`](https://api.ha
 - Backward compatibility through versioned API endpoints
 
 > [!IMPORTANT]
-> This project is hand-built by a fellow producer **without the use of any AI-generated content / code**.
+> This project is built by hand with love & care. It is not "vibecoded",
+> nor does it contain any user-facing AI-generated content.
 
 ## Example Usage
 
