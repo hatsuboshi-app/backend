@@ -1,8 +1,8 @@
 [
   {
-    "id": "effect-239127",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-141151",
+    "createdAt": "2026-10-28T04:52:52.806Z",
+    "updatedAt": "2026-10-28T04:52:52.806Z",
     "name": {
       "ja": "好調",
       "en": ""
@@ -10,8 +10,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3153",
-          "refId": "terminology-553008",
+          "id": "r3365",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -20,23 +20,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r3153}上昇量を50%増加",
+            "ja": "{r3365}上昇量を50%増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-732388",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-975000",
+    "createdAt": "2026-10-28T04:52:52.806Z",
+    "updatedAt": "2026-10-28T04:52:52.806Z",
     "name": {
       "ja": "元気",
       "en": ""
@@ -55,16 +55,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-577504",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-825091",
+    "createdAt": "2026-10-28T04:52:52.806Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "スキルカードを引く",
       "en": ""
@@ -83,16 +83,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-865294",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-788099",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力減少",
       "en": ""
@@ -111,16 +111,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-660632",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-554723",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "生成",
       "en": ""
@@ -139,16 +139,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-139563",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-810449",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "体力消費",
       "en": ""
@@ -156,8 +156,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5971",
-          "refId": "effect-732388",
+          "id": "r8613",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -166,23 +166,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5971}を無視して体力を消費",
+            "ja": "{r8613}を無視して体力を消費",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-377685",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-454591",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "集中",
       "en": ""
@@ -190,8 +190,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5644",
-          "refId": "terminology-553008",
+          "id": "r5676",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -200,23 +200,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "集中が1増加するごとに、{r5644}上昇量を1増加",
+            "ja": "集中が1増加するごとに、{r5676}上昇量を1増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-943999",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-490299",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "レッスン中強化",
       "en": ""
@@ -235,16 +235,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-512285",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-667076",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "スキルカード使用数追加",
       "en": ""
@@ -263,16 +263,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-106633",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-459597",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "集中効果一時増加",
       "en": ""
@@ -280,13 +280,13 @@
     "description": {
       "refs": [
         {
-          "id": "r4002",
-          "refId": "effect-377685",
+          "id": "r2930",
+          "refId": "effect-454591",
           "refType": 1
         },
         {
-          "id": "r4102",
-          "refId": "terminology-553008",
+          "id": "r9165",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -295,23 +295,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4002}による{r4102}上昇量増加効果を増加",
+            "ja": "{r2930}による{r9165}上昇量増加効果を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-325640",
-    "createdAt": "2026-07-08T07:35:46.741Z",
-    "updatedAt": "2026-07-08T07:35:46.741Z",
+    "id": "effect-944076",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力変化",
       "en": ""
@@ -330,16 +330,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-424785",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-793115",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "元気増加無効",
       "en": ""
@@ -347,8 +347,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5356",
-          "refId": "effect-732388",
+          "id": "r6838",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -357,23 +357,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5356}が増加しない",
+            "ja": "{r6838}が増加しない",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-177960",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-720398",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "持続効果",
       "en": ""
@@ -392,16 +392,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-545967",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-937854",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力低下",
       "en": ""
@@ -420,16 +420,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-226522",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-777478",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "体力減少",
       "en": ""
@@ -440,16 +440,16 @@
       "lines": []
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-665528",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-514009",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "体力回復",
       "en": ""
@@ -460,16 +460,16 @@
       "lines": []
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-220733",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-332183",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "固定パラメータ",
       "en": ""
@@ -477,8 +477,8 @@
     "description": {
       "refs": [
         {
-          "id": "r2511",
-          "refId": "terminology-553008",
+          "id": "r9326",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -487,23 +487,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "固定パラメータ{r2511}を増加させる",
+            "ja": "固定パラメータ{r9326}を増加させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-545730",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-169926",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "複製",
       "en": ""
@@ -522,16 +522,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-620334",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-839401",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "好印象",
       "en": ""
@@ -539,8 +539,8 @@
     "description": {
       "refs": [
         {
-          "id": "r8358",
-          "refId": "terminology-553008",
+          "id": "r5108",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -549,23 +549,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "ターン終了時、好印象1ごとに{r8358}を1上昇。ターン開始時、好印象が1減少",
+            "ja": "ターン終了時、好印象1ごとに{r5108}を1上昇。ターン開始時、好印象が1減少",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-748008",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-910585",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "スキルカード追加発動",
       "en": ""
@@ -584,16 +584,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-359058",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-195756",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "パラメータ上昇量増加",
       "en": ""
@@ -601,13 +601,13 @@
     "description": {
       "refs": [
         {
-          "id": "r9428",
-          "refId": "terminology-553008",
+          "id": "r7951",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r9615",
-          "refId": "effect-620334",
+          "id": "r4870",
+          "refId": "effect-839401",
           "refType": 1
         }
       ],
@@ -616,23 +616,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r9428}上昇量を増加（{r9615}による上昇も含む）",
+            "ja": "{r7951}上昇量を増加（{r4870}による上昇も含む）",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-607497",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-449982",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "やる気",
       "en": ""
@@ -640,8 +640,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4723",
-          "refId": "effect-732388",
+          "id": "r7917",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -650,23 +650,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "やる気が1増加するごとに、{r4723}の増加量を1増加",
+            "ja": "やる気が1増加するごとに、{r7917}の増加量を1増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-486259",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-306983",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "強気",
       "en": ""
@@ -674,23 +674,23 @@
     "description": {
       "refs": [
         {
-          "id": "r8622",
-          "refId": "effect-486259",
+          "id": "r2297",
+          "refId": "effect-306983",
           "refType": 1
         },
         {
-          "id": "r3810",
-          "refId": "effect-486259",
+          "id": "r9529",
+          "refId": "effect-306983",
           "refType": 1
         },
         {
-          "id": "r4866",
-          "refId": "terminology-553008",
+          "id": "r5230",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r2855",
-          "refId": "effect-139563",
+          "id": "r2446",
+          "refId": "effect-810449",
           "refType": 1
         }
       ],
@@ -699,14 +699,14 @@
         {
           "position": 0,
           "body": {
-            "ja": "指針を{r8622}に変更する",
+            "ja": "指針を{r2297}に変更する",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "すでに{r3810}の場合、2段階目になる",
+            "ja": "すでに{r9529}の場合、2段階目になる",
             "en": ""
           }
         },
@@ -727,7 +727,7 @@
         {
           "position": 4,
           "body": {
-            "ja": "{r4866}上昇量と消費体力を100%増加",
+            "ja": "{r5230}上昇量と消費体力を100%増加",
             "en": ""
           }
         },
@@ -748,30 +748,30 @@
         {
           "position": 7,
           "body": {
-            "ja": "{r4866}上昇量を150%増加・消費体力が100%増加",
+            "ja": "{r5230}上昇量を150%増加・消費体力が100%増加",
             "en": ""
           }
         },
         {
           "position": 8,
           "body": {
-            "ja": "スキルカードを使うごとに、{r2855}1",
+            "ja": "スキルカードを使うごとに、{r2446}1",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-431513",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-241287",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "温存",
       "en": ""
@@ -779,38 +779,38 @@
     "description": {
       "refs": [
         {
-          "id": "r8657",
-          "refId": "effect-431513",
+          "id": "r2056",
+          "refId": "effect-241287",
           "refType": 1
         },
         {
-          "id": "r1187",
-          "refId": "effect-431513",
+          "id": "r7682",
+          "refId": "effect-241287",
           "refType": 1
         },
         {
-          "id": "r5584",
-          "refId": "terminology-553008",
+          "id": "r9068",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r5238",
-          "refId": "effect-812909",
+          "id": "r4739",
+          "refId": "effect-665266",
           "refType": 1
         },
         {
-          "id": "r8714",
-          "refId": "effect-512285",
+          "id": "r2643",
+          "refId": "effect-667076",
           "refType": 1
         },
         {
-          "id": "r4786",
-          "refId": "effect-812909",
+          "id": "r3693",
+          "refId": "effect-665266",
           "refType": 1
         },
         {
-          "id": "r5368",
-          "refId": "effect-905552",
+          "id": "r6140",
+          "refId": "effect-152626",
           "refType": 1
         }
       ],
@@ -819,14 +819,14 @@
         {
           "position": 0,
           "body": {
-            "ja": "指針を{r8657}に変更する",
+            "ja": "指針を{r2056}に変更する",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "すでに{r1187}の場合、2段階目になる",
+            "ja": "すでに{r7682}の場合、2段階目になる",
             "en": ""
           }
         },
@@ -847,14 +847,14 @@
         {
           "position": 4,
           "body": {
-            "ja": "{r5584}上昇量と消費体力を50%減少",
+            "ja": "{r9068}上昇量と消費体力を50%減少",
             "en": ""
           }
         },
         {
           "position": 5,
           "body": {
-            "ja": "解除されたとき、{r5238}+5・{r8714}+1",
+            "ja": "解除されたとき、{r4739}+5・{r2643}+1",
             "en": ""
           }
         },
@@ -875,30 +875,30 @@
         {
           "position": 8,
           "body": {
-            "ja": "{r5584}上昇量と消費体力を75%減少",
+            "ja": "{r9068}上昇量と消費体力を75%減少",
             "en": ""
           }
         },
         {
           "position": 9,
           "body": {
-            "ja": "解除されたとき、{r4786}+8・{r5368}+5・{r8714}+1",
+            "ja": "解除されたとき、{r3693}+8・{r6140}+5・{r2643}+1",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-745384",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-115735",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "全力",
       "en": ""
@@ -906,43 +906,43 @@
     "description": {
       "refs": [
         {
-          "id": "r9624",
-          "refId": "effect-745384",
+          "id": "r5343",
+          "refId": "effect-115735",
           "refType": 1
         },
         {
-          "id": "r1535",
-          "refId": "effect-512285",
+          "id": "r6129",
+          "refId": "effect-667076",
           "refType": 1
         },
         {
-          "id": "r6947",
-          "refId": "terminology-433839",
+          "id": "r1953",
+          "refId": "terminology-746123",
           "refType": 0
         },
         {
-          "id": "r5181",
-          "refId": "effect-745384",
+          "id": "r7606",
+          "refId": "effect-115735",
           "refType": 1
         },
         {
-          "id": "r5389",
-          "refId": "terminology-553008",
+          "id": "r2899",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r7891",
-          "refId": "effect-745384",
+          "id": "r9532",
+          "refId": "effect-115735",
           "refType": 1
         },
         {
-          "id": "r1918",
-          "refId": "effect-745384",
+          "id": "r5889",
+          "refId": "effect-115735",
           "refType": 1
         },
         {
-          "id": "r9124",
-          "refId": "terminology-643059",
+          "id": "r2150",
+          "refId": "terminology-356196",
           "refType": 0
         }
       ],
@@ -951,44 +951,44 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r9624}に変更時、{r1535}+1・{r6947}にあるスキルカードを手札に移動",
+            "ja": "{r5343}に変更時、{r6129}+1・{r1953}にあるスキルカードを手札に移動",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r5181}状態の時、{r5389}上昇量を200%増加",
+            "ja": "{r7606}状態の時、{r2899}上昇量を200%増加",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "ターン終了時に{r7891}を解除",
+            "ja": "ターン終了時に{r9532}を解除",
             "en": ""
           }
         },
         {
           "position": 3,
           "body": {
-            "ja": "{r1918}状態を解除するまで{r9124}は変更できない",
+            "ja": "{r5889}状態を解除するまで{r2150}は変更できない",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-555787",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-852787",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "指針解除",
       "en": ""
@@ -996,13 +996,13 @@
     "description": {
       "refs": [
         {
-          "id": "r7660",
-          "refId": "effect-431513",
+          "id": "r1730",
+          "refId": "effect-241287",
           "refType": 1
         },
         {
-          "id": "r5591",
-          "refId": "effect-486259",
+          "id": "r1376",
+          "refId": "effect-306983",
           "refType": 1
         }
       ],
@@ -1011,23 +1011,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "「{r7660}」と「{r5591}」を解除する",
+            "ja": "「{r1730}」と「{r1376}」を解除する",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-207551",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-845190",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "全力値",
       "en": ""
@@ -1035,18 +1035,18 @@
     "description": {
       "refs": [
         {
-          "id": "r8808",
-          "refId": "effect-207551",
+          "id": "r4238",
+          "refId": "effect-845190",
           "refType": 1
         },
         {
-          "id": "r6689",
-          "refId": "effect-207551",
+          "id": "r8713",
+          "refId": "effect-845190",
           "refType": 1
         },
         {
-          "id": "r4671",
-          "refId": "effect-745384",
+          "id": "r7020",
+          "refId": "effect-115735",
           "refType": 1
         }
       ],
@@ -1055,23 +1055,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "ターン終了時に{r8808}が10以上なら、次のターン開始時に{r6689}を10消費して、指針を{r4671}に変更",
+            "ja": "ターン終了時に{r4238}が10以上なら、次のターン開始時に{r8713}を10消費して、指針を{r7020}に変更",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-905908",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-369718",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "全力値減少",
       "en": ""
@@ -1079,8 +1079,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3618",
-          "refId": "effect-207551",
+          "id": "r7858",
+          "refId": "effect-845190",
           "refType": 1
         }
       ],
@@ -1089,23 +1089,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r3618}を減少させる",
+            "ja": "{r7858}を減少させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-403113",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-911735",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力変化",
       "en": ""
@@ -1124,16 +1124,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-748812",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-909635",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "高揚",
       "en": ""
@@ -1141,8 +1141,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4705",
-          "refId": "effect-732388",
+          "id": "r3386",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -1151,23 +1151,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "ターン終了時、高揚1ごとに{r4705}を1増加。体力減少時、高揚が1減少",
+            "ja": "ターン終了時、高揚1ごとに{r3386}を1増加。体力減少時、高揚が1減少",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-926137",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-414414",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "ターン追加",
       "en": ""
@@ -1186,16 +1186,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-427462",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-103444",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "低下状態無効",
       "en": ""
@@ -1214,16 +1214,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-109646",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-286344",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力増加",
       "en": ""
@@ -1242,16 +1242,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-802683",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-381127",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "不安",
       "en": ""
@@ -1259,8 +1259,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4752",
-          "refId": "effect-732388",
+          "id": "r9477",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -1269,23 +1269,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4752}の増加量が33%減少",
+            "ja": "{r9477}の増加量が33%減少",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-187583",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-187188",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "不安無効",
       "en": ""
@@ -1304,16 +1304,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-928765",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-261784",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "体力回復効果増加",
       "en": ""
@@ -1332,16 +1332,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-620233",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-620962",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "体力消費軽減",
       "en": ""
@@ -1360,16 +1360,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-200467",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-197923",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "気まぐれ",
       "en": ""
@@ -1388,16 +1388,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-796056",
-    "createdAt": "2026-07-08T07:35:46.742Z",
-    "updatedAt": "2026-07-08T07:35:46.742Z",
+    "id": "effect-274799",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "パラメータ上昇値変更",
       "en": ""
@@ -1405,8 +1405,8 @@
     "description": {
       "refs": [
         {
-          "id": "r3431",
-          "refId": "terminology-553008",
+          "id": "r7735",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -1415,23 +1415,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "パラメータ上昇値変更{r3431}上昇値が以下ならにする",
+            "ja": "パラメータ上昇値変更{r7735}上昇値が以下ならにする",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-810988",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-656724",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "手札持ち越し",
       "en": ""
@@ -1450,16 +1450,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-616623",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-752586",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力追加",
       "en": ""
@@ -1478,16 +1478,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-276439",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-772846",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力増加効果減少",
       "en": ""
@@ -1506,16 +1506,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-879563",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-594886",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "体力回復無効",
       "en": ""
@@ -1534,16 +1534,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-419204",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-102221",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力減少効果増加",
       "en": ""
@@ -1562,16 +1562,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-804417",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-727530",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "生成強化",
       "en": ""
@@ -1579,13 +1579,13 @@
     "description": {
       "refs": [
         {
-          "id": "r1760",
-          "refId": "effect-660632",
+          "id": "r4407",
+          "refId": "effect-554723",
           "refType": 1
         },
         {
-          "id": "r3306",
-          "refId": "effect-943999",
+          "id": "r1374",
+          "refId": "effect-490299",
           "refType": 1
         }
       ],
@@ -1594,23 +1594,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "レッスン中にスキルカードを{r1760}する場合、{r3306}状態で{r1760}",
+            "ja": "レッスン中にスキルカードを{r4407}する場合、{r1374}状態で{r4407}",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-498563",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-241450",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "消費体力削減",
       "en": ""
@@ -1629,16 +1629,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-611704",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-930196",
+    "createdAt": "2026-10-28T04:52:52.807Z",
+    "updatedAt": "2026-10-28T04:52:52.807Z",
     "name": {
       "ja": "手札を入れ替える",
       "en": ""
@@ -1657,16 +1657,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-366462",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-298300",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "発動予約",
       "en": ""
@@ -1685,16 +1685,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-177537",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-976995",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "緊張",
       "en": ""
@@ -1702,8 +1702,8 @@
     "description": {
       "refs": [
         {
-          "id": "r1621",
-          "refId": "terminology-553008",
+          "id": "r2462",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -1712,23 +1712,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "緊張が1増加するごとに、{r1621}上昇量が1減少",
+            "ja": "緊張が1増加するごとに、{r2462}上昇量が1減少",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-382127",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-689697",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "不調",
       "en": ""
@@ -1736,8 +1736,8 @@
     "description": {
       "refs": [
         {
-          "id": "r2976",
-          "refId": "terminology-553008",
+          "id": "r2122",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -1746,23 +1746,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r2976}上昇量が33%減少",
+            "ja": "{r2122}上昇量が33%減少",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-127484",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-318049",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "弱気",
       "en": ""
@@ -1770,8 +1770,8 @@
     "description": {
       "refs": [
         {
-          "id": "r8153",
-          "refId": "effect-732388",
+          "id": "r2441",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -1780,23 +1780,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "弱気が1増加するごとに、{r8153}の増加量が1減少",
+            "ja": "弱気が1増加するごとに、{r2441}の増加量が1減少",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-812909",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-665266",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "熱意",
       "en": ""
@@ -1804,13 +1804,13 @@
     "description": {
       "refs": [
         {
-          "id": "r1418",
-          "refId": "terminology-553008",
+          "id": "r2332",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r8053",
-          "refId": "effect-812909",
+          "id": "r7264",
+          "refId": "effect-665266",
           "refType": 1
         }
       ],
@@ -1819,30 +1819,30 @@
         {
           "position": 0,
           "body": {
-            "ja": "熱意1につき{r1418}上昇量を1増加",
+            "ja": "熱意1につき{r2332}上昇量を1増加",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "ターン終了時、{r8053}を0にする",
+            "ja": "ターン終了時、{r7264}を0にする",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-350998",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-304562",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "使用不可",
       "en": ""
@@ -1861,16 +1861,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-250685",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-336013",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "スランプ",
       "en": ""
@@ -1878,8 +1878,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4851",
-          "refId": "terminology-553008",
+          "id": "r3071",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -1888,23 +1888,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4851}が上昇しない",
+            "ja": "{r3071}が上昇しない",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-954231",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-282870",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "手札減少",
       "en": ""
@@ -1923,16 +1923,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-905552",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-152626",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "固定元気",
       "en": ""
@@ -1940,8 +1940,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4000",
-          "refId": "effect-732388",
+          "id": "r5041",
+          "refId": "effect-975000",
           "refType": 1
         }
       ],
@@ -1950,23 +1950,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "強化状態や低下状態の影響を受けず{r4000}を増加させる",
+            "ja": "強化状態や低下状態の影響を受けず{r5041}を増加させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-826664",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-315857",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "うわの空",
       "en": ""
@@ -1974,8 +1974,8 @@
     "description": {
       "refs": [
         {
-          "id": "r1545",
-          "refId": "terminology-553008",
+          "id": "r5028",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -1984,23 +1984,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "スキルカードの{r1545}上昇値が以下ならになる",
+            "ja": "スキルカードの{r5028}上昇値が以下ならになる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-446387",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-724943",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "絶好調",
       "en": ""
@@ -2008,13 +2008,13 @@
     "description": {
       "refs": [
         {
-          "id": "r4890",
-          "refId": "effect-239127",
+          "id": "r4743",
+          "refId": "effect-141151",
           "refType": 1
         },
         {
-          "id": "r1375",
-          "refId": "terminology-553008",
+          "id": "r8569",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -2023,23 +2023,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4890}の{r1375}上昇量を{r4890}1ターンごとに10%増加",
+            "ja": "{r4743}の{r8569}上昇量を{r4743}1ターンごとに10%増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-932736",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-254371",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "指針固定",
       "en": ""
@@ -2047,13 +2047,13 @@
     "description": {
       "refs": [
         {
-          "id": "r6373",
-          "refId": "effect-207551",
+          "id": "r7893",
+          "refId": "effect-845190",
           "refType": 1
         },
         {
-          "id": "r1796",
-          "refId": "effect-745384",
+          "id": "r2014",
+          "refId": "effect-115735",
           "refType": 1
         }
       ],
@@ -2069,30 +2069,30 @@
         {
           "position": 1,
           "body": {
-            "ja": "{r6373}が10以上の場合でも、効果中は{r1796}にならない",
+            "ja": "{r7893}が10以上の場合でも、効果中は{r2014}にならない",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "{r1796}状態の場合は、ターン終了時に{r1796}を解除する",
+            "ja": "{r2014}状態の場合は、ターン終了時に{r2014}を解除する",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-943209",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-222382",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "低下状態回復",
       "en": ""
@@ -2111,16 +2111,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-542058",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-101035",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "好印象減少",
       "en": ""
@@ -2128,8 +2128,8 @@
     "description": {
       "refs": [
         {
-          "id": "r9403",
-          "refId": "effect-620334",
+          "id": "r2506",
+          "refId": "effect-839401",
           "refType": 1
         }
       ],
@@ -2138,23 +2138,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r9403}を減少させる",
+            "ja": "{r2506}を減少させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-453051",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-813365",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "やる気減少",
       "en": ""
@@ -2162,8 +2162,8 @@
     "description": {
       "refs": [
         {
-          "id": "r7028",
-          "refId": "effect-607497",
+          "id": "r2058",
+          "refId": "effect-449982",
           "refType": 1
         }
       ],
@@ -2172,23 +2172,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r7028}を減少させる",
+            "ja": "{r2058}を減少させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-552962",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-471320",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "集中減少",
       "en": ""
@@ -2196,8 +2196,8 @@
     "description": {
       "refs": [
         {
-          "id": "r6483",
-          "refId": "effect-377685",
+          "id": "r2746",
+          "refId": "effect-454591",
           "refType": 1
         }
       ],
@@ -2206,23 +2206,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r6483}を減少させる",
+            "ja": "{r2746}を減少させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-629646",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-816031",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "好調減少",
       "en": ""
@@ -2230,8 +2230,8 @@
     "description": {
       "refs": [
         {
-          "id": "r1159",
-          "refId": "effect-239127",
+          "id": "r2227",
+          "refId": "effect-141151",
           "refType": 1
         }
       ],
@@ -2240,23 +2240,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r1159}を減少させる",
+            "ja": "{r2227}を減少させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-196880",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-157742",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "パラメータ上昇量減少",
       "en": ""
@@ -2264,13 +2264,13 @@
     "description": {
       "refs": [
         {
-          "id": "r5608",
-          "refId": "terminology-553008",
+          "id": "r9016",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r3440",
-          "refId": "effect-620334",
+          "id": "r6741",
+          "refId": "effect-839401",
           "refType": 1
         }
       ],
@@ -2279,23 +2279,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5608}上昇量を減少（{r3440}による上昇も含む）",
+            "ja": "{r9016}上昇量を減少（{r6741}による上昇も含む）",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-494234",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-831213",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "成長",
       "en": ""
@@ -2314,16 +2314,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-183955",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-328311",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "のんびり",
       "en": ""
@@ -2331,58 +2331,58 @@
     "description": {
       "refs": [
         {
-          "id": "r7290",
-          "refId": "effect-183955",
+          "id": "r4780",
+          "refId": "effect-328311",
           "refType": 1
         },
         {
-          "id": "r9386",
-          "refId": "terminology-553008",
+          "id": "r3163",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r1883",
-          "refId": "effect-905552",
+          "id": "r1242",
+          "refId": "effect-152626",
           "refType": 1
         },
         {
-          "id": "r3303",
-          "refId": "effect-512285",
+          "id": "r6617",
+          "refId": "effect-667076",
           "refType": 1
         },
         {
-          "id": "r7609",
-          "refId": "effect-486259",
+          "id": "r9791",
+          "refId": "effect-306983",
           "refType": 1
         },
         {
-          "id": "r6069",
-          "refId": "effect-812909",
+          "id": "r1843",
+          "refId": "effect-665266",
           "refType": 1
         },
         {
-          "id": "r1543",
-          "refId": "effect-745384",
+          "id": "r7501",
+          "refId": "effect-115735",
           "refType": 1
         },
         {
-          "id": "r9124",
-          "refId": "effect-183955",
+          "id": "r3882",
+          "refId": "effect-328311",
           "refType": 1
         },
         {
-          "id": "r7101",
-          "refId": "effect-431513",
+          "id": "r7943",
+          "refId": "effect-241287",
           "refType": 1
         },
         {
-          "id": "r3362",
-          "refId": "effect-183955",
+          "id": "r5684",
+          "refId": "effect-328311",
           "refType": 1
         },
         {
-          "id": "r8605",
-          "refId": "effect-183955",
+          "id": "r8237",
+          "refId": "effect-328311",
           "refType": 1
         }
       ],
@@ -2391,35 +2391,35 @@
         {
           "position": 0,
           "body": {
-            "ja": "指針を{r7290}に変更する",
+            "ja": "指針を{r4780}に変更する",
             "en": ""
           }
         },
         {
           "position": 1,
           "body": {
-            "ja": "{r9386}上昇量と消費体力を100%減少",
+            "ja": "{r3163}上昇量と消費体力を100%減少",
             "en": ""
           }
         },
         {
           "position": 2,
           "body": {
-            "ja": "解除されたとき、{r1883}+5・{r3303}+1",
+            "ja": "解除されたとき、{r1242}+5・{r6617}+1",
             "en": ""
           }
         },
         {
           "position": 3,
           "body": {
-            "ja": "{r7609}に変更または解除した場合、{r6069}+10",
+            "ja": "{r9791}に変更または解除した場合、{r1843}+10",
             "en": ""
           }
         },
         {
           "position": 4,
           "body": {
-            "ja": "{r1543}に変更した場合、すべてのスキルカードのパラメータ値増加+10",
+            "ja": "{r7501}に変更した場合、すべてのスキルカードのパラメータ値増加+10",
             "en": ""
           }
         },
@@ -2433,30 +2433,30 @@
         {
           "position": 6,
           "body": {
-            "ja": "{r9124}は{r7101}3段階目に相当し、{r3362}から{r7101}には変更できない",
+            "ja": "{r3882}は{r7943}3段階目に相当し、{r5684}から{r7943}には変更できない",
             "en": ""
           }
         },
         {
           "position": 7,
           "body": {
-            "ja": "{r7101}から{r8605}に変更した場合、{r7101}解除時の効果は発生しない",
+            "ja": "{r7943}から{r8237}に変更した場合、{r7943}解除時の効果は発生しない",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-125831",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-112043",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "熱意追加",
       "en": ""
@@ -2464,8 +2464,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4708",
-          "refId": "effect-812909",
+          "id": "r7001",
+          "refId": "effect-665266",
           "refType": 1
         }
       ],
@@ -2474,23 +2474,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4708}の増加量を増加",
+            "ja": "{r7001}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-696359",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-874231",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "熱意増加",
       "en": ""
@@ -2498,8 +2498,8 @@
     "description": {
       "refs": [
         {
-          "id": "r6618",
-          "refId": "effect-812909",
+          "id": "r7698",
+          "refId": "effect-665266",
           "refType": 1
         }
       ],
@@ -2508,23 +2508,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r6618}の増加量を増加",
+            "ja": "{r7698}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-105181",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-311603",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "全力強化",
       "en": ""
@@ -2532,13 +2532,13 @@
     "description": {
       "refs": [
         {
-          "id": "r4292",
-          "refId": "effect-745384",
+          "id": "r4629",
+          "refId": "effect-115735",
           "refType": 1
         },
         {
-          "id": "r3706",
-          "refId": "terminology-553008",
+          "id": "r6640",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -2547,23 +2547,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4292}による{r3706}上昇量を増加",
+            "ja": "{r4629}による{r6640}上昇量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-123977",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-206318",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "強気強化",
       "en": ""
@@ -2571,13 +2571,13 @@
     "description": {
       "refs": [
         {
-          "id": "r2729",
-          "refId": "effect-486259",
+          "id": "r4892",
+          "refId": "effect-306983",
           "refType": 1
         },
         {
-          "id": "r5098",
-          "refId": "terminology-553008",
+          "id": "r8032",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -2586,23 +2586,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r2729}による{r5098}上昇量を増加",
+            "ja": "{r4892}による{r8032}上昇量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-253966",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-257968",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "集中増加量増加",
       "en": ""
@@ -2610,8 +2610,8 @@
     "description": {
       "refs": [
         {
-          "id": "r9320",
-          "refId": "effect-377685",
+          "id": "r4033",
+          "refId": "effect-454591",
           "refType": 1
         }
       ],
@@ -2620,23 +2620,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r9320}の増加量を増加",
+            "ja": "{r4033}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-538389",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-182186",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "好調増加量増加",
       "en": ""
@@ -2644,8 +2644,8 @@
     "description": {
       "refs": [
         {
-          "id": "r7644",
-          "refId": "effect-239127",
+          "id": "r5382",
+          "refId": "effect-141151",
           "refType": 1
         }
       ],
@@ -2654,23 +2654,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r7644}の増加量を増加",
+            "ja": "{r5382}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-282514",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-471188",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "やる気増加量増加",
       "en": ""
@@ -2678,8 +2678,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5549",
-          "refId": "effect-607497",
+          "id": "r7333",
+          "refId": "effect-449982",
           "refType": 1
         }
       ],
@@ -2688,23 +2688,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5549}の増加量を増加",
+            "ja": "{r7333}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-244751",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-458309",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "好印象増加量増加",
       "en": ""
@@ -2712,8 +2712,8 @@
     "description": {
       "refs": [
         {
-          "id": "r5288",
-          "refId": "effect-620334",
+          "id": "r9644",
+          "refId": "effect-839401",
           "refType": 1
         }
       ],
@@ -2722,23 +2722,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5288}の増加量を増加",
+            "ja": "{r9644}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-571026",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-810720",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "全力値増加量増加",
       "en": ""
@@ -2746,8 +2746,8 @@
     "description": {
       "refs": [
         {
-          "id": "r2609",
-          "refId": "effect-207551",
+          "id": "r3786",
+          "refId": "effect-845190",
           "refType": 1
         }
       ],
@@ -2756,23 +2756,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r2609}の増加量を増加",
+            "ja": "{r3786}の増加量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-765999",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-442392",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "パラメータ上昇値増加量増加",
       "en": ""
@@ -2791,16 +2791,16 @@
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-170901",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-804991",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "絶好調減少",
       "en": ""
@@ -2808,8 +2808,8 @@
     "description": {
       "refs": [
         {
-          "id": "r4696",
-          "refId": "effect-446387",
+          "id": "r9133",
+          "refId": "effect-724943",
           "refType": 1
         }
       ],
@@ -2818,23 +2818,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r4696}を減少させる",
+            "ja": "{r9133}を減少させる",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-636647",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-289969",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "プライド",
       "en": ""
@@ -2842,18 +2842,18 @@
     "description": {
       "refs": [
         {
-          "id": "r7932",
-          "refId": "terminology-553008",
+          "id": "r2019",
+          "refId": "terminology-409208",
           "refType": 0
         },
         {
-          "id": "r3597",
-          "refId": "effect-607497",
+          "id": "r1578",
+          "refId": "effect-449982",
           "refType": 1
         },
         {
-          "id": "r5334",
-          "refId": "effect-620334",
+          "id": "r9306",
+          "refId": "effect-839401",
           "refType": 1
         }
       ],
@@ -2862,23 +2862,23 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r7932}上昇量を{r3597}か{r5334}の最小値に応じて、1につき10%増加",
+            "ja": "{r2019}上昇量を{r1578}か{r9306}の最小値に応じて、1につき10%増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
   },
   {
-    "id": "effect-321056",
-    "createdAt": "2026-07-08T07:35:46.743Z",
-    "updatedAt": "2026-07-08T07:35:46.743Z",
+    "id": "effect-147902",
+    "createdAt": "2026-10-28T04:52:52.808Z",
+    "updatedAt": "2026-10-28T04:52:52.808Z",
     "name": {
       "ja": "好印象強化",
       "en": ""
@@ -2886,13 +2886,13 @@
     "description": {
       "refs": [
         {
-          "id": "r5742",
-          "refId": "effect-620334",
+          "id": "r7452",
+          "refId": "effect-839401",
           "refType": 1
         },
         {
-          "id": "r4125",
-          "refId": "terminology-553008",
+          "id": "r1985",
+          "refId": "terminology-409208",
           "refType": 0
         }
       ],
@@ -2901,15 +2901,15 @@
         {
           "position": 0,
           "body": {
-            "ja": "{r5742}による{r4125}上昇量を増加",
+            "ja": "{r7452}による{r1985}上昇量を増加",
             "en": ""
           }
         }
       ]
     },
     "icon": {
-      "color": "blue",
-      "shape": "diamond",
+      "color": "001-blue",
+      "shape": "001-diamond",
       "iconAssetId": "",
       "iconScale": 1
     }
