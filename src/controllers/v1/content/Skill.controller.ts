@@ -1,6 +1,10 @@
 import { db } from "@/services"
-import { decodeSortOptions, IPaginator, ISkill, SkillFilterOptions, SortOption } from "@hatsuboshi/types"
-import { Controller, Get, Path, Query, Response, Route, Tags } from "tsoa"
+import {
+    IPaginator,
+    ISkill, Skill,
+    SkillListQuery
+} from "@hatsuboshi/types"
+import { Controller, Get, Path, Queries, Response, Route, Tags } from "tsoa"
 import { NotFoundEC, UnprocessableEC } from "@/lib/errorCodes"
 import ControllerError, { ErrorResponse } from "@/lib/errors"
 
@@ -11,24 +15,13 @@ export class SkillController extends Controller {
      * Retrieves a paginated list of skills that match an optional filter.
      *
      * @summary List skills
-     *
-     * @param p   Page number to retrieve. (1-indexed)
-     * @param pp  Number of results to return per page.
-     * @param f   JSON-serialized string of an `SkillFilterOptions` object.
-     * @param s   String representation of a `SortOption<ISkill>[]` list.
      */
     @Get()
     @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listSkills(
-        @Query() p?: number,
-        @Query() pp?: number,
-        @Query() f?: string,
-        @Query() s?: string
+        @Queries() query: SkillListQuery
     ): Promise<IPaginator<ISkill>> {
-        const filter: SkillFilterOptions = f ? JSON.parse(f) : {}
-        const sort: SortOption<ISkill>[] = s ? decodeSortOptions(s) : []
-        const r = await db.getSkills({ page: p, perPage: pp }, filter, sort)
-        return r.toJSON()
+        return (await db.listSkills(Skill.decodeListQuery(query))).toJSON()
     }
 
     /**

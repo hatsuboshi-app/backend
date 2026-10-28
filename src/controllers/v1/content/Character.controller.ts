@@ -1,6 +1,11 @@
 import { db } from "@/services"
-import { CharacterFilterOptions, decodeSortOptions, ICharacter, IPaginator, SortOption } from "@hatsuboshi/types"
-import { Controller, Get, Path, Query, Response, Route, Tags } from "tsoa"
+import {
+    Character,
+    CharacterListQuery,
+    ICharacter,
+    IPaginator
+} from "@hatsuboshi/types"
+import { Controller, Get, Path, Queries, Response, Route, Tags } from "tsoa"
 import ControllerError, { ErrorResponse } from "@/lib/errors"
 import { NotFoundEC, UnprocessableEC } from "@/lib/errorCodes"
 
@@ -11,24 +16,13 @@ export class CharacterController extends Controller {
      * Retrieves a paginated list of `ICharacter` (JSON-serializable) objects that match an optional filter.
      *
      * @summary List characters
-     *
-     * @param p   Page number to retrieve. (1-indexed)
-     * @param pp  Number of results to return per page.
-     * @param f   JSON-serialized string of an `CharacterFilterOptions` object.
-     * @param s   String representation of a `SortOption<ICharacter>[]` list.
      */
     @Get()
     @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listCharacters(
-        @Query() p?: number,
-        @Query() pp?: number,
-        @Query() f?: string,
-        @Query() s?: string
+        @Queries() query: CharacterListQuery
     ): Promise<IPaginator<ICharacter>> {
-        const filter: CharacterFilterOptions = f ? JSON.parse(f) : {}
-        const sort: SortOption<ICharacter>[] = s ? decodeSortOptions(s) : []
-        const r = await db.getCharacters({ page: p, perPage: pp }, filter, sort)
-        return r.toJSON()
+        return (await db.listCharacters(Character.decodeListQuery(query))).toJSON()
     }
 
     /**

@@ -1,25 +1,25 @@
 import {
     Populate,
-    AuditionEffect, AuditionEffectFilterOptions,
-    AuditionTerminology, AuditionTerminologyFilterOptions,
+    AuditionEffect,
+    AuditionTerminology,
     Character,
-    CharacterFilterOptions, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBPItem, DBSkill,
+    DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBPItem, DBSkill,
     IAuditionEffect,
     IAuditionTerminology, ICharacter, IPDrink, IPIdol, IPItem, ISkill, ISupportCard, Paginator,
-    PDrink, PDrinkFilterOptions,
-    PIdol, PIdolFilterOptions,
-    PItem, PItemFilterOptions,
+    PDrink,
+    PIdol,
+    PItem,
     Result,
-    Skill, SkillFilterOptions, SortOption,
-    SupportCard, SupportCardFilterOptions, New
+    Skill,
+    SupportCard, New, ListRequest, AuditionEffectFilter, AuditionTerminologyFilter,
+    CharacterFilter, PDrinkFilter, PIdolFilter, PItemFilter, SkillFilter, SupportCardFilter
 } from "@hatsuboshi/types"
 import {
     AuthProvider,
     DBUser,
     IUser,
     User,
-    UserFilterOptions,
-    APIKeyFilterOptions, IAPIKey, APIKey, DBAPIKey
+    IAPIKey, APIKey, DBAPIKey, UserFilter, APIKeyFilter
 } from "@hatsuboshi/types/auth"
 
 export type ReferencePopulateMethods = {
@@ -56,7 +56,7 @@ export default interface IRepositoryService {
     //                //
     // AuditionEffect //
     //                //
-    getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]):
+    listAuditionEffects(req: ListRequest<AuditionEffectFilter, IAuditionEffect>):
         Promise<Paginator<AuditionEffect, IAuditionEffect>>
 
     getAuditionEffectById(id: string):
@@ -65,7 +65,7 @@ export default interface IRepositoryService {
     //                     //
     // AuditionTerminology //
     //                     //
-    getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]):
+    listAuditionTerminologies(req: ListRequest<AuditionTerminologyFilter, IAuditionTerminology>):
         Promise<Paginator<AuditionTerminology, IAuditionTerminology>>
 
     getAuditionTerminologyById(id: string):
@@ -74,7 +74,7 @@ export default interface IRepositoryService {
     //           //
     // Character //
     //           //
-    getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]):
+    listCharacters(req: ListRequest<CharacterFilter, ICharacter>):
         Promise<Paginator<Character, ICharacter>>
 
     getCharacterById(id: string):
@@ -83,7 +83,7 @@ export default interface IRepositoryService {
     //        //
     // PDrink //
     //        //
-    getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]):
+    listPDrinks(req: ListRequest<PDrinkFilter, IPDrink>):
         Promise<Paginator<PDrink, IPDrink>>
 
     getPDrinkById(id: string):
@@ -92,7 +92,7 @@ export default interface IRepositoryService {
     //       //
     // PIdol //
     //       //
-    getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]):
+    listPIdols(req: ListRequest<PIdolFilter, IPIdol>):
         Promise<Paginator<PIdol, IPIdol>>
 
     getPIdolById(id: string):
@@ -101,7 +101,7 @@ export default interface IRepositoryService {
     //       //
     // PItem //
     //       //
-    getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]):
+    listPItems(req: ListRequest<PItemFilter, IPItem>):
         Promise<Paginator<PItem, IPItem>>
 
     getPItemById(id: string):
@@ -110,7 +110,7 @@ export default interface IRepositoryService {
     //       //
     // Skill //
     //       //
-    getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]):
+    listSkills(req: ListRequest<SkillFilter, ISkill>):
         Promise<Paginator<Skill, ISkill>>
 
     getSkillById(id: string):
@@ -119,7 +119,7 @@ export default interface IRepositoryService {
     //             //
     // SupportCard //
     //             //
-    getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]):
+    listSupportCards(req: ListRequest<SupportCardFilter, ISupportCard>):
         Promise<Paginator<SupportCard, ISupportCard>>
 
     getSupportCardById(id: string):
@@ -128,7 +128,7 @@ export default interface IRepositoryService {
     //      //
     // User //
     //      //
-    getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]):
+    listUsers(req: ListRequest<UserFilter, IUser>):
         Promise<Paginator<User, IUser>>
 
     getUserById(id: string):
@@ -152,7 +152,7 @@ export default interface IRepositoryService {
     //        //
     // APIKey //
     //        //
-    getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]):
+    listAPIKeys(req: ListRequest<APIKeyFilter, IAPIKey>):
         Promise<Paginator<APIKey, IAPIKey>>
 
     getAPIKeyById(id: string):

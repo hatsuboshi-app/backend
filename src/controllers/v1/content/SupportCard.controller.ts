@@ -1,6 +1,11 @@
 import { db } from "@/services"
-import { decodeSortOptions, IPaginator, ISupportCard, SortOption, SupportCardFilterOptions } from "@hatsuboshi/types"
-import { Controller, Get, Hidden, Path, Query, Response, Route, Tags } from "tsoa"
+import {
+    IPaginator,
+    ISupportCard,
+    SupportCard,
+    SupportCardListQuery
+} from "@hatsuboshi/types"
+import { Controller, Get, Hidden, Path, Queries, Response, Route, Tags } from "tsoa"
 import { NotFoundEC, UnprocessableEC } from "@/lib/errorCodes"
 import ControllerError, { ErrorResponse } from "@/lib/errors"
 
@@ -12,24 +17,13 @@ export class SupportCardController extends Controller {
      * Retrieves a paginated list of `ISupportCard` (JSON-serializable) objects that match an optional filter.
      *
      * @summary List support cards
-     *
-     * @param p   Page number to retrieve. (1-indexed)
-     * @param pp  Number of results to return per page.
-     * @param f   JSON-serialized string of an `SupportCardFilterOptions` object.
-     * @param s   String representation of a `SortOption<ISupportCard>[]` list.
      */
     @Get()
     @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listSupportCards(
-        @Query() p?: number,
-        @Query() pp?: number,
-        @Query() f?: string,
-        @Query() s?: string
+        @Queries() query: SupportCardListQuery
     ): Promise<IPaginator<ISupportCard>> {
-        const filter: SupportCardFilterOptions = f ? JSON.parse(f) : {}
-        const sort: SortOption<ISupportCard>[] = s ? decodeSortOptions(s) : []
-        const r = await db.getSupportCards({ page: p, perPage: pp }, filter, sort)
-        return r.toJSON()
+        return (await db.listSupportCards(SupportCard.decodeListQuery(query))).toJSON()
     }
 
     /**

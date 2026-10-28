@@ -16,34 +16,46 @@ import {
     PItem,
     Skill,
     SupportCard,
-    fail, success, DBAuditionEffect, DBAuditionTerminology, DBCharacter, DBSkill, DBPItem, DBPIdol, DBPDrink, Paginator,
-    IAuditionTerminology, AuditionTerminologyFilterOptions, IAuditionEffect, AuditionEffectFilterOptions,
-    CharacterFilterOptions,
+    fail,
+    success,
+    DBAuditionEffect,
+    DBAuditionTerminology,
+    DBCharacter,
+    DBSkill,
+    DBPItem,
+    DBPIdol,
+    DBPDrink,
+    Paginator,
+    IAuditionTerminology,
+    IAuditionEffect,
     ICharacter,
     IPDrink,
     IPIdol,
     IPItem,
     ISkill,
     ISupportCard,
-    PDrinkFilterOptions,
-    PIdolFilterOptions,
-    PItemFilterOptions,
-    SkillFilterOptions,
-    SupportCardFilterOptions, SortOption, DateFilterOptions, NumberFilterOptions, EnumFilterOptions,
-    LocaleStringFilterOptions, IPaginator, JSONSerializable, StringFilterOptions, New
+    SortOption,
+    DateFilterOptions,
+    NumberFilterOptions,
+    EnumFilterOptions,
+    LocaleStringFilterOptions,
+    IPaginator,
+    JSONSerializable,
+    New,
+    ListRequest,
+    AuditionEffectFilter,
+    AuditionTerminologyFilter, CharacterFilter, PDrinkFilter, PIdolFilter, PItemFilter, SkillFilter, SupportCardFilter
 } from "@hatsuboshi/types"
 import config from "@/lib/config"
 import {
-    APIKey,
-    APIKeyFilterOptions,
+    APIKey, APIKeyFilter,
     AuthProvider, DBAPIKey,
     DBUser,
     IAPIKey,
     IUser,
-    User,
-    UserFilterOptions
+    User, UserFilter,
 } from "@hatsuboshi/types/auth"
-import ControllerError from "@/lib/errors";
+import ControllerError from "@/lib/errors"
 
 export type MongoCredentials = {
     shared: string,
@@ -71,7 +83,9 @@ export default class MongoRepositoryService implements IRepositoryService {
     private readonly items: Collection
     private readonly skills: Collection
     private readonly supportCards: Collection
+
     private readonly users: Collection
+    private readonly apiKeys: Collection
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
@@ -136,6 +150,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         this.skills = this.gameDataDb.collection("Skill")
         this.supportCards = this.gameDataDb.collection("SupportCard")
         this.users = this.metaDataDb.collection("User")
+        this.apiKeys = this.metaDataDb.collection("APIKey")
     }
 
     private async fetchAndConstructPaginator<T extends JSONSerializable<I>, I extends {}>({ collection, populate, filter, options, sort }: PaginationHandlerParams<T, I>): Promise<IPaginator<I>> {
@@ -147,14 +162,11 @@ export default class MongoRepositoryService implements IRepositoryService {
         }
 
         // Handle Sort
-        let sortObj = {}
-        if (sort) {
-            for (const s of sort) {
-                sortObj = { ...sortObj, [s.attribute]: s.ascending ? 1 : -1 }
-            }
-        } else {
-            sortObj =  { ...sortObj, "createdAt": 1 }
+        const sortObj: Record<string, 1 | -1> = {}
+        for (const s of sort?.length ? sort : [{ attribute: "createdAt", ascending: true }]) {
+            sortObj[String(s.attribute)] = s.ascending ? 1 : -1
         }
+        sortObj.id ??= 1
 
         const [totalItems, docs] = await Promise.all([
             collection
@@ -184,30 +196,30 @@ export default class MongoRepositoryService implements IRepositoryService {
         const rf: Filter<any> = structuredClone(f)
         rf.$and = rf.$and ?? []
         if (filter) {
-            filter.after && rf.$and.push({ [fieldName]: { $gt: filter.after } })
-            filter.before && rf.$and.push({ [fieldName]: { $lt: filter.before } })
+            filter.after && rf.$and.push({ [fieldName]: { $gte: filter.after } })
+            filter.before && rf.$and.push({ [fieldName]: { $lte: filter.before } })
         }
         return rf
     }
+
     private addNumberFilter(f: Filter<any>, fieldName: string, filter?: NumberFilterOptions): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
         rf.$and = rf.$and ?? []
         if (filter) {
-            filter.lte && rf.$and.push({ [fieldName]: { $lte: filter.lte } })
-            filter.gte && rf.$and.push({ [fieldName]: { $gte: filter.gte } })
+            filter.lte !== undefined && rf.$and.push({ [fieldName]: { $lte: filter.lte } })
+            filter.gte !== undefined && rf.$and.push({ [fieldName]: { $gte: filter.gte } })
         }
         return rf
     }
+
     private addEnumFilter<E>(f: Filter<any>, fieldName: string, filter?: EnumFilterOptions<E>): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
         rf.$and = rf.$and ?? []
-        if (filter && filter.include) {
-            rf.$and.push({ [fieldName]: { $in: filter.include }})
-        } else if (filter && filter.exclude) {
-            rf.$and.push({ [fieldName]: { $nin: filter.exclude }})
-        }
+        filter?.include && rf.$and.push({ [fieldName]: { $in: filter.include } })
+        filter?.exclude && rf.$and.push({ [fieldName]: { $nin: filter.exclude } })
         return rf
     }
+
     private addLocaleStringFilter(f: Filter<any>, fieldName: string, filter?: LocaleStringFilterOptions): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
         rf.$and = rf.$and ?? []
@@ -238,6 +250,7 @@ export default class MongoRepositoryService implements IRepositoryService {
         }
         return rf
     }
+
     private addCustomFilter(f: Filter<any>, cond?: Filter<any>): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
         rf.$and = rf.$and ?? []
@@ -246,7 +259,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // AuditionEffect //
-    async getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
+    async listAuditionEffects({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<AuditionEffectFilter, IAuditionEffect>): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
@@ -255,11 +268,12 @@ export default class MongoRepositoryService implements IRepositoryService {
             collection: this.effects,
             populate: async d => await AuditionEffect.fromDB(<any>d, this.populateMethods),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(AuditionEffect, data)
     }
+
     async getAuditionEffectById(id: string): Promise<RepositoryResult<AuditionEffect>> {
         const d = await this.effects.findOne({ id: id })
         return d
@@ -268,7 +282,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // AuditionTerminology //
-    async getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
+    async listAuditionTerminologies({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<AuditionTerminologyFilter, IAuditionTerminology>): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
@@ -277,11 +291,12 @@ export default class MongoRepositoryService implements IRepositoryService {
             collection: this.terminologies,
             populate: async d => await AuditionTerminology.fromDB(<any>d, this.populateMethods),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(AuditionTerminology, data)
     }
+
     async getAuditionTerminologyById(id: string): Promise<RepositoryResult<AuditionTerminology>> {
         const d = await this.terminologies.findOne({ id: id })
         return d
@@ -290,24 +305,29 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // Character //
-    async getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]): Promise<Paginator<Character, ICharacter>> {
+    async listCharacters({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<CharacterFilter, ICharacter>): Promise<Paginator<Character, ICharacter>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
+        const part = (n: string, l: string) => ({ $ifNull: [`$${n}.${l}`, ""] })
+        const fullName = {
+            ja: { $concat: [part("lastName", "ja"), part("firstName", "ja")] },
+            en: { $concat: [part("firstName", "en"), " ", part("lastName", "en"), " ", part("firstName", "en")] }
+        }
         if (f?.name && f.name.type === "Search" && f.name.search) {
-            let nameFilter: Filter<any> = {}
-            const toSearch = f.name.search.split(" ")
-            toSearch.forEach(s => {
-                const sf: StringFilterOptions = {
-                    ...<StringFilterOptions>f.name,
-                    search: s
-                }
-                nameFilter = this.addLocaleStringFilter(nameFilter, "firstName", sf)
-                nameFilter = this.addLocaleStringFilter(nameFilter, "lastName", sf)
-            })
-            nameFilter.$or = nameFilter.$and
-            delete nameFilter.$and
-            filter = this.addCustomFilter(filter, nameFilter)
+            const regex = f.name.search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            filter = this.addCustomFilter(filter, { $expr: { $or: [
+                { $regexMatch: { input: fullName.ja, regex, options: "i" } },
+                { $regexMatch: { input: fullName.en, regex, options: "i" } }
+            ] } })
+        } else if (f?.name?.type === "IncompleteLocale") {
+            const conds = [
+                f.name.missingJa && { $eq: [fullName.ja, ""] },
+                f.name.missingEn && { $or: ["firstName", "lastName"].map(n => ({
+                        $and: [{ $ne: [part(n, "ja"), ""] }, { $eq: [part(n, "en"), ""] }]
+                    })) }
+            ].filter(c => !!c)
+            filter = this.addCustomFilter(filter, { $expr: conds.length ? { $or: conds } : { $literal: false } })
         }
         if (f?.isPlayable != undefined) {
             filter = this.addCustomFilter(filter, { "isPlayable": f.isPlayable })
@@ -316,11 +336,12 @@ export default class MongoRepositoryService implements IRepositoryService {
             collection: this.characters,
             populate: async d => await Character.fromDB(<any>d),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(Character, data)
     }
+
     async getCharacterById(id: string): Promise<RepositoryResult<Character>> {
         const d = await this.characters.findOne({ id: id })
         return d
@@ -329,7 +350,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // PDrink //
-    async getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]): Promise<Paginator<PDrink, IPDrink>> {
+    async listPDrinks({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<PDrinkFilter, IPDrink>): Promise<Paginator<PDrink, IPDrink>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
@@ -341,11 +362,12 @@ export default class MongoRepositoryService implements IRepositoryService {
             collection: this.drinks,
             populate: async d => await PDrink.fromDB(<any>d, this.populateMethods),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(PDrink, data)
     }
+
     async getPDrinkById(id: string): Promise<RepositoryResult<PDrink>> {
         const d = await this.drinks.findOne({ id: id })
         return d
@@ -354,7 +376,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // PIdol //
-    async getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]): Promise<Paginator<PIdol, IPIdol>> {
+    async listPIdols({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<PIdolFilter, IPIdol>): Promise<Paginator<PIdol, IPIdol>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
@@ -369,17 +391,18 @@ export default class MongoRepositoryService implements IRepositoryService {
             filter = this.addCustomFilter(filter, { "primaStellaUpgrade": f.hasPrimaStellaUpgrade ? { $ne: null } : null })
         }
         if (f?.hasTrainingLv7 != undefined) {
-            filter = this.addCustomFilter(filter, { "upgradeLevels.6": { $exists: f.hasTrainingLv7 }})
+            filter = this.addCustomFilter(filter, { "trainingLevels.6": { $exists: f.hasTrainingLv7 }})
         }
         const data = await this.fetchAndConstructPaginator<PIdol, IPIdol>({
             collection: this.idols,
             populate: async d => await PIdol.fromDB(<any>d, this.populateMethods),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(PIdol, data)
     }
+
     async getPIdolById(id: string): Promise<RepositoryResult<PIdol>> {
         const d = await this.idols.findOne({ id: id })
         return d
@@ -388,7 +411,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // PItem //
-    async getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]): Promise<Paginator<PItem, IPItem>> {
+    async listPItems({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<PItemFilter, IPItem>): Promise<Paginator<PItem, IPItem>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
@@ -401,11 +424,12 @@ export default class MongoRepositoryService implements IRepositoryService {
             collection: this.items,
             populate: async d => await PItem.fromDB(<any>d, this.populateMethods),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(PItem, data)
     }
+
     async getPItemById(id: string): Promise<RepositoryResult<PItem>> {
         const d = await this.items.findOne({ id: id })
         return d
@@ -414,7 +438,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // Skill //
-    async getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]): Promise<Paginator<Skill, ISkill>> {
+    async listSkills({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<SkillFilter, ISkill>): Promise<Paginator<Skill, ISkill>> {
         let filter: Filter<any> = {}
         filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
         filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
@@ -431,11 +455,12 @@ export default class MongoRepositoryService implements IRepositoryService {
             collection: this.skills,
             populate: async d => await Skill.fromDB(<any>d, this.populateMethods),
             filter: filter,
-            options: p,
+            options: { page: p, perPage: pp },
             sort: s
         })
         return new Paginator(Skill, data)
     }
+
     async getSkillById(id: string): Promise<RepositoryResult<Skill>> {
         const d = await this.skills.findOne({ id: id })
         return d
@@ -444,55 +469,68 @@ export default class MongoRepositoryService implements IRepositoryService {
     }
 
     // SupportCard //
-    async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
+    async listSupportCards({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<SupportCardFilter, ISupportCard>): Promise<Paginator<SupportCard, ISupportCard>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async getSupportCardById(id: string): Promise<RepositoryResult<SupportCard>> {
         throw new ControllerError("core/not-implemented")
     }
 
     // User //
-    async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
+    async listUsers({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<UserFilter, IUser>): Promise<Paginator<User, IUser>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async getUserById(id: string): Promise<RepositoryResult<User>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async createUser(obj: New<DBUser>): Promise<RepositoryResult<User>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async updateUser(id: string, patch: UserPatch): Promise<RepositoryResult<User>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
         throw new ControllerError("core/not-implemented")
     }
 
     // APIKey //
-    async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
+    async listAPIKeys({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<APIKeyFilter, IAPIKey>): Promise<Paginator<APIKey, IAPIKey>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKeyCredential>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async createAPIKey(obj: New<DBAPIKey>): Promise<RepositoryResult<APIKey>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async recordAPIKeyUse(id: string, at?: Date): Promise<RepositoryResult<APIKey>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async updateAPIKey(id: string, patch: APIKeyPatch): Promise<RepositoryResult<APIKey>> {
         throw new ControllerError("core/not-implemented")
     }
+
     async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
         throw new ControllerError("core/not-implemented")
     }

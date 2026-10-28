@@ -21,9 +21,6 @@ import {
     DBPItem,
     DBAuditionEffect,
     DBAuditionTerminology, DBPDrink, DBPIdol,
-    AuditionEffectFilterOptions,
-    AuditionTerminologyFilterOptions,
-    CharacterFilterOptions,
     IAuditionEffect,
     IAuditionTerminology,
     ICharacter,
@@ -33,23 +30,18 @@ import {
     ISkill,
     ISupportCard,
     Paginator,
-    PDrinkFilterOptions,
-    PIdolFilterOptions,
-    PItemFilterOptions,
-    SkillFilterOptions,
-    SupportCardFilterOptions, DBSupportCard, LocaleString, LocaleStringWithRomaji, LocaleStringFilterOptions,
+    DBSupportCard, LocaleString, LocaleStringWithRomaji, LocaleStringFilterOptions,
     DateFilterOptions, SortOption, IPaginator, EnumFilterOptions, NumberFilterOptions, New, SimpleStringFilterOptions,
-    IPersistentObject
+    IPersistentObject, ListRequest, AuditionEffectFilter, AuditionTerminologyFilter, CharacterFilter, PDrinkFilter,
+    PIdolFilter, PItemFilter, SkillFilter, SupportCardFilter
 } from "@hatsuboshi/types"
 import config from "@/lib/config"
 import {
-    APIKey,
-    APIKeyFilterOptions,
+    APIKey, APIKeyFilter,
     AuthProvider, DBAPIKey,
     DBUser, IAPIKey,
     IUser,
-    User,
-    UserFilterOptions
+    User, UserFilter
 } from "@hatsuboshi/types/auth"
 import ControllerError from "@/lib/errors"
 
@@ -167,18 +159,11 @@ export default class LocalRepositoryService implements IRepositoryService {
     private handleDateFilter(field: string | null, filter?: DateFilterOptions): boolean {
         if (!filter) return true
         if (!field) return false
-        let isMatch = true
-        if (filter.before) {
-            const d1 = new Date(field)
-            const d2 = new Date(filter.before)
-            isMatch = d1 <= d2  // false if d1 (field) is after d2 (filter), true if d1 (field) is before d2 (filter)
-        }
-        if (filter.after) {
-            const d1 = new Date(field)
-            const d2 = new Date(filter.after)
-            isMatch = d1 >= d2  // false if d1 (field) is before d2 (filter), true if d1 (field) is after d2 (filter)
-        }
-        return isMatch
+        const d = new Date(field)
+        if (filter.before && d > new Date(filter.before)) return false
+        if (filter.after && d < new Date(filter.after)) return false
+        //
+        return true
     }
 
     private handleNumberFilter(field: number, filter?: NumberFilterOptions): boolean {
@@ -218,48 +203,43 @@ export default class LocalRepositoryService implements IRepositoryService {
     private handleEnumFilter<E>(field: E | E[], filter?: EnumFilterOptions<E>): boolean {
         if (!filter) return true
         const vals: E[] = Array.isArray(field) ? field : [field]
-        if (filter.include) {
-            for (const v of vals) {
-                if (filter.include.includes(v)) return true
-            }
-            return false
-        } else if (filter.exclude) {
-            for (const v of vals) {
-                if (filter.exclude.includes(v)) return false
-            }
-            return true
-        } else {
-            return true
-        }
+        const { include, exclude } = filter
+        if (include && !vals.some(v => include.includes(v))) return false
+        if (exclude && vals.some(v => exclude.includes(v))) return false
+        //
+        return true
     }
 
-    private handleSort<T extends { createdAt: string }>({ a, b }: { a: T, b: T }, sort?: SortOption<T>[]): number {
-        if (!sort) return new Date(a.createdAt) > new Date(b.createdAt) ? 1 : -1
-        const compareValue = <K>(v: K[keyof K]): string | number => {
+    private handleSort<T extends { createdAt: string, id: string }>({ a, b }: { a: T, b: T }, sort?: SortOption<T>[]): number {
+        const compareValue = <K>(v: K[keyof K]): string | number | null => {
             if (v instanceof Date) return v.getTime()
             if (typeof v === 'object' && v !== null && 'ja' in v) {
                 return (v as unknown as LocaleString).ja
             }
-            return v as string | number
+            return (v ?? null) as string | number | null
         }
-        for (const s of sort) {
+        const order = sort?.length ? sort : [{ attribute: "createdAt", ascending: true } as SortOption<T>]
+        for (const s of order) {
             const av = compareValue(a[s.attribute])
             const bv = compareValue(b[s.attribute])
+            if (av === bv) continue
+            if (av === null) return s.ascending ? -1 : 1
+            if (bv === null) return s.ascending ? 1 : -1
             if (av < bv) return s.ascending ? -1 : 1
             if (av > bv) return s.ascending ? 1 : -1
         }
-        return 0
+        return a.id < b.id ? -1 : a.id > b.id ? 1 : 0
     }
 
     // AuditionEffect //
-    async getAuditionEffects(p?: PaginateOptions, f?: AuditionEffectFilterOptions, s?: SortOption<IAuditionEffect>[]): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
+    async listAuditionEffects({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<AuditionEffectFilter, IAuditionEffect>): Promise<Paginator<AuditionEffect, IAuditionEffect>> {
         const data = (await Promise.all(this.effects
             .filter(e => this.handleDateFilter(e.createdAt, f?.createdAt))
             .filter(e => this.handleDateFilter(e.updatedAt, f?.updatedAt))
             .filter(e => this.handleLocaleStringFilter({ field: e.name, hasRom: false }, f?.name))
             .map(async (m) => (await AuditionEffect.fromDB(m, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(AuditionEffect, this.constructPaginator(data, p))
+        return new Paginator(AuditionEffect, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getAuditionEffectById(id: string): Promise<RepositoryResult<AuditionEffect>> {
@@ -270,14 +250,14 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // AuditionTerminology //
-    async getAuditionTerminologies(p?: PaginateOptions, f?: AuditionTerminologyFilterOptions, s?: SortOption<IAuditionTerminology>[]): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
+    async listAuditionTerminologies({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<AuditionTerminologyFilter, IAuditionTerminology>): Promise<Paginator<AuditionTerminology, IAuditionTerminology>> {
         const data = (await Promise.all(this.terminologies
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
             .filter(i => this.handleLocaleStringFilter({ field: i.name, hasRom: false }, f?.name))
             .map(async (i) => (await AuditionTerminology.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(AuditionTerminology, this.constructPaginator(data, p))
+        return new Paginator(AuditionTerminology, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getAuditionTerminologyById(id: string): Promise<RepositoryResult<AuditionTerminology>> {
@@ -288,21 +268,28 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // Character //
-    async getCharacters(p?: PaginateOptions, f?: CharacterFilterOptions, s?: SortOption<ICharacter>[]): Promise<Paginator<Character, ICharacter>> {
+    async listCharacters({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<CharacterFilter, ICharacter>): Promise<Paginator<Character, ICharacter>> {
         const combineName = (fn: LocaleString, ln: LocaleString): LocaleString => {
             return {
                 ja: `${ln.ja}${fn.ja}`,
-                en: fn.en || ln.en ? `${fn.en} ${ln.en} ${fn.en}` : null
+                en: fn.en || ln.en ? `${fn.en ?? ""} ${ln.en ?? ""} ${fn.en ?? ""}` : null
             }
         }
         const data = (await Promise.all(this.characters
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
-            .filter(i => this.handleLocaleStringFilter({ field: combineName(i.firstName, i.lastName), hasRom: false }, f?.name))
+            .filter(i => {
+                if (f?.name?.type !== "IncompleteLocale")
+                    return this.handleLocaleStringFilter({ field: combineName(i.firstName, i.lastName), hasRom: false }, f?.name)
+                return [
+                    !!(f.name.missingJa && !combineName(i.firstName, i.lastName).ja),
+                    !!(f.name.missingEn && [i.firstName, i.lastName].some(n => n.ja && !n.en))
+                ].some(v => v)
+            })
             .filter(i => f?.isPlayable !== undefined ? i.isPlayable == f.isPlayable : true )
             .map(async (i) => (await Character.fromDB(i)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(Character, this.constructPaginator(data, p))
+        return new Paginator(Character, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getCharacterById(id: string): Promise<RepositoryResult<Character>> {
@@ -313,7 +300,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // PDrink //
-    async getPDrinks(p?: PaginateOptions, f?: PDrinkFilterOptions, s?: SortOption<IPDrink>[]): Promise<Paginator<PDrink, IPDrink>> {
+    async listPDrinks({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<PDrinkFilter, IPDrink>): Promise<Paginator<PDrink, IPDrink>> {
         const data = (await Promise.all(this.drinks
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
@@ -323,7 +310,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
             .map(async (i) => (await PDrink.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(PDrink, this.constructPaginator(data, p))
+        return new Paginator(PDrink, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getPDrinkById(id: string): Promise<RepositoryResult<PDrink>> {
@@ -334,7 +321,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // PIdol //
-    async getPIdols(p?: PaginateOptions, f?: PIdolFilterOptions, s?: SortOption<IPIdol>[]): Promise<Paginator<PIdol, IPIdol>> {
+    async listPIdols({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<PIdolFilter, IPIdol>): Promise<Paginator<PIdol, IPIdol>> {
         const data = (await Promise.all(this.idols
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
@@ -347,7 +334,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => f?.hasTrainingLv7 !== undefined ? (i.trainingLevels.length === 7) == f.hasTrainingLv7 : true)
             .map(async (i) => (await PIdol.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(PIdol, this.constructPaginator(data, p))
+        return new Paginator(PIdol, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getPIdolById(id: string): Promise<RepositoryResult<PIdol>> {
@@ -358,7 +345,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // PItem //
-    async getPItems(p?: PaginateOptions, f?: PItemFilterOptions, s?: SortOption<IPItem>[]): Promise<Paginator<PItem, IPItem>> {
+    async listPItems({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<PItemFilter, IPItem>): Promise<Paginator<PItem, IPItem>> {
         const data = (await Promise.all(this.items
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
@@ -369,7 +356,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleNumberFilter(i.unlockLevel, f?.unlockLevel))
             .map(async (i) => (await PItem.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(PItem, this.constructPaginator(data, p))
+        return new Paginator(PItem, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getPItemById(id: string): Promise<RepositoryResult<PItem>> {
@@ -380,7 +367,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // Skill //
-    async getSkills(p?: PaginateOptions, f?: SkillFilterOptions, s?: SortOption<ISkill>[]): Promise<Paginator<Skill, ISkill>> {
+    async listSkills({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<SkillFilter, ISkill>): Promise<Paginator<Skill, ISkill>> {
         const data = (await Promise.all(this.skills
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
@@ -393,7 +380,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => f?.isCustomizable !== undefined ? (i.customizeOptions.length != 0) == f.isCustomizable : true)
             .map(async (i) => (await Skill.fromDB(i, this.populateMethods)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(Skill, this.constructPaginator(data, p))
+        return new Paginator(Skill, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getSkillById(id: string): Promise<RepositoryResult<Skill>> {
@@ -404,7 +391,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // SupportCard //
-    async getSupportCards(p?: PaginateOptions, f?: SupportCardFilterOptions, s?: SortOption<ISupportCard>[]): Promise<Paginator<SupportCard, ISupportCard>> {
+    async listSupportCards({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<SupportCardFilter, ISupportCard>): Promise<Paginator<SupportCard, ISupportCard>> {
         throw new ControllerError("core/not-implemented")
     }
 
@@ -413,7 +400,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // User //
-    async getUsers(p?: PaginateOptions, f?: UserFilterOptions, s?: SortOption<IUser>[]): Promise<Paginator<User, IUser>> {
+    async listUsers({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<UserFilter, IUser>): Promise<Paginator<User, IUser>> {
         const data = (await Promise.all(this.users
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
             .filter(i => this.handleDateFilter(i.updatedAt, f?.updatedAt))
@@ -421,7 +408,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             .filter(i => this.handleEnumFilter(i.roles, f?.roles))
             .map(async (i) => (await User.fromDB(i)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(User, this.constructPaginator(data, p))
+        return new Paginator(User, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getUserById(id: string): Promise<RepositoryResult<User>> {
@@ -474,7 +461,7 @@ export default class LocalRepositoryService implements IRepositoryService {
     }
 
     // APIKey //
-    async getAPIKeys(p?: PaginateOptions, f?: APIKeyFilterOptions, s?: SortOption<IAPIKey>[]): Promise<Paginator<APIKey, IAPIKey>> {
+    async listAPIKeys({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<APIKeyFilter, IAPIKey>): Promise<Paginator<APIKey, IAPIKey>> {
         const now = new Date()
         const data = (await Promise.all(this.apiKeys
             .filter(i => this.handleDateFilter(i.createdAt, f?.createdAt))
@@ -493,7 +480,7 @@ export default class LocalRepositoryService implements IRepositoryService {
             })
             .map(async (i) => (await APIKey.fromDB(i)).toJSON())
         )).sort((a, b) => this.handleSort({ a, b }, s))
-        return new Paginator(APIKey, this.constructPaginator(data, p))
+        return new Paginator(APIKey, this.constructPaginator(data, { page: p, perPage: pp }))
     }
 
     async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {

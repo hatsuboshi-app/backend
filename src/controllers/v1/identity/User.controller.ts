@@ -5,8 +5,7 @@ import {
     Hidden,
     Patch,
     Path,
-    Post,
-    Query,
+    Post, Queries,
     Request,
     Response,
     Route,
@@ -17,12 +16,12 @@ import { Request as ExpressRequest } from "express"
 import { ForbiddenEC, NotFoundEC, UnauthorizedEC, UnprocessableEC } from "@/lib/errorCodes"
 import { Security } from "@/lib/auth"
 import { AuthContext } from "@/services/auth/auth.service"
-import { decodeSortOptions, IPaginator, SortOption } from "@hatsuboshi/types"
+import { IPaginator } from "@hatsuboshi/types"
 import {
     IAdminUpdateUser,
     IAdminUser,
-    IPublicUser, IUser,
-    UserFilterOptions
+    IPublicUser, User,
+    UserListQuery
 } from "@hatsuboshi/types/auth"
 import ControllerError, { ErrorResponse } from "@/lib/errors"
 import { db } from "@/services"
@@ -60,24 +59,14 @@ export class UserController extends Controller {
      * Retrieves a paginated list of all users that match an optional filter.
      *
      * @summary List users (admin)
-     *
-     * @param p   Page number to retrieve. (1-indexed)
-     * @param pp  Number of results to return per page.
-     * @param f   JSON-serialized string of a `UserFilterOptions` object.
-     * @param s   String representation of a `SortOption<IUser>[]` list.
      */
     @Get()
     @Security("bearer", ["read:user"])
     @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listUsers(
-        @Query() p?: number,
-        @Query() pp?: number,
-        @Query() f?: string,
-        @Query() s?: string
+        @Queries() query: UserListQuery
     ): Promise<IPaginator<IAdminUser>> {
-        const filter: UserFilterOptions = f ? JSON.parse(f) : {}
-        const sort: SortOption<IUser>[] = s ? decodeSortOptions(s) : []
-        const pg = await db.getUsers({ page: p, perPage: pp }, filter, sort)
+        const pg = await db.listUsers(User.decodeListQuery(query))
         return {
             ...pg.toJSON(),
             data: pg.data.map(u => u.toAdminUser(grantedPatterns(u)))

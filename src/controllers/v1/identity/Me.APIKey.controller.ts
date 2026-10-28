@@ -1,10 +1,29 @@
-import { Body, Controller, Get, Patch, Path, Post, Query, Request, Response, Route, SuccessResponse, Tags } from "tsoa"
+import {
+    Body,
+    Controller,
+    Get,
+    Patch,
+    Path,
+    Post,
+    Queries,
+    Request,
+    Response,
+    Route,
+    SuccessResponse,
+    Tags
+} from "tsoa"
 import { Request as ExpressRequest } from "express"
 import { ForbiddenEC, NotFoundEC, UnauthorizedEC, UnprocessableEC } from "@/lib/errorCodes"
 import { isOwner, Security } from "@/lib/auth"
 import { AuthContext } from "@/services/auth/auth.service"
-import { decodeSortOptions, IPaginator, SortOption } from "@hatsuboshi/types"
-import { IAPIKey, ICreatedAPIKey, IUpdateAPIKey, ICreateAPIKey, APIKeyFilterOptions } from "@hatsuboshi/types/auth"
+import { IPaginator } from "@hatsuboshi/types"
+import {
+    IAPIKey,
+    ICreatedAPIKey,
+    IUpdateAPIKey,
+    ICreateAPIKey,
+    SelfAPIKeyListQuery, APIKey
+} from "@hatsuboshi/types/auth"
 import { apiKeys, db } from "@/services"
 import ControllerError, { ErrorResponse } from "@/lib/errors"
 import { expandScopes, grantedPatterns } from "@/lib/authScopes"
@@ -16,31 +35,19 @@ import { expandScopes, grantedPatterns } from "@/lib/authScopes"
 @Response<ErrorResponse<403, ForbiddenEC>>(403, "Forbidden")
 export class MyAPIKeyController extends Controller {
     /**
-     * Retrieves a paginated list of all API keys belonging to
-     * the user who owns the credential the request is made with,
-     * that match an optional filter.
+     * Retrieves a paginated list of all API keys belonging to the user who owns the credential
+     * the request is made with, that match an optional filter.
      *
      * @summary List API keys
-     *
-     * @param req
-     * @param p   Page number to retrieve. (1-indexed)
-     * @param pp  Number of results to return per page.
-     * @param f   JSON-serialized string of an `APIKeyFilterOptions` object.
-     * @param s   String representation of a `SortOption<IAPIKey>[]` list.
      */
     @Get()
     @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listMyAPIKeys(
         @Request() req: ExpressRequest,
-        @Query() p?: number,
-        @Query() pp?: number,
-        @Query() f?: string,
-        @Query() s?: string
+        @Queries() query: SelfAPIKeyListQuery,
     ): Promise<IPaginator<IAPIKey>> {
         const ctx = req.user! as AuthContext & { kind: "id-token" | "session" }
-        const filter: APIKeyFilterOptions = f ? JSON.parse(f) : {}
-        const sort: SortOption<IAPIKey>[] = s ? decodeSortOptions(s) : []
-        return (await db.getAPIKeys({ page: p, perPage: pp }, { ...filter, userId: { include: [ctx.user.id] } }, sort)).toJSON()
+        return (await db.listAPIKeys(APIKey.decodeListQuery({ ...query, userId: [ctx.user.id] }))).toJSON()
     }
 
     /**

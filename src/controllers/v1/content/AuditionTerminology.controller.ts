@@ -1,12 +1,11 @@
 import { db } from "@/services"
 import {
-    AuditionTerminologyFilterOptions,
-    decodeSortOptions,
+    AuditionTerminology,
+    AuditionTerminologyListQuery,
     IAuditionTerminology,
-    IPaginator,
-    SortOption
+    IPaginator
 } from "@hatsuboshi/types"
-import { Controller, Get, Path, Query, Response, Route, Tags } from "tsoa"
+import { Controller, Get, Path, Queries, Response, Route, Tags } from "tsoa"
 import { NotFoundEC, UnprocessableEC } from "@/lib/errorCodes"
 import ControllerError, { ErrorResponse } from "@/lib/errors"
 
@@ -17,24 +16,13 @@ export class AuditionTerminologyController extends Controller {
      * Retrieves a paginated list of `IAuditionTerminology` (JSON-serializable) objects that match an optional filter.
      *
      * @summary List terminologies
-     *
-     * @param p   Page number to retrieve. (1-indexed)
-     * @param pp  Number of results to return per page.
-     * @param f   JSON-serialized string of an `AuditionTerminologyFilterOptions` object.
-     * @param s   String representation of a `SortOption<IAuditionTerminology>[]` list.
      */
     @Get()
     @Response<ErrorResponse<422, UnprocessableEC>>(422, "Unprocessable Entity")
     public async listTerminologies(
-        @Query() p?: number,
-        @Query() pp?: number,
-        @Query() f?: string,
-        @Query() s?: string
+        @Queries() query: AuditionTerminologyListQuery
     ): Promise<IPaginator<IAuditionTerminology>> {
-        const filter: AuditionTerminologyFilterOptions = f ? JSON.parse(f) : {}
-        const sort: SortOption<IAuditionTerminology>[] = s ? decodeSortOptions(s) : []
-        const r = await db.getAuditionTerminologies({ page: p, perPage: pp }, filter, sort)
-        return r.toJSON()
+        return (await db.listAuditionTerminologies(AuditionTerminology.decodeListQuery(query))).toJSON()
     }
 
     /**
