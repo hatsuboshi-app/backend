@@ -1,8 +1,8 @@
 [
   {
-    "id": "character-584626",
-    "createdAt": "2026-07-08T07:35:46.515Z",
-    "updatedAt": "2026-07-08T07:35:46.516Z",
+    "id": "character-655075",
+    "createdAt": "2026-10-28T04:52:52.648Z",
+    "updatedAt": "2026-10-28T04:52:52.648Z",
     "lastName": {
       "ja": "有村",
       "en": ""
@@ -72,7 +72,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 10,
           "da": 0,
@@ -86,7 +86,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 15,
           "da": 0,
@@ -102,9 +102,9 @@
     ]
   },
   {
-    "id": "character-610497",
-    "createdAt": "2026-07-08T07:35:46.516Z",
-    "updatedAt": "2026-07-08T07:35:46.516Z",
+    "id": "character-317177",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "雨夜",
       "en": ""
@@ -175,9 +175,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-384729",
-    "createdAt": "2026-07-08T07:35:46.516Z",
-    "updatedAt": "2026-07-08T07:35:46.516Z",
+    "id": "character-145035",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "藤田",
       "en": ""
@@ -247,7 +247,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -261,7 +261,7 @@
         "stamina": 4
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 0,
           "da": 10,
@@ -277,9 +277,9 @@
     ]
   },
   {
-    "id": "character-263927",
-    "createdAt": "2026-07-08T07:35:46.516Z",
-    "updatedAt": "2026-07-08T07:35:46.516Z",
+    "id": "character-119390",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "秦谷",
       "en": ""
@@ -348,7 +348,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 25,
@@ -362,7 +362,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 0,
           "da": 10,
@@ -378,9 +378,9 @@
     ]
   },
   {
-    "id": "character-893252",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-600287",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "姫崎",
       "en": ""
@@ -450,7 +450,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -464,7 +464,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 0,
           "da": 15,
@@ -480,9 +480,9 @@
     ]
   },
   {
-    "id": "character-345759",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-358443",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "花海",
       "en": ""
@@ -552,7 +552,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -566,7 +566,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -582,9 +582,9 @@
     ]
   },
   {
-    "id": "character-260002",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-334285",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "花海",
       "en": ""
@@ -654,7 +654,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -668,7 +668,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 15,
           "da": 10,
@@ -684,9 +684,9 @@
     ]
   },
   {
-    "id": "character-356628",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-561149",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "十王",
       "en": ""
@@ -757,9 +757,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-516367",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-574736",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "十王",
       "en": ""
@@ -829,7 +829,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 20,
           "da": 0,
@@ -843,7 +843,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -859,9 +859,9 @@
     ]
   },
   {
-    "id": "character-863058",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-562702",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "倉本",
       "en": ""
@@ -931,7 +931,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 35,
@@ -945,7 +945,7 @@
         "stamina": 2
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 0,
           "da": 5,
@@ -961,9 +961,9 @@
     ]
   },
   {
-    "id": "character-962712",
-    "createdAt": "2026-07-08T07:35:46.517Z",
-    "updatedAt": "2026-07-08T07:35:46.517Z",
+    "id": "character-317598",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "葛城",
       "en": ""
@@ -1033,7 +1033,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 0,
@@ -1047,7 +1047,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 5,
           "da": 25,
@@ -1063,9 +1063,9 @@
     ]
   },
   {
-    "id": "character-265157",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-683267",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "真城",
       "en": ""
@@ -1136,9 +1136,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-129743",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-251769",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "根緒",
       "en": ""
@@ -1209,9 +1209,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-648062",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-592686",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "篠澤",
       "en": ""
@@ -1281,7 +1281,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 40,
           "da": 40,
@@ -1295,7 +1295,7 @@
         "stamina": 2
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 10,
           "da": 5,
@@ -1311,9 +1311,9 @@
     ]
   },
   {
-    "id": "character-404877",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-265026",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "紫雲",
       "en": ""
@@ -1383,7 +1383,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 0,
           "da": 5,
@@ -1397,7 +1397,7 @@
         "stamina": 0
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 10,
           "da": 30,
@@ -1413,9 +1413,9 @@
     ]
   },
   {
-    "id": "character-931389",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-165218",
+    "createdAt": "2026-10-28T04:52:52.649Z",
+    "updatedAt": "2026-10-28T04:52:52.649Z",
     "lastName": {
       "ja": "ダンス",
       "en": ""
@@ -1486,9 +1486,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-502100",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-695891",
+    "createdAt": "2026-10-28T04:52:52.650Z",
+    "updatedAt": "2026-10-28T04:52:52.650Z",
     "lastName": {
       "ja": "ビジュアル",
       "en": ""
@@ -1559,9 +1559,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-699967",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-119128",
+    "createdAt": "2026-10-28T04:52:52.650Z",
+    "updatedAt": "2026-10-28T04:52:52.650Z",
     "lastName": {
       "ja": "ボーカル",
       "en": ""
@@ -1632,9 +1632,9 @@
     "trueEndBonuses": []
   },
   {
-    "id": "character-335552",
-    "createdAt": "2026-07-08T07:35:46.518Z",
-    "updatedAt": "2026-07-08T07:35:46.518Z",
+    "id": "character-136626",
+    "createdAt": "2026-10-28T04:52:52.650Z",
+    "updatedAt": "2026-10-28T04:52:52.650Z",
     "lastName": {
       "ja": "月村",
       "en": ""
@@ -1704,7 +1704,7 @@
     },
     "trueEndBonuses": [
       {
-        "scenario": "hajime",
+        "scenario": "000-hajime",
         "parameter": {
           "vo": 10,
           "da": 0,
@@ -1718,7 +1718,7 @@
         "stamina": 2
       },
       {
-        "scenario": "nia",
+        "scenario": "010-nia",
         "parameter": {
           "vo": 10,
           "da": 10,
