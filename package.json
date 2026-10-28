@@ -16,8 +16,8 @@
     "postbuild": "copyfiles -u 1 ./src/services/repository/local/data/*.json ./dist",
     "start": "cross-env API_ENV=local node ./dist/app.js",
     "dev": "cross-env API_ENV=local nodemon",
-    "dev:development": "nodemon --env-file=.env.development",
-    "dev:production": "nodemon --env-file=.env.production"
+    "dev:development": "nodemon --exec \"npm run tsoa -s && tsx --env-file=.env.development src/app.ts\"",
+    "dev:production": "nodemon --exec \"npm run tsoa -s && tsx --env-file=.env.production src/app.ts\""
   },
   "devDependencies": {
     "@types/cors": "^2.8.19",

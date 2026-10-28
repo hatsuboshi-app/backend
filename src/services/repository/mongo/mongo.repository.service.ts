@@ -2,11 +2,11 @@ import IRepositoryService, {
     APIKeyCredential,
     APIKeyPatch,
     PaginateOptions,
-    ReferencePopulateMethods,
+    ReferencePopulateMethods, RepositoryResource,
     RepositoryResult,
     UserPatch
 } from "@/services/repository/repository.service"
-import { Collection, Db, Document, Filter, MongoClient, ServerApiVersion, WithId } from "mongodb"
+import { Collection, Db, Document, Filter, MongoClient, MongoServerError, ServerApiVersion, WithId } from "mongodb"
 import {
     AuditionEffect,
     AuditionTerminology,
@@ -44,7 +44,8 @@ import {
     New,
     ListRequest,
     AuditionEffectFilter,
-    AuditionTerminologyFilter, CharacterFilter, PDrinkFilter, PIdolFilter, PItemFilter, SkillFilter, SupportCardFilter
+    AuditionTerminologyFilter, CharacterFilter, PDrinkFilter, PIdolFilter, PItemFilter, SkillFilter, SupportCardFilter,
+    SimpleStringFilterOptions
 } from "@hatsuboshi/types"
 import config from "@/lib/config"
 import {
@@ -86,6 +87,7 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     private readonly users: Collection
     private readonly apiKeys: Collection
+
     private readonly populateMethods: ReferencePopulateMethods = {
         auditionEffect: async (id: string) => {
             const r = await this.effects.findOne({ id: id })
@@ -137,7 +139,7 @@ export default class MongoRepositoryService implements IRepositoryService {
     constructor({ shared, cluster, username, password }: MongoCredentials) {
         const client = new MongoClient(
             `mongodb+srv://${username}:${password}@${cluster}.${shared}.mongodb.net/?appName=${cluster}`,
-            { serverApi: ServerApiVersion.v1 }
+            { serverApi: ServerApiVersion.v1, ignoreUndefined: true }
         )
         this.gameDataDb = client.db("GameData")
         this.metaDataDb = client.db("MetaData")
@@ -151,6 +153,19 @@ export default class MongoRepositoryService implements IRepositoryService {
         this.supportCards = this.gameDataDb.collection("SupportCard")
         this.users = this.metaDataDb.collection("User")
         this.apiKeys = this.metaDataDb.collection("APIKey")
+    }
+
+    private get collections(): Record<Exclude<RepositoryResource, "user" | "apiKey">, Collection> {
+        return {
+            auditionEffect: this.effects,
+            auditionTerminology: this.terminologies,
+            character: this.characters,
+            pDrink: this.drinks,
+            pIdol: this.idols,
+            pItem: this.items,
+            skill: this.skills,
+            supportCard: this.supportCards
+        }
     }
 
     private async fetchAndConstructPaginator<T extends JSONSerializable<I>, I extends {}>({ collection, populate, filter, options, sort }: PaginationHandlerParams<T, I>): Promise<IPaginator<I>> {
@@ -192,9 +207,21 @@ export default class MongoRepositoryService implements IRepositoryService {
         }
     }
 
+    private escapeRegex(search: string): string {
+        return search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+    }
+
+    private containsFilter(search: string): Filter<any> {
+        return { $regex: this.escapeRegex(search), $options: "i" }
+    }
+
+    private isDuplicateKeyError(e: unknown): boolean {
+        return e instanceof MongoServerError && e.code === 11000
+    }
+
     private addDateFilter(f: Filter<any>, fieldName: string, filter?: DateFilterOptions): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
-        rf.$and = rf.$and ?? []
+        rf.$and ??= []
         if (filter) {
             filter.after && rf.$and.push({ [fieldName]: { $gte: filter.after } })
             filter.before && rf.$and.push({ [fieldName]: { $lte: filter.before } })
@@ -204,7 +231,7 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     private addNumberFilter(f: Filter<any>, fieldName: string, filter?: NumberFilterOptions): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
-        rf.$and = rf.$and ?? []
+        rf.$and ??= []
         if (filter) {
             filter.lte !== undefined && rf.$and.push({ [fieldName]: { $lte: filter.lte } })
             filter.gte !== undefined && rf.$and.push({ [fieldName]: { $gte: filter.gte } })
@@ -214,7 +241,7 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     private addEnumFilter<E>(f: Filter<any>, fieldName: string, filter?: EnumFilterOptions<E>): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
-        rf.$and = rf.$and ?? []
+        rf.$and ??= []
         filter?.include && rf.$and.push({ [fieldName]: { $in: filter.include } })
         filter?.exclude && rf.$and.push({ [fieldName]: { $nin: filter.exclude } })
         return rf
@@ -222,7 +249,7 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     private addLocaleStringFilter(f: Filter<any>, fieldName: string, filter?: LocaleStringFilterOptions): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
-        rf.$and = rf.$and ?? []
+        rf.$and ??= []
         if (filter) {
             switch (filter.type) {
                 case "IncompleteLocale": {
@@ -236,7 +263,7 @@ export default class MongoRepositoryService implements IRepositoryService {
                 } break
                 case "Search": {
                     if (filter.search) {
-                        const contains = { $regex: filter.search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), $options: "i" }
+                        const contains = this.containsFilter(filter.search)
                         rf.$and.push({
                             $or: [
                                 { [`${fieldName}.ja`]: contains},
@@ -251,11 +278,32 @@ export default class MongoRepositoryService implements IRepositoryService {
         return rf
     }
 
+    private addSimpleStringFilter(f: Filter<any>, fieldName: string, filter?: SimpleStringFilterOptions): Filter<any> {
+        const rf: Filter<any> = structuredClone(f)
+        rf.$and ??= []
+        if (filter?.search) {
+            rf.$and.push({
+                [fieldName]: this.containsFilter(filter.search)
+            })
+        }
+        return rf
+    }
+
     private addCustomFilter(f: Filter<any>, cond?: Filter<any>): Filter<any> {
         const rf: Filter<any> = structuredClone(f)
         rf.$and = rf.$and ?? []
         cond && rf.$and.push(cond)
         return rf
+    }
+
+    async idReferenced(id: string): Promise<boolean> {
+        const needle = JSON.stringify(id)
+        const hits = await Promise.all(Object.values(this.collections).map(async c => {
+            for await (const d of c.find({ id: { $ne: id } }, { projection: { _id: 0 } }).batchSize(1000))
+                if (JSON.stringify(d).includes(needle)) return true
+            return false
+        }))
+        return hits.some(h => h)
     }
 
     // AuditionEffect //
@@ -315,7 +363,7 @@ export default class MongoRepositoryService implements IRepositoryService {
             en: { $concat: [part("firstName", "en"), " ", part("lastName", "en"), " ", part("firstName", "en")] }
         }
         if (f?.name && f.name.type === "Search" && f.name.search) {
-            const regex = f.name.search.trim().replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+            const regex = this.escapeRegex(f.name.search)
             filter = this.addCustomFilter(filter, { $expr: { $or: [
                 { $regexMatch: { input: fullName.ja, regex, options: "i" } },
                 { $regexMatch: { input: fullName.en, regex, options: "i" } }

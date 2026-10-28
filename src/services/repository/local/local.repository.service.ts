@@ -3,7 +3,7 @@ import { readFileSync } from "jsonfile"
 import IRepositoryService, {
     APIKeyCredential, APIKeyPatch,
     PaginateOptions,
-    ReferencePopulateMethods, RepositoryResult, UserPatch
+    ReferencePopulateMethods, RepositoryResource, RepositoryResult, UserPatch
 } from "@/services/repository/repository.service"
 import {
     Character,
@@ -44,6 +44,7 @@ import {
     User, UserFilter
 } from "@hatsuboshi/types/auth"
 import ControllerError from "@/lib/errors"
+import { newPersistentObject } from "@/lib/repository"
 
 type LocaleStringFieldOptions = { field: LocaleStringWithRomaji, hasRom: true } | { field: LocaleString, hasRom: false }
 
@@ -122,6 +123,19 @@ export default class LocalRepositoryService implements IRepositoryService {
         this.apiKeys = readFileSync(path.join(dir, "APIKey.json"))
     }
 
+    private get collections(): Record<Exclude<RepositoryResource, "user" | "apiKey">, IPersistentObject[]> {
+        return {
+            auditionEffect: this.effects,
+            auditionTerminology: this.terminologies,
+            character: this.characters,
+            pDrink: this.drinks,
+            pIdol: this.idols,
+            pItem: this.items,
+            skill: this.skills,
+            supportCard: this.supportCards
+        }
+    }
+
     private constructPaginator<T extends {}>(data: T[], options?: PaginateOptions): IPaginator<T> {
         const page = (options?.page || 1) - 1
         const perPage = options?.perPage || config.defaults.pageSize
@@ -135,24 +149,6 @@ export default class LocalRepositoryService implements IRepositoryService {
                 totalItems: data.length,
                 totalPages: Math.ceil(data.length / perPage)
             }
-        }
-    }
-
-    private getNewId(): string {
-        const chars = "abcdefghijklmnopqrstuvwxyz0123456789"
-        const len = 8
-        let id = "";
-        for (let i = 0; i < len; i++) {
-            id += chars[Math.floor(Math.random() * chars.length)];
-        }
-        return id
-    }
-
-    private getNewObj(): IPersistentObject {
-        return {
-            id: this.getNewId(),
-            createdAt: new Date().toISOString(),
-            updatedAt: new Date().toISOString()
         }
     }
 
@@ -229,6 +225,13 @@ export default class LocalRepositoryService implements IRepositoryService {
             if (av > bv) return s.ascending ? 1 : -1
         }
         return a.id < b.id ? -1 : a.id > b.id ? 1 : 0
+    }
+
+    async idReferenced(id: string): Promise<boolean> {
+        const needle = JSON.stringify(id)
+        return Object.values(this.collections).some(c =>
+            c.some(i => i.id !== id && JSON.stringify(i).includes(needle))
+        )
     }
 
     // AuditionEffect //
@@ -433,7 +436,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const created = new User({
             ...await User.fromDB({
                 ...obj,
-                ...this.getNewObj()
+                ...newPersistentObject("user")
             })
         })
         this.users.push(created.toDB())
@@ -499,7 +502,7 @@ export default class LocalRepositoryService implements IRepositoryService {
         const created = new APIKey({
             ...(await APIKey.fromDB({
                 ...obj,
-                ...this.getNewObj()
+                ...newPersistentObject("apiKey")
             }))
         })
         this.apiKeys.push({ ...created.toDB(), secretHash: obj.secretHash })

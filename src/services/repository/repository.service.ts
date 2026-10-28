@@ -30,6 +30,18 @@ export type ReferencePopulateMethods = {
     pItem: Populate<DBPItem>
 }
 
+export type RepositoryResource =
+    | "auditionEffect"
+    | "auditionTerminology"
+    | "character"
+    | "pDrink"
+    | "pIdol"
+    | "pItem"
+    | "skill"
+    | "supportCard"
+    | "user"
+    | "apiKey"
+
 export type PaginateOptions = Partial<{
     page: number
     perPage: number
@@ -53,6 +65,12 @@ export type RepositoryEC = `db/${
 }`
 
 export default interface IRepositoryService {
+    //         //
+    // Utility //
+    //         //
+    idReferenced(id: string):
+        Promise<boolean>
+
     //                //
     // AuditionEffect //
     //                //
