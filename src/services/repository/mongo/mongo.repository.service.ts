@@ -57,6 +57,7 @@ import {
     User, UserFilter,
 } from "@hatsuboshi/types/auth"
 import ControllerError from "@/lib/errors"
+import { newPersistentObject } from "@/lib/repository"
 
 export type MongoCredentials = {
     shared: string,
@@ -527,59 +528,155 @@ export default class MongoRepositoryService implements IRepositoryService {
 
     // User //
     async listUsers({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<UserFilter, IUser>): Promise<Paginator<User, IUser>> {
-        throw new ControllerError("core/not-implemented")
+        let filter: Filter<any> = {}
+        filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
+        filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
+        filter = this.addSimpleStringFilter(filter, "displayName", f?.displayName)
+        filter = this.addEnumFilter(filter, "roles", f?.roles)
+        const data = await this.fetchAndConstructPaginator<User, IUser>({
+            collection: this.users,
+            populate: async d => await User.fromDB(<any>d),
+            filter: filter,
+            options: { page: p, perPage: pp },
+            sort: s
+        })
+        return new Paginator(User, data)
     }
 
     async getUserById(id: string): Promise<RepositoryResult<User>> {
-        throw new ControllerError("core/not-implemented")
+        const d = await this.users.findOne({ id: id })
+        return d
+            ? success(await User.fromDB(<DBUser><unknown>d))
+            : fail("db/not-found")
     }
 
     async getUserByIdentity(provider: AuthProvider, subject: string): Promise<RepositoryResult<User>> {
-        throw new ControllerError("core/not-implemented")
+        if (!provider || !subject) return fail("db/not-found")
+        const d = await this.users.findOne({ identities: { $elemMatch: { provider: provider, subject: subject } } })
+        return d
+            ? success(await User.fromDB(<DBUser><unknown>d))
+            : fail("db/not-found")
     }
 
     async getUserByEmail(email: string): Promise<RepositoryResult<User>> {
-        throw new ControllerError("core/not-implemented")
+        if (!email) return fail("db/not-found")
+        const d = await this.users.findOne({ email: email })
+        return d
+            ? success(await User.fromDB(<DBUser><unknown>d))
+            : fail("db/not-found")
     }
 
     async createUser(obj: New<DBUser>): Promise<RepositoryResult<User>> {
-        throw new ControllerError("core/not-implemented")
+        if (obj.identities.length && await this.users.findOne(
+            { $or: obj.identities.map(i => ({ identities: { $elemMatch: { provider: i.provider, subject: i.subject } } })) },
+            { projection: { _id: 1 } }
+        )) return fail("db/already-exists")
+        const created = await User.fromDB({ ...obj, ...newPersistentObject("user") })
+        try {
+            await this.users.insertOne(created.toDB())
+        } catch (e) {
+            if (this.isDuplicateKeyError(e)) return fail("db/already-exists")
+            throw e
+        }
+        return success(created)
     }
 
     async updateUser(id: string, patch: UserPatch): Promise<RepositoryResult<User>> {
-        throw new ControllerError("core/not-implemented")
+        const d = await this.users.findOneAndUpdate(
+            { id: id },
+            { $set: { ...patch, updatedAt: new Date().toISOString() } },
+            { returnDocument: "after" }
+        )
+        return d
+            ? success(await User.fromDB(<DBUser><unknown>d))
+            : fail("db/not-found")
     }
 
     async deleteUser(id: string): Promise<RepositoryResult<null>> {
-        throw new ControllerError("core/not-implemented")
+        await this.users.deleteOne({ id: id })
+        await this.apiKeys.deleteMany({ userId: id })
+        return success(null)
     }
 
     // APIKey //
     async listAPIKeys({ filter: f, sort: s, page: p, perPage: pp }: ListRequest<APIKeyFilter, IAPIKey>): Promise<Paginator<APIKey, IAPIKey>> {
-        throw new ControllerError("core/not-implemented")
+        const now = new Date().toISOString()
+        let filter: Filter<any> = {}
+        filter = this.addDateFilter(filter, "createdAt", f?.createdAt)
+        filter = this.addDateFilter(filter, "updatedAt", f?.updatedAt)
+        filter = this.addSimpleStringFilter(filter, "label", f?.label)
+        filter = this.addEnumFilter(filter, "userId", f?.userId)
+        filter = this.addDateFilter(filter, "lastUsedAt", f?.lastUsedAt)
+        if (f?.isExpired != undefined) {
+            filter = this.addCustomFilter(filter, f.isExpired
+                ? { expiresAt: { $ne: null, $lt: now } }
+                : { $or: [{ expiresAt: null }, { expiresAt: { $gte: now } }] })
+        }
+        if (f?.isRevoked != undefined) {
+            filter = this.addCustomFilter(filter, { revokedAt: f.isRevoked ? { $ne: null } : null })
+        }
+        const data = await this.fetchAndConstructPaginator<APIKey, IAPIKey>({
+            collection: this.apiKeys,
+            populate: async d => await APIKey.fromDB(<any>d),
+            filter: filter,
+            options: { page: p, perPage: pp },
+            sort: s
+        })
+        return new Paginator(APIKey, data)
     }
 
     async getAPIKeyById(id: string): Promise<RepositoryResult<APIKey>> {
-        throw new ControllerError("core/not-implemented")
+        const d = await this.apiKeys.findOne({ id: id })
+        return d
+            ? success(await APIKey.fromDB(<DBAPIKey><unknown>d))
+            : fail("db/not-found")
     }
 
     async getAPIKeyByPrefix(prefix: string): Promise<RepositoryResult<APIKeyCredential>> {
-        throw new ControllerError("core/not-implemented")
+        if (!prefix) return fail("db/not-found")
+        const d = <DBAPIKey | null><unknown>await this.apiKeys.findOne({ prefix: prefix })
+        return d
+            ? success({ key: await APIKey.fromDB(d), secretHash: d.secretHash })
+            : fail("db/not-found")
     }
 
     async createAPIKey(obj: New<DBAPIKey>): Promise<RepositoryResult<APIKey>> {
-        throw new ControllerError("core/not-implemented")
+        if (await this.apiKeys.findOne({ prefix: obj.prefix }, { projection: { _id: 1 } }))
+            return fail("db/already-exists")
+        const created = await APIKey.fromDB({ ...obj, ...newPersistentObject("apiKey") })
+        try {
+            await this.apiKeys.insertOne({ ...created.toDB(), secretHash: obj.secretHash })
+        } catch (e) {
+            if (this.isDuplicateKeyError(e)) return fail("db/already-exists")
+            throw e
+        }
+        return success(created)
     }
 
     async recordAPIKeyUse(id: string, at?: Date): Promise<RepositoryResult<APIKey>> {
-        throw new ControllerError("core/not-implemented")
+        const d = await this.apiKeys.findOneAndUpdate(
+            { id: id },
+            { $set: { lastUsedAt: (at ?? new Date()).toISOString() } },
+            { returnDocument: "after" }
+        )
+        return d
+            ? success(await APIKey.fromDB(<DBAPIKey><unknown>d))
+            : fail("db/not-found")
     }
 
     async updateAPIKey(id: string, patch: APIKeyPatch): Promise<RepositoryResult<APIKey>> {
-        throw new ControllerError("core/not-implemented")
+        const d = await this.apiKeys.findOneAndUpdate(
+            { id: id },
+            { $set: { ...patch, updatedAt: new Date().toISOString() } },
+            { returnDocument: "after" }
+        )
+        return d
+            ? success(await APIKey.fromDB(<DBAPIKey><unknown>d))
+            : fail("db/not-found")
     }
 
     async deleteAPIKey(id: string): Promise<RepositoryResult<null>> {
-        throw new ControllerError("core/not-implemented")
+        await this.apiKeys.deleteOne({ id: id })
+        return success(null)
     }
 }
