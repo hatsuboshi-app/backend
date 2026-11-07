@@ -2,9 +2,9 @@
   "compilerOptions": {
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
-    "target": "es2019",
-    "module": "commonjs",
-    "moduleResolution": "node",
+    "target": "es2021",
+    "module": "node16",
+    "moduleResolution": "node16",
     "esModuleInterop": true,
     "outDir": "./dist",
     "incremental": false,
@@ -15,5 +15,5 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*"],
+  "include": ["src/**/*", "env.d.ts", "express.d.ts"],
 }

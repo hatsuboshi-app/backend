@@ -1,16 +1,16 @@
 import ILoggerService from "@/services/logger/logger.service"
 
 export default class ConsoleLoggerService implements ILoggerService {
-    debug(message: string): void {
+    debug(message: any): void {
         console.debug(message)
     }
-    info(message: string): void {
+    info(message: any): void {
         console.info(message)
     }
-    warn(message: string): void {
+    warn(message: any): void {
         console.warn(message)
     }
-    error(message: string): void {
+    error(message: any): void {
         console.error(message)
     }
 }
