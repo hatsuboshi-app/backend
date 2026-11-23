@@ -20,7 +20,6 @@ export class MeController extends Controller {
      * @summary Retrieve the current user
      */
     @Get()
-    @Security("bearer")
     public async getMe(
         @Request() req: ExpressRequest
     ): Promise<ISelfUser> {
