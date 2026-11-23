@@ -23,7 +23,8 @@ Hatsuboshi API's production URI is [`https://api.hatsuboshi.app`](https://api.ha
 - Backward compatibility through versioned API endpoints
 
 > [!IMPORTANT]
-> This project is hand-built by a fellow producer **without the use of any AI-generated content / code**.
+> This project is built by hand with love & care. It is not "vibecoded",
+> nor does it contain any user-facing AI-generated content.
 
 ## Example Usage
 
@@ -31,7 +32,7 @@ Hatsuboshi API's production URI is [`https://api.hatsuboshi.app`](https://api.ha
 $ curl https://api.hatsuboshi.app/v1/p-idols/763034
 ```
 
-```json
+```plaintext
 {
   "id": "763034",
   "createdAt": "2026-07-07T07:35:55.674Z",
@@ -72,15 +73,6 @@ This API is built using the [Express.js](https://expressjs.com/) framework, and 
 
 This API uses service modules defined through service interfaces, which are injected as dependencies and initialized globally via a factory. This allows each service to remain fully modular, provided that its implementation correctly conforms to the corresponding interface. In addition to cloud-based implementations, each service also provides an in-memory implementation, which allows the application to run independently of external cloud providers in a local development environment.
 
-- `IRepositoryService`:
-  - Implemented with [MongoDB Atlas](https://www.mongodb.com/products/platform), and an in-memory implementation.
-
-- `IAuthService`:
-  - Implemented with [Firebase Authentication](https://firebase.google.com/docs/auth), and an in-memory implementation.
-
-- `IAssetService`:
-  - Implemented with a [self-hosted](https://garagehq.deuxfleurs.fr/) [AWS S3](https://aws.amazon.com/s3/) bucket running on local hardware, and an in-memory implementation.
-
 > [!TIP]
 > The following environment variables are available to customize app defaults:
 > - `PORT` (default: `3001`)
@@ -92,6 +84,9 @@ This API uses service modules defined through service interfaces, which are inje
 > - `MONGO_CLUSTER`
 > - `MONGO_USER`
 > - `MONGO_PASS`
+> - `FIREBASE_PROJECT_ID`
+> - `FIREBASE_CLIENT_EMAIL`
+> - `FIREBASE_PRIVATE_KEY`
 > - `S3_KEY`
 > - `S3_SECRET`
 > - `S3_REGION`
@@ -139,4 +134,4 @@ Feel free to contact me, [@HuzzuDesu on Twitter](https://x.com/HuzzuDesu) or `@h
 ## Disclaimer
 
 > [!WARNING]
-> This app is a part of a fan-made project and **NOT** an officially endorsed app for Gakuen IDOLM@STER, nor is it associated with BNEI, QualiArts Inc., or any other official entities. All rights to assets, contents & data belong to their respective copyright owners.
+> This app is a part of a fan-made project and **NOT** an officially endorsed app for Gakuen IDOLM@STER, nor is it associated with BNEI, QualiArts Inc., or any other official entities. All rights to the original game assets, content, and intellectual property belong to their respective copyright owners.

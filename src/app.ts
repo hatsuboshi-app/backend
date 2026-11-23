@@ -1,7 +1,7 @@
 import express, { Request, Response } from "express"
-import config from "@/config"
+import config from "@/lib/config"
 import cors from "cors"
-import { db, logger } from "@/services"
+import { logger } from "@/services"
 import { errorHandler } from "@/middlewares/errorHandler"
 import morgan from "morgan"
 // @ts-ignore
@@ -15,9 +15,8 @@ app.use(cors())
 
 app.get("/", (_: Request, res: Response) => {
     res.json({
-        version: "1",
-        environment: config.env,
-        repository: db.id
+        status: "ok",
+        environment: process.env.API_ENV
     })
 })
 
@@ -29,5 +28,5 @@ app.use('/v1', v1Router)
 app.use(errorHandler)
 
 app.listen(config.port, () => {
-    logger.info(`server live  //  http://localhost:${config.port}  //  env: ${config.env}\n`)
+    logger.info(`server live  @  http://localhost:${config.port}  @  env: ${process.env.API_ENV}\n`)
 })

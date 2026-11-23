@@ -1,6 +1,6 @@
 export default interface ILoggerService {
-    debug(message: string): void
-    info(message: string): void
-    warn(message: string): void
-    error(message: string): void
+    debug(message: any): void
+    info(message: any): void
+    warn(message: any): void
+    error(message: any): void
 }

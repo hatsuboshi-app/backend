@@ -1,6 +1,6 @@
 {
   "exec": "npm run tsoa -s && tsx src/app.ts",
-  "watch": ["src"],
+  "watch": ["src", "config"],
   "ignore": ["src/routes/*"],
   "ext": "ts,json"
 }
